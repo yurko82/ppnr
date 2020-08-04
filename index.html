@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RNPP</title>
+
+    <link href="css/bootstrap.css" rel="stylesheet" id="bootstrap-css">
+    <link rel="stylesheet" href="fonts/fontawesome/all.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="fonts/GothamPro/stylesheet.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<button class="prev"></button>
+
+<body>
+
+    <!------ Include the above in your HEAD tag ---------->
+    <header class="header fixed-top">
+        <div class="container">
+            <div class="header__wrap position-relative">
+                <div class="header__social">
+                    <ul class="header__social-icons">
+                        <li class="header__social-icon"><i class="fab fa-youtube"></i></li>
+                        <li class="header__social-icon"><i class="fab fa-facebook"></i></li>
+                        <li class="header__social-icon"><i class="fab fa-twitter-square"></i></li>
+                        <li class="header__social-icon"><i class="fab fa-instagram"></i></li>
+                        <li class="header__social-icon"><i class="fab fa-telegram-plane pr-5"></i></li>
+                        <li class="header__social-icon"><i class="fas fa-search"></i></li>
+                        <li class="header__social-icon"><i class="fa fa-low-vision" title="Перегляд для людей з вадами зору"></i></li>
+                        <li class="header__social-icon">
+                            <img class="ukr d-inline-block" src="images/Flag_of_Ukraine.svg" alt="">
+                        </li>
+                    </ul>
+                </div>
+                <div class="logo-nav">
+                    <nav class="navbar navbar-expand-lg navbar-light align-items-center p-0" role="navigation">
+
+                        <!-- data-target="#navbarCollapse" -->
+                        <button class="navbar-toggler" type="button" data-show="false">
+                            <span class="navbar-icon"><i class="fas fa-bars"></i></span>
+                        </button>
+                        <a href="index.html" class="logo"><img src="images/logo-320.svg" alt=""></a>
+                        <div class="navbar__search"><img class="ukr d-inline-block" src="images/Flag_of_Ukraine.svg" alt=""></div>
+                        <div class="navbar__sett"><i class="fa fa-low-vision"></i></div>
+                        <div class=" navbar-collapse align-self-end" id="navbarCollapse">
+                            <!-- <form class="form-inline">
+                                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                            </form> -->
+                            <ul class="navbar-nav ml-auto">
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" id="dropdown1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Про нас</a>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdown1">
+                                        <li class="dropdown-item dropdown">
+                                            <a class="dropdown-toggle" id="dropdown1-1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Хто ми</a>
+                                            <ul class="dropdown-menu" aria-labelledby="dropdown1-1">
+                                                <li class="dropdown-item"><a href="#">Місія, бачення, цінності</a></li>
+                                                <li class="dropdown-item"><a href="#">Історія</a></li>
+                                                <li class="dropdown-item dropdown">
+                                                    <a class="dropdown-toggle" id="dropdown1-1-1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Діяльність</a>
+                                                    <ul class="dropdown-menu" aria-labelledby="dropdown1-1-1">
+                                                        <li class="dropdown-item"><a href="#">Технологія виробництва</a></li>
+                                                        <li class="dropdown-item"><a href="#">Заяви</a></li>
+                                                        <li class="dropdown-item"><a href="#">Ліцензовані види діяльності</a></li>
+                                                        <li class="dropdown-item"><a href="#">Безпека і надійність</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="dropdown-item"><a href="#">Дізнатися більше</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown-item dropdown">
+                                            <a class="dropdown-toggle" id="dropdown1-2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Наша команда</a>
+                                            <ul class="dropdown-menu" aria-labelledby="dropdown1-2">
+                                                <li class="dropdown-item"><a href="#">Відповідальні лідери</a></li>
+                                                <li class="dropdown-item"><a href="#">Команда професіоналів</a></li>
+                                                <li class="dropdown-item"><a href="#">Працівнику</a></li>
+                                                <li class="dropdown-item"><a href="#">Кар’єра і HR</a></li>
+                                                <li class="dropdown-item"><a href="#">Нагороди</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown-item dropdown">
+                                            <a class="dropdown-toggle" id="dropdown1-3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Наші партнери </a>
+                                            <ul class="dropdown-menu" aria-labelledby="dropdown1-3">
+                                                <li class="dropdown-item"><a href="#">Профспілка</a></li>
+                                                <li class="dropdown-item"><a href="#">УкрЯТ</a></li>
+                                                <li class="dropdown-item"><a href="#">ВАО АЕС</a></li>
+                                                <li class="dropdown-item"><a href="#">МАГАТЕ</a></li>
+                                                <li class="dropdown-item"><a href="#">Ділові партнери</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" id="dropdown2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Новини</a>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdown2-1">
+                                        <li class="dropdown-item"><a href="#">Новини</a></li>
+                                        <li class="dropdown-item"><a href="#">Анонси</a></li>
+                                        <li class="dropdown-item"><a href="#">Газета «Енергія»</a></li>
+                                        <li class="dropdown-item"><a href="#">Телеканал «Енергоатом»</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" id="dropdown3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Чому АЕС</a>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdown3-1">
+                                        <li class="dropdown-item"><a href="#">Збереження клімату і чисте довкілля</a></li>
+                                        <li class="dropdown-item"><a href="#">Доступна енергія</a></li>
+                                        <li class="dropdown-item"><a href="#">Підтримую ядерну енергію</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" id="dropdown4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Громаді</a>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdown4-1">
+                                        <li class="dropdown-item"><a href="#">Розвиток регіону</a></li>
+                                        <li class="dropdown-item"><a href="#">Спорт</a></li>
+                                        <li class="dropdown-item"><a href="#">Культура</a></li>
+                                        <li class="dropdown-item"><a href="#">Оздоровлення</a></li>
+                                        <li class="dropdown-item"><a href="#">Готель</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                             <form class="navbar__form form-inline">
+                                <input class="navbar__form-input" type="search" placeholder="Пошук" aria-label="Search">
+                                <button class="navbar__form-btn" type="submit"><i class="fas fa-search"></i></button>
+                            </form>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- <div class="content" style="padding: 120px 50px 50px 50px;"></div> -->
+    <!-- <div class="overlay"></div> -->
+    <section class=" head-slider ">
+
+        <div class=" head-slider__items ">
+
+            <div class=" head-slider__item " style=" background-image: url(images/bg/1.jpg); min-height: 100vh; background-position: 50% 0%; ">
+                <div class="head-slider__text "><span class="blackItalic yellow">Чиста</span><br> енергія мабутнього.</div>
+                <div class="head-slider__overlay"></div>
+            </div>
+            <div class=" head-slider__item " style=" background-image: url(images/bg/2.jpg); min-height: 100vh; background-position: 50% 40%; ">
+                <div class="head-slider__text "><span class="blackItalic yellow">Головний</span><br> пріоритет безпека</div>
+                <div class="head-slider__overlay"></div>
+            </div>
+            <div class=" head-slider__item " style=" background-image: url(images/bg/3.jpg); min-height: 100vh; background-position: 50% 0%; ">
+                <div class="head-slider__text "><span class="blackItalic yellow">Відповідальна</span><br> команда професіоналів</div>
+                <div class="head-slider__overlay"></div>
+            </div>
+            <div class=" head-slider__item " style=" background-image: url(images/bg/4.jpg); min-height: 100vh; background-position: 50% 0%; ">
+                <div class="head-slider__text "><span class="blackItalic yellow">Найдешевші</span><br> екологічні кіловати</div>
+                <div class="head-slider__overlay"></div>
+            </div>
+            <div class=" head-slider__item " style=" background-image: url(images/bg/5.jpg); min-height: 100vh; background-position: 50% 0%; ">
+                <div class="head-slider__text "><span class="blackItalic yellow">Наша стабільність</span><br> розвиток регіону</div>
+                <div class="head-slider__overlay"></div>
+            </div>
+            <div class=" head-slider__item " style=" background-image: url(images/bg/6.jpg); min-height: 100vh; background-position: 50% 0%; ">
+                <div class="head-slider__text "><span class="blackItalic yellow">Можливості</span><br> для успішної кар’єри</div>
+                <div class="head-slider__overlay"></div>
+            </div>
+            <div class=" head-slider__item " style=" background-image: url(images/bg/7.jpg); min-height: 100vh; background-position: 50% 0%; ">
+                <div class="head-slider__text "><span class="blackItalic yellow">Постійне </span><br> вдосконалення виробництва</div>
+                <div class="head-slider__overlay"></div>
+            </div>
+            <div class=" head-slider__item " style=" background-image: url(images/bg/8.jpg); min-height: 100vh; background-position: 50% 0%; ">
+                <div class="head-slider__text "><span class="blackItalic yellow">Турбота</span><br> про наступні покоління</div>
+                <div class="head-slider__overlay"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="widget">
+        <div class="container">
+            <!-- <div class="widget__title title t-h" data-aos="fade-down">
+                <span>Показники</span>
+            </div> -->
+            <div class="widget__slider">
+                <div class="widget__elektro">
+                    <span class="widget__slider-title ">Вироблено електроенергії</span>
+                    <div class="widget_elektro-doba d-flex justify-content-between align-items-baseline">
+                        <span class="text flex-grow-1">доба</span>
+                        <span class="pokaz">57.11</span>
+                        <span class="odin">млн кВт*год</span>
+                    </div>
+                    <div class="widget_elektro-mis d-flex justify-content-between align-items-baseline">
+                        <span class="text flex-grow-1">місяць</span>
+                        <span class="pokaz">14.39</span>
+                        <span class="odin">млрд кВт*год</span>
+                    </div>
+                    <div class="widget_elektro-rik d-flex justify-content-between align-items-baseline">
+                        <span class="text flex-grow-1">рік</span>
+                        <span class="pokaz">1173.84</span>
+                        <span class="odin">млрд кВт*год</span>
+                    </div>
+                    <span class="widget__slider-title ">Вартість електроенергії</span>
+                    <div class="widget_elektro-doba d-flex justify-content-between align-items-baseline">
+                        <span class="text flex-grow-1"></span>
+                        <span class="pokaz">1</span>
+                        <span class="odin">грн/кВт*год</span>
+                    </div>
+                </div>
+                <div class="widget__co2">
+                    <span class="widget__slider-title ">Не потрапило до атосфери СО2</span>
+                    <div class="widget_co2-doba d-flex justify-content-between align-items-baseline">
+                        <span class="text flex-grow-1"></span>
+                        <span class="pokaz">45 631 </span>
+                        <span class="odin">тонн</span>
+                    </div>
+                    <span class="widget__slider-title ">За добу зекономлено</span>
+                    <div class="widget_co2-doba d-flex justify-content-between align-items-baseline">
+                        <span class="text flex-grow-1">нафти</span>
+                        <span class="pokaz">27 413 </span>
+                        <span class="odin">тонн</span>
+                    </div>
+                    <div class="widget_co2-doba d-flex justify-content-between align-items-baseline">
+                        <span class="text flex-grow-1">вугілля</span>
+                        <span class="pokaz">9 631 </span>
+                        <span class="odin">тонн</span>
+                    </div>
+                    <div class="widget_co2-doba d-flex justify-content-between align-items-baseline">
+                        <span class="text flex-grow-1">газу</span>
+                        <span class="pokaz">8 605 </span>
+                        <span class="odin">тонн</span>
+                    </div>
+                </div>
+                <div class="widget__weather">
+                    <span class="widget__slider-title ">Метеорологічний стан</span>
+                    <div class="widget_weather-online d-flex justify-content-between align-items-baseline">
+                        <span class="text flex-grow-1">температура</span>
+                        <span class="pokaz">26.8</span>
+                        <span class="odin">C</span>
+                    </div>
+                    <div class="widget_weather-online d-flex justify-content-between align-items-baseline">
+                        <span class="text flex-grow-1">швидкість вітру</span>
+                        <span class="pokaz">1.8</span>
+                        <span class="odin">м/с</span>
+                    </div>
+                    <div class="widget_weather-online d-flex justify-content-between align-items-baseline">
+                        <span class="text flex-grow-1">вологість</span>
+                        <span class="pokaz">46</span>
+                        <span class="odin">%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="info" style="background-image: url('images/coronavirus.png');">
+        <div class="info__wrap">
+            <div class="container">
+
+                <div class="info__block">
+                    <div class="about__tiile title t-d" data-aos="fade-down">
+                        <span>COVID-19</span>
+                    </div>
+                    <div class="info__content">
+                        <img class="info__item" src="images/coronavirus1.png" alt="">
+                        <img class="info__item" src="images/coronavirus1.png" alt="">
+                    </div>
+
+                    <button class="about__btn btn btn-d">Подробиці</button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section class=" about ">
+        <div class="about__wrap">
+            <div class="about__img" style="background-image: url(images/about.jpg);">
+                <!-- <img src="images/about.jpg" alt="Про нас"> -->
+            </div>
+            <div class="about__content">
+                <div class="about__title title t-h" data-aos="fade-down">
+                    <span>Хто ми</span>
+                </div>
+                <div class="about__text">
+                    <p>
+                        Ми створюємо безпечну і доступну енергію майбутнього. Ми розвиваємо енергетику в сучасному високотехнологічному світі, що швидко змінюється, щоб наші споживачі були впевнені у тому, що їх сьогоденні та майбутні потреби в енергії будуть гарантовано задоволені
+                        у безпечний, надійний та ефективний спосіб.
+                    </p>
+                    <p>
+                        Ефективна система корпоративних підрозділів, які орієнтовані на замовників, постійно вдосконалюються і здатні впроваджувати швидкі зміни.
+                    </p>
+                    <p>
+                        Підприємство, що створює можливості для реалізації та розвитку потенціалу працівників, які є відповідальними і сильними професіоналами і прагнуть бути потрібними людям і корисними суспільству.
+                    </p>
+                </div>
+                <button class="about__btn btn btn-h">Дізнатись більше</button>
+            </div>
+
+
+        </div>
+    </section>
+    <section class=" news ">
+        <div class="container">
+            <div class="news__wrap">
+                <div class="news__title title t-d" data-aos="fade-down">
+                    <span>Новини</span>
+                </div>
+                <div class="news__slider">
+                    <div class="news__items slide1">
+                        <div class="news__item video">
+                            <img class="news__item-img" src="images/covid-19.png" />
+                            <div class="news__item-title">
+                                <h3>Епідемічна ситуація на Рівненській АЕС станом на 10 липня</h3>
+                            </div>
+                            <span class="news__item-date">
+							10 липня
+						</span>
+                        </div>
+                        <div class="news__item video">
+                            <img class="news__item-img" src="images/2020-03-12_08-41_88360876_2834225239988671_8031683199656525824_o.png" />
+                            <div class="news__item-title">
+                                <h3>На Рівненській АЕС триває технічне обслуговування електротехнічного обладнання.</h3>
+                            </div>
+                            <span class="news__item-date">
+							10 липня
+						</span>
+                        </div>
+                        <div class="news__item video">
+                            <img class="news__item-img" src="images/2020-07-03_15-43_Blue_and_White3.png" />
+                            <div class="news__item-title">
+                                <h3>Цьогоріч на РАЕС вже працевлаштовано 11 випускників профільних вишів.</h3>
+                            </div>
+                            <span class="news__item-date">
+							10 липня
+						</span>
+                        </div>
+                    </div>
+                    <div class="news__items slide2">
+
+                        <div class="news__item video">
+                            <img class="news__item-img" src="images/choven.jpg" />
+                            <div class="news__item-title">
+                                <h3>У червні показники якості скидної води залишалися незмінними</h3>
+                            </div>
+                            <span class="news__item-date">
+							10 липня
+						</span>
+                        </div>
+                        <div class="news__item video">
+                            <img class="news__item-img" src="images/covid-19.png" />
+                            <div class="news__item-title">
+                                <h3>Епідемічна ситуація на Рівненській АЕС станом на 10 липня</h3>
+                            </div>
+                            <span class="news__item-date">
+							10 липня
+						</span>
+                        </div>
+                        <div class="news__item video">
+                            <img class="news__item-img" src="images/2020-07-03_15-43_Blue_and_White3.png" />
+                            <div class="news__item-title">
+                                <h3>Цьогоріч на РАЕС вже працевлаштовано 11 випускників профільних вишів.</h3>
+                            </div>
+                            <span class="news__item-date">
+							10 липня
+						</span>
+                        </div>
+                    </div>
+                    <div class="news__items slide3">
+                        <div class="news__item video">
+                            <img class="news__item-img" src="images/rok-b-o.jpg" />
+                            <div class="news__item-title">
+                                <h3>РОК «Біле озеро» відкриває оздоровчий сезон для працівників РАЕС</h3>
+                            </div>
+                            <span class="news__item-date">
+							10 липня
+						</span>
+                        </div>
+                        <div class="news__item video">
+                            <img class="news__item-img" src="images/covid-19.png" />
+                            <div class="news__item-title">
+                                <h3>Епідемічна ситуація на Рівненській АЕС станом на 10 липня</h3>
+                            </div>
+                            <span class="news__item-date">
+							10 липня
+						</span>
+                        </div>
+                        <div class="news__item video">
+                            <img class="news__item-img" src="images/2020-03-12_08-41_88360876_2834225239988671_8031683199656525824_o.png" />
+                            <div class="news__item-title">
+                                <h3>На Рівненській АЕС триває технічне обслуговування електротехнічного обладнання.</h3>
+                            </div>
+                            <span class="news__item-date">
+							10 липня
+						</span>
+                        </div>
+
+                    </div>
+                </div>
+                <button class="news__btn btn btn-d">Усі новини</button>
+            </div>
+        </div>
+    </section>
+    <section class=" why ">
+        <div class="container">
+            <div class="why__wrap">
+                <div class="why__title title t-h" data-aos="fade-down">
+                    <span>Чому АЕС</span>
+                </div>
+                <div class="why__items">
+                    <div class="why__item">
+                        <span class="why__item-icon" data-aos="zoom-in"><i class="fas fa-shield-alt"></i></span>
+                        <div class="why__item_content">
+                            <div class="why__item-title">
+                                <h3 class="h2"><a href="#">Безпека</a></h3>
+                            </div>
+                            <div class="why__item-text t1">
+                                Є вищим пріоритетом та переважає над економічністю та ефективністю
+                            </div>
+                        </div>
+                    </div>
+                    <div class="why__item">
+                        <span class="why__item-icon" data-aos="zoom-in"><i class="fas fa-leaf"></i></span>
+                        <div class="why__item-content">
+                            <div class="why__item-title">
+                                <h3 class="h2"><a href="#">Екологічність</a></h3>
+                            </div>
+                            <div class="why__item-text t1">
+                                Я ніколи не буваю таким зайнятим, як в часи свого дозвілля.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="why__item">
+                        <span class="why__item-icon" data-aos="zoom-in"><i class="fas fa-flask"></i></span>
+                        <div class="why__item-content">
+                            <div class="why__item-title">
+                                <h3 class="h2"><a href="#">CO2</a></h3>
+                            </div>
+                            <div class="why__item-text t1">
+                                Вправа і помірність можуть навіть і в старості зберегти до деякої міри колишню силу.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="why__item">
+                        <span class="why__item-icon" data-aos="zoom-in"><i class="fas fa-chart-line"></i></span>
+                        <div class="why__item-content">
+                            <div class="why__item-title">
+                                <h3 class="h2"><a href="#">Надійність</a></h3>
+                            </div>
+                            <div class="why__item-text t1">
+                                Забезпечується впровадженням передових технологій та світового досвіду
+                            </div>
+                        </div>
+                    </div>
+                    <div class="why__item">
+                        <span class="why__item-icon" data-aos="zoom-in"><i class="fas fa-cogs"></i></span>
+                        <div class="why__item-content">
+                            <div class="why__item-title">
+                                <h3 class="h2"><a href="#">Стабільність</a></h3>
+                            </div>
+                            <div class="why__item-text t1">
+                                Сильні уми обговорюють ідеї, посередні уми обговорюють події, слабкі уми обговорюють людей.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="why__item">
+                        <span class="why__item-icon" data-aos="zoom-in"><i class="fas fa-check-circle"></i></span>
+                        <div class="why__item-content">
+                            <div class="why__item-title">
+                                <h3 class="h2"><a href="#">Доступність</a></h3>
+                            </div>
+                            <div class="why__item-text t1">
+                                Яка людина, будучи рабом задоволень, не зіпсує свого тіла і душі.
+                            </div>
+                        </div>
+                    </div>
+                    <button class="news__btn btn btn-h">Детальніше</button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section class=" people ">
+        <div class="container">
+            <div class="people__wrap">
+                <div class="people__title title t-d " data-aos="fade-down">
+                    <span>Громаді</span>
+                </div>
+                <div class="people__items">
+                    <div class="people__item">
+                        <div class="people__item-img" style="background-image: url(images/people/carer.png);">
+
+                        </div>
+                        <div class="people__item-title" data-aos="zoom-in">
+                            <h3 class="h2">Карє'ра</h3>
+                        </div>
+                    </div>
+                    <div class="people__item">
+                        <div class="people__item-img" style="background-image: url(images/people/rozv.png);">
+
+                        </div>
+                        <div class="people__item-title" data-aos="zoom-in">
+                            <h3 class="h2">Розвиток регіону</h3>
+                        </div>
+                    </div>
+                    <div class="people__item">
+                        <div class="people__item-img" style="background-image: url(images/people/ozdor.png);">
+
+                        </div>
+                        <div class="people__item-title" data-aos="zoom-in">
+                            <h3 class="h2">Оздоровлення</h3>
+                        </div>
+                    </div>
+                    <div class="people__item">
+                        <div class="people__item-img" style="background-image: url(images/people/cultur.png);">
+
+                        </div>
+                        <div class="people__item-title" data-aos="zoom-in">
+                            <h3 class="h2">Культура</h3>
+                        </div>
+                    </div>
+                    <div class="people__item">
+                        <div class="people__item-img" style="background-image: url(images/people/sport.png);">
+
+                        </div>
+                        <div class="people__item-title" data-aos="zoom-in">
+                            <h3 class="h2">Спорт</h3>
+                        </div>
+                    </div>
+                    <div class="people__item">
+                        <div class="people__item-img" style="background-image: url(images/people/gotel.png);">
+
+                        </div>
+                        <div class="people__item-title" data-aos="zoom-in">
+                            <h3 class="h2">Готель Вараш</h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <footer class=" footer ">
+
+        
+        <div class="container">
+            <div class="footer__content">
+
+                <div class="footer__mail">
+                    <div class="footer__contact">
+                        <h4 class="footer__title h3">Контакти</h4>
+                        <p>Рівненська АЕС</p>
+                        <p>м. Вараш</p>
+                        <p>Рівненська обл.</p>
+                        <p>34400</p>
+                        <p>Україна</p>
+                        <p><a href="mailtooffice@rnpp.atom.gov.ua">office@rnpp.atom.gov.ua</a></p>
+                        <p><a href="mailto:pr@rnpp.atom.gov.ua">pr@rnpp.atom.gov.ua</a></p>
+                    </div>
+                    <div class="footer__info">
+                        <h4 class="footer__title h3">Інформаційний центр</h4>
+                        <p>+38 (03636) 64-123</p>
+                        <p><a href="mailto:info@info.atom.gov.ua">info@rnpp.atom.gov.ua</a></p>
+                    </div>
+                </div>
+                <div class="footer__link">
+                    <h4 class="footer__title h3">Посилання</h4>
+                    <ul class="footer__link-links">
+                        <li class="footer__link-link"><a href="">НАЕК "Енергоатом"</a></li>
+                        <li class="footer__link-link"><a href="">Хмельницька АЕС</a></li>
+                        <li class="footer__link-link"><a href="">Запорізька АЕС</a></li>
+                        <li class="footer__link-link"><a href="">Южно-Українська АЕС</a></li>
+                        <li class="footer__link-link"><a href="">Український ядерний форум</a></li>
+                        <li class="footer__link-link"><a href="">Атомпрофспілка</a></li>
+                        <li class="footer__link-link"><a href="">Чорнобильська АЕС</a></li>
+                        <li class="footer__link-link"><a href="">Українське ядерне товариство</a></li>
+
+                    </ul>
+                    <span class="footer__link-politic"><a href="">Політика конфедеційності та захисту персональних даних</a></span>
+                </div>
+                <div class="footer__required">
+
+                    <img class="footer__logo" src="images/logo-naek.png" alt="">
+                    <div class="footer__trustbox">
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="footer__wrap"></div>
+        <div class="footer__copy t3">
+            <div class="container">
+                <p>©2020, Рівненська Атомна Електростанція. Усі права захищено.</p>
+                <p>Копіювання, публікування або інше поширення інформації, у т.ч. окремих частин текстів чи зображень, розміщених на веб-сайті ВП РАЕС, без письмового дозволу забороняється. <a href="mailto:pr@rnpp.atom.gov.ua">pr@rnpp.atom.gov.ua</a></p>
+            </div>
+        </div>
+        <!-- </div> -->
+    </footer>
+    <script src="js/jquery.min.js "></script>
+    <script src="js/aos.js "></script>
+    <script src="js/scrollax.min.js "></script>
+    <script src="js/bootstrap.min.js "></script>
+    <script src="js/slick.min.js "></script>
+    <script src="js/main.js "></script>
+
+</body>
+
+</html>

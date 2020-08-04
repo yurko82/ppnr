@@ -208,7 +208,6 @@ $(function() {
 
     if ($(window).width() > 999) {
         $('i.fas.fa-search').click(function() {
-            $(this).toggleClass("fa-window-close");
             $('.navbar__form').toggleClass("active");
         });
     };
