@@ -1047,20 +1047,25 @@
         justify-content: start;
         position: relative;
     }
-    
-    .about__img {
+
+     .about__wrap::before {
+        content:'';        
         min-width: 50%;
+        background-image: url(../images/about.jpg);
+        -webkit-background-size: cover;
         background-size: cover;
         transform: scale(-1, 1);
         display: none;
     }
     
+     
     .about__content {
         padding: 0 15px 0 15px;
         color: #fff;
         position: relative;
         max-width: 635px;
     }
+   
     
     .about__text {
         /*margin-bottom: 40px;*/
@@ -1070,7 +1075,7 @@
     .about__btn {}
     
     @media(min-width: 768px) {
-        .about__img {
+        .about__wrap::before {
             display: block;
         }
     }
