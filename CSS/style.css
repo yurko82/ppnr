@@ -524,6 +524,9 @@
         color: #0061a3;
         height: 60px;
     }
+    .navbar a{
+        color: #005B99;
+    }
     
     .navbar-collapse {
         display: block;
@@ -1078,6 +1081,14 @@
         .about__wrap::before {
             display: block;
         }
+        .about__text {
+        font-size: 16px;
+        }
+    }
+     @media(min-width: 1280px) {
+        .about__text {
+        font-size: 18px;
+        }
     }
     /*----about end----*/
     /*----news start----*/
@@ -1108,25 +1119,25 @@
         background-color: #eeeeee;
         position: relative;
     }
-    .news__item::before{
+    /*.news__item::before{
         content: '';
         position: absolute;
         display: inline-block;
         width: 100%;
         height: 100%;
         background-color:rgba(0,0,0,0.6);
-    }
+    }*/
     
     .news__item-title {
-        text-align:center;
-        height: 120px;
-        position: absolute;
-        top: 50%;
-        margin: -80px 0 0 0;
+        /*text-align:center;*/
+        height: 110px;
+        /*position: absolute;*/
+        /*top: 50%;*/
+        /*margin: -80px 0 0 0;*/
 
     }
 
-    .news__item-title::before{
+    /*.news__item-title::before{
         content: '';
         background-image: url(../images/logo.png);
         width: 80px;
@@ -1134,17 +1145,17 @@
         -webkit-background-size: cover;
         background-size: cover;
         display: inline-block;
-    }
+    }*/
     
     .news__item-title h3 {
-        font-size: 20px;
+        font-size: 16px;
         font-style: normal;
-        font-weight: 500;
-        color: #fff;
+        font-weight: 400;
+        color: #505050;
         padding: 10px;
-        margin: 0 40px;
-        border-bottom:1px solid #fff;
-        border-top: 1px solid #fff;
+        /*margin: 0 40px;*/
+        /*border-bottom:1px solid #fff;
+        border-top: 1px solid #fff;*/
     }
         
     .news__item-date {
@@ -1324,12 +1335,7 @@
     
     .footer {
         background-color: #005B99;
-    }
-    
-    .footer__wrap {
-        background-image: url(../images/pattern_oo_white.png);
-        background-repeat: no-repeat;
-        background-position: bottom right;
+        position:relative;
     }
     
     .footer__title {
@@ -1348,6 +1354,18 @@
         -ms-flex-direction: column;
         -o-flex-direction: column;
         flex-direction: column;
+    }
+
+    .footer__content::before {
+        content: '';
+        position: absolute;
+        display: block;
+        background-image: url(../images/pattern_oo_white.png);
+        width: 284px;
+        height: 244px;
+        right: 0px;
+        bottom: 82px;
+        opacity: 0.25;
     }
     
     .footer__content a {
@@ -1369,7 +1387,7 @@
     }
     
     .footer__logo {
-        padding-top: 50px;
+        padding-top: 20px;
     }
     
     @media(min-width: 768px) {
