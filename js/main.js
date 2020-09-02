@@ -211,11 +211,23 @@ $(function() {
             $(this).toggleClass("fa-window-close");
             $('.navbar__form').toggleClass("active");
         });
+    //scroll page - menu
+
+        $(window).on("scroll", function(){
+            if($(window).scrollTop() > 90)
+                $('.header').addClass('scroll_page');
+            else
+                $('.header').removeClass('scroll_page');
+        }); 
+           
     };
+     
 
      $('i.fas.fa-th-list').click(function() {
             $('.news__block, .allnews__block').toggleClass("gallery");
         });
+
+    
 
 
 });
