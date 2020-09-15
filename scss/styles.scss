@@ -34,6 +34,8 @@
     $grey4:#999999;
     $grey5:#d1d1d1;
     $grey6:#eeeeee;
+
+
     
     * {
         -webkit-box-sizing: border-box;
@@ -65,6 +67,7 @@
     a:hover {
         text-decoration: unset;
     }
+
     
     body {
         font-family: 'Gotham Pro';
@@ -116,6 +119,25 @@
     .mt120{
     margin-top: 120px;
     }
+    .bg_bl-4{
+        background-color: $blue4;
+    }
+    .bg_r-3{
+        background-color: $red3;
+    }
+    .bg_r-2{
+        background-color: $red2;
+    }
+    .bg_r-1{
+        background-color: $red1;
+    }
+    .bg_gr-2{
+        background-color: $green2;
+    }
+    .bg_gr-3{
+        background-color: $green3;
+    }
+
     
     .h1 {
         margin: 0;
@@ -1111,6 +1133,7 @@
                 position: absolute;
                 right: 16px;
                 bottom: 16px;
+                padding: 0px 8px;
                 & h3 {
                     font-weight: 400;
                 }
@@ -1118,11 +1141,10 @@
         }   
         @media(min-width: 480px) {
             &__item {
-                height: 220px;
+                height: 240px;
                 padding: 8px;
             }
             &__item-title {
-                margin: 8px;
                 & h3 {
                     line-height: 32px;
                 }
@@ -1137,11 +1159,10 @@
             }
             &__item {
                 width: 33.33333%;
-                height: 220px;
+                height: 240px;
                 padding: 8px;
             }
             &__item-title {
-                margin: 8px;
                 & h3 {
                     line-height: 32px;
                 }
