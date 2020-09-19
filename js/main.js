@@ -222,10 +222,22 @@ $(function() {
            
     };
      
-
-     $('i.fas.fa-th-list').click(function() {
+    
+    $('.news-type').on('click', function() {
+        if($(this).children('i').hasClass("fa-th")){
+            $(this).children('i').removeClass("fa-th").addClass("fa-bars");
             $('.news__block, .allnews__block').toggleClass("gallery");
-        });
+        }
+        else if($(this).children('i').hasClass("fa-bars")){
+            $(this).children('i').removeClass("fa-bars").addClass("fa-th-list");
+            $('.news__block, .allnews__block').toggleClass("gallery");
+            $('.news__block-img').css("display","none");
+        }
+        else {
+            $(this).children('i').removeClass("fa-th-list").addClass("fa-th");
+            $('.news__block-img').css("display","block");
+        }
+    });
 
     
 
