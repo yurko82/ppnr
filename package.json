@@ -1,0 +1,22 @@
+{
+  "name": "ppnr",
+  "version": "1.0.0",
+  "description": "new site rnpp",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yurko82/ppnr.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yurko82/ppnr/issues"
+  },
+  "homepage": "https://github.com/yurko82/ppnr#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
+}
