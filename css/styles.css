@@ -513,11 +513,13 @@ img {
 .btn-h {
   color: #ffffff;
   border: 1px solid #ffffff;
+  cursor: pointer;
 }
 
 .btn-d {
   color: #505050;
   border: 1px solid #757575;
+  cursor: pointer;
 }
 
 .overlay {
@@ -1567,7 +1569,7 @@ img {
   padding: 40px 0;
 }
 
-.allnews .allnews__head-btn {
+.allnews__head-btn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1577,8 +1579,17 @@ img {
   color: #005B99;
 }
 
-.allnews .allnews__head-btn li {
+.allnews__head-btn li {
   margin: 0 5px;
+}
+
+.allnews__btn {
+  text-align: center;
+  padding: 24px 0;
+}
+
+.allnews__btn button {
+  padding: 8px;
 }
 
 .news__block {

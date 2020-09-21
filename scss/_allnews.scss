@@ -9,7 +9,7 @@
             padding: 40px 0;
         }
     }
-    .allnews__head-btn{
+    &__head-btn{
         display: flex;
         justify-content: flex-end;
         color: #005B99;
@@ -17,6 +17,14 @@
             margin: 0 5px;
         }
     }
+    &__btn{
+        text-align: center;
+        padding: 24px 0;
+        & button{
+            padding: 8px;
+        }
+    }
+
 }
 .news__block{
     margin-top: 20px;
