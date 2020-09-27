@@ -157,9 +157,6 @@ $(function() {
         duration: 1200,
     });
 
-    // Scrollax
-    $.Scrollax();
-
     //widget 
     $('.widget .slick-dots li  button').click(function() {
         var $bgColor = $(this).css("background-color");
