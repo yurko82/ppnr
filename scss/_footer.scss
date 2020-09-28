@@ -1,0 +1,53 @@
+@import "_colors";
+
+.footer {
+    background-color: #005B99;
+    position:relative;
+    &__title {
+        font-weight: 400;
+        color: #fff;
+        padding: 20px 0 10px 0;
+    }
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        color: $grey5;
+        padding-bottom: 30px;
+        flex-direction: column;
+        &::before {
+            content: '';
+            position: absolute;
+            display: block;
+            background-image: url(../images/pattern_oo_white.png);
+            width: 284px;
+            height: 244px;
+            right: 0px;
+            bottom: 82px;
+            opacity: 0.05;
+        }
+        & a{
+            color: $blue5;
+        }
+    }
+    &__copy {
+        padding: 20px 0;
+        color: $grey4;
+        background-color: #113d6e;
+    }
+    &__logo {
+        padding-top: 20px;
+    }
+    @media(min-width: 768px) {
+        &__content {
+            flex-direction: row;
+        }
+    }
+    @media (min-width: 1000px) {
+        &__mail {
+            width: 30%;
+        }
+        &__link {
+            width: 30%;
+        }
+    }
+}

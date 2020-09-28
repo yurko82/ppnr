@@ -31,10 +31,11 @@
     "gulp-ttf2woff2": "^3.0.0",
     "gulp-uglify-js": "0.0.4",
     "gulp-webp": "^4.0.1",
-    "gulp-webpcss": "^1.1.1"
+    "gulp-webpcss": "^1.1.1",
+    "gulp-webp-html": "^1.0.2",
+    "gulp-imagemin": "^7.1.0"
   },
   "dependencies": {
-    "gulp-imagemin": "^7.1.0",
-    "gulp-webp-html": "^1.0.2"
+    
   }
 }

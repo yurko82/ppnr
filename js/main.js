@@ -154,7 +154,9 @@ $(function() {
     });
 
     AOS.init({
-        duration: 1200,
+        duration: 800,
+        offset: 30,
+        once: true
     });
 
     //widget 
