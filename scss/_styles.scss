@@ -11,28 +11,12 @@
     @import "_fonts"; 
     @import "_colors";
 
-    * {
+    *, *::before, *::after  {
         -webkit-box-sizing: border-box;
         box-sizing: border-box;
     }
-    
-    *::before {
-        -webkit-box-sizing: border-box;
-        box-sizing: border-box;
-    }
-    
-    *::after {
-        -webkit-box-sizing: border-box;
-        box-sizing: border-box;
-    }
-    
-    ul[class] {
-        padding: 0;
-        margin: 0;
-        list-style: none;
-    }
-    
-    ol[class] {
+
+    ul[class], ol[class] {
         padding: 0;
         margin: 0;
         list-style: none;
@@ -90,29 +74,14 @@
             justify-content: center;
         }
     }    
-    .mt120{
-    margin-top: 120px;
-    }
-    .bg_bl-4{
-        background-color: $blue4;
-    }
-    .bg_r-3{
-        background-color: $red3;
-    }
-    .bg_r-2{
-        background-color: $red2;
-    }
-    .bg_r-1{
-        background-color: $red1;
-    }
-    .bg_gr-2{
-        background-color: $green2;
-    }
-    .bg_gr-3{
-        background-color: $green3;
-    }
+    .mt120{  margin-top: 120px;  }
+    .bg_bl-4{  background-color: $blue4;  }
+    .bg_r-3{   background-color: $red3;   }
+    .bg_r-2{   background-color: $red2;   }
+    .bg_r-1{   background-color: $red1;   }
+    .bg_gr-2{  background-color: $green2; }
+    .bg_gr-3{  background-color: $green3; }
 
-    
     .h1 {
         margin: 0;
         font-size: 20px;
@@ -252,7 +221,6 @@
     h1,h2,h3,h4,p,li,figure,figcaption,dl,dd {
         margin: 0;
     }
-     
     
     a:not([class]) {
         text-decoration-skip-ink: auto;
@@ -415,22 +383,8 @@
         position: absolute;
     }
 
-    /*scroll_page-menu -- start*/
-    .scroll_page {
-        box-shadow: 0px 5px 10px -5px rgba(50, 50, 50, 0.5); 
-        & .navbar{
-            height: 60px;
-            transition: 0.5s;
-        }
-        & .logo img{
-            width: 100px;
-            transition: 0.5s;
-        }
-        & .header__social{
-            display: none;
-        }
-    }
-    /*scroll_page-menu -- end*/
+    .shadow{ box-shadow: 0px 5px 10px -5px rgba(50, 50, 50, 0.5); }
+    .pointer { cursor: pointer; }
 
     // @mixin font($font_name, $file_name, $weight, $height){
     //     @font-face {

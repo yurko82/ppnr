@@ -7,28 +7,12 @@
 /* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
 /* Упрощаем работу с изображениями */
 /* END CLEANER */
-* {
+*, *::before, *::after {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-*::before {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-*::after {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-ul[class] {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-ol[class] {
+ul[class], ol[class] {
   padding: 0;
   margin: 0;
   list-style: none;
@@ -530,29 +514,15 @@ img {
   position: absolute;
 }
 
-/*scroll_page-menu -- start*/
-.scroll_page {
+.shadow {
   -webkit-box-shadow: 0px 5px 10px -5px rgba(50, 50, 50, 0.5);
           box-shadow: 0px 5px 10px -5px rgba(50, 50, 50, 0.5);
 }
 
-.scroll_page .navbar {
-  height: 60px;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+.pointer {
+  cursor: pointer;
 }
 
-.scroll_page .logo img {
-  width: 100px;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-}
-
-.scroll_page .header__social {
-  display: none;
-}
-
-/*scroll_page-menu -- end*/
 .header {
   background-color: #fff;
   max-height: 60px;
@@ -676,6 +646,24 @@ img {
   font-weight: 300;
 }
 
+/*scroll_page-menu -- start*/
+.scroll_page .navbar {
+  height: 60px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.scroll_page .logo img {
+  width: 100px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.scroll_page .header__social {
+  top: -49px;
+}
+
+/*scroll_page-menu -- end*/
 @media (min-width: 768px) {
   .header {
     max-height: 90px;
@@ -769,6 +757,8 @@ img {
     right: 0;
     top: 11px;
     z-index: 99999;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
   }
   .header__social-icons {
     display: -webkit-box;
@@ -821,7 +811,7 @@ img {
   height: 244px;
   right: 0px;
   bottom: 82px;
-  opacity: 0.25;
+  opacity: 0.05;
 }
 
 .footer__content a {

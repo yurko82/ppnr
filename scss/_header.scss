@@ -70,8 +70,8 @@
     
     & .dropdown-item{
         &:hover {
-        text-decoration: none;
-        background-color: $blue2;
+            text-decoration: none;
+            background-color: $blue2;
         }
         
     }
@@ -113,6 +113,23 @@
     //     top: 22px;
     // }
 }
+
+    /*scroll_page-menu -- start*/
+    .scroll_page {
+        & .navbar{
+            height: 60px;
+            transition: 0.5s;
+        }
+        & .logo img{
+            width: 100px;
+            transition: 0.5s;
+        }
+        & .header__social{
+            //display: none;
+            top:-49px;
+        }
+    }
+    /*scroll_page-menu -- end*/
 
 @media (min-width: 768px) {
     .header {
@@ -189,7 +206,6 @@
     .logo img {
         width: 200px;
     }
-    
 }
 
 @media (min-width: 1000px) {
@@ -202,6 +218,7 @@
         right: 0;
         top: 11px;
         z-index: 99999;
+        transition: 0.5s;
     }
     .header__social-icons {
         display: -webkit-box;
