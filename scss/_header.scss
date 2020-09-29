@@ -3,9 +3,6 @@
 .header {
     background-color: #fff;
     max-height: 60px;
-    &__social {
-        display: none;
-    }
 }    
 
 .navbar {
@@ -69,9 +66,11 @@
     }
     
     & .dropdown-item{
+        padding: 0.5rem 1.5rem;
+        cursor: pointer;
         &:hover {
             text-decoration: none;
-            background-color: $blue2;
+            background-color: $blue3;
         }
         
     }
@@ -79,12 +78,23 @@
         background-color: $blue2;
     }
     & .nav-item.show a {
-        color: $blue5 !important;
+        color: $blue6 !important;
         &:hover{
             color: $red5 !important;
         }
     }
 }
+
+// .dropdown:hover>.dropdown-menu {
+//     display: block;
+//   }
+  
+//   .dropdown>.dropdown-toggle:active {
+//     /*Without this, clicking will make it sticky*/
+//       pointer-events: none;
+//   }
+
+
 .dropdown-toggle:after {
     display: none;
 }
@@ -114,22 +124,22 @@
     // }
 }
 
-    /*scroll_page-menu -- start*/
-    .scroll_page {
-        & .navbar{
-            height: 60px;
-            transition: 0.5s;
-        }
-        & .logo img{
-            width: 100px;
-            transition: 0.5s;
-        }
-        & .header__social{
-            //display: none;
-            top:-49px;
-        }
+/*scroll_page-menu -- start*/
+.scroll_page {
+    & .navbar{
+        height: 60px;
+        transition: 0.5s;
     }
-    /*scroll_page-menu -- end*/
+    & .logo img{
+        width: 100px;
+        transition: 0.5s;
+    }
+    & .header__social{
+        //display: none;
+        top:-49px;
+    }
+}
+/*scroll_page-menu -- end*/
 
 @media (min-width: 768px) {
     .header {
@@ -213,7 +223,7 @@
         max-height: 120px;
     }
     .header__social {
-        display: inline-block;
+        display: flex;
         position: absolute;
         right: 0;
         top: 11px;
