@@ -55,24 +55,10 @@
     }
     &-nav {
         padding-bottom: 30px;
-    }        
+    }
     & .dropdown-toggle {
         cursor: pointer;
     }
-    // & .dropdown-menu a {
-    //     cursor: pointer;
-    //     color: #fff;
-    //     font-weight: 300;
-    // }
-    
-    // & .dropdown-item{
-    //     cursor: pointer;
-    //     &:hover {
-    //         text-decoration: none;
-    //         background-color: $blue3;
-    //     }
-        
-    // }
     & .dropdown-menu{
         border: none;
         border-radius: 0;
@@ -87,16 +73,8 @@
     & .dropdown>.dropdown-toggle:active { /*Without this, clicking will make it sticky*/
         pointer-events: none;
     }
-    // & .show{
-    //     background-color: $blue2;
-    // }
-    // & .nav-item.show a {
-    //     // color: $blue6 !important;
-    //     &:hover{
-    //         color: $red5 !important;
-    //     }
-    // }
 }
+.marginleftfix{margin-left: 0 !important;}
 
 .dropdown-toggle:after {
     display: none;
@@ -105,13 +83,24 @@
     flex-grow: 1;
     /*margin-left: 18px;*/
 }
-ul.navbar-nav :hover {
+ul.navbar-nav .on-hover {
     background-color: $blue2;
-    color: $red5;
+    & a.nav-link {
+        color: $red5;
+    }
+    & ul {
+        background-color: $blue2;
+        & a {
+            color: $blue5;
+        }
+        & li:hover {
+            background-color: $blue3;
+            & >a {
+                color: $red5;
+            }
+        }
+    }
 }
-// .nav-item a:hover {
-//     color: $red5;
-// }
 
 .nav-link {
     text-transform: uppercase;
