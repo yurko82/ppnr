@@ -523,6 +523,14 @@ img {
   cursor: pointer;
 }
 
+.bold {
+  font-weight: 700;
+}
+
+.regular {
+  font-weight: 300;
+}
+
 .header {
   background-color: #fff;
   max-height: 60px;
@@ -1375,10 +1383,11 @@ ul.navbar-nav .on-hover ul li:hover > a {
 }
 
 .why__item-icon i {
-  font-size: 42px;
+  font-size: 60px;
   color: #fff;
   margin: 0 20px 0 0;
-  width: 42px;
+  width: 80px;
+  text-align: right;
 }
 
 .why__item-title h3 {

@@ -385,6 +385,8 @@
 
     .shadow{ box-shadow: 0 2px 3px -2px rgba(50, 50, 50, 0.5); }
     .pointer { cursor: pointer; }
+    .bold { font-weight: 700; } 
+    .regular { font-weight: 300; } 
 
     // @mixin font($font_name, $file_name, $weight, $height){
     //     @font-face {
