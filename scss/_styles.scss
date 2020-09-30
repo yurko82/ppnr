@@ -403,8 +403,16 @@
 
     .shadow{ box-shadow: 0 2px 3px -2px rgba(50, 50, 50, 0.5); }
     .pointer { cursor: pointer; }
-    .bold { font-weight: 700; } 
-    .regular { font-weight: 300; } 
+
+    .font-thin { font-weight: 100; } 
+    .font-extra-light { font-weight: 200; } 
+    .font-light { font-weight: 300; } 
+    .font-regular { font-weight: 400; } 
+    .font-medium { font-weight: 500; } 
+    .font-semi-bold { font-weight: 600; } 
+    .font-bold { font-weight: 700; } 
+    .font-extra-bold { font-weight: 700; } 
+    .font-black { font-weight: 700; } 
 
     // @mixin font($font_name, $file_name, $weight, $height){
     //     @font-face {

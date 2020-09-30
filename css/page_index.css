@@ -548,12 +548,40 @@ img {
   cursor: pointer;
 }
 
-.bold {
+.font-thin {
+  font-weight: 100;
+}
+
+.font-extra-light {
+  font-weight: 200;
+}
+
+.font-light {
+  font-weight: 300;
+}
+
+.font-regular {
+  font-weight: 400;
+}
+
+.font-medium {
+  font-weight: 500;
+}
+
+.font-semi-bold {
+  font-weight: 600;
+}
+
+.font-bold {
   font-weight: 700;
 }
 
-.regular {
-  font-weight: 300;
+.font-extra-bold {
+  font-weight: 700;
+}
+
+.font-black {
+  font-weight: 700;
 }
 
 .header {
@@ -901,7 +929,6 @@ ul.navbar-nav .on-hover ul li:hover > a {
 .head-slider__item {
   width: 100%;
   height: 100%;
-  position: inherit;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top center;
@@ -965,11 +992,10 @@ ul.navbar-nav .on-hover ul li:hover > a {
 .head-slider__overlay {
   /*background: -webkit-gradient(linear, left top, right top, color-stop(2%, #005B99), color-stop(50%, transparent));
     background: linear-gradient(to right, #005B99 2%, transparent 50%);*/
-  background-color: #005b99;
+  background-image: url(../images/img/grid.png);
   height: 100vh;
   width: 100%;
   position: absolute;
-  opacity: 0.2;
 }
 
 .head-slider .slick-track {
@@ -995,12 +1021,13 @@ ul.navbar-nav .on-hover ul li:hover > a {
   background-color: transparent;
   border: none;
   padding: 5px;
+  cursor: pointer;
 }
 
 .head-slider .slick-dots li button::before {
   content: "";
   width: 32px;
-  height: 8px;
+  height: 12px;
   border: 2px solid #fff;
   /*border-radius: 50%;*/
   display: inline-block;
