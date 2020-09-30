@@ -457,6 +457,10 @@ img {
   margin: 20px 0 20px auto;
 }
 
+.btn a {
+  color: inherit;
+}
+
 @media (min-width: 480px) {
   .btn {
     height: 32px;
@@ -495,15 +499,36 @@ img {
 }
 
 .btn-h {
-  color: #ffffff;
-  border: 1px solid #ffffff;
-  cursor: pointer;
+  color: white;
+  border: 1px solid white;
+}
+
+.btn-h:hover {
+  background-color: white;
+  border-color: #005b99;
+  color: #005b99;
 }
 
 .btn-d {
   color: #505050;
   border: 1px solid #757575;
-  cursor: pointer;
+}
+
+.btn-d:hover {
+  background-color: #005b99;
+  border-color: #005b99;
+  color: white;
+}
+
+.btn-g {
+  color: white;
+  border: 1px solid white;
+}
+
+.btn-g:hover {
+  background-color: white;
+  border-color: #39b791;
+  color: #39b791;
 }
 
 .overlay {
