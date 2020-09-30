@@ -316,7 +316,6 @@ a:not([class]) {
 }
 
 img {
-  max-width: 100%;
   display: block;
 }
 
@@ -870,4 +869,59 @@ ul.navbar-nav .on-hover ul li:hover > a {
   .footer__link {
     width: 30%;
   }
+}
+
+.news p, .news img {
+  padding-top: 20px;
+}
+
+.news__container {
+  max-width: 900px;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.news__img {
+  height: 800px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.news__head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.news__head-wrap {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.news__quote {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  background: #daf4fa;
+  padding: 0 0 20px 0;
+  font-style: italic;
+}
+
+.news__quote-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.news__quote-text {
+  padding-top: 20px;
+  font-size: 18px;
 }

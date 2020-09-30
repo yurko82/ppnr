@@ -2,3 +2,44 @@
 @import "_header";
 @import "_footer";
  
+.news{
+    & p,img{
+        padding-top: 20px;
+    }
+    &__container{
+        max-width: 900px;
+        width: 100%;
+        // padding: 0 270px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    &__img{
+        height: 800px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    &__head{
+        display: flex;
+        justify-content: space-between;
+        &-wrap{
+            flex: 1;
+        }
+    }
+    &__quote{
+        width: 100vw;
+        margin-left: calc(-50vw + 50%);
+        background: $blue6;
+        padding: 0 0 20px 0;
+    font-style: italic;
+        &-block{
+            display: flex;
+            justify-content: space-between;
+        }
+        &-text{
+            padding-top: 20px;
+            font-size: 18px;
+        }
+               
+    }
+}
