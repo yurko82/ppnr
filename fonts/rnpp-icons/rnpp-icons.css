@@ -1,0 +1,54 @@
+@font-face {
+  font-family: 'rnpp-icons';
+   src: url('rnpp-icons.woff?s8eevm') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'rnpp-icons' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-news3:before {
+  content: "\e900";
+  /* color: #5b5b5b; */
+}
+.icon-news1:before {
+  content: "\e901";
+  /* color: #5b5b5b; */
+}
+.icon-news2:before {
+  content: "\e902";
+  /* color: #5b5b5b; */
+}
+.icon-facebook:before {
+  content: "\e903";
+}
+.icon-instagram:before {
+  content: "\e904";
+}
+.icon-telegram:before {
+  content: "\e905";
+}
+.icon-twitter:before {
+  content: "\e906";
+}
+.icon-youtube:before {
+  content: "\e907";
+}
+.icon-angle-right:before {
+  content: "\e908";
+  /* color: #757575; */
+}
