@@ -1452,12 +1452,15 @@ ul.navbar-nav .on-hover ul li:hover > a, ul.navbar-nav .on-hover ul li:hover > .
   color: #fff;
 }
 
-.why__item-icon i {
-  font-size: 60px;
-  color: #fff;
-  margin: 0 20px 0 0;
+.why__item-icon {
+  margin: -5px 15px 0 0;
   width: 80px;
-  text-align: right;
+  display: inline-block;
+}
+
+.why__item-icon-img {
+  width: 72px;
+  height: auto;
 }
 
 .why__item-title h3 {
