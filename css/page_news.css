@@ -987,6 +987,12 @@ ul.navbar-nav .on-hover ul li:hover > a {
           justify-content: space-between;
 }
 
+.news__quote-block::before {
+  content: "<i class=" fas fa-quote-left "></i>";
+  width: 24px;
+  height: 24px;
+}
+
 .news__quote-text {
   padding-top: 20px;
   font-size: 18px;
