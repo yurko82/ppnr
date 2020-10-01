@@ -18,12 +18,21 @@
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
+        
     }
     &__head{
         display: flex;
         justify-content: space-between;
+        padding: 8px 0;
+        color: $grey4;
         &-wrap{
             flex: 1;
+        }
+    }
+    &__title{
+        color: $blue3;
+        h1{
+            font-weight: 400;
         }
     }
     &__quote{
@@ -33,18 +42,65 @@
         padding: 0 0 20px 0;
     font-style: italic;
         &-block{
+            position: relative;
             display: flex;
             justify-content: space-between;
+            &>i{
+                position: absolute;
+                left: -61px;
+                top: 24px;
+                color: $blue4;
+                font-size: 40px;
+            }
         }
-        &-block::before{
-            content: "<i class="fas fa-quote-left"></i>";
-            width: 24px;
-            height: 24px;
-        }
+        
         &-text{
             padding-top: 20px;
             font-size: 18px;
         }
                
+    }
+    &__img{
+        &-slider{
+            margin-top: 40px;
+            &>.slick-dots{
+                display: flex;
+                position: absolute;
+                left: 0;
+                top: -30px;
+                & button{
+                    padding-right: 5px;
+                    color: $grey2;
+                }
+                &::before{
+                    content: "Фото";
+                    padding-right: 16px;
+                }
+            }
+
+        }
+        &-slid{
+            height: 500px;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+    }
+    &__footer{
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 0;
+        color: $grey2;
+        & a{
+            color: $blue2;
+            border: 1px solid $blue2;
+            padding: 0 3px;
+        }
+        &-autor{
+            font-style: italic;
+            & span{
+                font-style: normal;
+            }
+        }
     }
 }
