@@ -36,6 +36,11 @@
             display: flex;
             justify-content: space-between;
         }
+        &-block::before{
+            content: "<i class="fas fa-quote-left"></i>";
+            width: 24px;
+            height: 24px;
+        }
         &-text{
             padding-top: 20px;
             font-size: 18px;
