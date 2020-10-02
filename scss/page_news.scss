@@ -75,6 +75,8 @@
                 &::before{
                     content: "Фото";
                     padding-right: 16px;
+                    font-size: 18px;
+                    color: $grey4;
                 }
             }
 
@@ -92,15 +94,64 @@
         padding: 20px 0;
         color: $grey2;
         & a{
-            color: $blue2;
-            border: 1px solid $blue2;
+            color: $blue3;
+            border: 1px solid $blue3;
             padding: 0 3px;
+        }
+        &-tags{
+            &>span{
+                font-size: 18px;
+                color: $grey4;
+            }
         }
         &-autor{
             font-style: italic;
             & span{
                 font-style: normal;
+                color: $grey4;
+                font-size: 18px;
             }
+        }
+    }
+    &__social{
+        font-size: 40px;
+        color: $grey4;
+        text-align: center;
+    }
+    &__button{
+        display: flex;
+        justify-content: space-between;
+        padding: 12px 0;
+        & button{
+            padding: 3px;
+        }
+    }
+    &__others{
+        color: $grey4;
+        &>span{
+            font-size: 18px;
+        }
+        &-items{
+            display: flex;
+            justify-content: space-between;
+            margin: 15px 0 20px 0;
+        }
+        &-item{
+            width: 30%;
+            border: 1px solid $grey5;
+            padding: 5px;
+        }
+        &-title{
+            color: $blue3;
+            & h5{
+                font-weight: 400;
+                color: $blue3;
+                font-size: 18px;
+            }
+        }
+        &-footer{
+            display: flex;
+            justify-content: space-between;
         }
     }
 }

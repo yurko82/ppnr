@@ -16,50 +16,52 @@
 <body>
 
     <!------ Include the above in your HEAD tag ---------->
-    <header class="header fixed-top">
+    <header class="header fixed-top shadow">
         <div class="container">
             <div class="header__wrap position-relative">
                 <div class="header__social">
+                    <ul class="header__social-icons pr-4">
+                        <li class="header__social-icon"><a href="https://www.youtube.com/channel/UCRrM8pysKmTiDqlfTPMzyCg"><i class="fab fa-youtube"></i></li></a>
+                        <li class="header__social-icon"><a href="https://www.facebook.com/rnppofficial"><i class="fab fa-facebook"></i></li></a>
+                        <li class="header__social-icon"><a href="https://twitter.com/rnppofficial"><i class="fab fa-twitter-square"></i></li></a>
+                        <li class="header__social-icon"><a href="https://www.instagram.com/rnppofficial"><i class="fab fa-instagram"></i></li></a>
+                        <li class="header__social-icon"><a href="https://t.me/rnppofficial"><i class="fab fa-telegram-plane"></i></li></a>
+                    </ul>
                     <ul class="header__social-icons">
-                        <li class="header__social-icon"><i class="fab fa-youtube"></i></li>
-                        <li class="header__social-icon"><i class="fab fa-facebook"></i></li>
-                        <li class="header__social-icon"><i class="fab fa-twitter-square"></i></li>
-                        <li class="header__social-icon"><i class="fab fa-instagram"></i></li>
-                        <li class="header__social-icon"><i class="fab fa-telegram-plane pr-5"></i></li>
-                        <li class="header__social-icon"><i class="fas fa-search"></i></li>
-                        <li class="header__social-icon"><i class="fa fa-low-vision" title="Перегляд для людей з вадами зору"></i></li>
-                        <li class="header__social-icon">
-                            <img class="ukr d-inline-block" src="../images/ukraine.svg" alt="">
-                        </li>
+                        <li class="header__social-icon"><i class="fas fa-search pointer"></i></li>
+                        <li class="header__social-icon"><i class="fa fa-low-vision pr-3 pointer" title="Перегляд для людей з вадами зору"></i></li>
+                        <li class="header__social-icon"><img class="ukr d-inline-block pointer" src="../images/ukraine.svg" alt=""></li>
                     </ul>
                 </div>
                 <div class="logo-nav">
-                    <nav class="navbar navbar-expand-lg navbar-light align-items-center p-0" role="navigation">
+                    <nav class="navbar navbar-expand-lg  align-items-center p-0" role="navigation">
 
                         <!-- data-target="#navbarCollapse" -->
                         <button class="navbar-toggler" type="button" data-show="false">
                             <span class="navbar-icon"><i class="fas fa-bars"></i></span>
                         </button>
-                        <a href="../index.html" class="logo"><img src="../images/logo-320.svg" alt=""></a>
+                        <a href="index.html" class="logo"><img src="../images/logo.svg" alt=""></a>
                         <div class="navbar__search"><img class="ukr d-inline-block" src="../images/ukraine.svg" alt=""></div>
                         <div class="navbar__sett"><i class="fa fa-low-vision"></i></div>
-                        <div class=" navbar-collapse align-self-end" id="navbarCollapse">
+                        <div class="navbar-collapse align-self-end" id="navbarCollapse">
                             <!-- <form class="form-inline">
                                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
                                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                             </form> -->
                             <ul class="navbar-nav ml-auto">
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" id="dropdown1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Про нас</a>
+                                <li class="nav-item dropdown" >
+                                    <a class="nav-link dropdown-toggle" id="dropdown1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Про нас</a>
                                     <ul class="dropdown-menu" aria-labelledby="dropdown1">
-                                        <li class="dropdown-item dropdown">
+                                        <li class="dropdown-item dropdown dropright">
                                             <a class="dropdown-toggle" id="dropdown1-1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Хто ми</a>
-                                            <ul class="dropdown-menu" aria-labelledby="dropdown1-1">
-                                                <li class="dropdown-item"><a href="#">Місія, бачення, цінності</a></li>
+                                            <span class="icon-angle-right angle-right"></span>
+                                            <ul class="dropdown-menu marginleftfix" aria-labelledby="dropdown1-1">
+                                                <li class="dropdown-item"><a href="about.html">Місія, бачення, цінності</a></li>
                                                 <li class="dropdown-item"><a href="#">Історія</a></li>
-                                                <li class="dropdown-item dropdown">
+                                                <li class="dropdown-item dropdown dropright">
                                                     <a class="dropdown-toggle" id="dropdown1-1-1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Діяльність</a>
-                                                    <ul class="dropdown-menu" aria-labelledby="dropdown1-1-1">
+                                                    <span class="icon-angle-right angle-right"></span>
+                                                    <ul class="dropdown-menu marginleftfix" aria-labelledby="dropdown1-1-1">
                                                         <li class="dropdown-item"><a href="#">Технологія виробництва</a></li>
                                                         <li class="dropdown-item"><a href="#">Заяви</a></li>
                                                         <li class="dropdown-item"><a href="#">Ліцензовані види діяльності</a></li>
@@ -69,9 +71,10 @@
                                                 <li class="dropdown-item"><a href="#">Дізнатися більше</a></li>
                                             </ul>
                                         </li>
-                                        <li class="dropdown-item dropdown">
+                                        <li class="dropdown-item dropdown  dropright">
                                             <a class="dropdown-toggle" id="dropdown1-2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Наша команда</a>
-                                            <ul class="dropdown-menu" aria-labelledby="dropdown1-2">
+                                            <span class="icon-angle-right angle-right"></span>
+                                            <ul class="dropdown-menu marginleftfix" aria-labelledby="dropdown1-2">
                                                 <li class="dropdown-item"><a href="#">Відповідальні лідери</a></li>
                                                 <li class="dropdown-item"><a href="#">Команда професіоналів</a></li>
                                                 <li class="dropdown-item"><a href="#">Працівнику</a></li>
@@ -79,9 +82,10 @@
                                                 <li class="dropdown-item"><a href="#">Нагороди</a></li>
                                             </ul>
                                         </li>
-                                        <li class="dropdown-item dropdown">
+                                        <li class="dropdown-item dropdown  dropright">
                                             <a class="dropdown-toggle" id="dropdown1-3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Наші партнери </a>
-                                            <ul class="dropdown-menu" aria-labelledby="dropdown1-3">
+                                            <span class="icon-angle-right angle-right"></span>
+                                            <ul class="dropdown-menu marginleftfix" aria-labelledby="dropdown1-3">
                                                 <li class="dropdown-item"><a href="#">Профспілка</a></li>
                                                 <li class="dropdown-item"><a href="#">УкрЯТ</a></li>
                                                 <li class="dropdown-item"><a href="#">УЯФ</a></li>
@@ -93,16 +97,16 @@
                                     </ul>
                                 </li>
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" id="dropdown2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Новини</a>
+                                    <a class="nav-link dropdown-toggle" id="dropdown2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Новини</a>
                                     <ul class="dropdown-menu" aria-labelledby="dropdown2-1">
-                                        <li class="dropdown-item"><a href="#">Новини</a></li>
+                                        <li class="dropdown-item"><a href="html/news.html">Новини</a></li>
                                         <li class="dropdown-item"><a href="#">Анонси</a></li>
                                         <li class="dropdown-item"><a href="#">Газета «Енергія»</a></li>
                                         <li class="dropdown-item"><a href="#">Телеканал «Енергоатом»</a></li>
                                     </ul>
                                 </li>
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" id="dropdown3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Чому АЕС</a>
+                                    <a class="nav-link dropdown-toggle" id="dropdown3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Чому АЕС</a>
                                     <ul class="dropdown-menu" aria-labelledby="dropdown3-1">
                                         <li class="dropdown-item"><a href="#">Збереження клімату і чисте довкілля</a></li>
                                         <li class="dropdown-item"><a href="#">Доступна енергія</a></li>
@@ -110,7 +114,10 @@
                                     </ul>
                                 </li>
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" id="dropdown4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Громаді</a>
+                                    <a class="nav-link dropdown-toggle" id="dropdown3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Р5</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" id="dropdown4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Громаді</a>
                                     <ul class="dropdown-menu" aria-labelledby="dropdown4-1">
                                         <li class="dropdown-item"><a href="#">Розвиток регіону</a></li>
                                         <li class="dropdown-item"><a href="#">Спорт</a></li>
@@ -185,6 +192,50 @@
                    <a class="news__tag" href="#">Кубок</a>
                 </div>
                <div class="news__footer-autor"><span>Автор: </span>Петровець Петро</div>
+           </div>
+           <div class="news__social">
+               <i class="fab fa-facebook"></i>
+               <i class="fab fa-twitter-square"></i>
+               <i class="fab fa-telegram"></i>
+           </div>
+           <div class="news__button">
+               <button class="btn-d">Попередня новина</button>
+               <button class="btn-d">Наступна новина</button>
+           </div>
+           <div class="news__others">
+               <span>Читайте також:</span>
+               <div class="news__others-items">
+                   <div class="news__others-item">
+                        <div class="news__others-title"><a href="#"><h5>Кубок на призи профспілки – справжнє спортивне свято міста-супутника РАЕС</h5></a></div>
+                        <div class="news__others-footer">
+                            <span class="news__others-category pr-4"><i class="fas fa-scroll pr-1"></i>Новина</span>
+                            <div class="news__others-datepost">
+                                <span class="news__others-date">2 липня</span>
+                                <span class="news__others-time">16:35</span>
+                            </div>
+                        </div>    
+                   </div>
+                   <div class="news__others-item">
+                        <div class="news__others-title"><a href="#"><h5>Кубок на призи профспілки – справжнє спортивне свято міста-супутника РАЕС </h5></a></div>
+                        <div class="news__others-footer">
+                            <span class="news__others-category pr-4"><i class="fas fa-scroll pr-1"></i>Новина</span>
+                            <div class="news__others-datepost">
+                                <span class="news__others-date">2 липня</span>
+                                <span class="news__others-time">16:35</span>
+                            </div>
+                        </div> 
+                   </div>
+                   <div class="news__others-item">
+                        <div class="news__others-title"><a href="#"><h5>Кубок на призи профспілки – справжнє спортивне свято міста-супутника РАЕС</h5></a></div>
+                        <div class="news__others-footer">
+                            <span class="news__others-category pr-4"><i class="fas fa-scroll pr-1"></i>Новина</span>
+                            <div class="news__others-datepost">
+                                <span class="news__others-date">2 липня</span>
+                                <span class="news__others-time">16:35</span>
+                            </div>
+                        </div> 
+                   </div>
+               </div>
            </div>
        </div>           
     </section>
