@@ -684,7 +684,7 @@ img {
   font-size: 10px;
   margin-left: 8px;
   color: #daf4fa;
-  height: 10px;
+  height: 7px;
 }
 
 .navbar .dropdown:hover > .dropdown-menu {
@@ -890,12 +890,13 @@ ul.navbar-nav .on-hover ul li:hover > a, ul.navbar-nav .on-hover ul li:hover > .
   content: '';
   position: absolute;
   display: block;
-  background-image: url(../images/pattern_oo_white.png);
+  background-image: url(../images/svg/o_naek_blue.svg);
+  background-size: 284px;
   width: 284px;
   height: 244px;
   right: 0px;
-  bottom: 82px;
-  opacity: 0.05;
+  bottom: 70px;
+  opacity: 0.15;
 }
 
 .footer__content a {

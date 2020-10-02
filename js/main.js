@@ -212,6 +212,7 @@
            
     };
     
+    // use only on allnews.html
     $('.news-type').on('click', function() {
         if($(this).children('i').hasClass("fa-th")){
             $(this).children('i').removeClass("fa-th").addClass("fa-bars");
