@@ -38,6 +38,12 @@
         padding: 20px 0;
         color: $grey4;
         background-color: #113d6e;
+        & a{
+            color:#41b6e6;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
     }
     &__logo {
         padding-top: 20px;

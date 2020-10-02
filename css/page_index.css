@@ -543,6 +543,10 @@ img {
           box-shadow: 0 2px 3px -2px rgba(50, 50, 50, 0.5);
 }
 
+.text-shadow {
+  text-shadow: 2px 2px rgba(50, 50, 50, 0.1);
+}
+
 .pointer {
   cursor: pointer;
 }
@@ -913,6 +917,14 @@ ul.navbar-nav .on-hover ul li:hover > a, ul.navbar-nav .on-hover ul li:hover > .
   background-color: #113d6e;
 }
 
+.footer__copy a {
+  color: #41b6e6;
+}
+
+.footer__copy a:hover {
+  text-decoration: underline;
+}
+
 .footer__logo {
   padding-top: 20px;
 }
@@ -956,35 +968,32 @@ ul.navbar-nav .on-hover ul li:hover > a, ul.navbar-nav .on-hover ul li:hover > .
 
 .head-slider__text {
   height: 200px;
-  font-size: 36px;
-  font-family: Gotham Pro;
-  font-weight: 500;
-  font-style: italic;
-  line-height: 42px;
-  letter-spacing: 2px;
   position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 15px;
-  color: #ffffff;
+  bottom: 25%;
+  left: 8%;
   margin: auto;
   z-index: 2;
 }
 
 .head-slider__text span {
-  font-weight: 900;
-  color: #ffeb28;
+  line-height: 42px;
+  letter-spacing: 2px;
+  font-size: 48px;
+  font-family: Gotham Pro;
+  font-weight: 500;
+  font-style: italic;
+  color: #f5f5e8;
 }
 
 @media (min-width: 768px) {
-  .head-slider__text {
+  .head-slider__text span {
     font-size: 48px;
     line-height: 56px;
   }
 }
 
 @media (min-width: 1000px) {
-  .head-slider__text {
+  .head-slider__text span {
     font-size: 60px;
     line-height: 75px;
     letter-spacing: 3px;
@@ -992,7 +1001,7 @@ ul.navbar-nav .on-hover ul li:hover > a, ul.navbar-nav .on-hover ul li:hover > .
 }
 
 @media (min-width: 1280px) {
-  .head-slider__text {
+  .head-slider__text span {
     font-size: 72px;
     line-height: 84px;
     letter-spacing: 4px;
@@ -1000,7 +1009,7 @@ ul.navbar-nav .on-hover ul li:hover > a, ul.navbar-nav .on-hover ul li:hover > .
 }
 
 @media (min-width: 1920px) {
-  .head-slider__text {
+  .head-slider__text span {
     font-size: 90px;
     line-height: 102px;
     letter-spacing: 5px;
@@ -1014,7 +1023,7 @@ ul.navbar-nav .on-hover ul li:hover > a, ul.navbar-nav .on-hover ul li:hover > .
   height: 100vh;
   width: 100%;
   position: absolute;
-  opacity: 0.4;
+  opacity: 0.5;
 }
 
 .head-slider .slick-track {
