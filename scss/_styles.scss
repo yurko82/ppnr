@@ -11,22 +11,16 @@
     @import "_fonts"; 
     @import "_colors";
 
-    *, *::before, *::after  {
-        -webkit-box-sizing: border-box;
-        box-sizing: border-box;
-    }
-
+    *, *::before, *::after  {  -webkit-box-sizing: border-box;  box-sizing: border-box;  }
     ul[class], ol[class] {
         padding: 0;
         margin: 0;
         list-style: none;
     }
-    
-    a:hover {
-        text-decoration: unset;
-    }
-
-    
+    h1,h2,h3,h4,p,li,figure,figcaption,dl,dd { margin: 0; }
+    a:not([class]) {  text-decoration-skip-ink: auto;  }
+    a:hover { text-decoration: unset; }
+    img { display: block; }   
     body {
         font-family: 'Gotham Pro';
         font-style: normal;
@@ -217,19 +211,6 @@
             letter-spacing: 1px;
             }
     }
-
-    h1,h2,h3,h4,p,li,figure,figcaption,dl,dd {
-        margin: 0;
-    }
-    
-    a:not([class]) {
-        text-decoration-skip-ink: auto;
-    }
-    
-    img {
-        // max-width: 100%;
-        display: block;
-    }   
     
     .text1 {
         font-size: 12px;

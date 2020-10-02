@@ -18,8 +18,20 @@ ul[class], ol[class] {
   list-style: none;
 }
 
+h1, h2, h3, h4, p, li, figure, figcaption, dl, dd {
+  margin: 0;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
 a:hover {
   text-decoration: unset;
+}
+
+img {
+  display: block;
 }
 
 body {
@@ -305,18 +317,6 @@ button.next {
     line-height: 14px;
     letter-spacing: 1px;
   }
-}
-
-h1, h2, h3, h4, p, li, figure, figcaption, dl, dd {
-  margin: 0;
-}
-
-a:not([class]) {
-  text-decoration-skip-ink: auto;
-}
-
-img {
-  display: block;
 }
 
 .text1 {
@@ -1023,7 +1023,7 @@ ul.navbar-nav .on-hover ul li:hover > a, ul.navbar-nav .on-hover ul li:hover > .
   height: 100vh;
   width: 100%;
   position: absolute;
-  opacity: 0.5;
+  opacity: 0.3;
 }
 
 .head-slider .slick-track {
@@ -1466,10 +1466,12 @@ ul.navbar-nav .on-hover ul li:hover > a, ul.navbar-nav .on-hover ul li:hover > .
   margin: -5px 15px 0 0;
   width: 80px;
   display: inline-block;
+  text-align: center;
 }
 
 .why__item-icon-img {
-  width: 72px;
+  background-size: 80px;
+  width: 80px;
   height: auto;
 }
 
@@ -1519,16 +1521,15 @@ ul.navbar-nav .on-hover ul li:hover > a, ul.navbar-nav .on-hover ul li:hover > .
 }
 
 .people__item {
+  overflow: hidden;
+  cursor: pointer;
   width: 100%;
-  height: 150px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  position: relative;
+  height: 100%;
+}
+
+.people__item:hover .people__item-img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .people__item-img {
@@ -1536,7 +1537,9 @@ ul.navbar-nav .on-hover ul li:hover > a, ul.navbar-nav .on-hover ul li:hover > .
   height: 100%;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: 100%;
+  background-position: center;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
 .people__item-title {
@@ -1546,17 +1549,21 @@ ul.navbar-nav .on-hover ul li:hover > a, ul.navbar-nav .on-hover ul li:hover > .
   right: 16px;
   bottom: 16px;
   padding: 0px 8px;
+  pointer-events: none;
 }
 
 .people__item-title h3 {
   font-weight: 400;
 }
 
+.people__item-padding {
+  padding: 8px;
+  width: 33.33333%;
+  height: 240px;
+  position: relative;
+}
+
 @media (min-width: 480px) {
-  .people__item {
-    height: 240px;
-    padding: 8px;
-  }
   .people__item-title h3 {
     line-height: 32px;
   }
@@ -1567,17 +1574,16 @@ ul.navbar-nav .on-hover ul li:hover > a, ul.navbar-nav .on-hover ul li:hover > .
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     margin-bottom: 50px;
-  }
-  .people__item {
-    width: 33.33333%;
-    height: 240px;
-    padding: 8px;
   }
   .people__item-title h3 {
     line-height: 32px;

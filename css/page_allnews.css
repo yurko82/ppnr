@@ -18,8 +18,20 @@ ul[class], ol[class] {
   list-style: none;
 }
 
+h1, h2, h3, h4, p, li, figure, figcaption, dl, dd {
+  margin: 0;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
 a:hover {
   text-decoration: unset;
+}
+
+img {
+  display: block;
 }
 
 body {
@@ -305,18 +317,6 @@ button.next {
     line-height: 14px;
     letter-spacing: 1px;
   }
-}
-
-h1, h2, h3, h4, p, li, figure, figcaption, dl, dd {
-  margin: 0;
-}
-
-a:not([class]) {
-  text-decoration-skip-ink: auto;
-}
-
-img {
-  display: block;
 }
 
 .text1 {
