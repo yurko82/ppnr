@@ -36,7 +36,6 @@
         arrows: false,
         fade: true,
         pauseOnHover: false,
-
     });
 
     $('.widget__slider').slick({
@@ -56,60 +55,62 @@
 
     });
 
+    // START news slider on index page
+    let isNewsIntersect=false, isNewsAnimate=false;
+    new IntersectionObserver((ent)=>{
+        if (ent[0].isIntersecting) {
+            isNewsIntersect=true;
+            startNewsSlide();
+        } else isNewsIntersect=false;
+    }, {threshold:[0]}).observe(document.querySelector(".news__slider"));
 
-
-    function startSlide(el) {
-
+    function initNewsSlide(el) {
         el.slick({
             prevArrow: '<button class="prev btn-d"><i class="fas fa-chevron-left"></i></button>',
             nextArrow: '<button class="next btn-d"><i class="fas fa-chevron-right"></i></button>',
             slidesToShow: 1,
             slidesToScroll: 1,
             vertical: false,
-            speed: 4000,
+            speed: 2500,
             arrows: false,
-            pauseOnHover: false,
             responsive: [{
                     breakpoint: 1000,
                     settings: {
                         slidesToShow: 2,
                         slidesToScroll: 2,
-                        arrows: true,
+                        arrows: true
                     }
-                },
-                {
+                },{
                     breakpoint: 768,
                     settings: {
                         slidesToShow: 1,
                         slidesToScroll: 1,
-                        arrows: true,
+                        arrows: true
                     }
                 }
             ]
-
-
         });
-
     };
-    startSlide($('.slide1'));
-    startSlide($('.slide2'));
-    startSlide($('.slide3'));
-    $('.slide1').slick('slickNext');
+    initNewsSlide($('.slide1'));     // OPTIMISE all this code for adaptive via clides count
+    initNewsSlide($('.slide2'));
+    initNewsSlide($('.slide3'));
+    function startNewsSlide(){
+        if (isNewsAnimate || !isNewsIntersect) return;
+        setTimeout(()=> {if (isNewsIntersect) $('.slide1').slick('slickNext')}, 2000);
+    }
     $('.slide1').on('afterChange', function(event, currentSlide) {
-        if (currentSlide = 2) {
-            ($('.slide2').slick('slickNext'));
-        }
+        isNewsAnimate=true;
+        $('.slide2').slick('slickNext');
     })
     $('.slide2').on('afterChange', function(event, currentSlide) {
-        if (currentSlide = 2) {
-            ($('.slide3').slick('slickNext'));
-        }
+        $('.slide3').slick('slickNext');
     })
     $('.slide3').on('afterChange', function(event, currentSlide) {
-        if (currentSlide = 2) {
-            ($('.slide1').slick('slickNext'));
-        }
+        isNewsAnimate=false;
+        startNewsSlide();
     });
+    // END news slider on index page
+
 
     $('.people__items').slick({
         prevArrow: '<button class="prev btn-d"><i class="fas fa-chevron-left"></i></button>',
@@ -123,16 +124,14 @@
         responsive: [{
                 breakpoint: 4000,
                 settings: "unslick"
-            },
-            {
+            },{
                 breakpoint: 1000,
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 2,
                     arrows: true,
                 }
-            },
-            {
+            },{
                 breakpoint: 768,
                 settings: {
                     slidesToShow: 1,
@@ -141,7 +140,6 @@
                 }
             }
         ]
-
     });
 
     AOS.init({
@@ -203,13 +201,12 @@
         });
 
     //scroll page - menu
-        $(window).on("scroll", function(){
+    $(window).on("scroll", function(){
             if($(window).scrollTop() > 90)
                 $('.header').addClass('scroll_page');
             else
                 $('.header').removeClass('scroll_page');
         }); 
-           
     };
     
     // use only on allnews.html
@@ -228,30 +225,5 @@
             $('.news__block-img').css("display","block");
         }
     });
-
-    //news-slider
-    $('.news__img-slider').slick({
-        prevArrow: '<button class="prev btn-d"><i class="fas fa-chevron-left"></i></button>',
-        nextArrow: '<button class="next btn-d"><i class="fas fa-chevron-right"></i></button>',
-        speed: 1000,
-        arrows: true,
-        fade: true,
-        dots: true,
-        // dotsClass: 'customPaging',
-        // customPaging: function(slider, i){
-        //     console.log(slider);
-        //     return (i + 1) +'/' +slider.slideCount;
-        // }
-        //responsive: [{
-           // breakpoint: 768,
-            //settings: {
-               // dots: true,
-                //arrows: true
-           // }
-        //}]
-
-    });
-    
-
 
 })();
