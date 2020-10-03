@@ -18,8 +18,20 @@ ul[class], ol[class] {
   list-style: none;
 }
 
+h1, h2, h3, h4, p, li, figure, figcaption, dl, dd {
+  margin: 0;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
 a:hover {
   text-decoration: unset;
+}
+
+img {
+  display: block;
 }
 
 body {
@@ -307,18 +319,6 @@ button.next {
   }
 }
 
-h1, h2, h3, h4, p, li, figure, figcaption, dl, dd {
-  margin: 0;
-}
-
-a:not([class]) {
-  text-decoration-skip-ink: auto;
-}
-
-img {
-  display: block;
-}
-
 .text1 {
   font-size: 12px;
   line-height: 14px;
@@ -528,41 +528,6 @@ img {
   background-color: white;
   border-color: #39b791;
   color: #39b791;
-}
-
-.btn_up {
-  position: fixed;
-  bottom: -50px;
-  right: 50px;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  border: 1px solid #005b99;
-  background: #eeeeee;
-  z-index: 100;
-  outline: 0 !important;
-  -webkit-transition: .6s;
-  transition: .6s;
-}
-
-.btn_up::after {
-  content: '';
-  width: 15px;
-  height: 15px;
-  border-top: 2px solid #005b99;
-  border-left: 2px solid #005b99;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-  position: absolute;
-  top: 8px;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-}
-
-.btn_up.active {
-  bottom: 50px;
 }
 
 .overlay {
