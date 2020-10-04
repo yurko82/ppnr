@@ -103,6 +103,10 @@ button.next {
   margin-top: 120px;
 }
 
+.mt80 {
+  margin-top: 80px;
+}
+
 .bg_bl-4 {
   background-color: #41b6e6;
 }
@@ -970,17 +974,15 @@ ul.navbar-nav .on-hover ul li:hover > a, ul.navbar-nav .on-hover ul li:hover > .
   height: 200px;
   position: absolute;
   bottom: 25%;
-  left: 8%;
+  left: 10%;
   margin: auto;
   z-index: 2;
 }
 
 .head-slider__text span {
-  line-height: 42px;
   letter-spacing: 2px;
-  font-size: 48px;
   font-family: Gotham Pro;
-  font-weight: 500;
+  font-weight: 700;
   font-style: italic;
   color: #f5f5e8;
 }
@@ -1583,6 +1585,7 @@ ul.navbar-nav .on-hover ul li:hover > a, ul.navbar-nav .on-hover ul li:hover > .
 /*----gromadi start----*/
 .people __wrap {
   margin-bottom: 15px;
+  max-height: 1280px;
 }
 
 .people__item {
@@ -1622,8 +1625,8 @@ ul.navbar-nav .on-hover ul li:hover > a, ul.navbar-nav .on-hover ul li:hover > .
 }
 
 .people__item-padding {
-  padding: 8px;
-  width: 33.33333%;
+  margin-bottom: 1.125%;
+  width: 32.5%;
   height: 240px;
   position: relative;
 }

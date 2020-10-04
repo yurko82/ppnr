@@ -26,15 +26,13 @@
         position: absolute;
         //top: 0;
         bottom: 25%;
-        left: 8%;
+        left: 10%;
         margin: auto;
         z-index: 2;
         & span {
-            line-height: 42px;
             letter-spacing: 2px;
-            font-size: 48px;
             font-family: Gotham Pro;
-            font-weight: 500;
+            font-weight: 700;
             font-style: italic;
             color: $red6;
 
@@ -49,13 +47,13 @@
             }
             @media(min-width: 1280px) {
                 font-size: 72px;
-                    line-height: 84px;
-                    letter-spacing: 4px;
+                line-height: 84px;
+                letter-spacing: 4px;
             }
             @media(min-width: 1920px) {
-                    font-size: 90px;
-                    line-height: 102px;
-                    letter-spacing: 5px;
+                font-size: 90px;
+                line-height: 102px;
+                letter-spacing: 5px;
             }
         }
  
@@ -548,6 +546,7 @@
 .people{
     & __wrap {
         margin-bottom: 15px;
+        max-height: 1280px;
     }
     &__item {
         overflow: hidden;
@@ -579,8 +578,10 @@
             }
         }
         &-padding{
-            padding:8px;
-            width: 33.33333%;
+            // padding:8px;
+            // width: 33.33333%;
+            margin-bottom: 1.125%;
+            width: 32.5%;
             height: 240px;
             position: relative;
         }
