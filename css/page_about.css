@@ -652,11 +652,44 @@ button.next {
 
 .navbar__form-input {
   width: 100%;
+  border: none;
+  border-bottom: 1px solid #005b99;
+  color: #505050;
+}
+
+.navbar__form-input::-webkit-input-placeholder {
+  color: #d1d1d1;
+  font-style: italic;
+}
+
+.navbar__form-input:-ms-input-placeholder {
+  color: #d1d1d1;
+  font-style: italic;
+}
+
+.navbar__form-input::-ms-input-placeholder {
+  color: #d1d1d1;
+  font-style: italic;
+}
+
+.navbar__form-input::placeholder {
+  color: #d1d1d1;
+  font-style: italic;
+}
+
+.navbar__form-input::-webkit-search-decoration, .navbar__form-input::-webkit-search-cancel-button, .navbar__form-input::-webkit-search-results-button, .navbar__form-input::-webkit-search-results-decoration {
+  display: none;
+}
+
+.navbar__form-input:focus {
+  outline: none;
 }
 
 .navbar__form-btn {
   position: absolute;
   right: 24px;
+  color: #005b99;
+  cursor: pointer;
 }
 
 .navbar-nav {

@@ -48,10 +48,25 @@
     }
     &__form-input{
         width: 100%;
+        border: none;
+        border-bottom: 1px solid $blue3;
+        color: $grey2;
+        &::placeholder {
+            color: $grey5;
+            font-style: italic;
+        }
+        &::-webkit-search-decoration, &::-webkit-search-cancel-button, &::-webkit-search-results-button, &::-webkit-search-results-decoration { 
+            display: none; 
+        }
+        &:focus {
+            outline: none;
+        }
     }
     &__form-btn{
         position: absolute;
         right: 24px;
+        color: $blue3;
+        cursor: pointer;
     }
     &-nav {
         padding-bottom: 30px;
