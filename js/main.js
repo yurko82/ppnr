@@ -162,7 +162,7 @@
             if (!div.is(e.target) // если клик был не по нашему блоку
                 &&
                 div.has(e.target).length === 0) { // и не по его дочерним элементам
-                div.css('transform', 'translateX(300px)'); // скрываем его
+                div.css('transform', 'translateX(328px)'); // скрываем его
             }
         });
     }

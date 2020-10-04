@@ -159,9 +159,9 @@
             top: 50vh;
             right: 0;
             margin-top: -110px;
-            transform: translateX(300px);
-            width: 300px;
-            transition: all 1.5s;
+            transform: translateX(328px);
+            width: 328px;
+            transition: all 1s;
         }
         &__slider {
             margin: 0px;
@@ -191,7 +191,7 @@
         height: 60px;
     }
     & span {
-        padding-bottom: 5px;
+        padding-bottom: 2px;
     }
     background-color: $green1;
     position: relative;
@@ -222,13 +222,29 @@
         justify-content: center;
     }
     &__slider {
-        padding-top: 16px;
+        padding: 12px 0;
+        & .text, & .odin {
+            font-size: 12px;
+            font-weight: 400;
+            font-style: italic;
+        }
+        & .pokaz {
+            font-size: 20px;
+            font-weight: 900;
+            margin-right: 10px;
+            line-height: 1.2;
+        }
     }
     &__slider-title {
-        font-size: 16px;
-        font-weight: 500;
+        font-size: 18px;
+        line-height: 1.2;
         display: inline-block;
-        padding: 0 0 24px 0;
+        text-transform: uppercase;
+        padding: 0 0 16px 0;
+        &:not(:first-child) {
+            padding-top: 16px;
+        }
+        
     }
 }    
 #slick-slide-control10 {
@@ -240,7 +256,7 @@
 }
 
 #slick-slide-control11 {
-    background-color: $green2;
+    background-color: $green4;
     background-image: url(../images/CO2.png);
     background-position: center;
     background-repeat: no-repeat;
@@ -248,7 +264,7 @@
 }
 
 #slick-slide-control12 {
-    background-color: $blue5;
+    background-color: $blue4;
     background-image: url(../images/weather.png);
     background-position: center;
     background-repeat: no-repeat;

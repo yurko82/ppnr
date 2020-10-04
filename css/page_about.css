@@ -642,7 +642,7 @@ button.next {
 
 .navbar__form {
   width: 100%;
-  padding: 16px 16px 16px 16px;
+  padding: 16px;
   position: relative;
 }
 
@@ -688,7 +688,7 @@ button.next {
   font-size: 10px;
   margin-left: 8px;
   color: #daf4fa;
-  height: 7px;
+  height: 10px;
 }
 
 .navbar .dropdown:hover > .dropdown-menu {

@@ -642,7 +642,7 @@ button.next {
 
 .navbar__form {
   width: 100%;
-  padding: 16px 16px 16px 16px;
+  padding: 16px;
   position: relative;
 }
 
@@ -688,7 +688,7 @@ button.next {
   font-size: 10px;
   margin-left: 8px;
   color: #daf4fa;
-  height: 7px;
+  height: 10px;
 }
 
 .navbar .dropdown:hover > .dropdown-menu {
@@ -1141,11 +1141,11 @@ ul.navbar-nav .on-hover ul li:hover > a, ul.navbar-nav .on-hover ul li:hover > .
     top: 50vh;
     right: 0;
     margin-top: -110px;
-    -webkit-transform: translateX(300px);
-            transform: translateX(300px);
-    width: 300px;
-    -webkit-transition: all 1.5s;
-    transition: all 1.5s;
+    -webkit-transform: translateX(328px);
+            transform: translateX(328px);
+    width: 328px;
+    -webkit-transition: all 1s;
+    transition: all 1s;
   }
   .widget__slider {
     margin: 0px;
@@ -1176,7 +1176,7 @@ ul.navbar-nav .on-hover ul li:hover > a, ul.navbar-nav .on-hover ul li:hover > .
 }
 
 .widget span {
-  padding-bottom: 5px;
+  padding-bottom: 2px;
 }
 
 .widget button.prev {
@@ -1219,14 +1219,32 @@ ul.navbar-nav .on-hover ul li:hover > a, ul.navbar-nav .on-hover ul li:hover > .
 }
 
 .widget__slider {
-  padding-top: 16px;
+  padding: 12px 0;
+}
+
+.widget__slider .text, .widget__slider .odin {
+  font-size: 12px;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.widget__slider .pokaz {
+  font-size: 20px;
+  font-weight: 900;
+  margin-right: 10px;
+  line-height: 1.2;
 }
 
 .widget__slider-title {
-  font-size: 16px;
-  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.2;
   display: inline-block;
-  padding: 0 0 24px 0;
+  text-transform: uppercase;
+  padding: 0 0 16px 0;
+}
+
+.widget__slider-title:not(:first-child) {
+  padding-top: 16px;
 }
 
 #slick-slide-control10 {
@@ -1238,7 +1256,7 @@ ul.navbar-nav .on-hover ul li:hover > a, ul.navbar-nav .on-hover ul li:hover > .
 }
 
 #slick-slide-control11 {
-  background-color: #20bf55;
+  background-color: #009a31;
   background-image: url(../images/CO2.png);
   background-position: center;
   background-repeat: no-repeat;
@@ -1246,7 +1264,7 @@ ul.navbar-nav .on-hover ul li:hover > a, ul.navbar-nav .on-hover ul li:hover > .
 }
 
 #slick-slide-control12 {
-  background-color: #74d2e7;
+  background-color: #41b6e6;
   background-image: url(../images/weather.png);
   background-position: center;
   background-repeat: no-repeat;
