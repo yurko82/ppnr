@@ -585,6 +585,115 @@ button.next {
   position: absolute;
 }
 
+lang__block {
+  position: relative;
+}
+
+lang__block .lang {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: none;
+  font-size: 15px;
+  color: #005b99;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  padding: 0 5px;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+lang__block .lang i {
+  margin: auto 0;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+lang__block .lang .arrow-down {
+  margin-left: 9px;
+  font-size: 20px;
+  -webkit-transition: .3s;
+  transition: .3s;
+  position: relative;
+  width: 12px;
+  height: 6px;
+  top: 9px;
+}
+
+lang__block .lang .arrow-down span:first-child, lang__block .lang .arrow-down :last-child {
+  content: '';
+  width: 2px;
+  height: 7px;
+  position: absolute;
+  display: block;
+}
+
+lang__block .lang text {
+  text-transform: uppercase;
+  font-size: 13px;
+}
+
+lang__block .slideDown i {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+lang__drop {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  opacity: 0;
+  position: absolute;
+  z-index: 3;
+  min-height: 0;
+  overflow: hidden;
+  left: 0;
+  width: 100%;
+  top: 32px;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+lang__drop.open {
+  opacity: 1;
+  max-height: 999px;
+}
+
+lang__drop a {
+  padding: 8px 8px;
+  text-align: center;
+  -webkit-transition: .3s all;
+  transition: .3s all;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-bottom: 1px solid #999999;
+  font-size: 13px;
+  font-weight: 600;
+  color: #005b99;
+  background-color: #fff;
+}
+
+lang__drop a:hover {
+  background-color: #daf4fa;
+}
+
+lang__drop a.active {
+  background-color: #daf4fa;
+}
+
 .shadow {
   -webkit-box-shadow: 0 2px 3px -2px rgba(50, 50, 50, 0.5);
           box-shadow: 0 2px 3px -2px rgba(50, 50, 50, 0.5);

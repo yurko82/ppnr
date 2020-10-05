@@ -252,4 +252,24 @@
         }
     });
 
+    //lang
+    $('.lang').on('click', function(e) {
+        e.preventDefault();
+        if (!$(this).hasClass('slideDown')) {
+            $(this).addClass('slideDown');
+            $(this).closest('.lang__block').find('.lang__drop').addClass('open');
+        } else {
+            $(this).removeClass('slideDown');
+            $(this).closest('.lang__block').find('.lang__drop').removeClass('open');
+        }
+    });
+    $(document).on('click', function(e) {
+        if (!$(e.target).closest(".lang__block").length) {
+            $('.lang').removeClass('slideDown');
+            $('.lang__drop').removeClass('open');
+        }
+        e.stopPropagation();
+
+    });
+
 })();
