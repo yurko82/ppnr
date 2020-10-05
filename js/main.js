@@ -251,7 +251,26 @@
         }
     });
 
-    //lang
+    //lang at header
+    let currentLang="UA";
+    $('.lang__block .lang_UA').click(()=>changeLanguage('UA'));
+    $('.lang__block .lang_RU').click(()=>changeLanguage('RU'));
+    $('.lang__block .lang_EN').click(()=>changeLanguage('EN'));
+    function changeLanguage(l){
+        switch(currentLang) {
+            case "UA": $('.lang__block .lang_UA').removeClass('active'); break;
+            case "RU": $('.lang__block .lang_RU').removeClass('active'); break;
+            case "EN": $('.lang__block .lang_EN').removeClass('active'); break;
+        }
+        currentLang = l;
+        switch(currentLang) {
+            case "UA": $('.lang__block .lang_UA').addClass('active'); $('.lang__block span.text').text('Укр'); break;
+            case "RU": $('.lang__block .lang_RU').addClass('active'); $('.lang__block span.text').text('Рус'); break;
+            case "EN": $('.lang__block .lang_EN').addClass('active'); $('.lang__block span.text').text('Eng'); break;
+        }
+        $('.lang').removeClass('slideDown');
+        $('.lang__drop').removeClass('open');
+    }
     $('.lang').on('click', function(e) {
         e.preventDefault();
         if (!$(this).hasClass('slideDown')) {
