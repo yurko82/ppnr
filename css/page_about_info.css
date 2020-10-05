@@ -585,11 +585,11 @@ button.next {
   position: absolute;
 }
 
-lang__block {
+.lang__block {
   position: relative;
 }
 
-lang__block .lang {
+.lang__block .lang {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -603,13 +603,13 @@ lang__block .lang {
   transition: .5s;
 }
 
-lang__block .lang i {
+.lang__block .lang i {
   margin: auto 0;
   -webkit-transition: .3s;
   transition: .3s;
 }
 
-lang__block .lang .arrow-down {
+.lang__block .lang .arrow-down {
   margin-left: 9px;
   font-size: 20px;
   -webkit-transition: .3s;
@@ -620,7 +620,7 @@ lang__block .lang .arrow-down {
   top: 9px;
 }
 
-lang__block .lang .arrow-down span:first-child, lang__block .lang .arrow-down :last-child {
+.lang__block .lang .arrow-down span:first-child, .lang__block .lang .arrow-down :last-child {
   content: '';
   width: 2px;
   height: 7px;
@@ -628,19 +628,19 @@ lang__block .lang .arrow-down span:first-child, lang__block .lang .arrow-down :l
   display: block;
 }
 
-lang__block .lang text {
+.lang__block .lang text {
   text-transform: uppercase;
   font-size: 13px;
 }
 
-lang__block .slideDown i {
+.lang__block .slideDown i {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
   -webkit-transition: .3s;
   transition: .3s;
 }
 
-lang__drop {
+.lang__drop {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -660,12 +660,12 @@ lang__drop {
   transition: .3s;
 }
 
-lang__drop.open {
+.lang__drop.open {
   opacity: 1;
   max-height: 999px;
 }
 
-lang__drop a {
+.lang__drop a {
   padding: 8px 8px;
   text-align: center;
   -webkit-transition: .3s all;
@@ -686,11 +686,11 @@ lang__drop a {
   background-color: #fff;
 }
 
-lang__drop a:hover {
+.lang__drop a:hover {
   background-color: #daf4fa;
 }
 
-lang__drop a.active {
+.lang__drop a.active {
   background-color: #daf4fa;
 }
 
