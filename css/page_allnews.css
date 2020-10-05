@@ -651,7 +651,7 @@ button.next {
   opacity: 0;
   position: absolute;
   z-index: 3;
-  min-height: 0;
+  max-height: 0;
   overflow: hidden;
   left: 0;
   width: 100%;
