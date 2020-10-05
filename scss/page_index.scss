@@ -247,31 +247,47 @@
 }    
 #slick-slide-control10 {
     background-color: $green1;
-    background-image: url(../images/batteryl.png);
+    background-image: url(../images/svg/widget_battery.svg);
     background-position: center;
     background-repeat: no-repeat;
+    background-size: 35px;
     font-size: 0;
+    cursor: pointer;
+    &:focus {
+        outline: none;
+    }
+    
 }
 
 #slick-slide-control11 {
     background-color: $green4;
-    background-image: url(../images/CO2.png);
+    background-image: url(../images/svg/widget_lyst.svg);
     background-position: center;
     background-repeat: no-repeat;
+    background-size: 35px;
     font-size: 0;
+    cursor: pointer;
+    &:focus {
+        outline: none;
+    }
 }
 
 #slick-slide-control12 {
     background-color: $blue4;
-    background-image: url(../images/weather.png);
+    background-image: url(../images/svg/widget_cloud.svg);
     background-position: center;
     background-repeat: no-repeat;
+    background-size: 40px;
     font-size: 0;
+    cursor: pointer;
+    &:focus {
+        outline: none;
+    }
 }
 /*----widget end----*/
 
 /*----about start----*/
-    .about{
+.about{
     & p {
         margin-bottom: 10px;
     }

@@ -65,7 +65,7 @@
                 startNewsSlide();
             } else isNewsIntersect=false;
         }, {threshold:[0]}).observe(document.querySelector(".news__slider"));
-        initNewsSlide($('.slide1'));     // OPTIMISE all this code for adaptive via clides count
+        initNewsSlide($('.slide1'));     // OPTIMISE all this code for adaptive via slides count
         initNewsSlide($('.slide2'));
         initNewsSlide($('.slide3'));
     }
@@ -246,8 +246,7 @@
     $(window).scroll(function(){
         if ($(window).scrollTop() > 300) {
             $('.btn_up').addClass('active');
-        }
-        else{
+        }else{
             $('.btn_up').removeClass('active');
         }
     });
