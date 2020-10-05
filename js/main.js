@@ -57,8 +57,8 @@
     });
 
     // START news slider, use only on index page
+    let isNewsIntersect=false, isNewsAnimate=false;
     if (document.querySelector(".news__slider")) {
-        let isNewsIntersect=false, isNewsAnimate=false;
         new IntersectionObserver((ent)=>{
             if (ent[0].isIntersecting) {
                 isNewsIntersect=true;
