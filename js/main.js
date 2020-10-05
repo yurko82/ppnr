@@ -38,6 +38,7 @@
         pauseOnHover: false,
     });
 
+    // use only on index page
     $('.widget__slider').slick({
         prevArrow: '<button class="prev btn-h"><i class="fas fa-chevron-left"></i></button>',
         nextArrow: '<button class="next btn-h"><i class="fas fa-chevron-right"></i></button>',
@@ -55,14 +56,19 @@
 
     });
 
-    // START news slider on index page
-    let isNewsIntersect=false, isNewsAnimate=false;
-    new IntersectionObserver((ent)=>{
-        if (ent[0].isIntersecting) {
-            isNewsIntersect=true;
-            startNewsSlide();
-        } else isNewsIntersect=false;
-    }, {threshold:[0]}).observe(document.querySelector(".news__slider"));
+    // START news slider, use only on index page
+    if (document.querySelector(".news__slider")) {
+        let isNewsIntersect=false, isNewsAnimate=false;
+        new IntersectionObserver((ent)=>{
+            if (ent[0].isIntersecting) {
+                isNewsIntersect=true;
+                startNewsSlide();
+            } else isNewsIntersect=false;
+        }, {threshold:[0]}).observe(document.querySelector(".news__slider"));
+        initNewsSlide($('.slide1'));     // OPTIMISE all this code for adaptive via clides count
+        initNewsSlide($('.slide2'));
+        initNewsSlide($('.slide3'));
+    }
 
     function initNewsSlide(el) {
         el.slick({
@@ -91,9 +97,7 @@
             ]
         });
     };
-    initNewsSlide($('.slide1'));     // OPTIMISE all this code for adaptive via clides count
-    initNewsSlide($('.slide2'));
-    initNewsSlide($('.slide3'));
+   
     function startNewsSlide(){
         if (isNewsAnimate || !isNewsIntersect) return;
         setTimeout(()=> {if (isNewsIntersect) $('.slide1').slick('slickNext')}, 2000);
@@ -111,8 +115,8 @@
     });
     // END news slider on index page
 
-
-    $('.people__items').slick({
+    // use only on index page
+    $('.people__items').slick({ 
         prevArrow: '<button class="prev btn-d"><i class="fas fa-chevron-left"></i></button>',
         nextArrow: '<button class="next btn-d"><i class="fas fa-chevron-right"></i></button>',
         slidesToShow: 2,
@@ -148,7 +152,7 @@
         once: true
     });
 
-    //widget 
+    //widget - use only on index page
     $('.widget .slick-dots li  button').click(function() {
         var $bgColor = $(this).css("background-color");
         $('.widget').css({
@@ -209,7 +213,7 @@
         }); 
     };
     
-    // use only at allnews.html
+    // use only on allnews.html
     $('.news-type').on('click', function() {
         if($(this).children('i').hasClass("fa-th")){
             $(this).children('i').removeClass("fa-th").addClass("fa-bars");
@@ -225,5 +229,12 @@
             $('.news__block-img').css("display","block");
         }
     });
+
+    // use only on allnews.html
+    function checkNewsType(){
+        let url = window.location.href.split('?');
+        if (url[1]) console.log('news type: ' + url[1]);
+    }
+    checkNewsType();
 
 })();
