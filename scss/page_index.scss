@@ -187,6 +187,21 @@
     & .slick-dots li button {
         width: 60px;
         height: 60px;
+        &::before{
+            content: "";
+            background: white;
+            position: absolute;
+            z-index: 1;
+            left:0;
+            width:4px;
+            height:60px;
+            transform-origin: 0 100%;
+            transition-property: transform;
+            transition-duration: 0.1s;
+            transition-timing-function: ease-out;
+            transform: translateY(-30px) scaleY(0);
+        }
+        &:hover:before, &:focus:before{ transform: translateY(-30px) scaleY(1); }
     }
     & span {
         padding-bottom: 2px;
@@ -253,10 +268,7 @@
     background-size: 35px;
     font-size: 0;
     cursor: pointer;
-    &:focus {
-        outline: none;
-    }
-    
+    &:focus { outline: none; }
 }
 
 #slick-slide-control11 {
@@ -267,9 +279,7 @@
     background-size: 35px;
     font-size: 0;
     cursor: pointer;
-    &:focus {
-        outline: none;
-    }
+    &:focus { outline: none; }
 }
 
 #slick-slide-control12 {
@@ -280,9 +290,7 @@
     background-size: 40px;
     font-size: 0;
     cursor: pointer;
-    &:focus {
-        outline: none;
-    }
+    &:focus { outline: none; }
 }
 /*----widget end----*/
 

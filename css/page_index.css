@@ -1432,6 +1432,33 @@ ul.navbar-nav .on-hover ul li:hover > a, ul.navbar-nav .on-hover ul li:hover > .
   height: 60px;
 }
 
+.widget .slick-dots li button::before {
+  content: "";
+  background: white;
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  width: 4px;
+  height: 60px;
+  -webkit-transform-origin: 0 100%;
+          transform-origin: 0 100%;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-duration: 0.1s;
+          transition-duration: 0.1s;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
+  -webkit-transform: translateY(-30px) scaleY(0);
+          transform: translateY(-30px) scaleY(0);
+}
+
+.widget .slick-dots li button:hover:before, .widget .slick-dots li button:focus:before {
+  -webkit-transform: translateY(-30px) scaleY(1);
+          transform: translateY(-30px) scaleY(1);
+}
+
 .widget span {
   padding-bottom: 2px;
 }
