@@ -586,15 +586,23 @@ button.next {
 
 .btn_up {
   position: fixed;
-  bottom: -50px;
-  right: 50px;
-  width: 50px;
-  height: 50px;
-  border: 1px solid #005b99;
-  background: white;
+  bottom: -40px;
+  right: 40px;
+  width: 40px;
+  height: 40px;
+  background: #41b6e6;
   z-index: 100;
-  -webkit-transition: .6s;
-  transition: .6s;
+  -webkit-transition: all .6s;
+  transition: all .6s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   cursor: pointer;
 }
 
@@ -602,20 +610,13 @@ button.next {
   outline: none;
 }
 
-.btn_up::after {
-  content: '';
-  width: 15px;
-  height: 15px;
-  border-top: 2px solid #005b99;
-  border-left: 2px solid #005b99;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+.btn_up__angle-top {
+  color: white;
+  font-size: 16px;
   position: absolute;
-  top: 8px;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  line-height: 0;
 }
 
 .btn_up.active {

@@ -237,7 +237,7 @@
     checkNewsType();
 
     //btn up
-    $('body').append('<button class="btn_up" />');
+    $('body').append('<button class="btn_up"><span class="icon-angle-right btn_up__angle-top"></span></button>');
     $('.btn_up').click(function(){
         $('body').animate({'scrollTop': 0}, 1000);
         $('html').animate({'scrollTop': 0}, 1000);
@@ -286,7 +286,6 @@
             $('.lang__drop').removeClass('open');
         }
         e.stopPropagation();
-
     });
 
     //news-slider

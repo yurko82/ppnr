@@ -405,36 +405,29 @@
         &:hover:before, &:focus:before, &:active:before { transform: scaleX(1); }
     }
 
-    .btn_up{
+    .btn_up {
         position: fixed;
-        bottom: -50px;
-        right: 50px;
-        width: 50px;
-        height: 50px;
-        // border-radius: 5px;
-        border: 1px solid $blue3;
-        background: white;
+        bottom: -40px;
+        right: 40px;
+        width: 40px;
+        height: 40px;
+        // border: 1px solid white;
+        background: $blue4;
         z-index: 100;
-        transition: .6s;
+        transition: all .6s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         cursor: pointer;
-        &:focus {
-            outline: none;
-        }
-        &::after{
-            content: '';
-            width: 15px;
-            height: 15px;
-            border-top: 2px solid $blue3;
-            border-left: 2px solid $blue3;
-            transform: rotate(45deg);
+        &:focus { outline: none; }
+        &__angle-top {
+            color: white;
+            font-size: 16px;
             position: absolute;
-            top: 8px;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            margin: auto;
-        } 
-        &.active{
+            transform: rotate(-90deg);
+            line-height: 0;
+        }
+        &.active {
             bottom: 50px;
         }
     }
