@@ -1158,6 +1158,35 @@ ul.navbar-nav .on-hover ul li:hover > a, ul.navbar-nav .on-hover ul li:hover > .
 
 .footer__logo {
   padding-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+.footer__logo:after {
+  content: "";
+  height: 50px;
+  border-right: 2px #fff solid;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  position: absolute;
+  right: 125px;
+  top: 20px;
+}
+
+.footer__logo-naek {
+  height: 50px;
+}
+
+.footer__logo-raes {
+  height: 50px;
+  margin-left: 50px;
 }
 
 .footer__link-link {
