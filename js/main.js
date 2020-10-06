@@ -147,7 +147,7 @@
     });
 
     AOS.init({
-        offset: 120,
+        offset: 60,
         duration: 800,
         once: true
     });

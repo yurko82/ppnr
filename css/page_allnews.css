@@ -506,6 +506,10 @@ button.next {
   border: 1px solid white;
 }
 
+.btn-h:before {
+  background: white;
+}
+
 .btn-h:hover {
   background-color: white;
   border-color: #005b99;
@@ -515,6 +519,10 @@ button.next {
 .btn-d {
   color: #505050;
   border: 1px solid #757575;
+}
+
+.btn-d:before {
+  background: #005b99;
 }
 
 .btn-d:hover {
@@ -528,10 +536,52 @@ button.next {
   border: 1px solid white;
 }
 
+.btn-g:before {
+  background: white;
+}
+
 .btn-g:hover {
   background-color: white;
   border-color: #39b791;
   color: #39b791;
+}
+
+.btn_to-right {
+  -webkit-transition: color 0.3 ease;
+  transition: color 0.3 ease;
+  position: relative;
+  z-index: 0;
+}
+
+.btn_to-right:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: 0 50%;
+          transform-origin: 0 50%;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
+}
+
+.btn_to-right:hover, .btn_to-right:focus, .btn_to-right:active {
+  background-color: transparent;
+}
+
+.btn_to-right:hover:before, .btn_to-right:focus:before, .btn_to-right:active:before {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
 }
 
 .btn_up {
@@ -540,13 +590,16 @@ button.next {
   right: 50px;
   width: 50px;
   height: 50px;
-  border-radius: 50%;
   border: 1px solid #005b99;
-  background: #eeeeee;
+  background: white;
   z-index: 100;
-  outline: 0 !important;
   -webkit-transition: .6s;
   transition: .6s;
+  cursor: pointer;
+}
+
+.btn_up:focus {
+  outline: none;
 }
 
 .btn_up::after {
@@ -760,7 +813,7 @@ button.next {
   font-size: 10px;
   margin-left: 8px;
   color: #daf4fa;
-  height: 8px;
+  height: 10px;
 }
 
 .navbar .dropdown:hover > .dropdown-menu {
