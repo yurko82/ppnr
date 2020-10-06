@@ -53,7 +53,6 @@
                 arrows: true
             }
         }]
-
     });
 
     // START news slider, use only on index page
