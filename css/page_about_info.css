@@ -935,7 +935,7 @@ ul.navbar-nav .on-hover ul li:hover > a, ul.navbar-nav .on-hover ul li:hover > .
     -webkit-transition: unset;
     transition: unset;
   }
-  .navbar__search, .navbar__sett {
+  .navbar .lang__block, .navbar__sett {
     display: none;
     font-size: 28px;
   }
