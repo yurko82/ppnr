@@ -146,7 +146,7 @@
     });
 
     AOS.init({
-        offset: 60,
+        offset: 120,
         duration: 800,
         once: true
     });
@@ -307,23 +307,24 @@
 
     // info block at index.html
     if ($('.info')) {
-        let currentInfoNumber=1; 
+        let currentInfoNumber=0; 
         let arrayInfo = [{
             type:'baner',
-            title:'Covid 19',
+            title:'Covid-19',
             bg:'img/info/1_bg.jpeg',
             pics:{'1280':'images/img/info/1_1240.jpeg', '1000':'images/img/info/1_1000.jpeg', '650':'images/img/info/1_650.jpeg'},
             url:'html/some_page.html',
             use:true
         },{
             type:'baner',
-            title:'Р5',
+            title:'Реактор 5',
             bg:'img/info/2_bg.jpeg',
             pics:{'1280':'images/img/info/2_1240.jpeg', '1000':'images/img/info/2_1000.jpeg', '650':'images/img/info/2_650.jpeg'},
             url:'html/some_page.html',
             use:true
         },{
             type:'statistic',
+            title:'Показники',
             use:true
         }];
 
@@ -332,8 +333,37 @@
             $('.info .btn-arrow-right').click(()=>_moveSlider(true));
         };
         function _moveSlider(right){
-            right ? $('.info__parallax__slider').slick('slickNext') : $('.info__parallax__slider').slick('slickPrev'); 
-            right ? $('.info__content__slider').slick('slickNext') : $('.info__content__slider').slick('slickPrev'); 
+            if (right) { 
+                $('.info__parallax__slider').slick('slickNext');
+                $('.info__content__slider').slick('slickNext');
+                currentInfoNumber++;
+            } else {
+                $('.info__parallax__slider').slick('slickPrev');
+                $('.info__content__slider').slick('slickPrev');
+                currentInfoNumber--; 
+            }
+            if (currentInfoNumber<0) currentInfoNumber=arrayInfo.length-1;
+            if (currentInfoNumber>=arrayInfo.length) currentInfoNumber=0;
+            _changeInfoBlockTitle(arrayInfo[currentInfoNumber].title);
+        }
+        function _changeInfoBlockTitle(stNew){
+            let span=$('.info .info__actions .title').find('span');
+            let st = span.text();
+            let timerRemove = setInterval(()=>{
+                st=st.slice(0,-1);
+                span.text(st);
+                if (st.length==1){
+                    clearInterval(timerRemove);
+                    st='';
+                    let timerAdd = setInterval(()=>{
+                        st+=stNew.charAt(0);
+                        span.text(st);
+                        stNew=stNew.substring(1);
+                        if (stNew=='') clearInterval(timerAdd);
+                    },40);
+                }
+            },40);
+            $('.info .info__actions .title').find('span').text(st);
         }
         _createInfoBlocks();
 
@@ -347,8 +377,9 @@
             speed: 1000,
             dots: false,
             arrows: false,
-            fade: true
+            fade: false
         });
+        
     }
 
 })();
