@@ -35,13 +35,13 @@
         dots: true,
         arrows: false,
         fade: true,
-        pauseOnHover: false,
+        pauseOnHover: false
     });
 
     // use only on index page
     $('.widget__slider').slick({
-        prevArrow: '<button class="prev btn-h"><i class="fas fa-chevron-left"></i></button>',
-        nextArrow: '<button class="next btn-h"><i class="fas fa-chevron-right"></i></button>',
+        // prevArrow: '<button class="prev btn-h"><i class="fas fa-chevron-left"></i></button>',
+        // nextArrow: '<button class="next btn-h"><i class="fas fa-chevron-right"></i></button>',
         speed: 1000,
         dots: true,
         arrows: false,
@@ -295,12 +295,60 @@
         speed: 1000,
         arrows: true,
         fade: true,
-        dots: true,
+        dots: true
         // dotsClass: 'customPaging',
         // customPaging: function(slider, i){
         //     console.log(slider);
         //     return (i + 1) +'/' +slider.slideCount;
         // }    
+    });
+
+
+
+    // info block at index.html
+    if ($('.info')) {
+        let currentInfoNumber=1; 
+        let arrayInfo = [{
+            type:'baner',
+            title:'Covid 19',
+            bg:'img/info/1_bg.jpeg',
+            pics:{'1280':'images/img/info/1_1240.jpeg', '1000':'images/img/info/1_1000.jpeg', '650':'images/img/info/1_650.jpeg'},
+            url:'html/some_page.html',
+            use:true
+        },{
+            type:'baner',
+            title:'Р5',
+            bg:'img/info/2_bg.jpeg',
+            pics:{'1280':'images/img/info/2_1240.jpeg', '1000':'images/img/info/2_1000.jpeg', '650':'images/img/info/2_650.jpeg'},
+            url:'html/some_page.html',
+            use:true
+        },{
+            type:'statistic',
+            use:true
+        }];
+
+        function _createInfoBlocks(){
+            $('.info .btn-arrow-left').click(()=>_moveSlider(false));
+            $('.info .btn-arrow-right').click(()=>_moveSlider(true));
+        };
+        function _moveSlider(right){
+            right ? $('.info__parallax__slider').slick('slickNext') : $('.info__parallax__slider').slick('slickPrev'); 
+            right ? $('.info__content__slider').slick('slickNext') : $('.info__content__slider').slick('slickPrev'); 
+        }
+        _createInfoBlocks();
+
+        $('.info__parallax__slider').slick({
+            speed: 1000,
+            dots: false,
+            arrows: false,
+            fade: true
         });
+        $('.info__content__slider').slick({
+            speed: 1000,
+            dots: false,
+            arrows: false,
+            fade: true
+        });
+    }
 
 })();

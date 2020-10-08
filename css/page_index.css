@@ -7,6 +7,18 @@
 /* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
 /* Упрощаем работу с изображениями */
 /* END CLEANER */
+.bg-green1 {
+  background-color: #39b791;
+}
+
+.bg-green4 {
+  background-color: #009a31;
+}
+
+.bg-blue4 {
+  background-color: #41b6e6;
+}
+
 *, *::before, *::after {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -412,6 +424,12 @@ button.next {
   line-height: 23px;
   letter-spacing: 1px;
   font-weight: 300;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media (min-width: 480px) {
@@ -623,6 +641,56 @@ button.next {
   bottom: 50px;
 }
 
+.btn-arrow {
+  display: inline-block;
+  border: 1px solid #757575;
+  color: #505050;
+  font-size: 10px;
+  line-height: 0;
+  font-weight: 300;
+  padding: 8px 12px;
+  background-color: transparent;
+  border-radius: 0;
+  margin: 0;
+}
+
+.btn-arrow:focus {
+  outline: none;
+}
+
+.btn-arrow a {
+  color: inherit;
+}
+
+@media (min-width: 480px) {
+  .btn-arrow {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 768px) {
+  .btn-arrow {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .btn-arrow {
+    font-size: 16px;
+  }
+}
+
+.btn-arrow-container {
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .overlay {
   background: linear-gradient(to bottom, #fff 130px, transparent 310px);
   height: 100vh;
@@ -678,6 +746,18 @@ button.next {
 
 .font-black {
   font-weight: 700;
+}
+
+.bg-green1 {
+  background-color: #39b791;
+}
+
+.bg-green4 {
+  background-color: #009a31;
+}
+
+.bg-blue4 {
+  background-color: #41b6e6;
 }
 
 .header {
@@ -1095,6 +1175,18 @@ ul.navbar-nav .on-hover ul li:hover > a, ul.navbar-nav .on-hover ul li:hover > .
   display: none;
 }
 
+.bg-green1 {
+  background-color: #39b791;
+}
+
+.bg-green4 {
+  background-color: #009a31;
+}
+
+.bg-blue4 {
+  background-color: #41b6e6;
+}
+
 .footer {
   background-color: #005B99;
   position: relative;
@@ -1326,47 +1418,105 @@ ul.navbar-nav .on-hover ul li:hover > a, ul.navbar-nav .on-hover ul li:hover > .
 /*----head-slider end----*/
 /*----info start----*/
 .info {
+  height: 544px;
+}
+
+.info__parallax {
   background-attachment: fixed;
   background-size: cover;
+  z-index: 0;
+  height: 544px;
+  position: relative;
 }
 
-.info__wrap {
-  background-color: rgba(255, 255, 255, 0.8);
-}
-
-.info__block {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.info__content {
-  max-height: 300px;
+.info__content__slider {
+  z-index: 1;
+  height: 544px;
+  top: -544px;
+  max-width: 1240;
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding-bottom: 15px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.info__actions {
+  top: -1088px;
+  height: 544px;
+  position: relative;
+  z-index: 12;
+}
+
+.info__block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .info__item {
-  padding: 5px;
+  max-width: 1240px;
+  max-height: 300px;
 }
 
-.info__item:not(:first-child) {
-  display: none;
+.info__statistic {
+  width: 100%;
+  height: 300px;
 }
 
-@media (min-width: 480px) {
-  .info__item {
-    display: block !important;
-  }
+.info__statistic-item {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 100%;
+  width: 33%;
+  margin: 0;
+  color: white;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.info__statistic-content {
+  max-width: 80%;
+}
+
+.info__statistic-content .text, .info__statistic-content .odin {
+  font-size: 16px;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.info__statistic-content .pokaz {
+  font-size: 20px;
+  font-weight: 900;
+  margin-right: 10px;
+  line-height: 1.2;
+}
+
+.info__statistic_title {
+  font-size: 20px;
+  line-height: 1.2;
+  display: block;
+  text-transform: uppercase;
+  padding: 30px 0 16px 0;
+  font-weight: 400;
+}
+
+.info__btn {
+  top: 300px;
 }
 
 /*----info end----*/

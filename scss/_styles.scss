@@ -280,6 +280,8 @@
         line-height: 23px;
         letter-spacing: 1px;
         font-weight: 300;
+        display: flex;
+        align-items: center;
         @media (min-width: 480px) {
             font-size: 24px;
             line-height: 28px;
@@ -411,7 +413,6 @@
         right: 40px;
         width: 40px;
         height: 40px;
-        // border: 1px solid white;
         background: $blue4;
         z-index: 100;
         transition: all .6s;
@@ -427,9 +428,37 @@
             transform: rotate(-90deg);
             line-height: 0;
         }
-        &.active {
-            bottom: 50px;
+        &.active { bottom: 50px; }
+    }
+
+    .btn-arrow { 
+        display: inline-block;
+        border: 1px solid $grey3;
+        color: $grey2;
+        font-size: 10px;
+        line-height: 0;
+        font-weight: 300;
+        padding: 8px 12px;
+        background-color: transparent;
+        border-radius: 0;
+        margin: 0;
+        &:focus { outline: none; }
+        & a { color:inherit; }
+        @media (min-width: 480px) {
+            font-size: 16px;
         }
+        @media (min-width: 768px) {
+            font-size: 16px;
+        }
+        @media (min-width: 1280px) {
+            font-size: 16px;
+        }
+    }
+    .btn-arrow-container{
+        padding:0;
+        margin:0;
+        display: flex;
+        align-items: center;
     }
 
     .overlay {
