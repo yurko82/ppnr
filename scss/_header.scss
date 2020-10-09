@@ -30,13 +30,14 @@
     &-toggler {
         padding: 0;
         border: none;
-        &i{
+        & i{
             color: $blue3;
         }
     }
     &__sett {
         font-size: 18px;
         margin: 0 10px;
+        color: $blue3;
     }
     &__search {
         font-size: 18px;

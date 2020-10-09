@@ -800,13 +800,14 @@ button.next {
   border: none;
 }
 
-.navbar-toggleri {
+.navbar-toggler i {
   color: #005b99;
 }
 
 .navbar__sett {
   font-size: 18px;
   margin: 0 10px;
+  color: #005b99;
 }
 
 .navbar__search {
