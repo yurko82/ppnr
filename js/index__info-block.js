@@ -24,13 +24,17 @@
         url:"html/some_page3.html",
         use:true
     }];
-    let currentInfoNumber=0, _screenWidth, arrayInfo=data.filter(x=>x.use).sort((a,b)=>a.priority>b.priority ? 1: -1);
+    let currentInfoNumber=0, _screenWidth=0, arrayInfo=data.filter(x=>x.use).sort((a,b)=>a.priority>b.priority ? 1: -1);
 
     function _checkScreenWidth(){
-        let w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-        if (w>1000) _screenWidth=1280;
-        else if (w>700) _screenWidth=1000;
-        else _screenWidth=650;
+        let t, w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+        if (w>1000) t=1280;
+        else if (w>700) t=1000;
+        else t=650;
+        if (t!=_screenWidth){
+            _screenWidth=t;
+            _updateInfoBlock();
+        }
     }
     function _updateInfoBlock(){
         if (!arrayInfo.length) {
@@ -126,7 +130,6 @@
             }
         }
         html+='</div>';
-        console.log(html);
         html+=` <div class="container info__actions">
                     <div class="info__block">
                         <div class="title t-d">
@@ -198,8 +201,5 @@
     }
 
     _checkScreenWidth();
-    _updateInfoBlock();
-
-   
 
 })();
