@@ -106,18 +106,18 @@
 
 /*----info start----*/
 .info {
-    height: 544px;
+    height: 550px;
     &__parallax {
         background-attachment: fixed;
         background-size: cover;
         z-index: 0;
-        height: 544px;
+        height: 550px;
         position: relative;
     }
     &__content__slider {
         z-index: 1;
-        height: 544px;
-        top:-544px;
+        height: 550px;
+        top:-550px;
         max-width: 1240;
         position: relative;
         display: flex;
@@ -125,8 +125,8 @@
         align-items: center;
     }
     &__actions {
-        top:-1088px;
-        height: 544px;
+        top:-1100px;
+        height: 550px;
         position: relative;
         z-index: 12;
     }

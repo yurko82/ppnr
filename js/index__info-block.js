@@ -5,40 +5,48 @@
         title:"Covid-19",
         priority:2,
         bg:"images/img/info/1_bg.jpg",
-        pics:{"1280":'images/img/info/1_1240.jpg', "1000":'images/img/info/1_1000.jpg', "650":'images/img/info/1_650.jpg'},
-        url:"html/some_page1.html",
+        pics:{"1280":'images/img/info/1_1240.jpg', "1000":'images/img/info/1_1000.jpg', "650":'images/img/info/1_650.jpg', "400":'images/img/info/1_400.jpg'},
+        url:'html/some_page1.html',
         use:true
     },{
         type:"baner",
         title:"Реактор 5",
         priority:4,
         bg:"images/img/info/2_bg.jpg",
-        pics:{"1280":'images/img/info/2_1240.jpg', "1000":'images/img/info/2_1000.jpg', "650":'images/img/info/2_650.jpg'},
-        url:"html/some_page2.html",
+        pics:{"1280":'images/img/info/2_1240.jpg', "1000":'images/img/info/2_1000.jpg', "650":'images/img/info/2_650.jpg', "400":'images/img/info/2_400.jpg'},
+        url:'html/some_page2.html',
         use:true
     },{
         type:"data",
         title:"Показники",
         priority:3,
         bg:"images/img/info/3_bg.jpg",
-        url:"html/some_page3.html",
+        url:'html/some_page3.html',
         use:true
     }];
-    let currentInfoNumber=0, _screenWidth=0, arrayInfo=data.filter(x=>x.use).sort((a,b)=>a.priority>b.priority ? 1: -1);
+    let currentInfoNumber=0, _screenWidth=0, 
+        arrayInfo=data.filter(x=>x.use).sort((a,b)=>a.priority>b.priority ? 1: -1)
+        container=$('section.info');
 
     function _checkScreenWidth(){
         let t, w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-        if (w>1000) t=1280;
+        console.log('w: '+w);
+        if (w>1280) t=1920;
+        else if (w>1000) t=1280;
         else if (w>700) t=1000;
-        else t=650;
+        else if (w>=500) t=650;
+        else t=400;
         if (t!=_screenWidth){
             _screenWidth=t;
             _updateInfoBlock();
         }
+        if (w<1300) _updateCSS();
     }
     function _updateInfoBlock(){
+        $('.info__parallax__slider').slick('unslick');
+        $('.info__content__slider').slick('unslick');
         if (!arrayInfo.length) {
-            $('section.info').html('').css('height','0');
+            container.html('').css('height','0');
             return;
         }
         let i,html='';
@@ -51,7 +59,7 @@
         html+='<div class="container info__content__slider">';
         for (i=0;i<arrayInfo.length;i++){
             if (arrayInfo[i].type=="baner"){
-                html+=`<img class="info__item" src="${arrayInfo[i].pics[_screenWidth]}" alt="">`;
+                html+=`<img class="info__item" src="${arrayInfo[i].pics[_screenWidth]||arrayInfo[i].pics['1280']}" alt="">`;
             } else if (arrayInfo[i].type=="data"){
                 html+=`<div class="info__item info__statistic">
                     <div class="info__statistic-item bg-green1">
@@ -144,44 +152,65 @@
         html +=    `</div>
                     <button class="btn btn-d btn_to-right info__btn" onclick="window.location.href="${arrayInfo[currentInfoNumber].url}"><a>Подробиці</a></button>
                 </div>`;
-        $('section.info').html(html).css('height','544px');
+        container.html(html).css('height','544px');
 
         if (arrayInfo.length>1) {
             $('.info__parallax__slider').slick({
                 speed: 1000,
                 dots: false,
                 arrows: false,
-                fade: true
+                fade: true,
+                adaptiveHeight:true,
+                initialSlide: currentInfoNumber
             });
             $('.info__content__slider').slick({
                 speed: 1000,
                 dots: false,
                 arrows: false,
-                fade: false
+                fade: _screenWidth<=1000,
+                adaptiveHeight: true,
+                initialSlide: currentInfoNumber
             });
 
-            $('.info .btn-arrow-left').click(()=>_moveSlider(false));
-            $('.info .btn-arrow-right').click(()=>_moveSlider(true));
+            container.find('.btn-arrow-left').click(()=>_moveSlider(false));
+            container.find('.btn-arrow-right').click(()=>_moveSlider(true));
         }
+    }
+    function _updateCSS(){
+        let title=container.find('.title'), btn=container.find('.info__btn'), 
+            contentH=container.find('.info__content__slider img.slick-current').height();
+        h = title.outerHeight(true);
+        // console.log(h+' + '+contentH+' + '+btn.outerHeight(true)+' = '+(+h+contentH+btn.outerHeight(true)));
+        h = parseInt(title.outerHeight(true)+contentH+btn.outerHeight(true));
+        container.css('height',h);
+        container.find('.info__parallax__slider').css('height',h);
+        container.find('.info__content__slider').css('height',h); container.find('.info__content__slider').css('top',-h);
+        // container.find('.info__content__slider img.slick-current').css('height',contentH);
+        container.find('.info__actions').css('height',h); container.find('.info__actions').css('top',-2*h); 
+        btn.css('top',contentH);
+        // h = parseInt(contentH + title.outerHeight(true) + btn.outerHeight(true));
+        // container.css('height',h);
+        // console.log('h: ' + h);
+        // container.find('.info__content__slider').css({'height':h,'top':-h});
+        //container.find('.info__actions').css({'height':h, 'top':-2*h});
     }
     function _moveSlider(right){
         if (right) { 
-            $('.info__parallax__slider').slick('slickNext');
-            $('.info__content__slider').slick('slickNext');
+            container.find('.info__parallax__slider').slick('slickNext');
+            container.find('.info__content__slider').slick('slickNext');
             currentInfoNumber++;
         } else {
-            $('.info__parallax__slider').slick('slickPrev');
-            $('.info__content__slider').slick('slickPrev');
+            container.find('.info__parallax__slider').slick('slickPrev');
+            container.find('.info__content__slider').slick('slickPrev');
             currentInfoNumber--; 
         }
         if (currentInfoNumber<0) currentInfoNumber=arrayInfo.length-1;
         if (currentInfoNumber>=arrayInfo.length) currentInfoNumber=0;
            $('.info .info__actions button.info__btn a').attr('href', arrayInfo[currentInfoNumber].url);
         _changeInfoBlockTitle(arrayInfo[currentInfoNumber].title);
-        // _checkContainerHeight(); //  for positionY of button
     }
     function _changeInfoBlockTitle(stNew){
-        let span=$('.info .info__actions .title').find('span');
+        let span=container.find('.info__actions .title span');
         let st = span.text();
         let timerRemove = setInterval(()=>{
             st=st.slice(0,-1);
@@ -197,9 +226,16 @@
                 },40);
             }
         },40);
-        $('.info .info__actions .title').find('span').text(st);
+        container.find('.info__actions .title span').text(st);
     }
 
+
+    window.addEventListener('resize', _checkScreenWidth);
     _checkScreenWidth();
+    
+    window.onload = function(){
+        //_checkScreenWidth();
+        _updateCSS();
+    };
 
 })();

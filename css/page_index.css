@@ -641,6 +641,12 @@ button.next {
   bottom: 50px;
 }
 
+@media (max-width: 768px) {
+  .btn_up {
+    display: none;
+  }
+}
+
 .btn-arrow {
   display: inline-block;
   border: 1px solid #757575;
@@ -1439,21 +1445,21 @@ ul.navbar-nav .on-hover ul li:hover > a, ul.navbar-nav .on-hover ul li:hover > .
 /*----head-slider end----*/
 /*----info start----*/
 .info {
-  height: 544px;
+  height: 550px;
 }
 
 .info__parallax {
   background-attachment: fixed;
   background-size: cover;
   z-index: 0;
-  height: 544px;
+  height: 550px;
   position: relative;
 }
 
 .info__content__slider {
   z-index: 1;
-  height: 544px;
-  top: -544px;
+  height: 550px;
+  top: -550px;
   max-width: 1240;
   position: relative;
   display: -webkit-box;
@@ -1468,8 +1474,8 @@ ul.navbar-nav .on-hover ul li:hover > a, ul.navbar-nav .on-hover ul li:hover > .
 }
 
 .info__actions {
-  top: -1088px;
-  height: 544px;
+  top: -1100px;
+  height: 550px;
   position: relative;
   z-index: 12;
 }

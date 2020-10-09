@@ -429,6 +429,9 @@
             line-height: 0;
         }
         &.active { bottom: 50px; }
+        @media (max-width: 768px) {
+            display: none;
+        }
     }
 
     .btn-arrow { 
