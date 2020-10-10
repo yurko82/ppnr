@@ -437,7 +437,7 @@ button.next {
     font-size: 24px;
     line-height: 28px;
     letter-spacing: 2px;
-    padding: 32px 0;
+    padding: 24px 0;
   }
 }
 
@@ -891,7 +891,7 @@ button.next {
 
 .navbar .dropdown-item {
   border-radius: 0;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0 0.5rem 0.7rem;
 }
 
 .navbar .dropdown-item .angle-right {
@@ -1285,7 +1285,7 @@ ul.navbar-nav .on-hover ul li:hover > a, ul.navbar-nav .on-hover ul li:hover > .
 
 .footer__logo:after {
   content: "";
-  height: 25px;
+  height: 38px;
   border-right: 2px #fff solid;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1295,17 +1295,17 @@ ul.navbar-nav .on-hover ul li:hover > a, ul.navbar-nav .on-hover ul li:hover > .
       -ms-flex-direction: row;
           flex-direction: row;
   position: absolute;
-  left: 220px;
+  left: 197px;
   top: 20px;
 }
 
 .footer__logo-naek {
-  height: 25px;
+  height: 38px;
 }
 
 .footer__logo-raes {
-  height: 25px;
-  margin-left: 25px;
+  height: 38px;
+  margin-left: 38px;
 }
 
 .footer__link-link {
@@ -1325,23 +1325,8 @@ ul.navbar-nav .on-hover ul li:hover > a, ul.navbar-nav .on-hover ul li:hover > .
   }
   .footer__logo:after {
     content: "";
-    height: 32px;
-    left: 282px;
-  }
-  .footer__logo-naek {
-    height: 32px;
-  }
-  .footer__logo-raes {
-    height: 32px;
-    margin-left: 32px;
-  }
-}
-
-@media (min-width: 1000px) {
-  .footer__logo:after {
-    content: "";
     height: 40px;
-    left: 354px;
+    left: 207px;
   }
   .footer__logo-naek {
     height: 40px;
@@ -1349,6 +1334,21 @@ ul.navbar-nav .on-hover ul li:hover > a, ul.navbar-nav .on-hover ul li:hover > .
   .footer__logo-raes {
     height: 40px;
     margin-left: 40px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .footer__logo:after {
+    content: "";
+    height: 50px;
+    left: 259px;
+  }
+  .footer__logo-naek {
+    height: 50px;
+  }
+  .footer__logo-raes {
+    height: 50px;
+    margin-left: 50px;
   }
   .footer__mail {
     width: 30%;
@@ -1361,15 +1361,15 @@ ul.navbar-nav .on-hover ul li:hover > a, ul.navbar-nav .on-hover ul li:hover > .
 @media (min-width: 1280px) {
   .footer__logo:after {
     content: "";
-    height: 50px;
-    left: 441px;
+    height: 60px;
+    left: 312px;
   }
   .footer__logo-naek {
-    height: 50px;
+    height: 60px;
   }
   .footer__logo-raes {
-    height: 50px;
-    margin-left: 50px;
+    height: 60px;
+    margin-left: 60px;
   }
 }
 
@@ -1593,6 +1593,10 @@ ul.navbar-nav .on-hover ul li:hover > a, ul.navbar-nav .on-hover ul li:hover > .
   color: #fff;
 }
 
+.widget .slick-track > div {
+  padding-top: 30px;
+}
+
 @media (min-width: 480px) {
   .widget__slider-title {
     font-size: 22px;
@@ -1606,6 +1610,9 @@ ul.navbar-nav .on-hover ul li:hover > a, ul.navbar-nav .on-hover ul li:hover > .
   }
   .widget .odin {
     font-size: 18px;
+  }
+  .widget .slick-track > div {
+    padding-top: unset;
   }
 }
 

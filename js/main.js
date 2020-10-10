@@ -40,8 +40,8 @@
 
     // use only on index page
     $('.widget__slider').slick({
-        // prevArrow: '<button class="prev btn-h"><i class="fas fa-chevron-left"></i></button>',
-        // nextArrow: '<button class="next btn-h"><i class="fas fa-chevron-right"></i></button>',
+        prevArrow: '<button class="prev btn-h"><i class="fas fa-chevron-left"></i></button>',
+        nextArrow: '<button class="next btn-h"><i class="fas fa-chevron-right"></i></button>',
         speed: 1000,
         dots: true,
         arrows: false,

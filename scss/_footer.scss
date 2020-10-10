@@ -50,21 +50,21 @@
         position: relative;
         &:after{
                 content: "";
-                height: 25px;
+                height: 38px;
                 border-right: 2px #fff solid;
                 display: flex;
                 flex-direction: row;
                 position: absolute;
-                left: 220px;
+                left: 197px;
                 top: 20px;
             }
         &-naek{
-           height: 25px; 
+           height: 38px; 
             
         }
         &-raes{
-            height: 25px;
-            margin-left: 25px;
+            height: 38px;
+            margin-left: 38px;
         }
     }
     &__link-link{
@@ -80,16 +80,16 @@
         &__logo {
             &:after{
                      content: "";
-                     height: 32px;
-                     left: 282px;
+                     height: 40px;
+                     left: 207px;
                  }
              &-naek{
-                height: 32px; 
+                height: 40px; 
                  
              }
              &-raes{
-                 height: 32px;
-                 margin-left: 32px;
+                 height: 40px;
+                 margin-left: 40px;
              }
          }
     }
@@ -97,16 +97,16 @@
         &__logo {
            &:after{
                     content: "";
-                    height: 40px;
-                    left: 354px;
+                    height: 50px;
+                    left: 259px;
                 }
             &-naek{
-               height: 40px; 
+               height: 50px; 
                 
             }
             &-raes{
-                height: 40px;
-                margin-left: 40px;
+                height: 50px;
+                margin-left: 50px;
             }
         }
         &__mail {
@@ -120,16 +120,16 @@
         &__logo {
            &:after{
                     content: "";
-                    height: 50px;
-                    left: 441px;
+                    height: 60px;
+                    left: 312px;
                 }
             &-naek{
-               height: 50px; 
+               height: 60px; 
                 
             }
             &-raes{
-                height: 50px;
-                margin-left: 50px;
+                height: 60px;
+                margin-left: 60px;
             }
         }
         
