@@ -650,11 +650,10 @@ button.next {
 .btn-arrow {
   display: inline-block;
   border: 1px solid #757575;
-  color: #505050;
+  color: #757575;
   font-size: 10px;
   line-height: 0;
-  font-weight: 300;
-  padding: 8px 12px;
+  padding: 8px 8px;
   background-color: transparent;
   border-radius: 0;
   margin: 0;
@@ -1251,7 +1250,7 @@ ul.navbar-nav .on-hover ul li:hover > a, ul.navbar-nav .on-hover ul li:hover > .
   height: 244px;
   right: 0px;
   bottom: 70px;
-  opacity: 0.15;
+  opacity: 0.25;
 }
 
 .footer__content a {

@@ -145,8 +145,8 @@
                         </div>`;
         if (arrayInfo.length>1) {
             html +=    `<div class="btn-arrow-container">
-                            <button class="btn-arrow btn-arrow-left btn-d pointer"><a class="icon-angle-right"></a></button>
-                            <button class="btn-arrow btn-arrow-right btn-d pointer"><a class="icon-angle-right"></a></button>
+                            <button class="btn-arrow btn-arrow-left btn-d pointer"><a class="icon-left-arrow"></a></button>
+                            <button class="btn-arrow btn-arrow-right btn-d pointer"><a class="icon-right-arrow"></a></button>
                         </div>`;
         }
         html +=    `</div>

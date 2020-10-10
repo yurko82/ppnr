@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'rnpp-icons';
-   src: url('rnpp-icons.woff?s8eevm') format('woff');
+  src:  url('rnpp-icons.woff?ghoivp') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -21,34 +21,129 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-news3:before {
+.icon-announcement_full:before {
   content: "\e900";
   /* color: #5b5b5b; */
 }
-.icon-news1:before {
+.icon-announcement:before {
   content: "\e901";
   /* color: #5b5b5b; */
 }
-.icon-news2:before {
+.icon-bookmark_full:before {
   content: "\e902";
   /* color: #5b5b5b; */
 }
-.icon-facebook:before {
+.icon-bookmark:before {
   content: "\e903";
+  /* color: #5b5b5b; */
+}
+.icon-calendar:before {
+  content: "\e904";
+  /* color: #727271; */
+}
+.icon-close:before {
+  content: "\e905";
+  /* color: #5b5b5b; */
+}
+.icon-eye_full:before {
+  content: "\e906";
+  /* color: #5b5b5b; */
+}
+.icon-eye:before {
+  content: "\e907";
+  /* color: #5b5b5b; */
+}
+.icon-facebook:before {
+  content: "\e908";
+  /* color: #5b5b5b; */
 }
 .icon-instagram:before {
-  content: "\e904";
+  content: "\e909";
+  /* color: #5b5b5b; */
+}
+.icon-left-arrow:before {
+  content: "\e90a";
+  /* color: #5b5b5b; */
+}
+.icon-news_full:before {
+  content: "\e90b";
+  /* color: #5b5b5b; */
+}
+.icon-news-bars:before {
+  content: "\e90c";
+  /* color: #5b5b5b; */
+}
+.icon-news-th-list:before {
+  content: "\e90d";
+  /* color: #5b5b5b; */
+}
+.icon-news-th:before {
+  content: "\e90e";
+  /* color: #5b5b5b; */
+}
+.icon-news .path1:before {
+  content: "\e90f";
+  /* color: rgb(84, 85, 86); */
+}
+.icon-news .path2:before {
+  content: "\e910";
+  margin-left: -1em;
+  /* color: rgb(91, 91, 91); */
+}
+.icon-newspaper_full .path1:before {
+  content: "\e911";
+  /* color: rgb(84, 84, 84); */
+}
+.icon-newspaper_full .path2:before {
+  content: "\e912";
+  margin-left: -1em;
+  /* color: rgb(84, 84, 84); */
+}
+.icon-newspaper_full .path3:before {
+  content: "\e913";
+  margin-left: -1em;
+  /* color: rgb(91, 91, 91); */
+}
+.icon-newspaper_full .path4:before {
+  content: "\e914";
+  margin-left: -1em;
+  /* color: rgb(91, 91, 91); */
+}
+.icon-newspaper_full .path5:before {
+  content: "\e915";
+  margin-left: -1em;
+  /* color: rgb(91, 91, 91); */
+}
+.icon-newspaper_full .path6:before {
+  content: "\e916";
+  margin-left: -1em;
+  /* color: rgb(91, 91, 91); */
+}
+.icon-newspaper:before {
+  content: "\e917";
+  /* color: #5b5b5b; */
+}
+.icon-right-arrow:before {
+  content: "\e918";
+  /* color: #5b5b5b; */
+}
+.icon-search:before {
+  content: "\e919";
+  /* color: #5b5b5b; */
 }
 .icon-telegram:before {
-  content: "\e905";
+  content: "\e91a";
+  /* color: #5b5b5b; */
 }
 .icon-twitter:before {
-  content: "\e906";
+  content: "\e91b";
+  /* color: #5b5b5b; */
+}
+.icon-video:before {
+  content: "\e91c";
+  /* color: #5b5b5b; */
 }
 .icon-youtube:before {
-  content: "\e907";
-}
-.icon-angle-right:before {
-  content: "\e908";
-  /* color: #757575; */
+  content: "\e91d";
+  /* color: #5b5b5b; */
 }

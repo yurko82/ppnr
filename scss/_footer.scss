@@ -18,14 +18,13 @@
             content: '';
             position: absolute;
             display: block;
-            // background-image: url(../images/pattern_oo_white.png);
             background-image: url(../images/svg/o_naek_blue.svg);
             background-size: 284px;
             width: 284px;
             height: 244px;
             right: 0px;
             bottom: 70px;
-            opacity: 0.15;
+            opacity: 0.25;
         }
         & a{
             color: $blue5;
