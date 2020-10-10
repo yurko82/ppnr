@@ -184,6 +184,9 @@
 
 /*----widget start----*/
 .widget {
+    & .slick-track > div{
+        padding-top: 30px;
+    }
     @media(min-width: 480px) {
         &__slider-title {
             font-size: 22px;
@@ -197,6 +200,9 @@
         }
         & .odin {
             font-size: 18px;
+        }
+        & .slick-track > div{
+            padding-top: unset;
         }
     }
     @media(min-width: 768px) {
