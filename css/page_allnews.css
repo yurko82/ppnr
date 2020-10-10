@@ -892,7 +892,7 @@ button.next {
 
 .navbar .dropdown-item {
   border-radius: 0;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0 0.5rem 0.7rem;
 }
 
 .navbar .dropdown-item .angle-right {
