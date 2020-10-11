@@ -73,6 +73,16 @@
     &__link-politic {
         line-height: 1;
     }
+    &__right{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    &__trustbox{
+        margin-top: 32px;
+        & img{
+            height: 50px;
+        }
+    }
     @media(min-width: 768px) {
         &__content {
             flex-direction: row;
@@ -92,6 +102,14 @@
                  margin-left: 40px;
              }
          }
+        &__right{
+            flex-direction: column;
+        }
+        &__trustbox{
+            & img{
+                height: unset;
+            }
+        }
     }
     @media (min-width: 1000px) {
         &__logo {
