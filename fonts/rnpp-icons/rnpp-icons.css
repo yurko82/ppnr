@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'rnpp-icons';
-  src:  url('rnpp-icons.woff?ghoivp') format('woff');
+  src: url('rnpp-icons.woff?p6u6cy') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -21,129 +21,33 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-announcement_full:before {
-  content: "\e900";
-  /* color: #5b5b5b; */
-}
-.icon-announcement:before {
-  content: "\e901";
-  /* color: #5b5b5b; */
-}
-.icon-bookmark_full:before {
-  content: "\e902";
-  /* color: #5b5b5b; */
-}
-.icon-bookmark:before {
-  content: "\e903";
-  /* color: #5b5b5b; */
-}
-.icon-calendar:before {
-  content: "\e904";
-  /* color: #727271; */
-}
-.icon-close:before {
-  content: "\e905";
-  /* color: #5b5b5b; */
-}
-.icon-eye_full:before {
-  content: "\e906";
-  /* color: #5b5b5b; */
-}
-.icon-eye:before {
-  content: "\e907";
-  /* color: #5b5b5b; */
-}
-.icon-facebook:before {
-  content: "\e908";
-  /* color: #5b5b5b; */
-}
-.icon-instagram:before {
-  content: "\e909";
-  /* color: #5b5b5b; */
-}
-.icon-left-arrow:before {
-  content: "\e90a";
-  /* color: #5b5b5b; */
-}
-.icon-news_full:before {
-  content: "\e90b";
-  /* color: #5b5b5b; */
-}
-.icon-news-bars:before {
-  content: "\e90c";
-  /* color: #5b5b5b; */
-}
-.icon-news-th-list:before {
-  content: "\e90d";
-  /* color: #5b5b5b; */
-}
-.icon-news-th:before {
-  content: "\e90e";
-  /* color: #5b5b5b; */
-}
-.icon-news .path1:before {
-  content: "\e90f";
-  /* color: rgb(84, 85, 86); */
-}
-.icon-news .path2:before {
-  content: "\e910";
-  margin-left: -1em;
-  /* color: rgb(91, 91, 91); */
-}
-.icon-newspaper_full .path1:before {
-  content: "\e911";
-  /* color: rgb(84, 84, 84); */
-}
-.icon-newspaper_full .path2:before {
-  content: "\e912";
-  margin-left: -1em;
-  /* color: rgb(84, 84, 84); */
-}
-.icon-newspaper_full .path3:before {
-  content: "\e913";
-  margin-left: -1em;
-  /* color: rgb(91, 91, 91); */
-}
-.icon-newspaper_full .path4:before {
-  content: "\e914";
-  margin-left: -1em;
-  /* color: rgb(91, 91, 91); */
-}
-.icon-newspaper_full .path5:before {
-  content: "\e915";
-  margin-left: -1em;
-  /* color: rgb(91, 91, 91); */
-}
-.icon-newspaper_full .path6:before {
-  content: "\e916";
-  margin-left: -1em;
-  /* color: rgb(91, 91, 91); */
-}
-.icon-newspaper:before {
-  content: "\e917";
-  /* color: #5b5b5b; */
-}
-.icon-right-arrow:before {
-  content: "\e918";
-  /* color: #5b5b5b; */
-}
-.icon-search:before {
-  content: "\e919";
-  /* color: #5b5b5b; */
-}
-.icon-telegram:before {
-  content: "\e91a";
-  /* color: #5b5b5b; */
-}
-.icon-twitter:before {
-  content: "\e91b";
-  /* color: #5b5b5b; */
-}
-.icon-video:before {
-  content: "\e91c";
-  /* color: #5b5b5b; */
-}
-.icon-youtube:before {
-  content: "\e91d";
-  /* color: #5b5b5b; */
-}
+.icon-news:before {  content: "\e912";}
+.icon-news_full:before {  content: "\e90e";}
+.icon-newspaper:before {  content: "\e914";}
+.icon-newspaper_full:before {  content: "\e913";}
+.icon-video:before {  content: "\e923";}
+.icon-video_full:before {  content: "\e921";}
+.icon-instagram:before {  content: "\e900";}
+.icon-instagram_full:before {  content: "\e90c";}
+.icon-youtube:before {  content: "\e901";}
+.icon-youtube_full:before {  content: "\e922";}
+.icon-announcement:before {  content: "\e903";}
+.icon-announcement_full:before {  content: "\e902";}
+.icon-bookmark:before {  content: "\e905";}
+.icon-bookmark_full:before {  content: "\e904";}
+.icon-calendar:before {  content: "\e906";}
+.icon-eye:before {  content: "\e909";}
+.icon-eye_full:before {  content: "\e908";}
+.icon-facebook:before {  content: "\e90b";}
+.icon-facebook_full:before {  content: "\e90a";}
+.icon-left-arrow:before {  content: "\e90d";}
+.icon-news-bars:before {  content: "\e90f";}
+.icon-news-th-list:before {  content: "\e910";}
+.icon-news-th:before {  content: "\e911";}
+.icon-right-arrow:before {  content: "\e91b";}
+.icon-search:before {  content: "\e91c";}
+.icon-telegram:before {  content: "\e91e";}
+.icon-telegram_full:before {  content: "\e91d";}
+.icon-twitter:before {  content: "\e920";}
+.icon-twitter_full:before {  content: "\e91f";}
+.icon-close:before {  content: "\e907";}

@@ -1,18 +1,17 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<!-- Creator: CorelDRAW X7 -->
-<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="200px" height="200px" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
-viewBox="0 0 2000000 2000000"
- xmlns:xlink="http://www.w3.org/1999/xlink">
- <defs>
-  <style type="text/css">
-   <![CDATA[
-    .fil0 {fill:#5B5B5B}
-   ]]>
-  </style>
- </defs>
- <g id="Слой_x0020_1">
-  <metadata id="CorelCorpID_0Corel-Layer"/>
-  <path class="fil0" d="M610032 0l779936 0c335530,0 610044,276640 610044,614769l0 770462c0,338129 -274514,614769 -610044,614769l-779936 0c-335530,0 -610044,-276640 -610044,-614769l0 -770462c0,-338129 274514,-614769 610044,-614769zm22465 962098c294215,-123946 572272,-243935 874460,-340018 19512,-6213 61937,-16441 53055,35244l-74256 667588c-25229,233577 -41753,290034 -241018,166301 -59882,-37182 -278967,-173872 -303699,-220077 -83871,-51367 307987,-324499 366393,-433976 -78036,35847 -232160,146056 -290625,186061 -171686,117461 -239706,192296 -381652,146847 -60461,-19370 -154844,-41752 -193620,-78744 -26977,-58395 153249,-112879 190962,-129226z"/>
- </g>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 209.8 209.8" style="enable-background:new 0 0 209.8 209.8;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#555555;}
+</style>
+<g id="Слой_x0020_1">
+	<g>
+		<path class="st0" d="M143.9,208.9h-78c-35.8,0-65-29.4-65-65.5v-77c0-36.1,29.2-65.5,65-65.5h78c35.8,0,65,29.4,65,65.5v77
+			C208.9,179.5,179.7,208.9,143.9,208.9z M65.9,8.9c-31.4,0-57,25.8-57,57.5v77c0,31.7,25.6,57.5,57,57.5h78c31.4,0,57-25.8,57-57.5
+			v-77c0-31.7-25.6-57.5-57-57.5C143.9,8.9,65.9,8.9,65.9,8.9z M63.2,92.2c29.4-12.4,57.2-24.4,87.4-34c2-0.6,6.2-1.6,5.3,3.5
+			l-7.4,66.8c-2.5,23.4-4.2,29-24.1,16.6c-6-3.7-27.9-17.4-30.4-22c-8.4-5.1,30.8-32.4,36.6-43.4c-7.8,3.6-23.2,14.6-29.1,18.6
+			c-17.2,11.7-24,19.2-38.2,14.7c-6-1.9-15.5-4.2-19.4-7.9C41.5,99.3,59.5,93.8,63.2,92.2z"/>
+	</g>
+</g>
 </svg>

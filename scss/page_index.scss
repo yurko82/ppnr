@@ -415,6 +415,20 @@
         background-color: #fff;
         position: relative;
         cursor: pointer;
+        &-type{
+            position: absolute;
+            top:0;
+            right:0;
+            height: 24px;
+            // width: 100%;
+            color: white;
+            font-size: 16px;
+            padding:2px 8px;
+            & i{
+                margin-right:8px;
+                font-size: 12px;
+            }
+        }
         &.anons{
             &:hover{
                 &::after{
@@ -425,18 +439,6 @@
                     position: absolute;
                     bottom: 0;
                 }
-            }
-            &::before{
-                content: "Анонс";
-                // width: 90px;
-                color: white;
-                height: 24px;
-                padding: 2px 5px;
-                background-color: $green1;
-                display: inline-block;
-                position: absolute;
-                top: 0;
-                right: 0;
             }
         }
         &.important{
@@ -450,18 +452,6 @@
                     bottom: 0;
                 }
             }
-            &::before{
-                content: "Важливо";
-                color: white;
-                // width: 90px;
-                height: 24px;
-                padding: 2px 5px;
-                background-color: $red3;
-                display: inline-block;
-                position: absolute;
-                top: 0;
-                right: 0;
-            }
         }
         &.video{
             &:hover{
@@ -473,18 +463,6 @@
                     position: absolute;
                     bottom: 0;
                 }
-            }
-            &::before{
-                content: "Відео";
-                color: white;
-                // width: 90px;
-                height: 24px;
-                padding: 2px 5px;
-                background-color: $red1;
-                display: inline-block;
-                position: absolute;
-                top: 0;
-                right: 0;
             }
         }
         &.simplenews{
@@ -510,20 +488,7 @@
                     bottom: 0;
                 }
             }
-            &::before{
-                content: "Газета";
-                color: white;
-                // width: 90px;
-                height: 24px;
-                padding: 2px 5px;
-                background-color: $blue4;
-                display: inline-block;
-                position: absolute;
-                top: 0;
-                right: 0;
-            }
         }
-
     }
     &__item-title {
         height: 110px;
@@ -574,7 +539,7 @@
         width: 100%;
         display: flex;
         align-items: flex-start;
-        padding: 0 0 32px 0;
+        padding: 0 10px 32px 0;
         color: #fff;
         &-icon {
             margin: -5px 15px 0 0;
@@ -582,14 +547,14 @@
             display: inline-block;
             text-align: center;
             &-img{
-                background-size: 80px;
-                width: 80px;
-                height: auto;
+                background-size: 75px;
+                max-width: 75px;
+                height: 70px;
             }
         }
         &-title h3 {
             color: #fff;
-            margin: 0 0 10px 0;
+            margin: 0 0 8px 0;
             font-family: 'Gotham Pro';
             text-transform: uppercase;
             

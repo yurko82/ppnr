@@ -12,13 +12,15 @@
     });
 
     var lowVision = 0;
-    $('.fa-low-vision').click(function() {
+    $('i.icon-eye').click(function() {
         if (lowVision === 0) {
             $('body').css('filter', 'grayscale(100%)').addClass('lowvision');
             lowVision = 1;
+            $(this).addClass('icon-eye_full');
         } else {
             $('body').css('filter', 'none').removeClass('lowvision');
             lowVision = 0;
+            $(this).removeClass('icon-eye_full');
         }
     });
 
@@ -198,10 +200,13 @@
 
 
     if ($(window).width() > 999) {
-        $('i.fas.fa-search').click(function() {
-            $(this).toggleClass("fa-window-close");
+        $('i.icon-search').click(function() {
+            $(this).toggleClass("icon-close");
             $('.navbar__form').toggleClass("active");
         });
+        ['facebook','youtube','twitter','instagram','telegram'].forEach((n) => $('i.icon-'+n).hover(
+            function(){ $(this).addClass('icon-'+n+'_full'); }, 
+            function(){ $(this).removeClass('icon-'+n+'_full'); }));
 
     //scroll page - menu
     $(window).on("scroll", function(){
@@ -232,7 +237,7 @@
     // use only on allnews.html
     function checkNewsType(){
         let url = window.location.href.split('?');
-        if (url[1]) console.log('news type: ' + url[1]);
+        if (url[1]) console.log('news type: ' + url[1]); // use this for news filter
     }
     checkNewsType();
 

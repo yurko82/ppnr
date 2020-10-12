@@ -1,18 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<!-- Creator: CorelDRAW X7 -->
-<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="200px" height="200px" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
-viewBox="0 0 2000000 2000000"
- xmlns:xlink="http://www.w3.org/1999/xlink">
- <defs>
-  <style type="text/css">
-   <![CDATA[
-    .fil0 {fill:#5B5B5B;fill-rule:nonzero}
-   ]]>
-  </style>
- </defs>
- <g id="Слой_x0020_1">
-  <metadata id="CorelCorpID_0Corel-Layer"/>
-  <path class="fil0" d="M454515 1787010c-72957,72957 -191269,72957 -264238,0 -72957,-72969 -72957,-191281 0,-264238l553008 -553008 -553008 -553032c-72957,-72958 -72957,-191258 0,-264215 72957,-72957 191258,-72957 264215,0l553032 553032 553032 -553032c72957,-72957 191257,-72957 264214,0 72958,72957 72958,191257 0,264215l-553008 553032 553008 553008c72958,72957 72958,191269 0,264238 -72969,72957 -191281,72957 -264238,0l-553008 -553008 -553009 553008z"/>
- </g>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 200 200" style="enable-background:new 0 0 200 200;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#5B5B5B;}
+</style>
+<path class="st0" d="M169.2,152.7l-54.3-54.3l54.2-53.3c5.8-5.7,6.8-12,1-17.8c-5.7-5.8-12-4.8-17.8,1L99.1,82.4L45.5,28.9
+	c-5.7-5.8-12-7.8-17.8-2c-5.8,5.7-3.8,12,2,17.8L84,99l-54.2,53.3c-5.8,5.7-6.8,12-1,17.8c5.7,5.8,12,4.8,17.8-1L99.8,115l53.6,53.5
+	c5.7,5.8,12,7.8,17.8,2C177,164.8,175,158.5,169.2,152.7z"/>
 </svg>
