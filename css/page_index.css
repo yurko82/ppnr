@@ -1357,6 +1357,24 @@ ul.navbar-nav .on-hover ul li:hover > a, ul.navbar-nav .on-hover ul li:hover > .
   line-height: 1;
 }
 
+.footer__right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+}
+
+.footer__trustbox {
+  margin-top: 32px;
+}
+
+.footer__trustbox img {
+  height: 50px;
+}
+
 @media (min-width: 768px) {
   .footer__content {
     -webkit-box-orient: horizontal;
@@ -1375,6 +1393,15 @@ ul.navbar-nav .on-hover ul li:hover > a, ul.navbar-nav .on-hover ul li:hover > .
   .footer__logo-raes {
     height: 40px;
     margin-left: 40px;
+  }
+  .footer__right {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .footer__trustbox img {
+    height: unset;
   }
 }
 
