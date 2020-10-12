@@ -361,7 +361,7 @@
     &__wrap::before {
         content:'';        
         min-width: 50%;
-        background-image: url(../images/about.jpg);
+        background-image: url(../images/img/about.jpg);
         background-size: cover;
         transform: scale(-1, 1);
         display: none;
@@ -425,7 +425,7 @@
             font-size: 16px;
             padding:2px 8px;
             & i{
-                margin-right:8px;
+                margin-right:6px;
                 font-size: 12px;
             }
         }
