@@ -24,27 +24,36 @@
         url:'html/some_page3.html',
         use:true
     }];
-    let currentInfoNumber=0, _screenWidth=0, 
-        arrayInfo=data.filter(x=>x.use).sort((a,b)=>a.priority>b.priority ? 1: -1)
+    let currentInfoNumber=0, _screenWidth=0, _screenPic=0,
         container=$('section.info');
 
+    function _checkArrayInfo(w){
+        arrayInfo=data.filter(x=>x.use && (w>=768 || x.type!='data')).sort((a,b)=>a.priority>b.priority ? 1: -1);
+    }
+    function _initScreenWidth(){
+        _screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+        _checkArrayInfo(_screenWidth);
+        _checkScreenWidth();
+    }
     function _checkScreenWidth(){
         let t, w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-        console.log('w: '+w);
         if (w>1280) t=1920;
         else if (w>1000) t=1280;
         else if (w>700) t=1000;
         else if (w>=500) t=650;
         else t=400;
-        if (t!=_screenWidth){
-            _screenWidth=t;
+        if (t!=_screenPic || w<768 && _screenWidth>=768 || w>=768 && _screenWidth<768) {
+            _screenPic=t;
+            if (w<768 && _screenWidth>=768 || w>=768 && _screenWidth<768) _checkArrayInfo(w);
+            _screenWidth = w;
             _updateInfoBlock();
-        }
-        if (w<1300) _updateCSS();
+        } else  _screenWidth = w;
+        if (_screenWidth<1300) _updateCSS();
     }
     function _updateInfoBlock(){
         $('.info__parallax__slider').slick('unslick');
         $('.info__content__slider').slick('unslick');
+        if (!arrayInfo.length) _checkArrayInfo();
         if (!arrayInfo.length) {
             container.html('').css('height','0');
             return;
@@ -52,6 +61,7 @@
         let i,html='';
         html+='<div class="info__parallax__slider">';
         for (i=0;i<arrayInfo.length;i++){
+            if (arrayInfo[i].type=='data' && _screenWidth<768) continue;
             html+=`<div class="info__parallax" style="background-image: url('${arrayInfo[i].bg}');"></div>`;
         }
         html+='</div>';
@@ -59,8 +69,9 @@
         html+='<div class="container info__content__slider">';
         for (i=0;i<arrayInfo.length;i++){
             if (arrayInfo[i].type=="baner"){
-                html+=`<img class="info__item" src="${arrayInfo[i].pics[_screenWidth]||arrayInfo[i].pics['1280']}" alt="">`;
+                html+=`<img class="info__item" src="${arrayInfo[i].pics[_screenPic]||arrayInfo[i].pics['1280']}" alt="">`;
             } else if (arrayInfo[i].type=="data"){
+                if (_screenWidth<768) continue;
                 html+=`<div class="info__item info__statistic">
                     <div class="info__statistic-item bg-green1">
                         <div class="info__statistic-content">
@@ -152,7 +163,9 @@
         html +=    `</div>
                     <button class="btn btn-d btn_to-right info__btn" onclick="window.location.href='${arrayInfo[currentInfoNumber].url}'"><a>Подробиці</a></button>
                 </div>`;
-        container.html(html).css('height','544px');
+        container.html(html).css('height','550px');
+        Array.prototype.forEach.call($('img.info__item'), el => { if (el.src) el.onload=()=>_updateCSS(); });
+
 
         if (arrayInfo.length>1) {
             $('.info__parallax__slider').slick({
@@ -177,22 +190,35 @@
         }
     }
     function _updateCSS(){
-        let title=container.find('.title'), btn=container.find('.info__btn'), 
-            contentH=container.find('.info__content__slider img.slick-current').height();
+        let title=container.find('.title'), btn=container.find('.info__btn'); 
+        let h1, w1;
+        if (_screenWidth>1280) {
+            w1=1240;
+            h1=300;
+        } else if (_screenWidth<=400){
+            w1=_screenWidth-24;
+            h1=parseInt(w1*300/400);
+        } else if (_screenWidth<650) {
+            w1=_screenWidth-24;
+            h1=parseInt(w1*300/650);
+        } else if (_screenWidth<1000) {
+            w1=_screenWidth-24;
+            h1=parseInt(w1*300/1000);
+        } else {
+            w1=_screenWidth-24;
+            h1=parseInt(w1*300/1240);
+        }
+        container.find('.info__content__slider').find('.slick-list, .slick-track, .info__item').css({'width': w1+'px', 'height': h1+'px'});
+        contentH=h1;
+
+
         h = title.outerHeight(true);
-        // console.log(h+' + '+contentH+' + '+btn.outerHeight(true)+' = '+(+h+contentH+btn.outerHeight(true)));
         h = parseInt(title.outerHeight(true)+contentH+btn.outerHeight(true));
         container.css('height',h);
         container.find('.info__parallax__slider').css('height',h);
         container.find('.info__content__slider').css('height',h); container.find('.info__content__slider').css('top',-h);
-        // container.find('.info__content__slider img.slick-current').css('height',contentH);
         container.find('.info__actions').css('height',h); container.find('.info__actions').css('top',-2*h); 
         btn.css('top',contentH);
-        // h = parseInt(contentH + title.outerHeight(true) + btn.outerHeight(true));
-        // container.css('height',h);
-        // console.log('h: ' + h);
-        // container.find('.info__content__slider').css({'height':h,'top':-h});
-        //container.find('.info__actions').css({'height':h, 'top':-2*h});
     }
     function _moveSlider(right){
         if (right) { 
@@ -229,13 +255,12 @@
         container.find('.info__actions .title span').text(st);
     }
 
-
     window.addEventListener('resize', _checkScreenWidth);
-    _checkScreenWidth();
+    _initScreenWidth();
     
-    window.onload = function(){
-        //_checkScreenWidth();
-        _updateCSS();
-    };
+    // window.onload = function(){
+    //     _checkScreenWidth();
+    //     _updateCSS();
+    // };
 
 })();

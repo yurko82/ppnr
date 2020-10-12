@@ -111,12 +111,12 @@
         background-attachment: fixed;
         background-size: cover;
         z-index: 0;
-        height: 550px;
+        max-height: 550px;
         position: relative;
     }
     &__content__slider {
         z-index: 1;
-        height: 550px;
+        max-height: 550px;
         top:-550px;
         max-width: 1240;
         position: relative;
@@ -126,7 +126,7 @@
     }
     &__actions {
         top:-1100px;
-        height: 550px;
+        max-height: 550px;
         position: relative;
         z-index: 12;
     }
