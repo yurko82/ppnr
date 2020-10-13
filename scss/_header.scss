@@ -164,9 +164,12 @@ ul.navbar-nav .on-hover {
         & i {
             font-size: 18px;
         }
-        .logo img {
+        .logo {
+            flex-grow: 0;
+            img {
             max-height: 60px;
             transition: 0.5s;
+            }
         }
     }
 }
@@ -196,6 +199,7 @@ ul.navbar-nav .on-hover {
             transform: translateX(0);
             background-color: #fff;
             transition: unset;
+            flex-basis: unset;
         }
         & .lang__block,
         &__sett {
@@ -223,6 +227,9 @@ ul.navbar-nav .on-hover {
             transition: 500ms;
         }
     
+    }
+    .nav-item:last-child .nav-link{
+        padding-right: unset;
     }
     // .navbar .dropdown-toggle:not(.nav-link)::after {
     //     display: inline-block;

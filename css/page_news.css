@@ -1006,6 +1006,11 @@ ul.navbar-nav .on-hover ul li:hover > a, ul.navbar-nav .on-hover ul li:hover > .
   .navbar i {
     font-size: 18px;
   }
+  .navbar .logo {
+    -webkit-box-flex: 0;
+        -ms-flex-positive: 0;
+            flex-grow: 0;
+  }
   .navbar .logo img {
     max-height: 60px;
     -webkit-transition: 0.5s;
@@ -1048,6 +1053,8 @@ ul.navbar-nav .on-hover ul li:hover > a, ul.navbar-nav .on-hover ul li:hover > .
     background-color: #fff;
     -webkit-transition: unset;
     transition: unset;
+    -ms-flex-preferred-size: unset;
+        flex-basis: unset;
   }
   .navbar .lang__block, .navbar__sett {
     display: none;
@@ -1075,6 +1082,9 @@ ul.navbar-nav .on-hover ul li:hover > a, ul.navbar-nav .on-hover ul li:hover > .
     max-height: 90px;
     -webkit-transition: 500ms;
     transition: 500ms;
+  }
+  .nav-item:last-child .nav-link {
+    padding-right: unset;
   }
 }
 
