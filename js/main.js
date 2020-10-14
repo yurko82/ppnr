@@ -30,6 +30,22 @@
         $(e.currentTarget).removeClass('on-hover');
     });
 
+    var $divs = $('.head-slider__items>div');
+    var arr = [];
+    console.log(arr)
+    $divs.each(function(){
+      arr.push($(this).detach());
+    });
+    arr.sort(function(a, b){
+      return 0.5 - Math.random();
+    });
+    console.log(arr)
+    for (var index in arr) {
+      if (index < 4) {
+          $('.head-slider__items').append(arr[index]);
+      }  
+    }
+
     $('.head-slider__items').slick({
         autoplay: true,
         autoplaySpeed: 4000,
@@ -103,14 +119,14 @@
         if (isNewsAnimate || !isNewsIntersect) return;
         setTimeout(()=> {if (isNewsIntersect) $('.slide1').slick('slickNext')}, 2000);
     }
-    $('.slide1').on('afterChange', function(event, currentSlide) {
+    $('.slide1').on('afterChange', function(_event, _currentSlide) {
         isNewsAnimate=true;
         $('.slide2').slick('slickNext');
     })
-    $('.slide2').on('afterChange', function(event, currentSlide) {
+    $('.slide2').on('afterChange', function(_event, _currentSlide) {
         $('.slide3').slick('slickNext');
     })
-    $('.slide3').on('afterChange', function(event, currentSlide) {
+    $('.slide3').on('afterChange', function(_event, _currentSlide) {
         isNewsAnimate=false;
         startNewsSlide();
     });
@@ -307,8 +323,11 @@
         //     return (i + 1) +'/' +slider.slideCount;
         // }    
     });
-    
+    //fix index head-slider
     let vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty('--vh', `${vh}px`);
+    
+    
+      
     
 })();
