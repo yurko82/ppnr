@@ -24,26 +24,26 @@
         }
     });
 
-    $('header .nav-item').hover((e)=>{
+    $('header .nav-item').hover((e) => {
         $(e.currentTarget).addClass('on-hover');
-    },(e)=>{
+    }, (e) => {
         $(e.currentTarget).removeClass('on-hover');
     });
 
     var $divs = $('.head-slider__items>div');
     var arr = [];
     console.log(arr)
-    $divs.each(function(){
-      arr.push($(this).detach());
+    $divs.each(function() {
+        arr.push($(this).detach());
     });
-    arr.sort(function(a, b){
-      return 0.5 - Math.random();
+    arr.sort(function(a, b) {
+        return 0.5 - Math.random();
     });
     console.log(arr)
     for (var index in arr) {
-      if (index < 4) {
-          $('.head-slider__items').append(arr[index]);
-      }  
+        if (index < 4) {
+            $('.head-slider__items').append(arr[index]);
+        }
     }
 
     $('.head-slider__items').slick({
@@ -74,15 +74,16 @@
     });
 
     // START news slider, use only on index page
-    let isNewsIntersect=false, isNewsAnimate=false;
+    let isNewsIntersect = false,
+        isNewsAnimate = false;
     if (document.querySelector(".news__slider")) {
-        new IntersectionObserver((ent)=>{
+        new IntersectionObserver((ent) => {
             if (ent[0].isIntersecting) {
-                isNewsIntersect=true;
+                isNewsIntersect = true;
                 startNewsSlide();
-            } else isNewsIntersect=false;
-        }, {threshold:[0]}).observe(document.querySelector(".news__slider"));
-        initNewsSlide($('.slide1'));     // OPTIMISE all this code for adaptive via slides count
+            } else isNewsIntersect = false;
+        }, { threshold: [0] }).observe(document.querySelector(".news__slider"));
+        initNewsSlide($('.slide1')); // OPTIMISE all this code for adaptive via slides count
         initNewsSlide($('.slide2'));
         initNewsSlide($('.slide3'));
     }
@@ -97,43 +98,42 @@
             speed: 2500,
             arrows: false,
             responsive: [{
-                    breakpoint: 1000,
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 2,
-                        arrows: true
-                    }
-                },{
-                    breakpoint: 768,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1,
-                        arrows: true
-                    }
+                breakpoint: 1000,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    arrows: true
                 }
-            ]
+            }, {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    arrows: true
+                }
+            }]
         });
     };
-   
-    function startNewsSlide(){
+
+    function startNewsSlide() {
         if (isNewsAnimate || !isNewsIntersect) return;
-        setTimeout(()=> {if (isNewsIntersect) $('.slide1').slick('slickNext')}, 2000);
+        setTimeout(() => { if (isNewsIntersect) $('.slide1').slick('slickNext') }, 2000);
     }
     $('.slide1').on('afterChange', function(_event, _currentSlide) {
-        isNewsAnimate=true;
+        isNewsAnimate = true;
         $('.slide2').slick('slickNext');
     })
     $('.slide2').on('afterChange', function(_event, _currentSlide) {
         $('.slide3').slick('slickNext');
     })
     $('.slide3').on('afterChange', function(_event, _currentSlide) {
-        isNewsAnimate=false;
+        isNewsAnimate = false;
         startNewsSlide();
     });
     // END news slider on index page
 
     // use only on index page
-    $('.people__items').slick({ 
+    $('.people__items').slick({
         prevArrow: '<button class="prev btn-d"><i class="fas fa-chevron-left"></i></button>',
         nextArrow: '<button class="next btn-d"><i class="fas fa-chevron-right"></i></button>',
         slidesToShow: 2,
@@ -143,24 +143,23 @@
         vertical: false,
 
         responsive: [{
-                breakpoint: 4000,
-                settings: "unslick"
-            },{
-                breakpoint: 1000,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2,
-                    arrows: true,
-                }
-            },{
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    arrows: true,
-                }
+            breakpoint: 4000,
+            settings: "unslick"
+        }, {
+            breakpoint: 1000,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+                arrows: true,
             }
-        ]
+        }, {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: true,
+            }
+        }]
     });
 
     AOS.init({
@@ -220,38 +219,36 @@
             $(this).toggleClass("icon-close");
             $('.navbar__form').toggleClass("active");
         });
-        ['facebook','youtube','twitter','instagram','telegram'].forEach((n) => $('i.icon-'+n).hover(
-            function(){ $(this).addClass('icon-'+n+'_full'); }, 
-            function(){ $(this).removeClass('icon-'+n+'_full'); }));
+        ['facebook', 'youtube', 'twitter', 'instagram', 'telegram'].forEach((n) => $('i.icon-' + n).hover(
+            function() { $(this).addClass('icon-' + n + '_full'); },
+            function() { $(this).removeClass('icon-' + n + '_full'); }));
 
-    //scroll page - menu
-    $(window).on("scroll", function(){
-            if($(window).scrollTop() > 90)
+        //scroll page - menu
+        $(window).on("scroll", function() {
+            if ($(window).scrollTop() > 90)
                 $('.header').addClass('scroll_page');
             else
                 $('.header').removeClass('scroll_page');
-        }); 
+        });
     };
-    
+
     // use only on allnews.html
     $('.news-type').on('click', function() {
-        if($(this).children('i').hasClass("fa-th")){
+        if ($(this).children('i').hasClass("fa-th")) {
             $(this).children('i').removeClass("fa-th").addClass("fa-bars");
             $('.news__block, .allnews__block').toggleClass("gallery");
-        }
-        else if($(this).children('i').hasClass("fa-bars")){
+        } else if ($(this).children('i').hasClass("fa-bars")) {
             $(this).children('i').removeClass("fa-bars").addClass("fa-th-list");
             $('.news__block, .allnews__block').toggleClass("gallery");
-            $('.news__block-img').css("display","none");
-        }
-        else {
+            $('.news__block-img').css("display", "none");
+        } else {
             $(this).children('i').removeClass("fa-th-list").addClass("fa-th");
-            $('.news__block-img').css("display","block");
+            $('.news__block-img').css("display", "block");
         }
     });
 
     // use only on allnews.html
-    function checkNewsType(){
+    function checkNewsType() {
         let url = window.location.href.split('?');
         if (url[1]) console.log('news type: ' + url[1]); // use this for news filter
     }
@@ -259,34 +256,50 @@
 
     //btn up
     $('body').append('<button class="btn_up"><span class="icon-right-arrow btn_up__angle-top"></span></button>');
-    $('.btn_up').click(function(){
-        $('body').animate({'scrollTop': 0}, 1000);
-        $('html').animate({'scrollTop': 0}, 1000);
+    $('.btn_up').click(function() {
+        $('body').animate({ 'scrollTop': 0 }, 1000);
+        $('html').animate({ 'scrollTop': 0 }, 1000);
     });
-    $(window).scroll(function(){
+    $(window).scroll(function() {
         if ($(window).scrollTop() > 300) {
             $('.btn_up').addClass('active');
-        }else{
+        } else {
             $('.btn_up').removeClass('active');
         }
     });
 
     //lang at header
-    let currentLang="UA";
-    $('.lang__block .lang_UA').click(()=>changeLanguage('UA'));
-    $('.lang__block .lang_RU').click(()=>changeLanguage('RU'));
-    $('.lang__block .lang_EN').click(()=>changeLanguage('EN'));
-    function changeLanguage(l){
-        switch(currentLang) {
-            case "UA": $('.lang__block .lang_UA').removeClass('active'); break;
-            case "RU": $('.lang__block .lang_RU').removeClass('active'); break;
-            case "EN": $('.lang__block .lang_EN').removeClass('active'); break;
+    let currentLang = "UA";
+    $('.lang__block .lang_UA').click(() => changeLanguage('UA'));
+    $('.lang__block .lang_RU').click(() => changeLanguage('RU'));
+    $('.lang__block .lang_EN').click(() => changeLanguage('EN'));
+
+    function changeLanguage(l) {
+        switch (currentLang) {
+            case "UA":
+                $('.lang__block .lang_UA').removeClass('active');
+                break;
+            case "RU":
+                $('.lang__block .lang_RU').removeClass('active');
+                break;
+            case "EN":
+                $('.lang__block .lang_EN').removeClass('active');
+                break;
         }
         currentLang = l;
-        switch(currentLang) {
-            case "UA": $('.lang__block .lang_UA').addClass('active'); $('.lang__block span.text').text('Укр'); break;
-            case "RU": $('.lang__block .lang_RU').addClass('active'); $('.lang__block span.text').text('Рус'); break;
-            case "EN": $('.lang__block .lang_EN').addClass('active'); $('.lang__block span.text').text('Eng'); break;
+        switch (currentLang) {
+            case "UA":
+                $('.lang__block .lang_UA').addClass('active');
+                $('.lang__block span.text').text('Укр');
+                break;
+            case "RU":
+                $('.lang__block .lang_RU').addClass('active');
+                $('.lang__block span.text').text('Рус');
+                break;
+            case "EN":
+                $('.lang__block .lang_EN').addClass('active');
+                $('.lang__block span.text').text('Eng');
+                break;
         }
         $('.lang').removeClass('slideDown');
         $('.lang__drop').removeClass('open');
@@ -317,17 +330,17 @@
         arrows: true,
         fade: true,
         dots: true
-        // dotsClass: 'customPaging',
-        // customPaging: function(slider, i){
-        //     console.log(slider);
-        //     return (i + 1) +'/' +slider.slideCount;
-        // }    
+            // dotsClass: 'customPaging',
+            // customPaging: function(slider, i){
+            //     console.log(slider);
+            //     return (i + 1) +'/' +slider.slideCount;
+            // }    
     });
     //fix index head-slider
     let vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty('--vh', `${vh}px`);
-    
-    
-      
-    
+
+
+
+
 })();
