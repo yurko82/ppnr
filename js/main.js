@@ -321,6 +321,12 @@
         }
         e.stopPropagation();
     });
+    $('footer img.footer__logo-raes').dblclick((e)=>{  // temp for testing
+        e.stopPropagation();
+        alert('browser viewport- w:'+$(window).width()+', h:'+$(window).height()+
+        ' || html document- w:'+$(document).width()+', h:'+$(document).height()+
+        ' || screen- w:'+window.screen.width+', h:'+window.screen.height);
+    });
 
     //news-slider
     $('.news__img-slider').slick({
