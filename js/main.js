@@ -194,11 +194,13 @@
             $('.navbar-collapse').css({
                 'transform': 'translateX(-20px)',
             });
+            $(".body__overlay").css({ 'left': '0', 'opacity': '0.7' });
         } else {
             $(this).attr("data-show", "false");
             $('.navbar-collapse').css({
                 'transform': 'translateX(-310px)',
             });
+            $(".body__overlay").css({ 'opacity': '0', 'left': '-110vw' });
         }
 
     })
@@ -321,11 +323,11 @@
         }
         e.stopPropagation();
     });
-    $('footer img.footer__logo-raes').dblclick((e)=>{  // temp for testing
+    $('footer img.footer__logo-raes').dblclick((e) => { // temp for testing
         e.stopPropagation();
-        alert('browser viewport- w:'+$(window).width()+', h:'+$(window).height()+
-        ' || html document- w:'+$(document).width()+', h:'+$(document).height()+
-        ' || screen- w:'+window.screen.width+', h:'+window.screen.height);
+        alert('browser viewport- w:' + $(window).width() + ', h:' + $(window).height() +
+            ' || html document- w:' + $(document).width() + ', h:' + $(document).height() +
+            ' || screen- w:' + window.screen.width + ', h:' + window.screen.height);
     });
 
     //news-slider
