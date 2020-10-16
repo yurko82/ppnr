@@ -211,13 +211,15 @@
         container.find('.info__content__slider').find('.slick-list, .slick-track, .info__item').css({'width': w1+'px', 'height': h1+'px'});
         contentH=h1;
 
-
-        h = title.outerHeight(true);
-        h = parseInt(title.outerHeight(true)+contentH+btn.outerHeight(true));
-        container.css('height',h);
-        container.find('.info__parallax__slider').css('height',h);
-        container.find('.info__content__slider').css('height',h); container.find('.info__content__slider').css('top',-h);
-        container.find('.info__actions').css('height',h); container.find('.info__actions').css('top',-2*h); 
+        h1 = title.outerHeight(true);
+        h1 = parseInt(title.outerHeight(true)+contentH+btn.outerHeight(true));
+        container.css('height',h1);
+        container.find('.info__parallax__slider').css('height',h1);
+        container.find('.info__parallax__slider').find('.slick-track, .info__parallax').css('height', h1);
+        container.find('.info__content__slider').css('height',h1); 
+        container.find('.info__content__slider').css('top',-h1);
+        container.find('.info__actions').css('height',h1); 
+        container.find('.info__actions').css('top',-2*h1); 
         btn.css('top',contentH);
     }
     function _moveSlider(right){
