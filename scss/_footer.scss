@@ -1,8 +1,7 @@
 @import "_colors";
-
 .footer {
     background-color: #005B99;
-    position:relative;
+    position: relative;
     &__title {
         font-weight: 400;
         color: #fff;
@@ -26,7 +25,7 @@
             bottom: 70px;
             opacity: 0.25;
         }
-        & a{
+        & a {
             color: $blue5;
             &:hover {
                 text-decoration: underline;
@@ -37,8 +36,8 @@
         padding: 20px 0;
         color: $grey4;
         background-color: #113d6e;
-        & a{
-            color:#41b6e6;
+        & a {
+            color: #41b6e6;
             &:hover {
                 text-decoration: underline;
             }
@@ -48,38 +47,37 @@
         padding-top: 20px;
         display: flex;
         position: relative;
-        &:after{
-                content: "";
-                height: 38px;
-                border-right: 2px #fff solid;
-                display: flex;
-                flex-direction: row;
-                position: absolute;
-                left: 197px;
-                top: 20px;
-            }
-        &-naek{
-           height: 38px; 
-            
+        &:after {
+            content: "";
+            height: 38px;
+            border-right: 2px #fff solid;
+            display: flex;
+            flex-direction: row;
+            position: absolute;
+            left: 197px;
+            top: 20px;
         }
-        &-raes{
+        &-naek {
+            height: 38px;
+        }
+        &-raes {
             height: 38px;
             margin-left: 38px;
         }
     }
-    &__link-link{
+    &__link-link {
         margin-bottom: 6px;
     }
     &__link-politic {
         line-height: 1;
     }
-    &__right{
+    &__right {
         display: flex;
         flex-direction: column-reverse;
     }
-    &__trustbox{
+    &__trustbox {
         margin-top: 32px;
-        & img{
+        & img {
             height: 50px;
         }
     }
@@ -88,41 +86,39 @@
             flex-direction: row;
         }
         &__logo {
-            &:after{
-                     content: "";
-                     height: 40px;
-                     left: 207px;
-                 }
-             &-naek{
-                height: 40px; 
-                 
-             }
-             &-raes{
-                 height: 40px;
-                 margin-left: 40px;
-             }
-         }
-        &__right{
+            &:after {
+                content: "";
+                height: 40px;
+                left: 207px;
+            }
+            &-naek {
+                height: 40px;
+            }
+            &-raes {
+                height: 40px;
+                margin-left: 40px;
+            }
+        }
+        &__right {
             flex-direction: column;
         }
-        &__trustbox{
-            & img{
+        &__trustbox {
+            & img {
                 height: unset;
             }
         }
     }
     @media (min-width: 1000px) {
         &__logo {
-           &:after{
-                    content: "";
-                    height: 50px;
-                    left: 259px;
-                }
-            &-naek{
-               height: 50px; 
-                
+            &:after {
+                content: "";
+                height: 50px;
+                left: 259px;
             }
-            &-raes{
+            &-naek {
+                height: 50px;
+            }
+            &-raes {
                 height: 50px;
                 margin-left: 50px;
             }
@@ -136,20 +132,18 @@
     }
     @media (min-width: 1280px) {
         &__logo {
-           &:after{
-                    content: "";
-                    height: 60px;
-                    left: 312px;
-                }
-            &-naek{
-               height: 60px; 
-                
+            &:after {
+                content: "";
+                height: 60px;
+                left: 312px;
             }
-            &-raes{
+            &-naek {
+                height: 60px;
+            }
+            &-raes {
                 height: 60px;
                 margin-left: 60px;
             }
         }
-        
     }
 }

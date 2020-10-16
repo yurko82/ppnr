@@ -1,51 +1,51 @@
 @import '_styles';
 @import "_header";
 @import "_footer";
-
-.allnews{
-    &__block{
+.allnews {
+    &__block {
         display: flex;
         flex-direction: column;
         padding: 8px 0;
-        &.gallery{
+        &.gallery {
             flex-direction: row;
             flex-wrap: wrap;
             padding: 40px 0;
         }
     }
-    &__head-btn{
+    &__head-btn {
         display: flex;
         justify-content: flex-end;
         color: #005B99;
-        & li{
+        & li {
             margin: 0 5px;
         }
     }
-    &__btn{
+    &__btn {
         text-align: center;
         padding: 24px 0;
-        & button{
+        & button {
             padding: 8px;
         }
     }
-
 }
-.news__block{
+
+.news__block {
     margin-top: 20px;
-    &:hover{
+    &:hover {
         background-color: #eeeeee;
-        }
-    &.list{ /*fas fa-bars*/
-        margin-top: 20px;
-        }
-    
-    &.th-list{ /*fas fa-th-list*/
+    }
+    &.list {
+        /*fas fa-bars*/
         margin-top: 20px;
     }
-    &.gallery{
+    &.th-list {
+        /*fas fa-th-list*/
+        margin-top: 20px;
+    }
+    &.gallery {
         width: 33.33%;
         padding: 10px;
-        & .news__block-img{
+        & .news__block-img {
             width: 100%;
             float: none;
             margin-right: 8px;
@@ -53,32 +53,31 @@
                 width: 100%;
             }
         }
-        & .news__block-short-news{
+        & .news__block-short-news {
             display: none;
         }
-        & .news__block-title{
+        & .news__block-title {
             height: 60px;
             margin-bottom: 16px;
             font-weight: 300;
         }
     }
-    &-img{
+    &-img {
         //width: 200px;
         float: left;
         margin-right: 8px;
-        & img{
+        & img {
             width: 200px;
         }
     }
-    
-   &-title{
-    font-size: 20px;
-    font-weight: 500;
+    &-title {
+        font-size: 20px;
+        font-weight: 500;
     }
-    &-short-news{
+    &-short-news {
         margin: 0 0 20px 0;
     }
-    &-footer{
+    &-footer {
         display: flex;
         justify-content: space-between;
         text-align: right;
@@ -157,8 +156,6 @@
 //                 right: 0;
 //             }
 //         }
-        
-
 //     }
 //     &__item-title {
 //         height: 110px;

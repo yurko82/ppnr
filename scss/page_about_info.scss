@@ -1,22 +1,21 @@
 @import '_styles';
 @import "_header";
 @import "_footer";
-
-.allabout{
-    &__block{
+.allabout {
+    &__block {
         position: relative;
     }
-    &__title h2{
+    &__title h2 {
         font-weight: 300;
     }
-    &__menu{
+    &__menu {
         position: sticky;
         left: 0;
         top: 120px;
         float: left;
         z-index: 1005;
         padding-left: 24px;
-        &::before{
+        &::before {
             content: '';
             position: absolute;
             left: 0;
@@ -26,28 +25,28 @@
             height: 24px;
             background-color: #005B99;
         }
-        &-submenu{
+        &-submenu {
             margin-top: 16px;
         }
-        & .active{
+        & .active {
             color: #005B99;
         }
-        &>ul{
+        &>ul {
             margin: 32px 0 0 0;
             padding: 0;
         }
-        & li{
+        & li {
             list-style: none;
         }
-        & h3{
+        & h3 {
             font-size: 18px;
         }
     }
-    &__content{
+    &__content {
         margin-left: 300px;
         height: 55vh;
-        & p{
+        & p {
             padding: 0 0 24px 0;
-        }    
+        }
     }
 }

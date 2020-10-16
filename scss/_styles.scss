@@ -7,20 +7,48 @@
     /* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
     /* Упрощаем работу с изображениями */
     /* END CLEANER */
-     
-    @import "_fonts"; 
+    
+    @import "_fonts";
     @import "_colors";
-
-    *, *::before, *::after  {  -webkit-box-sizing: border-box;  box-sizing: border-box;  }
-    ul[class], ol[class] {
+    *,
+    *::before,
+    *::after {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    
+    ul[class],
+    ol[class] {
         padding: 0;
         margin: 0;
         list-style: none;
     }
-    h1,h2,h3,h4,p,li,figure,figcaption,dl,dd { margin: 0; }
-    a:not([class]) {  text-decoration-skip-ink: auto;  }
-    a:hover { text-decoration: unset; }
-    img { display: block; }   
+    
+    h1,
+    h2,
+    h3,
+    h4,
+    p,
+    li,
+    figure,
+    figcaption,
+    dl,
+    dd {
+        margin: 0;
+    }
+    
+    a:not([class]) {
+        text-decoration-skip-ink: auto;
+    }
+    
+    a:hover {
+        text-decoration: unset;
+    }
+    
+    img {
+        display: block;
+    }
+    
     body {
         font-family: 'Gotham Pro';
         font-style: normal;
@@ -32,14 +60,16 @@
         line-height: 1.5;
         overflow-x: hidden;
     }
+    
     button {
         background: transparent;
         border: none;
         padding: 0;
-        &:active,:focus{
-             outline: none;
+        &:active,
+        :focus {
+            outline: none;
         }
-        &::-moz-focus-inner{
+        &::-moz-focus-inner {
             border: 0;
         }
         &.prev {
@@ -67,16 +97,40 @@
             align-items: center;
             justify-content: center;
         }
-    }    
-    .mt120{  margin-top: 120px;  }
-    .mt80{  margin-top: 80px;  }
-    .bg_bl-4{  background-color: $blue4;  }
-    .bg_r-3{   background-color: $red3;   }
-    .bg_r-2{   background-color: $red2;   }
-    .bg_r-1{   background-color: $red1;   }
-    .bg_gr-2{  background-color: $green2; }
-    .bg_gr-3{  background-color: $green3; }
-
+    }
+    
+    .mt120 {
+        margin-top: 120px;
+    }
+    
+    .mt80 {
+        margin-top: 80px;
+    }
+    
+    .bg_bl-4 {
+        background-color: $blue4;
+    }
+    
+    .bg_r-3 {
+        background-color: $red3;
+    }
+    
+    .bg_r-2 {
+        background-color: $red2;
+    }
+    
+    .bg_r-1 {
+        background-color: $red1;
+    }
+    
+    .bg_gr-2 {
+        background-color: $green2;
+    }
+    
+    .bg_gr-3 {
+        background-color: $green3;
+    }
+    
     .h1 {
         margin: 0;
         font-size: 20px;
@@ -87,23 +141,24 @@
             font-size: 24px;
             line-height: 28px;
             letter-spacing: 2px;
-            }
+        }
         @media (min-width: 768px) {
             font-size: 30px;
             line-height: 36px;
             letter-spacing: 2px;
-            }
+        }
         @media (min-width: 768px) {
             font-size: 30px;
             line-height: 36px;
             letter-spacing: 2px;
-            }
+        }
         @media (min-width: 1280px) {
             font-size: 36px;
             line-height: 42px;
             letter-spacing: 2px;
-            }    
+        }
     }
+    
     .h2 {
         margin: 0;
         font-size: 20px;
@@ -114,18 +169,19 @@
             font-size: 24px;
             line-height: 28px;
             letter-spacing: 2px;
-            }
+        }
         @media (min-width: 768px) {
             font-size: 20px;
             line-height: 23px;
             letter-spacing: 1px;
-            }
+        }
         @media (min-width: 1280px) {
             font-size: 24px;
             line-height: 28px;
             letter-spacing: 2px;
-            }
+        }
     }
+    
     .h3 {
         margin: 0;
         font-size: 12px;
@@ -136,17 +192,17 @@
             font-size: 14px;
             line-height: 16px;
             letter-spacing: 1px;
-            }
+        }
         @media (min-width: 1000px) {
             font-size: 16px;
             line-height: 18px;
             letter-spacing: 1px;
-            }
+        }
         @media (min-width: 1280px) {
             font-size: 18px;
             line-height: 20px;
             letter-spacing: 1px;
-            }
+        }
     }
     
     .t1 {
@@ -159,18 +215,18 @@
             font-size: 14px;
             line-height: 16px;
             letter-spacing: 1px;
-            }
+        }
         @media (min-width: 768px) {
             font-size: 16px;
             line-height: 18px;
             letter-spacing: 1px;
-            }
+        }
         @media (min-width: 1280px) {
             font-size: 18px;
             line-height: 20px;
             letter-spacing: 1px;
-            }
         }
+    }
     
     .t2 {
         margin: 0;
@@ -182,12 +238,12 @@
             font-size: 10px;
             line-height: 12px;
             letter-spacing: 1px;
-            }
+        }
         @media (min-width: 768px) {
             font-size: 14px;
             line-height: 16px;
             letter-spacing: 1px;
-            }
+        }
         @media (min-width: 1280px) {
             font-size: 16px;
             line-height: 18px;
@@ -205,12 +261,12 @@
             font-size: 10px;
             line-height: 12px;
             letter-spacing: 1px;
-            }
+        }
         @media (min-width: 1280px) {
             font-size: 12px;
             line-height: 14px;
             letter-spacing: 1px;
-            }
+        }
     }
     
     .text1 {
@@ -241,13 +297,11 @@
         letter-spacing: 1px;
         font-weight: 400;
         @media (min-width: 480px) {
-        
             font-size: 10px;
             line-height: 12px;
             letter-spacing: 1px;
         }
         @media (min-width: 768px) {
-        
             font-size: 14px;
             line-height: 16px;
             letter-spacing: 1px;
@@ -320,7 +374,7 @@
         padding: 0 8px;
         margin: 20px 0 20px auto;
         & a {
-            color:inherit;
+            color: inherit;
         }
         @media (min-width: 480px) {
             height: 32px;
@@ -361,6 +415,7 @@
             color: $blue3;
         }
     }
+    
     .btn-d {
         color: $grey2;
         border: 1px solid $grey3;
@@ -373,6 +428,7 @@
             color: white;
         }
     }
+    
     .btn-g {
         color: white;
         border: 1px solid white;
@@ -385,6 +441,7 @@
             color: $green1;
         }
     }
+    
     .btn_to-right {
         transition: color 0.3 ease;
         position: relative;
@@ -403,10 +460,18 @@
             transition-duration: 0.3s;
             transition-timing-function: ease-out;
         }
-        &:hover, &:focus, &:active { background-color:transparent; }
-        &:hover:before, &:focus:before, &:active:before { transform: scaleX(1); }
+        &:hover,
+        &:focus,
+        &:active {
+            background-color: transparent;
+        }
+        &:hover:before,
+        &:focus:before,
+        &:active:before {
+            transform: scaleX(1);
+        }
     }
-
+    
     .btn_up {
         position: fixed;
         bottom: -40px;
@@ -420,7 +485,9 @@
         align-items: center;
         justify-content: center;
         cursor: pointer;
-        &:focus { outline: none; }
+        &:focus {
+            outline: none;
+        }
         &__angle-top {
             color: white;
             font-size: 16px;
@@ -428,13 +495,15 @@
             transform: rotate(-90deg);
             line-height: 0;
         }
-        &.active { bottom: 50px; }
+        &.active {
+            bottom: 50px;
+        }
         @media (max-width: 768px) {
             display: none;
         }
     }
-
-    .btn-arrow { 
+    
+    .btn-arrow {
         display: inline-block;
         border: 1px solid $grey3;
         color: $grey3;
@@ -444,8 +513,12 @@
         background-color: transparent;
         border-radius: 0;
         margin: 0;
-        &:focus { outline: none; }
-        & a { color:inherit; }
+        &:focus {
+            outline: none;
+        }
+        & a {
+            color: inherit;
+        }
         @media (min-width: 480px) {
             font-size: 16px;
         }
@@ -456,13 +529,14 @@
             font-size: 16px;
         }
     }
-    .btn-arrow-container{
-        padding:0;
-        margin:0;
+    
+    .btn-arrow-container {
+        padding: 0;
+        margin: 0;
         display: flex;
         align-items: center;
     }
-
+    
     .overlay {
         background: linear-gradient(to bottom, #fff 130px, transparent 310px);
         height: 100vh;
@@ -470,21 +544,55 @@
         z-index: 11;
         position: absolute;
     }
-        
-    .shadow{ box-shadow: 0 2px 3px -2px rgba(50, 50, 50, 0.5); }
-    .text-shadow{ text-shadow: 1px 2px rgba(50, 50, 50, 0.3); }
-    .pointer { cursor: pointer; }
-
-    .font-thin { font-weight: 100; } 
-    .font-extra-light { font-weight: 200; } 
-    .font-light { font-weight: 300; } 
-    .font-regular { font-weight: 400; } 
-    .font-medium { font-weight: 500; } 
-    .font-semi-bold { font-weight: 600; } 
-    .font-bold { font-weight: 700; } 
-    .font-extra-bold { font-weight: 700; } 
-    .font-black { font-weight: 700; } 
-
+    
+    .shadow {
+        box-shadow: 0 2px 3px -2px rgba(50, 50, 50, 0.5);
+    }
+    
+    .text-shadow {
+        text-shadow: 1px 2px rgba(50, 50, 50, 0.3);
+    }
+    
+    .pointer {
+        cursor: pointer;
+    }
+    
+    .font-thin {
+        font-weight: 100;
+    }
+    
+    .font-extra-light {
+        font-weight: 200;
+    }
+    
+    .font-light {
+        font-weight: 300;
+    }
+    
+    .font-regular {
+        font-weight: 400;
+    }
+    
+    .font-medium {
+        font-weight: 500;
+    }
+    
+    .font-semi-bold {
+        font-weight: 600;
+    }
+    
+    .font-bold {
+        font-weight: 700;
+    }
+    
+    .font-extra-bold {
+        font-weight: 700;
+    }
+    
+    .font-black {
+        font-weight: 700;
+    }
+    
     // @mixin font($font_name, $file_name, $weight, $height){
     //     @font-face {
     //         font-family: $font_name;
@@ -493,6 +601,4 @@
     //         font-weight: #{$weight};
     //         font-style: #{$style};
     //     }
-    // } 
-
-
+    // }
