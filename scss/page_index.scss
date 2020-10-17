@@ -417,10 +417,9 @@
         padding: 0 15px;
         color: #fff;
         position: relative;
-        
     }
     &__text {
-       font-size: 16px;
+        font-size: 16px;
     }
     @media(min-width: 768px) {
         &__wrap::before {
@@ -575,10 +574,13 @@
         }
     }
 }
+
+
 /*----news end----*/
 
 
 /*----why start----*/
+
 .why {
     background-color: $green1;
     & a {
@@ -707,9 +709,11 @@
         }
     }
 }
+
+
 /*----gromadi end----*/
 
-.section-top-row{
+.section-top-row {
     display: flex;
     flex-direction: row;
     align-items: center;

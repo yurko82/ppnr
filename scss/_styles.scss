@@ -66,7 +66,7 @@
         border: none;
         padding: 0;
         &:active,
-        :focus {
+         :focus {
             outline: none;
         }
         &::-moz-focus-inner {
@@ -534,16 +534,20 @@
         display: flex;
         align-items: center;
     }
-
-    .btn_full-width{
-        @media (max-width:768px) {
+    
+    .btn_full-width {
+        @media (max-width: 768px) {
             height: auto;
             font-size: 16px;
             line-height: 115%;
             padding: 8px 16px;
             margin: 30px auto;
-            width:100%;
+            width: 100%;
         }
+    }
+    
+    .flex-grow-1 {
+        flex-grow: 1;
     }
     
     .overlay {

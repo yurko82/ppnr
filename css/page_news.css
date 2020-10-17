@@ -728,6 +728,12 @@ button.next {
   }
 }
 
+.flex-grow-1 {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
 .overlay {
   background: linear-gradient(to bottom, #fff 130px, transparent 310px);
   height: 100vh;
@@ -965,13 +971,6 @@ button.next {
 
 .marginleftfix {
   margin-left: 0 !important;
-}
-
-.logo {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  /*margin-left: 18px;*/
 }
 
 .logo img {
