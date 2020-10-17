@@ -161,7 +161,7 @@
                         </div>`;
         }
         html +=    `</div>
-                    <button class="btn btn-d btn_to-right info__btn" onclick="window.location.href='${arrayInfo[currentInfoNumber].url}'"><a>Подробиці</a></button>
+                    <button class="btn btn-d btn_to-right btn_full-width info__btn" onclick="window.location.href='${arrayInfo[currentInfoNumber].url}'"><a>Подробиці</a></button>
                 </div>`;
         container.html(html).css('height','550px');
         Array.prototype.forEach.call($('img.info__item'), el => { if (el.src) el.onload=()=>_updateCSS(); });

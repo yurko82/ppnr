@@ -329,29 +329,22 @@
     }
     
     .title {
-        padding: 10px 0;
-        font-size: 20px;
-        line-height: 23px;
+        padding: 20px 0;
+        font-size: 36px;
+        line-height: 115%;
         letter-spacing: 1px;
         font-weight: 300;
         display: flex;
         align-items: center;
         @media (min-width: 480px) {
-            font-size: 24px;
-            line-height: 28px;
             letter-spacing: 2px;
             padding: 24px 0;
         }
         @media (min-width: 768px) {
-            font-size: 30px;
-            line-height: 36px;
-            letter-spacing: 2px;
             padding: 32px 0;
         }
-        @media (min-width: 1280px) {
+        @media (min-width: 1000px) {
             font-size: 36px;
-            line-height: 42px;
-            letter-spacing: 2px;
             padding: 40px 0;
         }
     }
@@ -368,11 +361,11 @@
         display: block;
         height: 24px;
         font-size: 10px;
-        line-height: 12px;
+        line-height: 115%;
         background-color: transparent;
         border-radius: 0;
-        padding: 0 8px;
-        margin: 20px 0 20px auto;
+        padding: 8px 16px;
+        margin: 20px auto;
         & a {
             color: inherit;
         }
@@ -443,32 +436,34 @@
     }
     
     .btn_to-right {
-        transition: color 0.3 ease;
-        position: relative;
-        z-index: 0;
-        &:before {
-            content: "";
-            position: absolute;
-            z-index: -1;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            transform: scaleX(0);
-            transform-origin: 0 50%;
-            transition-property: transform;
-            transition-duration: 0.3s;
-            transition-timing-function: ease-out;
+        @media(min-width: 768px) {
+            transition: color 0.3 ease;
+            position: relative;
+            z-index: 0;
+            &:before {
+                content: "";
+                position: absolute;
+                z-index: -1;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                transform: scaleX(0);
+                transform-origin: 0 50%;
+                transition-property: transform;
+                transition-duration: 0.3s;
+                transition-timing-function: ease-out;
+            }
+            &:hover:before,
+            &:focus:before,
+            &:active:before {
+                transform: scaleX(1);
+            }
         }
         &:hover,
         &:focus,
         &:active {
             background-color: transparent;
-        }
-        &:hover:before,
-        &:focus:before,
-        &:active:before {
-            transform: scaleX(1);
         }
     }
     
@@ -531,10 +526,21 @@
     }
     
     .btn-arrow-container {
-        padding: 0;
+        padding: 0 0 8px 0;
         margin: 0;
         display: flex;
         align-items: center;
+    }
+
+    .btn_full-width{
+        @media (max-width:768px) {
+            height: auto;
+            font-size: 16px;
+            line-height: 115%;
+            padding: 8px 16px;
+            margin: 24px auto;
+            width:100%;
+        }
     }
     
     .overlay {
