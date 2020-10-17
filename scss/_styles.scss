@@ -369,6 +369,9 @@
         & a {
             color: inherit;
         }
+        &:focus {
+            outline: none;
+        }
         @media (min-width: 480px) {
             height: 32px;
             font-size: 14px;
@@ -459,11 +462,11 @@
             &:active:before {
                 transform: scaleX(1);
             }
-        }
-        &:hover,
-        &:focus,
-        &:active {
-            background-color: transparent;
+            &:hover,
+            &:focus,
+            &:active {
+                background-color: transparent;
+            }
         }
     }
     
@@ -526,7 +529,7 @@
     }
     
     .btn-arrow-container {
-        padding: 0 0 8px 0;
+        padding: 0;
         margin: 0;
         display: flex;
         align-items: center;
@@ -538,7 +541,7 @@
             font-size: 16px;
             line-height: 115%;
             padding: 8px 16px;
-            margin: 24px auto;
+            margin: 30px auto;
             width:100%;
         }
     }

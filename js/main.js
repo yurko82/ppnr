@@ -73,65 +73,6 @@
         }]
     });
 
-    // START news slider, use only on index page
-    let isNewsIntersect = false,
-        isNewsAnimate = false;
-    if (document.querySelector(".news__slider")) {
-        new IntersectionObserver((ent) => {
-            if (ent[0].isIntersecting) {
-                isNewsIntersect = true;
-                startNewsSlide();
-            } else isNewsIntersect = false;
-        }, { threshold: [0] }).observe(document.querySelector(".news__slider"));
-        initNewsSlide($('.slide1')); // OPTIMISE all this code for adaptive via slides count
-        initNewsSlide($('.slide2'));
-        initNewsSlide($('.slide3'));
-    }
-
-    function initNewsSlide(el) {
-        el.slick({
-            prevArrow: '<button class="prev btn-d"><i class="fas fa-chevron-left"></i></button>',
-            nextArrow: '<button class="next btn-d"><i class="fas fa-chevron-right"></i></button>',
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            vertical: false,
-            speed: 2500,
-            arrows: false,
-            responsive: [{
-                breakpoint: 1000,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2,
-                    arrows: true
-                }
-            }, {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    arrows: true
-                }
-            }]
-        });
-    };
-
-    function startNewsSlide() {
-        if (isNewsAnimate || !isNewsIntersect) return;
-        setTimeout(() => { if (isNewsIntersect) $('.slide1').slick('slickNext') }, 2000);
-    }
-    $('.slide1').on('afterChange', function(_event, _currentSlide) {
-        isNewsAnimate = true;
-        $('.slide2').slick('slickNext');
-    })
-    $('.slide2').on('afterChange', function(_event, _currentSlide) {
-        $('.slide3').slick('slickNext');
-    })
-    $('.slide3').on('afterChange', function(_event, _currentSlide) {
-        isNewsAnimate = false;
-        startNewsSlide();
-    });
-    // END news slider on index page
-
     // use only on index page
     $('.people__items').slick({
         prevArrow: '<button class="prev btn-d"><i class="fas fa-chevron-left"></i></button>',
@@ -330,7 +271,7 @@
             ' || screen- w:' + window.screen.width + ', h:' + window.screen.height);
     });
 
-    //news-slider
+    //news-slider on news.html page
     $('.news__img-slider').slick({
         prevArrow: '<button class="prev btn-d"><i class="fas fa-chevron-left"></i></button>',
         nextArrow: '<button class="next btn-d"><i class="fas fa-chevron-right"></i></button>',

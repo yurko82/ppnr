@@ -500,6 +500,10 @@ button.next {
   color: inherit;
 }
 
+.btn:focus {
+  outline: none;
+}
+
 @media (min-width: 480px) {
   .btn {
     height: 32px;
@@ -614,10 +618,9 @@ button.next {
     -webkit-transform: scaleX(1);
             transform: scaleX(1);
   }
-}
-
-.btn_to-right:hover, .btn_to-right:focus, .btn_to-right:active {
-  background-color: transparent;
+  .btn_to-right:hover, .btn_to-right:focus, .btn_to-right:active {
+    background-color: transparent;
+  }
 }
 
 .btn_up {
@@ -704,7 +707,7 @@ button.next {
 }
 
 .btn-arrow-container {
-  padding: 0 0 8px 0;
+  padding: 0;
   margin: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -720,7 +723,7 @@ button.next {
     font-size: 16px;
     line-height: 115%;
     padding: 8px 16px;
-    margin: 24px auto;
+    margin: 30px auto;
     width: 100%;
   }
 }

@@ -417,7 +417,7 @@
         padding: 0 15px;
         color: #fff;
         position: relative;
-        max-width: 635px;
+        
     }
     &__text {
        font-size: 16px;
@@ -428,6 +428,7 @@
         }
         &__content {
             padding: 0 15px 0 36px;
+            max-width: 635px;
         }
     }
     // @media(min-width: 1280px) {
@@ -706,6 +707,19 @@
         }
     }
 }
-
-
 /*----gromadi end----*/
+
+.section-top-row{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    & .btn-arrow-container {
+        display: flex;
+    }
+    @media(min-width: 1000px) {
+        & .btn-arrow-container {
+            display: none;
+        }
+    }
+}
