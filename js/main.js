@@ -104,7 +104,7 @@
     // });
 
     AOS.init({
-        offset: 120,
+        offset: 50,
         duration: 800,
         once: true
     });
@@ -130,6 +130,7 @@
 
     // menu
     $('.navbar-toggler').click(function() {
+        $(this).toggleClass("active");
         if ($(this).attr("data-show") === "false") {
             $(this).attr("data-show", "true");
             $('.navbar-collapse').css({
@@ -290,6 +291,8 @@
     });
     //fix index head-slider
     let vh = window.innerHeight * 0.01;
+    console.log(vh)
+    console.log(window.screen.height * 0.01)
     document.documentElement.style.setProperty('--vh', `${vh}px`);
 
 
