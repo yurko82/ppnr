@@ -1725,6 +1725,7 @@ ul.navbar-nav .on-hover ul li:hover > .angle-right {
 }
 
 .info__btn {
+  position: relative;
   top: 300px;
 }
 

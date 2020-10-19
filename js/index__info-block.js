@@ -221,6 +221,7 @@
         container.find('.info__actions').css('height',h1); 
         container.find('.info__actions').css('top',-2*h1); 
         btn.css('top',contentH);
+        console.log('btn: ',btn);
     }
     function _moveSlider(right){
         if (right) { 
