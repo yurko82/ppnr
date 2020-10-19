@@ -47,8 +47,11 @@
             if (w<768 && _screenWidth>=768 || w>=768 && _screenWidth<768) _checkArrayInfo(w);
             _screenWidth = w;
             _updateInfoBlock();
-        } else  _screenWidth = w;
-        if (_screenWidth<1300) _updateCSS();
+        } else  {
+            if (_screenWidth<1300 && _screenWidth!=w) _updateCSS();
+            _screenWidth = w;
+        }
+        
     }
     function _updateInfoBlock(){
         $('.info__parallax__slider').slick('unslick');
@@ -182,6 +185,7 @@
                 arrows: false,
                 fade: _screenWidth<=1000,
                 adaptiveHeight: true,
+                vertical:false,
                 initialSlide: currentInfoNumber
             });
 
@@ -208,7 +212,8 @@
             w1=_screenWidth-24;
             h1=parseInt(w1*300/1240);
         }
-        container.find('.info__content__slider').find('.slick-list, .slick-track, .info__item').css({'width': w1+'px', 'height': h1+'px'});
+        container.find('.info__content__slider').find('.slick-list, .info__item').css({'width': w1+'px', 'height': h1+'px'});
+        container.find('.info__content__slider').find('.slick-track').css('height',h1);
         contentH=h1;
 
         h1 = title.outerHeight(true);
@@ -221,7 +226,6 @@
         container.find('.info__actions').css('height',h1); 
         container.find('.info__actions').css('top',-2*h1); 
         btn.css('top',contentH);
-        console.log('btn: ',btn);
     }
     function _moveSlider(right){
         if (right) { 
