@@ -210,34 +210,10 @@ button.next {
 
 .h2 {
   margin: 0;
-  font-size: 20px;
-  line-height: 23px;
+  font-size: 24px;
+  line-height: 115%;
   letter-spacing: 1px;
   font-weight: 500;
-}
-
-@media (min-width: 480px) {
-  .h2 {
-    font-size: 24px;
-    line-height: 28px;
-    letter-spacing: 2px;
-  }
-}
-
-@media (min-width: 768px) {
-  .h2 {
-    font-size: 20px;
-    line-height: 23px;
-    letter-spacing: 1px;
-  }
-}
-
-@media (min-width: 1280px) {
-  .h2 {
-    font-size: 24px;
-    line-height: 28px;
-    letter-spacing: 2px;
-  }
 }
 
 .h3 {
@@ -274,33 +250,15 @@ button.next {
 
 .t1 {
   margin: 0;
-  font-size: 12px;
-  line-height: 14px;
+  font-size: 16px;
+  line-height: 115%;
   letter-spacing: 1px;
   font-weight: 400;
 }
 
-@media (min-width: 480px) {
-  .t1 {
-    font-size: 14px;
-    line-height: 16px;
-    letter-spacing: 1px;
-  }
-}
-
-@media (min-width: 768px) {
-  .t1 {
-    font-size: 16px;
-    line-height: 18px;
-    letter-spacing: 1px;
-  }
-}
-
-@media (min-width: 1280px) {
+@media (min-width: 1000px) {
   .t1 {
     font-size: 18px;
-    line-height: 20px;
-    letter-spacing: 1px;
   }
 }
 
@@ -2156,7 +2114,7 @@ ul.navbar-nav .on-hover ul li:hover > .angle-right {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  padding: 0 10px 32px 0;
+  padding: 5px 10px 25px 0;
   color: #fff;
 }
 

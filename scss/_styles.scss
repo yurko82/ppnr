@@ -161,25 +161,10 @@
     
     .h2 {
         margin: 0;
-        font-size: 20px;
-        line-height: 23px;
+        font-size: 24px;
+        line-height: 115%;
         letter-spacing: 1px;
         font-weight: 500;
-        @media (min-width: 480px) {
-            font-size: 24px;
-            line-height: 28px;
-            letter-spacing: 2px;
-        }
-        @media (min-width: 768px) {
-            font-size: 20px;
-            line-height: 23px;
-            letter-spacing: 1px;
-        }
-        @media (min-width: 1280px) {
-            font-size: 24px;
-            line-height: 28px;
-            letter-spacing: 2px;
-        }
     }
     
     .h3 {
@@ -207,24 +192,12 @@
     
     .t1 {
         margin: 0;
-        font-size: 12px;
-        line-height: 14px;
+        font-size: 16px;
+        line-height: 115%;
         letter-spacing: 1px;
         font-weight: 400;
-        @media (min-width: 480px) {
-            font-size: 14px;
-            line-height: 16px;
-            letter-spacing: 1px;
-        }
-        @media (min-width: 768px) {
-            font-size: 16px;
-            line-height: 18px;
-            letter-spacing: 1px;
-        }
-        @media (min-width: 1280px) {
+        @media (min-width: 1000px) {
             font-size: 18px;
-            line-height: 20px;
-            letter-spacing: 1px;
         }
     }
     
