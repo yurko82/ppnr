@@ -5,18 +5,7 @@
         duration: 800,
         once: true
     });
-
-    var overlay = 0;
-    $('.fa-telegram-plane').click(function() {
-        if (overlay === 0) {
-            $('.overlay').css('display', 'none');
-            overlay = 1;
-        } else {
-            $('.overlay').css('display', 'block');
-            overlay = 0;
-        }
-    });
-
+    //low vision
     var lowVision = 0;
     $('i.icon-eye').click(function() {
         if (lowVision === 0) {
@@ -30,28 +19,29 @@
         }
     });
 
+    //hover for menu items
     $('header .nav-item').hover((e) => {
         $(e.currentTarget).addClass('on-hover');
     }, (e) => {
         $(e.currentTarget).removeClass('on-hover');
     });
 
+    //random slid on home screen
     var $divs = $('.head-slider__items>div');
     var arr = [];
-    console.log(arr)
     $divs.each(function() {
         arr.push($(this).detach());
     });
     arr.sort(function(a, b) {
         return 0.5 - Math.random();
     });
-    console.log(arr)
     for (var index in arr) {
-        if (index < 4) {
+        if (index < 4) { //-кількість слайдів
             $('.head-slider__items').append(arr[index]);
         }
     }
 
+    //slick slider for home screen
     $('.head-slider__items').slick({
         autoplay: true,
         autoplaySpeed: 4000,
@@ -62,7 +52,7 @@
         pauseOnHover: false
     });
 
-    // use only on index page
+    // //slick slider for widget
     $('.widget__slider').slick({
         prevArrow: '<button class="prev btn-h"><i class="fas fa-chevron-left"></i></button>',
         nextArrow: '<button class="next btn-h"><i class="fas fa-chevron-right"></i></button>',
@@ -111,7 +101,7 @@
 
 
 
-    //widget - use only on index page
+    //tabs for widget
     $('.widget .slick-dots li  button').click(function() {
         var $bgColor = $(this).css("background-color");
         $('.widget').css({
@@ -130,7 +120,7 @@
         });
     }
 
-    // menu
+    // mobile menu
     $('.navbar-toggler').click(function() {
         $(this).toggleClass("active");
         if ($(this).attr("data-show") === "false") {
@@ -295,9 +285,6 @@
     function vhSlideDebug() {
         let vh = window.innerHeight * 0.01;
         document.documentElement.style.setProperty('--vh', `${vh}px`);
-        // console.log(vh)
-        // console.log(window.screen.height * 0.01)
-        // console.log(document.documentElement.clientHeight)
     }
     setTimeout(vhSlideDebug, 50)
 
