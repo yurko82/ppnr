@@ -630,7 +630,7 @@ button.next {
   display: inline-block;
   border: 1px solid #757575;
   color: #757575;
-  font-size: 10px;
+  font-size: 12px;
   line-height: 0;
   padding: 8px 8px;
   background-color: transparent;
@@ -652,18 +652,6 @@ button.next {
   }
 }
 
-@media (min-width: 768px) {
-  .btn-arrow {
-    font-size: 16px;
-  }
-}
-
-@media (min-width: 1280px) {
-  .btn-arrow {
-    font-size: 16px;
-  }
-}
-
 .btn-arrow-container {
   padding: 0;
   margin: 0;
@@ -673,6 +661,20 @@ button.next {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media (max-width: 360px) {
+  .btn-arrow-container .btn-arrow {
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .btn-arrow-container .btn-arrow {
+    padding: 10px 16px;
+    font-size: 16px;
+  }
 }
 
 @media (max-width: 768px) {

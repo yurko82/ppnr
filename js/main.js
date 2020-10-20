@@ -281,6 +281,7 @@
             //     return (i + 1) +'/' +slider.slideCount;
             // }    
     });
+
     //fix index head-slider
     function vhSlideDebug() {
         let vh = window.innerHeight * 0.01;
