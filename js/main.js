@@ -1,5 +1,11 @@
 (function() {
 
+    AOS.init({
+        offset: 30,
+        duration: 800,
+        once: true
+    });
+
     var overlay = 0;
     $('.fa-telegram-plane').click(function() {
         if (overlay === 0) {
@@ -103,11 +109,7 @@
     //     }]
     // });
 
-    AOS.init({
-        offset: 50,
-        duration: 800,
-        once: true
-    });
+
 
     //widget - use only on index page
     $('.widget .slick-dots li  button').click(function() {
