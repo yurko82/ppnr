@@ -1,5 +1,11 @@
 (function() {
 
+    AOS.init({
+        offset: 30,
+        duration: 800,
+        once: true
+    });
+
     var overlay = 0;
     $('.fa-telegram-plane').click(function() {
         if (overlay === 0) {
@@ -73,11 +79,37 @@
         }]
     });
 
-    AOS.init({
-        offset: 50,
-        duration: 800,
-        once: true
-    });
+    // use only on index page
+    // $('.people__items').slick({
+    //     prevArrow: '<button class="prev btn-d"><i class="fas fa-chevron-left"></i></button>',
+    //     nextArrow: '<button class="next btn-d"><i class="fas fa-chevron-right"></i></button>',
+    //     slidesToShow: 2,
+    //     slidesToScroll: 2,
+    //     speed: 1000,
+    //     arrows: true,
+    //     vertical: false,
+
+    //     responsive: [{
+    //         breakpoint: 4000,
+    //         settings: "unslick"
+    //     }, {
+    //         breakpoint: 1000,
+    //         settings: {
+    //             slidesToShow: 2,
+    //             slidesToScroll: 2,
+    //             arrows: true,
+    //         }
+    //     }, {
+    //         breakpoint: 768,
+    //         settings: {
+    //             slidesToShow: 1,
+    //             slidesToScroll: 1,
+    //             arrows: true,
+    //         }
+    //     }]
+    // });
+
+
 
     //widget - use only on index page
     $('.widget .slick-dots li  button').click(function() {
