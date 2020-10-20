@@ -478,7 +478,7 @@
         display: inline-block;
         border: 1px solid $grey3;
         color: $grey3;
-        font-size: 10px;
+        font-size: 12px;
         line-height: 0;
         padding: 8px 8px;
         background-color: transparent;
@@ -493,12 +493,6 @@
         @media (min-width: 480px) {
             font-size: 16px;
         }
-        @media (min-width: 768px) {
-            font-size: 16px;
-        }
-        @media (min-width: 1280px) {
-            font-size: 16px;
-        }
     }
     
     .btn-arrow-container {
@@ -506,6 +500,18 @@
         margin: 0;
         display: flex;
         align-items: center;
+        @media(max-width: 360px){
+            & .btn-arrow{
+                padding: 10px 12px;
+                font-size: 14px;
+            }
+        }
+        @media(max-width: 768px){
+            & .btn-arrow{
+                padding: 10px 16px;
+                font-size: 16px;
+            }
+        }
     }
     
     .btn_full-width {
