@@ -290,12 +290,13 @@
             // }    
     });
     //fix index head-slider
-    let vh = window.innerHeight * 0.01;
-    console.log(vh)
-    console.log(window.screen.height * 0.01)
-    document.documentElement.style.setProperty('--vh', `${vh}px`);
-
-
-
+    function vhSlideDebug() {
+        let vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+        // console.log(vh)
+        // console.log(window.screen.height * 0.01)
+        // console.log(document.documentElement.clientHeight)
+    }
+    setTimeout(vhSlideDebug, 50)
 
 })();
