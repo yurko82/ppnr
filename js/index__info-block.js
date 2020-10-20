@@ -24,8 +24,7 @@
         url:'html/some_page3.html',
         use:true
     }];
-    let currentInfoNumber=0, _screenWidth=0, _screenPic=0,
-        container=$('section.info');
+    let currentInfoNumber=0, _screenWidth=0, _screenPic=0, container=$('section.info');
 
     function _checkArrayInfo(w){
         arrayInfo=data.filter(x=>x.use && (w>=768 || x.type!='data')).sort((a,b)=>a.priority>b.priority ? 1: -1);
@@ -33,6 +32,7 @@
     function _initScreenWidth(){
         _screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
         _checkArrayInfo(_screenWidth);
+        _createInfoBlock();
         _checkScreenWidth();
     }
     function _checkScreenWidth(){
@@ -44,35 +44,65 @@
         else t=400;
         if (t!=_screenPic || w<768 && _screenWidth>=768 || w>=768 && _screenWidth<768) {
             _screenPic=t;
-            if (w<768 && _screenWidth>=768 || w>=768 && _screenWidth<768) _checkArrayInfo(w);
+            if (w<768 && _screenWidth>=768 || w>=768 && _screenWidth<768) {
+                _checkArrayInfo(w);
+                _createInfoBlock();
+            }
             _screenWidth = w;
             _updateInfoBlock();
         } else  {
             if (_screenWidth<1300 && _screenWidth!=w) _updateCSS();
             _screenWidth = w;
         }
-        
     }
-    function _updateInfoBlock(){
-        $('.info__parallax__slider').slick('unslick');
-        $('.info__content__slider').slick('unslick');
-        if (!arrayInfo.length) _checkArrayInfo();
-        if (!arrayInfo.length) {
-            container.html('').css('height','0');
-            return;
-        }
-        let i,html='';
-        html+='<div class="info__parallax__slider">';
-        for (i=0;i<arrayInfo.length;i++){
+    function _createInfoBlock(){
+        let html='<div class="info__parallax__slider">';
+        for (let i=0;i<arrayInfo.length;i++){
             if (arrayInfo[i].type=='data' && _screenWidth<768) continue;
             html+=`<div class="info__parallax" style="background-image: url('${arrayInfo[i].bg}');"></div>`;
         }
         html+='</div>';
+        html+='<div class="info_container"></div>';
+        html+=`<div class="container info__actions">
+                    <div class="info__block">
+                        <div class="title t-d">
+                            <span>${arrayInfo[currentInfoNumber].title}</span>
+                        </div>`;
+        if (arrayInfo.length>1) {
+            html +=    `<div class="btn-arrow-container">
+                            <button class="btn-arrow btn-arrow-left btn-d pointer"><a class="icon-left-arrow"></a></button>
+                            <button class="btn-arrow btn-arrow-right btn-d pointer"><a class="icon-right-arrow"></a></button>
+                        </div>`;
+        }
+        html += `</div>
+                    <button class="btn btn-d btn_to-right btn_full-width info__btn" onclick="window.location.href='${arrayInfo[currentInfoNumber].url}'"><a>Подробиці</a></button>
+                </div>`;
+        container.html(html).css('height','550px');
 
-        html+='<div class="container info__content__slider">';
+        if (arrayInfo.length>1) {
+            $('.info__parallax__slider').slick({
+                speed: 1000,
+                dots: false,
+                arrows: false,
+                fade: true,
+                adaptiveHeight:true,
+                initialSlide: currentInfoNumber
+            });
+            container.find('.btn-arrow-left').click(()=>_moveSlider(false));
+            container.find('.btn-arrow-right').click(()=>_moveSlider(true));
+        }
+    }
+    function _updateInfoBlock(){
+        if (!arrayInfo.length) _checkArrayInfo();
+        if (!arrayInfo.length) {
+            container.css('height','0');
+            return;
+        }
+        let i,html='<div class="container info__content__slider">', countImg=0;
         for (i=0;i<arrayInfo.length;i++){
             if (arrayInfo[i].type=="baner"){
                 html+=`<img class="info__item" src="${arrayInfo[i].pics[_screenPic]||arrayInfo[i].pics['1280']}" alt="">`;
+                countImg++;
             } else if (arrayInfo[i].type=="data"){
                 if (_screenWidth<768) continue;
                 html+=`<div class="info__item info__statistic">
@@ -152,46 +182,24 @@
             }
         }
         html+='</div>';
-        html+=` <div class="container info__actions">
-                    <div class="info__block">
-                        <div class="title t-d">
-                            <span>${arrayInfo[currentInfoNumber].title}</span>
-                        </div>`;
-        if (arrayInfo.length>1) {
-            html +=    `<div class="btn-arrow-container">
-                            <button class="btn-arrow btn-arrow-left btn-d pointer"><a class="icon-left-arrow"></a></button>
-                            <button class="btn-arrow btn-arrow-right btn-d pointer"><a class="icon-right-arrow"></a></button>
-                        </div>`;
-        }
-        html +=    `</div>
-                    <button class="btn btn-d btn_to-right btn_full-width info__btn" onclick="window.location.href='${arrayInfo[currentInfoNumber].url}'"><a>Подробиці</a></button>
-                </div>`;
-        container.html(html).css('height','550px');
-        Array.prototype.forEach.call($('img.info__item'), el => { if (el.src) el.onload=()=>_updateCSS(); });
-
-
-        if (arrayInfo.length>1) {
-            $('.info__parallax__slider').slick({
-                speed: 1000,
-                dots: false,
-                arrows: false,
-                fade: true,
-                adaptiveHeight:true,
-                initialSlide: currentInfoNumber
-            });
-            $('.info__content__slider').slick({
-                speed: 1000,
-                dots: false,
-                arrows: false,
-                fade: _screenWidth<=1000,
-                adaptiveHeight: true,
-                vertical:false,
-                initialSlide: currentInfoNumber
-            });
-
-            container.find('.btn-arrow-left').click(()=>_moveSlider(false));
-            container.find('.btn-arrow-right').click(()=>_moveSlider(true));
-        }
+        container.find('.info_container').html(html);
+        if (countImg>0) {
+            __onLoadImg=function(){
+                countImg--;
+                if (countImg<=0){
+                    $('.info__content__slider').slick({
+                        speed: 1000,
+                        dots: false,
+                        arrows: false,
+                        fade: _screenWidth<=1000,
+                        adaptiveHeight: true,
+                        initialSlide: currentInfoNumber
+                    });
+                    _updateCSS();
+                }
+            }
+            Array.prototype.forEach.call($('img.info__item'), el => { if (el.src) el.onload=()=>__onLoadImg(); });
+        } else _updateCSS();
     }
     function _updateCSS(){
         let title=container.find('.title'), btn=container.find('.info__btn'); 
@@ -264,10 +272,5 @@
 
     window.addEventListener('resize', _checkScreenWidth);
     _initScreenWidth();
-    
-    // window.onload = function(){
-    //     _checkScreenWidth();
-    //     _updateCSS();
-    // };
 
 })();
