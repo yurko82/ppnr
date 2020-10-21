@@ -24,7 +24,7 @@
         url:'html/some_page3.html',
         use:true
     }];
-    let currentInfoNumber=0, _screenWidth=0, _screenPic=0, container=$('section.info');
+    let currentInfoNumber=0, _screenWidth=0, _screenPic=0, isAnimate=false, container=$('section.info');
 
     function _checkArrayInfo(w){
         arrayInfo=data.filter(x=>x.use && (w>=768 || x.type!='data')).sort((a,b)=>a.priority>b.priority ? 1: -1);
@@ -183,12 +183,13 @@
         }
         html+='</div>';
         container.find('.info_container').html(html);
+        $('.info__content__slider').on('afterChange', () => isAnimate=false);
         if (countImg>0) {
             __onLoadImg=function(){
                 countImg--;
                 if (countImg<=0){
                     $('.info__content__slider').slick({
-                        speed: 1000,
+                        speed: 1200,
                         dots: false,
                         arrows: false,
                         fade: _screenWidth<=1000,
@@ -236,13 +237,16 @@
         btn.css('top',contentH);
     }
     function _moveSlider(right){
+        if (isAnimate) return;
         if (right) { 
             container.find('.info__parallax__slider').slick('slickNext');
             container.find('.info__content__slider').slick('slickNext');
+            isAnimate=true;
             currentInfoNumber++;
         } else {
             container.find('.info__parallax__slider').slick('slickPrev');
             container.find('.info__content__slider').slick('slickPrev');
+            isAnimate=true;
             currentInfoNumber--; 
         }
         if (currentInfoNumber<0) currentInfoNumber=arrayInfo.length-1;

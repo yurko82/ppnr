@@ -1,6 +1,6 @@
 (function() {
 
-    let isNewsIntersect = false, isNewsAnimate = false;
+    let isNewsIntersect = false, isNewsAutoAnimate = false, isAnimate = false;
     let _screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
 
     function initNewsSlide(el) {
@@ -8,7 +8,7 @@
             slidesToShow: 1,
             slidesToScroll: 1,
             vertical: false,
-            speed: _screenWidth >= 1000 ? 2000 : 500,
+            speed: 2000,
             adaptiveHeight:true,
             useTransform: false,
             arrows: false,
@@ -16,37 +16,41 @@
                 breakpoint: 1000,
                 settings: {
                     slidesToShow: 2,
-                    slidesToScroll: 2
+                    slidesToScroll: 2,
+                    speed: 500
                 }
             }, {
                 breakpoint: 700,
                 settings: {
                     slidesToShow: 1,
-                    slidesToScroll: 1
+                    slidesToScroll: 1,
+                    speed: 500
                 }
             }]
         });
     };
 
     function startNewsSlide() {
-        if (isNewsAnimate || !isNewsIntersect || _screenWidth<1000) return;
+        if (isNewsAutoAnimate || !isNewsIntersect || _screenWidth<1000) return;
         setTimeout(() => { 
             if (isNewsIntersect && _screenWidth>=1000) {
-                isNewsAnimate = true;
+                isNewsAutoAnimate = true;
                 $('.slide1').slick('slickNext');
             }
         }, 3000);
     }
     $('.slide1').on('afterChange', function(_event, _currentSlide) {
-        if (_screenWidth>=1000 && isNewsIntersect) $('.slide2').slick('slickNext');
-        else isNewsAnimate=false;
+        if (isAnimate) isAnimate=false;
+        else 
+            if (_screenWidth>=1000 && isNewsIntersect) $('.slide2').slick('slickNext');
+            else isNewsAutoAnimate=false;
     })
     $('.slide2').on('afterChange', function(_event, _currentSlide) {
         if (_screenWidth>=1000 && isNewsIntersect) $('.slide3').slick('slickNext');
-        else isNewsAnimate=false;
+        else isNewsAutoAnimate=false;
     })
     $('.slide3').on('afterChange', function(_event, _currentSlide) {
-        isNewsAnimate = false;
+        isNewsAutoAnimate = false;
         startNewsSlide();
     });
 
@@ -70,9 +74,13 @@
     });
     
     $('.news .btn-arrow-container').find('.btn-arrow-left').click(()=>{
+        if (isNewsAutoAnimate || isAnimate) return;
+        isAnimate=true;
         $('.slide1').slick('slickPrev');
     });
     $('.news .btn-arrow-container').find('.btn-arrow-right').click(()=>{
+        if (isNewsAutoAnimate || isAnimate) return;
+        isAnimate=true;
         $('.slide1').slick('slickNext');
     });
 

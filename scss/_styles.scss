@@ -512,6 +512,11 @@
                 font-size: 16px;
             }
         }
+        @media(max-width: 1000px){
+            & .btn-arrow{
+                padding: 10px 20px;
+            }
+        }
     }
     
     .btn_full-width {

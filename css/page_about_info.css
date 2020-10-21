@@ -677,6 +677,12 @@ button.next {
   }
 }
 
+@media (max-width: 1000px) {
+  .btn-arrow-container .btn-arrow {
+    padding: 10px 20px;
+  }
+}
+
 @media (max-width: 768px) {
   .btn_full-width {
     height: auto;
