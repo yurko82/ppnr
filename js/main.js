@@ -141,13 +141,11 @@
     })
     if ($(window).width() < 1000) {
         $(document).mouseup(function(e) { // событие клика по веб-документу
-            var div = $(".navbar-collapse"); // тут указываем ID элемента
-            if (!div.is(e.target) // если клик был не по нашему блоку
-                &&
-                div.has(e.target).length === 0) { // и не по его дочерним элементам
-                div.css('transform', 'translateX(-310px)'); // скрываем его
+            let div = $(".navbar-collapse, .navbar-toggler");
+            if (!div.is(e.target) && div.has(e.target).length === 0 && $('.navbar-toggler').attr("data-show") === "true") {
+                $(".navbar-collapse").css('transform', 'translateX(-310px)');
                 $(".body__overlay").css({ 'opacity': '0' });
-
+                $('.navbar-toggler').toggleClass("active").attr("data-show", "false");
             }
         });
     };
