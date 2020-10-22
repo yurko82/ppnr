@@ -19,12 +19,12 @@
     },{
         type:"data",
         title:"Показники",
-        priority:3,
+        priority:7,
         bg:"images/img/info/3_bg.jpg",
         url:'html/some_page3.html',
         use:true
-    }];
-    let currentInfoNumber=0, _screenWidth=0, _screenPic=0, isAnimate=false, container=$('section.info');
+    },];
+    let currentInfoNumber=0, _screenWidth=0, _screenPic=0, isAnimate=false, isFade, container=$('section.info');
 
     function _checkArrayInfo(w){
         arrayInfo=data.filter(x=>x.use && (w>=768 || x.type!='data')).sort((a,b)=>a.priority>b.priority ? 1: -1);
@@ -105,7 +105,7 @@
                 countImg++;
             } else if (arrayInfo[i].type=="data"){
                 if (_screenWidth<768) continue;
-                html+=`<div class="info__item info__statistic">
+                html+=`<div class="info__item info__statistic" style="display:flex;">
                     <div class="info__statistic-item bg-green1">
                         <div class="info__statistic-content">
                             <span class="info__statistic_title">Вироблено електроенергії</span>
@@ -184,6 +184,7 @@
         html+='</div>';
         container.find('.info_container').html(html);
         $('.info__content__slider').on('afterChange', () => isAnimate=false);
+        isFade = _screenWidth<=1000;
         if (countImg>0) {
             __onLoadImg=function(){
                 countImg--;
@@ -192,7 +193,7 @@
                         speed: 1200,
                         dots: false,
                         arrows: false,
-                        fade: _screenWidth<=1000,
+                        fade: isFade,
                         adaptiveHeight: true,
                         initialSlide: currentInfoNumber
                     });
@@ -235,6 +236,21 @@
         container.find('.info__actions').css('height',h1); 
         container.find('.info__actions').css('top',-2*h1); 
         btn.css('top',contentH);
+
+        //check wrong positions
+        if (arrayInfo.length>1){
+            let cont=container.find('.info__content__slider .slick-track');
+            if (!cont.length ||!cont[0].style) return;
+            let translate3d=_getTranslate3d(cont[0]);
+                if (parseInt(translate3d[0])%w1 == 0) return;
+            let i, ar=cont.find('.info__item');
+            for (i=0;i<ar.length;i++){
+                if ($(ar[i]).hasClass('.slick-active')) {
+                    cont.css('transform','translate3d(' + (-1*i*w) + 'px,0,0');
+                    break;
+                }
+            } 
+        }
     }
     function _moveSlider(right){
         if (isAnimate) return;
@@ -272,6 +288,13 @@
             }
         },40);
         container.find('.info__actions .title span').text(st);
+    }
+    function _getTranslate3d (el) {
+        var values = el.style.transform.split(/\w+\(|\);?/);
+        if (!values[1] || !values[1].length) {
+            return [];
+        }
+        return values[1].split(/,\s?/g);
     }
 
     window.addEventListener('resize', _checkScreenWidth);
