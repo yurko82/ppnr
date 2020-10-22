@@ -1390,10 +1390,11 @@ ul.navbar-nav .on-hover ul li:hover > .angle-right {
 }
 
 .footer__link-link {
-  margin-bottom: 6px;
+  margin-bottom: 5px;
 }
 
 .footer__link-politic {
+  padding-top: 4px;
   line-height: 1;
 }
 
@@ -2089,7 +2090,7 @@ ul.navbar-nav .on-hover ul li:hover > .angle-right {
   height: 24px;
   color: white;
   font-size: 16px;
-  padding: 2px 8px;
+  padding: 2px 8px 8px 8px;
 }
 
 .news__item-type i {
@@ -2318,7 +2319,7 @@ ul.navbar-nav .on-hover ul li:hover > .angle-right {
   position: absolute;
   right: 16px;
   bottom: 16px;
-  padding: 0px 8px;
+  padding: 2px 8px;
   pointer-events: none;
 }
 

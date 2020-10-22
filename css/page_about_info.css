@@ -1390,10 +1390,11 @@ ul.navbar-nav .on-hover ul li:hover > .angle-right {
 }
 
 .footer__link-link {
-  margin-bottom: 6px;
+  margin-bottom: 5px;
 }
 
 .footer__link-politic {
+  padding-top: 4px;
   line-height: 1;
 }
 

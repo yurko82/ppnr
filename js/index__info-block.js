@@ -75,7 +75,7 @@
                         </div>`;
         }
         html += `</div>
-                    <button class="btn btn-d btn_to-right btn_full-width info__btn" onclick="window.location.href='${arrayInfo[currentInfoNumber].url}'"><a>Подробиці</a></button>
+                    <button class="btn btn-d btn_to-right btn_full-width info__btn" onclick="window.location.href='${arrayInfo[currentInfoNumber].url}'">Подробиці</button>
                 </div>`;
         container.html(html).css('height','550px');
 
