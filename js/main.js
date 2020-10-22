@@ -293,16 +293,13 @@
     var WebP = new Image();
     WebP.onload = WebP.onerror = function() {
         console.log(WebP.height) // =2
-        if (WebP.height = 2) {
+        if (WebP.height != 2) {
 
-            let webps = $("div[style*='webp']")
+            let webps = $("*[style*='webp']")
             for (let webp of webps) {
                 let webpBgImg = webp.style.backgroundImage
                 let webpRep = webpBgImg.replace(/webp/, 'jpg')
-                    // let webCss = webp.css('*');
-                    // console.log(webCss);
                 webp.style.backgroundImage = webpRep
-                console.log(webpRep);
             }
         }
     };
