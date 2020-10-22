@@ -289,4 +289,14 @@
     }
     setTimeout(vhSlideDebug, 50)
 
+    //audit support WEBP browser
+    var WebP = new Image();
+    WebP.onload = WebP.onerror = function() {
+        console.log(WebP.height) // =2
+        if (WebP.height != 2) {
+            console.log('not webp')
+        }
+    };
+    WebP.src = 'data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA';
+
 })();
