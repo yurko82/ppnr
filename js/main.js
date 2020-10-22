@@ -52,7 +52,7 @@
         pauseOnHover: false
     });
 
-    // //slick slider for widget
+    // //slick slider for widget  // bla-bla
     $('.widget__slider').slick({
         prevArrow: '<button class="prev btn-h"><i class="fas fa-chevron-left"></i></button>',
         nextArrow: '<button class="next btn-h"><i class="fas fa-chevron-right"></i></button>',
