@@ -292,9 +292,14 @@
     //audit support WEBP browser
     var WebP = new Image();
     WebP.onload = WebP.onerror = function() {
-        // console.log(WebP.height) // =2
+        console.log(WebP.height) // =2
         if (WebP.height != 2) {
-            console.log('not webp');
+            let webps = $("*[style*='webp']")
+            for (let webp of webps) {
+                let webpBgImg = webp.style.backgroundImage
+                let webpRep = webpBgImg.replace(/webp/, 'jpg')
+                webp.style.backgroundImage = webpRep
+            }
         }
     };
     WebP.src = 'data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA';
