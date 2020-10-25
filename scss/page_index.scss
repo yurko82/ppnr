@@ -188,7 +188,6 @@
             @media(min-width: 1240px) {
                 width: 33%;
             }
-            
         }
         &-content {
             & .text,
@@ -232,7 +231,6 @@
                 font-size: 20px;
                 padding: 30px 0 16px 0;
             }
-            
         }
     }
     &__btn {
@@ -248,79 +246,34 @@
 /*----widget start----*/
 
 .widget {
-    & .slick-track>div {
-        padding-top: 30px;
-    }
-    @media(min-width: 480px) {
-        &__slider-title {
-            font-size: 22px;
-        }
-        & .text {
-            font-size: 22px;
-        }
-        & .pokaz {
-            font-size: 22px;
-            font-weight: 400;
-        }
-        & .odin {
-            font-size: 18px;
-        }
-        & .slick-track>div {
-            padding-top: unset;
-        }
-    }
-    @media(min-width: 768px) {
-        & {
-            position: absolute;
-            top: 50vh;
-            right: 0;
-            margin-top: -110px;
-            transform: translateX(328px);
-            width: 328px;
-            transition: all 1s;
-        }
-        &__slider {
-            margin: 0px;
-        }
-        &__title {
-            display: none;
-        }
-        & .slick-dots {
-            position: absolute;
-            top: 0;
-            left: -80px;
-        }
-        & .text {
-            font-size: 16px;
-        }
-        & .pokaz {
-            font-size: 22px;
-            font-weight: 500;
-        }
-        & .odin {
-            font-size: 16px;
-        }
-    }
-    & .slick-dots li button {
-        width: 60px;
-        height: 60px;
-        &::before {
-            content: "";
-            background: white;
-            position: absolute;
-            z-index: 1;
-            left: 0;
-            width: 4px;
+    & .slick-dots {
+        display: flex;
+        position: absolute;
+        width: 100%;
+        top: 0;
+        margin-left: -12px;
+        & li button {
+            width: calc(100vw/3);
             height: 60px;
-            transform-origin: 0 100%;
-            transition-property: transform;
-            transition-duration: 0.1s;
-            transition-timing-function: ease-out;
-            transform: translateY(-30px) scaleY(0);
-        }
-        &:hover:before,
-        &:focus:before {
-            transform: translateY(-30px) scaleY(1);
+            &::before {
+                content: "";
+                background: white;
+                position: absolute;
+                z-index: 1;
+                bottom: 0;
+                left: unset;
+                width: calc(100vw/3);
+                height: 4px;
+                transform-origin: 0 100%;
+                transition-property: transform;
+                transition-duration: 0.1s;
+                transition-timing-function: ease-out;
+                transform: translateX(calc(-100vw/6)) scaleX(0);
+            }
+            &:hover:before,
+            &:focus:before {
+                transform: translateX(calc(-100vw/6)) scaleX(1);
+            }
         }
     }
     & span {
@@ -355,7 +308,7 @@
         justify-content: center;
     }
     &__slider {
-        padding: 12px 0;
+        padding-top: 64px;
         & .text,
         & .odin {
             font-size: 12px;
@@ -377,6 +330,87 @@
         padding: 0 0 16px 0;
         &:not(:first-child) {
             padding-top: 16px;
+        }
+    }
+    // & .slick-track>div {
+    //     padding-top: 30px;
+    // }
+    @media(min-width: 480px) {
+        &__slider-title {
+            font-size: 22px;
+        }
+        & .text {
+            font-size: 22px;
+        }
+        & .pokaz {
+            font-size: 22px;
+            font-weight: 400;
+        }
+        & .odin {
+            font-size: 18px;
+        }
+        & .slick-track>div {
+            padding-top: unset;
+        }
+    }
+    @media(min-width: 768px) {
+        & {
+            position: absolute;
+            top: 50vh;
+            right: 0;
+            margin-top: -110px;
+            transform: translateX(328px);
+            width: 328px;
+            transition: all 1s;
+        }
+        &__slider {
+            margin: 0px;
+            padding: 12px 0;
+        }
+        &__title {
+            display: none;
+        }
+        & .slick-dots {
+            position: absolute;
+            top: 0;
+            left: -80px;
+        }
+        & .text {
+            font-size: 16px;
+        }
+        & .pokaz {
+            font-size: 22px;
+            font-weight: 500;
+        }
+        & .odin {
+            font-size: 16px;
+        }
+        & .slick-dots {
+            display: block;
+            margin-left: 0px;
+            & li button {
+                width: 60px;
+                height: 60px;
+                &::before {
+                    content: "";
+                    background: white;
+                    position: absolute;
+                    z-index: 1;
+                    left: 0;
+                    bottom: unset;
+                    width: 4px;
+                    height: 60px;
+                    transform-origin: 0 100%;
+                    transition-property: transform;
+                    transition-duration: 0.1s;
+                    transition-timing-function: ease-out;
+                    transform: translateY(-30px) scaleY(0);
+                }
+                &:hover:before,
+                &:focus:before {
+                    transform: translateY(-30px) scaleY(1);
+                }
+            }
         }
     }
 }
@@ -702,7 +736,6 @@
             background-size: cover;
             background-position: center;
             transition: .5s;
-
         }
         &-title {
             text-align: center;

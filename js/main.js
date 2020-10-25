@@ -63,8 +63,8 @@
         responsive: [{
             breakpoint: 768,
             settings: {
-                dots: false,
-                arrows: true
+                dots: true,
+                arrows: false
             }
         }]
     });
