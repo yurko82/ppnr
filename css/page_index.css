@@ -1813,10 +1813,10 @@ ul.navbar-nav .on-hover ul li:hover > .angle-right {
   background: white;
   position: absolute;
   z-index: 1;
-  bottom: 0;
+  top: 0;
   left: unset;
   width: calc(100vw/3);
-  height: 4px;
+  height: 3px;
   -webkit-transform-origin: 0 100%;
           transform-origin: 0 100%;
   -webkit-transition-property: -webkit-transform;

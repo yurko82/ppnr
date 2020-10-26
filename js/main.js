@@ -53,6 +53,7 @@
     });
 
     // //slick slider for widget  // bla-bla
+    $('#slick-slide-control10').focus();
     $('.widget__slider').slick({
         prevArrow: '<button class="prev btn-h"><i class="fas fa-chevron-left"></i></button>',
         nextArrow: '<button class="next btn-h"><i class="fas fa-chevron-right"></i></button>',

@@ -260,10 +260,10 @@
                 background: white;
                 position: absolute;
                 z-index: 1;
-                bottom: 0;
+                top: 0;
                 left: unset;
                 width: calc(100vw/3);
-                height: 4px;
+                height: 3px;
                 transform-origin: 0 100%;
                 transition-property: transform;
                 transition-duration: 0.1s;
