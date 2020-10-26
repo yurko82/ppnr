@@ -1976,7 +1976,7 @@ ul.navbar-nav .on-hover ul li:hover > .angle-right {
     position: absolute;
     z-index: 1;
     left: 0;
-    bottom: unset;
+    top: unset;
     width: 4px;
     height: 60px;
     -webkit-transform-origin: 0 100%;
