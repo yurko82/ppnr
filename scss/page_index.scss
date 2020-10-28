@@ -270,8 +270,12 @@
                 transition-timing-function: ease-out;
                 transform: translateX(calc(-100vw/6)) scaleX(0);
             }
-            &:hover:before,
-            &:focus:before {
+            &:hover:before {
+                transform: translateX(calc(-100vw/6)) scaleX(1);
+            }
+        }
+        & li.slick-active button {
+            &::before {
                 transform: translateX(calc(-100vw/6)) scaleX(1);
             }
         }
@@ -395,6 +399,7 @@
                     content: "";
                     background: white;
                     position: absolute;
+                    opacity: 0;
                     z-index: 1;
                     left: 0;
                     top: unset;
@@ -408,6 +413,12 @@
                 }
                 &:hover:before,
                 &:focus:before {
+                    transform: translateY(-30px) scaleY(1);
+                    opacity: 1;
+                }
+            }
+            & li.slick-active button {
+                &::before {
                     transform: translateY(-30px) scaleY(1);
                 }
             }

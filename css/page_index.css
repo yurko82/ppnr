@@ -1845,7 +1845,12 @@ button.next {
           transform: translateX(calc(-100vw/6)) scaleX(0);
 }
 
-.widget .slick-dots li button:hover:before, .widget .slick-dots li button:focus:before {
+.widget .slick-dots li button:hover:before {
+  -webkit-transform: translateX(calc(-100vw/6)) scaleX(1);
+          transform: translateX(calc(-100vw/6)) scaleX(1);
+}
+
+.widget .slick-dots li.slick-active button::before {
   -webkit-transform: translateX(calc(-100vw/6)) scaleX(1);
           transform: translateX(calc(-100vw/6)) scaleX(1);
 }
@@ -1988,6 +1993,7 @@ button.next {
     content: "";
     background: white;
     position: absolute;
+    opacity: 0;
     z-index: 1;
     left: 0;
     top: unset;
@@ -2007,6 +2013,11 @@ button.next {
             transform: translateY(-30px) scaleY(0);
   }
   .widget .slick-dots li button:hover:before, .widget .slick-dots li button:focus:before {
+    -webkit-transform: translateY(-30px) scaleY(1);
+            transform: translateY(-30px) scaleY(1);
+    opacity: 1;
+  }
+  .widget .slick-dots li.slick-active button::before {
     -webkit-transform: translateY(-30px) scaleY(1);
             transform: translateY(-30px) scaleY(1);
   }
