@@ -26,6 +26,9 @@
         transform: translateX(-310px);
         background-color: #fff;
         transition: all 1s;
+        @media (max-width: 999px){
+            box-shadow: inset 0px 2px 5px -2px $grey1;
+        }
     }
     &-icon {
         font-size: 20px;
@@ -36,6 +39,10 @@
         position: relative;
         width: 24px;
         height: 20px;
+        &:focus, &:active {
+            border: none;
+            outline: none;
+        }
         & span {
             position: absolute;
             background-color: $blue3;
@@ -123,16 +130,15 @@
     & .dropdown-menu {
         border: none;
         border-radius: 0;
-        & .dropdown-menu {
-            box-shadow: -2px 0 3px 3px rgba(50, 50, 50, 0.2);
+        @media (min-width: 1000px) {
+            & .dropdown-menu {
+                box-shadow: -2px 0 3px 3px rgba(50, 50, 50, 0.2);
+            }
         }
     }
     & .dropdown-item {
         border-radius: 0;
         padding: 0.5rem 0 0.5rem 0.7rem;
-        //display: flex;
-        //flex-direction: column;
-        //align-items: center;
         & .angle-right {
             font-size: 10px;
             margin-left: 8px;
@@ -141,11 +147,14 @@
         }
     }
     & .dropdown:hover>.dropdown-menu {
-        display: block;
+        @media (min-width: 1000px) {
+            display: block;
+        }
     }
     & .dropdown>.dropdown-toggle:active {
-        /*Without this, clicking will make it sticky*/
-        pointer-events: none;
+        @media (min-width: 1000px) {
+            pointer-events: none;
+        }
     }
     & .dropdown-toggle::after {
         display: none;
@@ -164,20 +173,22 @@
 }
 
 ul.navbar-nav .on-hover {
-    background-color: $blue3;
-    & a.nav-link {
-        color: $red5;
-    }
-    & ul {
+    @media (min-width: 1000px){
         background-color: $blue3;
-        & a {
-            color: $blue6;
+        & a.nav-link {
+            color: $red5;
         }
-        & li:hover {
-            background-color: #0662A2;
-            &>a,
-            >.angle-right {
-                color: $red5;
+        & ul {
+            background-color: $blue3;
+            & a {
+                color: $blue6;
+            }
+            & li:hover {
+                background-color: #0662A2;
+                &>a,
+                >.angle-right {
+                    color: $red5;
+                }
             }
         }
     }
@@ -311,8 +322,8 @@ ul.navbar-nav .on-hover {
         }
     }
 }
-
 //end media 1000px
+
 .scroll_page {
     & .navbar {
         height: 60px;
@@ -350,22 +361,6 @@ ul.navbar-nav .on-hover {
                 font-size: 12px;
                 transition: .3s;
             }
-            // & .arrow-down{
-            //     margin-left: 9px;
-            //     font-size: 20px;
-            //     transition: .3s;
-            //     position: relative;
-            //     width: 12px;
-            //     height: 6px;
-            //     top: 9px;
-            //     & span:first-child, :last-child{
-            //         content: '';
-            //         width: 2px;
-            //         height: 7px;
-            //         position: absolute;
-            //         display: block;
-            //     }
-            // }
             & text {
                 text-transform: uppercase;
                 font-size: 13px;

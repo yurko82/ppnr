@@ -816,6 +816,13 @@ button.next {
   transition: all 1s;
 }
 
+@media (max-width: 999px) {
+  .navbar-collapse {
+    -webkit-box-shadow: inset 0px 2px 5px -2px #363636;
+            box-shadow: inset 0px 2px 5px -2px #363636;
+  }
+}
+
 .navbar-icon {
   font-size: 20px;
   padding-left: 5px;
@@ -826,6 +833,11 @@ button.next {
   position: relative;
   width: 24px;
   height: 20px;
+}
+
+.navbar-toggler:focus, .navbar-toggler:active {
+  border: none;
+  outline: none;
 }
 
 .navbar-toggler span {
@@ -950,9 +962,11 @@ button.next {
   border-radius: 0;
 }
 
-.navbar .dropdown-menu .dropdown-menu {
-  -webkit-box-shadow: -2px 0 3px 3px rgba(50, 50, 50, 0.2);
-          box-shadow: -2px 0 3px 3px rgba(50, 50, 50, 0.2);
+@media (min-width: 1000px) {
+  .navbar .dropdown-menu .dropdown-menu {
+    -webkit-box-shadow: -2px 0 3px 3px rgba(50, 50, 50, 0.2);
+            box-shadow: -2px 0 3px 3px rgba(50, 50, 50, 0.2);
+  }
 }
 
 .navbar .dropdown-item {
@@ -967,13 +981,16 @@ button.next {
   height: 10px;
 }
 
-.navbar .dropdown:hover > .dropdown-menu {
-  display: block;
+@media (min-width: 1000px) {
+  .navbar .dropdown:hover > .dropdown-menu {
+    display: block;
+  }
 }
 
-.navbar .dropdown > .dropdown-toggle:active {
-  /*Without this, clicking will make it sticky*/
-  pointer-events: none;
+@media (min-width: 1000px) {
+  .navbar .dropdown > .dropdown-toggle:active {
+    pointer-events: none;
+  }
 }
 
 .navbar .dropdown-toggle::after {
@@ -989,29 +1006,26 @@ button.next {
   margin-left: 16px;
 }
 
-ul.navbar-nav .on-hover {
-  background-color: #005b99;
-}
-
-ul.navbar-nav .on-hover a.nav-link {
-  color: #ffeb28;
-}
-
-ul.navbar-nav .on-hover ul {
-  background-color: #005b99;
-}
-
-ul.navbar-nav .on-hover ul a {
-  color: #daf4fa;
-}
-
-ul.navbar-nav .on-hover ul li:hover {
-  background-color: #0662A2;
-}
-
-ul.navbar-nav .on-hover ul li:hover > a,
-ul.navbar-nav .on-hover ul li:hover > .angle-right {
-  color: #ffeb28;
+@media (min-width: 1000px) {
+  ul.navbar-nav .on-hover {
+    background-color: #005b99;
+  }
+  ul.navbar-nav .on-hover a.nav-link {
+    color: #ffeb28;
+  }
+  ul.navbar-nav .on-hover ul {
+    background-color: #005b99;
+  }
+  ul.navbar-nav .on-hover ul a {
+    color: #daf4fa;
+  }
+  ul.navbar-nav .on-hover ul li:hover {
+    background-color: #0662A2;
+  }
+  ul.navbar-nav .on-hover ul li:hover > a,
+  ul.navbar-nav .on-hover ul li:hover > .angle-right {
+    color: #ffeb28;
+  }
 }
 
 .nav-link {

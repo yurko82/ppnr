@@ -19,14 +19,27 @@
         }
     });
 
-    //hover for menu items
+    // hover for menu items
     $('header .nav-item').hover((e) => {
         $(e.currentTarget).addClass('on-hover');
     }, (e) => {
         $(e.currentTarget).removeClass('on-hover');
     });
+    // if (window.innerWidth < 1000){
+        $('header a.dropdown-toggle').on('click', function(){
+            $(this).parents('.dropdown-menu').first().toggleClass('show');
+        });
+    // }
+    window.addEventListener("resize", ()=> {
+        checkMenuItemDropright();
+    });
+    function checkMenuItemDropright(){
+        if (window.innerWidth >= 1000) $('header .navbar-collapse li.dropdown-item.dropdown').addClass("dropright");
+        else $('header .navbar-collapse li.dropdown-item.dropdown').removeClass("dropright");
+    }
+    checkMenuItemDropright();
 
-    //random slid on home screen
+    //random slide on home screen
     var $divs = $('.head-slider__items>div');
     var arr = [];
     $divs.each(function() {
@@ -52,7 +65,7 @@
         pauseOnHover: false
     });
 
-    // //slick slider for widget  // bla-bla
+    // //slick slider for widget
     $('#slick-slide-control10').focus();
     $('.widget__slider').slick({
         prevArrow: '<button class="prev btn-h"><i class="fas fa-chevron-left"></i></button>',
@@ -70,38 +83,6 @@
         }]
     });
 
-    // use only on index page
-    // $('.people__items').slick({
-    //     prevArrow: '<button class="prev btn-d"><i class="fas fa-chevron-left"></i></button>',
-    //     nextArrow: '<button class="next btn-d"><i class="fas fa-chevron-right"></i></button>',
-    //     slidesToShow: 2,
-    //     slidesToScroll: 2,
-    //     speed: 1000,
-    //     arrows: true,
-    //     vertical: false,
-
-    //     responsive: [{
-    //         breakpoint: 4000,
-    //         settings: "unslick"
-    //     }, {
-    //         breakpoint: 1000,
-    //         settings: {
-    //             slidesToShow: 2,
-    //             slidesToScroll: 2,
-    //             arrows: true,
-    //         }
-    //     }, {
-    //         breakpoint: 768,
-    //         settings: {
-    //             slidesToShow: 1,
-    //             slidesToScroll: 1,
-    //             arrows: true,
-    //         }
-    //     }]
-    // });
-
-
-
     //tabs for widget
     $('.widget .slick-dots li  button').click(function() {
         var $bgColor = $(this).css("background-color");
@@ -111,9 +92,10 @@
         });
     })
     if ($(window).width() > 767) {
-        $(document).mouseup(function(e) { // событие клика по веб-документу
-            var div = $(".widget"); // тут указываем ID элемента
-            if (!div.is(e.target) // если клик был не по нашему блоку
+        $(document).mouseup(function(e) { 
+            console.log('click absde');
+            var div = $(".widget"); 
+            if (!div.is(e.target) 
                 &&
                 div.has(e.target).length === 0) { // и не по его дочерним элементам
                 div.css('transform', 'translateX(328px)'); // скрываем его
