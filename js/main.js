@@ -109,9 +109,8 @@
             }
         });
     }
-    if ($(window).width() < 768) {
-        $('#slick-slide-control10').focus();
-    }
+
+
     // mobile menu
     $('.navbar-toggler').click(function() {
         $(this).toggleClass("active");
