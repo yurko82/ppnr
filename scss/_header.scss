@@ -28,6 +28,7 @@
         transition: all 1s;
         @media (max-width: 999px){
             box-shadow: inset 0px 2px 5px -2px $grey1;
+            padding-top: 15px;
         }
     }
     &-icon {
@@ -156,13 +157,16 @@
             pointer-events: none;
         }
     }
-    & .dropdown-toggle::after {
+    & a.dropdown-toggle::after {
         display: none;
     }
 }
 
 .marginleftfix {
-    margin-left: 0 !important;
+    margin-left: 15px;
+    @media (min-width: 1000px){
+        margin-left: 0 !important;
+    }
 }
 
 .logo {
@@ -184,10 +188,13 @@ ul.navbar-nav .on-hover {
                 color: $blue6;
             }
             & li:hover {
-                background-color: #0662A2;
-                &>a,
-                >.angle-right {
+                
+                &>a {
                     color: $red5;
+                    background-color: #0662A2;
+                    &>i{
+                        color: $red5;
+                    }
                 }
             }
         }

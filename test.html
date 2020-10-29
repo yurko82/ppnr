@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+    <link href="css/lib/bootstrap.css" rel="stylesheet" id="bootstrap-css">
+    <style>
+        .dropdown-submenu {
+            position: relative;
+        }
+
+        .dropdown-submenu a::after {
+            position: absolute;
+            right: 6px;
+            top: .8em;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <ul class="navbar-nav">
+            <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Про нас</a>
+              <ul class="dropdown-menu" aria-labelledby="dropdown1">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Хто ми</a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Submenu action</a></li>
+                    <li><a class="dropdown-item" href="#">Another submenu action</a></li>
+                    <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Subsubmenu</a>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Subsubmenu action</a></li>
+                        <li><a class="dropdown-item" href="#">Another subsubmenu action</a></li>
+                      </ul>
+                    </li>
+                    <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Second subsubmenu</a>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Subsubmenu action</a></li>
+                        <li><a class="dropdown-item" href="#">Another subsubmenu action</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <nav class="navbar navbar-expand-lg  align-items-center p-0" role="navigation">
+        <ul class="navbar-nav">
+            <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="dropdown1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Про нас</a>
+                <ul class="dropdown-menu" aria-labelledby="dropdown1">
+                    <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Хто ми</a>
+                        <ul class="dropdown-menu marginleftfix">
+                            <li><a class="dropdown-item" href="html/about_info.html">Загальна інформація</a></li>
+                            <li><a class="dropdown-item" href="html/about_mission.html">Місія, бачення, цінності</a></li>
+                            <li><a class="dropdown-item" href="html/about_history.html">Історія</a></li>
+                            <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Діяльність</a>
+                                <ul class="dropdown-menu marginleftfix">
+                                    <li><a class="dropdown-item" href="html/about_activity_production.html">Технологія виробництва</a></li>
+                                    <li><a class="dropdown-item" href="html/about_activity_declaration.html">Заяви</a></li>
+                                    <li><a class="dropdown-item" href="html/about_activity_licensed.html">Ліцензовані види діяльності</a></li>
+                                    <li><a class="dropdown-item" href="html/about_activity_safety.html">Безпека і надійність</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item" href="html/about_more.html">Дізнатися більше</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Наша команда</a>
+                        <ul class="dropdown-menu marginleftfix">
+                            <li><a class="dropdown-item" href="html/leaders.html">Відповідальні лідери</a></li>
+                            <li><a class="dropdown-item" href="html/team.html">Команда професіоналів</a></li>
+                            <li><a class="dropdown-item" href="html/employee.html">Працівнику</a></li>
+                            <li><a class="dropdown-item" href="html/career.html">Кар’єра і HR</a></li>
+                            <li><a class="dropdown-item" href="html/awards.html">Нагороди</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Наші партнери </a>
+                        <ul class="dropdown-menu marginleftfix">
+                            <li><a class="dropdown-item" href="html/profspilka.html">Профспілка</a></li>
+                            <li><a class="dropdown-item" href="html/ukrns.html">УкрЯТ</a></li>
+                            <li><a class="dropdown-item" href="html/uaf.html">УЯФ</a></li>
+                            <li><a class="dropdown-item" href="html/waoaes.html">ВАО АЕС</a></li>
+                            <li><a class="dropdown-item" href="html/magate.html">МАГАТЕ</a></li>
+                            <li><a class="dropdown-item" href="html/partners.html">Ділові партнери</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <!-- <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="dropdown2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Новини</a>
+                <ul class="dropdown-menu" aria-labelledby="dropdown2">
+                    <li class="dropdown-item"><a href="html/allnews.html?news">Новини</a></li>
+                    <li class="dropdown-item"><a href="html/allnews.html?announcements">Анонси</a></li>
+                    <li class="dropdown-item"><a href="html/allnews.html?newspapers">Газета «Енергія»</a></li>
+                    <li class="dropdown-item"><a href="html/allnews.html?videos">Телеканал «Енергоатом»</a></li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="dropdown3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Чому АЕС</a>
+                <ul class="dropdown-menu" aria-labelledby="dropdown3">
+                    <li class="dropdown-item"><a href="html/climate.html">Клімат і довкілля</a></li>
+                    <li class="dropdown-item"><a href="html/available_energy.html">Доступна енергія</a></li>
+                    <li class="dropdown-item"><a href="html/support_nuclear.html">Підтримую ядерну енергію</a></li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" aria-haspopup="true" aria-expanded="false" href="html/rfive.html">Р5</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="dropdown4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Громаді</a>
+                <ul class="dropdown-menu" aria-labelledby="dropdown4">
+                    <li class="dropdown-item"><a href="html/region.html">Розвиток регіону</a></li>
+                    <li class="dropdown-item"><a href="html/sport.html">Спорт</a></li>
+                    <li class="dropdown-item"><a href="html/culture.html">Культура</a></li>
+                    <li class="dropdown-item"><a href="html/sanitation.html">Оздоровлення</a></li>
+                    <li class="dropdown-item"><a href="html/hotel.html">Готель</a></li>
+                </ul>
+            </li> -->
+        </ul>
+    </nav>
+
+
+
+<script src="js/lib/jquery.min.js "></script>
+<script src="js/lib/bootstrap.min.js "></script>
+<script>
+    $('.dropdown-menu a.dropdown-toggle').on('click', function(e) {
+        if (!$(this).next().hasClass('show')) {
+            $(this).parents('.dropdown-menu').first().find('.show').removeClass("show");
+        }
+        var $subMenu = $(this).next(".dropdown-menu");
+        $subMenu.toggleClass('show');
+
+
+        $(this).parents('li.nav-item.dropdown.show').on('hidden.bs.dropdown', function(e) {
+            $('.dropdown-submenu .show').removeClass("show");
+        });
+        return false;
+});
+</script>
+
+</body>
+
+</html>
+
+
+<!-- <div class="logo-nav">
+    <nav class="navbar navbar-expand-lg  align-items-center p-0" role="navigation">
+
+        <div class="navbar__sett"><i class="icon-eye"></i></div>
+        <div class="navbar-collapse align-self-end" id="navbarCollapse">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="dropdown1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Про нас</a>
+                    <ul class="dropdown-menu" aria-labelledby="dropdown1">
+                        <li class="dropdown-item dropdown">
+                            <a class="dropdown-toggle" id="dropdown1-1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Хто ми</a>
+                            <i class="icon-right-arrow angle-right"></i>
+                            <ul class="dropdown-menu marginleftfix" aria-labelledby="dropdown1-1">
+                                <li class="dropdown-item"><a href="html/about_info.html">Загальна інформація</a></li>
+                                <li class="dropdown-item"><a href="html/about_mission.html">Місія, бачення, цінності</a></li>
+                                <li class="dropdown-item"><a href="html/about_history.html">Історія</a></li>
+                                <li class="dropdown-item dropdown">
+                                    <a class="dropdown-toggle" id="dropdown1-1-1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Діяльність</a>
+                                    <i class="icon-right-arrow angle-right"></i>
+                                    <ul class="dropdown-menu marginleftfix" aria-labelledby="dropdown1-1-1">
+                                        <li class="dropdown-item"><a href="html/about_activity_production.html">Технологія виробництва</a></li>
+                                        <li class="dropdown-item"><a href="html/about_activity_declaration.html">Заяви</a></li>
+                                        <li class="dropdown-item"><a href="html/about_activity_licensed.html">Ліцензовані види діяльності</a></li>
+                                        <li class="dropdown-item"><a href="html/about_activity_safety.html">Безпека і надійність</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown-item"><a href="html/about_more.html">Дізнатися більше</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-item dropdown">
+                            <a class="dropdown-toggle" id="dropdown1-2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Наша команда</a>
+                            <i class="icon-right-arrow angle-right"></i>
+                            <ul class="dropdown-menu marginleftfix" aria-labelledby="dropdown1-2">
+                                <li class="dropdown-item"><a href="html/leaders.html">Відповідальні лідери</a></li>
+                                <li class="dropdown-item"><a href="html/team.html">Команда професіоналів</a></li>
+                                <li class="dropdown-item"><a href="html/employee.html">Працівнику</a></li>
+                                <li class="dropdown-item"><a href="html/career.html">Кар’єра і HR</a></li>
+                                <li class="dropdown-item"><a href="html/awards.html">Нагороди</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-item dropdown">
+                            <a class="dropdown-toggle" id="dropdown1-3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Наші партнери </a>
+                            <i class="icon-right-arrow angle-right"></i>
+                            <ul class="dropdown-menu marginleftfix" aria-labelledby="dropdown1-3">
+                                <li class="dropdown-item"><a href="html/profspilka.html">Профспілка</a></li>
+                                <li class="dropdown-item"><a href="html/ukrns.html">УкрЯТ</a></li>
+                                <li class="dropdown-item"><a href="html/uaf.html">УЯФ</a></li>
+                                <li class="dropdown-item"><a href="html/waoaes.html">ВАО АЕС</a></li>
+                                <li class="dropdown-item"><a href="html/magate.html">МАГАТЕ</a></li>
+                                <li class="dropdown-item"><a href="html/partners.html">Ділові партнери</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="dropdown2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Новини</a>
+                    <ul class="dropdown-menu" aria-labelledby="dropdown2">
+                        <li class="dropdown-item"><a href="html/allnews.html?news">Новини</a></li>
+                        <li class="dropdown-item"><a href="html/allnews.html?announcements">Анонси</a></li>
+                        <li class="dropdown-item"><a href="html/allnews.html?newspapers">Газета «Енергія»</a></li>
+                        <li class="dropdown-item"><a href="html/allnews.html?videos">Телеканал «Енергоатом»</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="dropdown3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Чому АЕС</a>
+                    <ul class="dropdown-menu" aria-labelledby="dropdown3">
+                        <li class="dropdown-item"><a href="html/climate.html">Клімат і довкілля</a></li>
+                        <li class="dropdown-item"><a href="html/available_energy.html">Доступна енергія</a></li>
+                        <li class="dropdown-item"><a href="html/support_nuclear.html">Підтримую ядерну енергію</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" aria-haspopup="true" aria-expanded="false" href="html/rfive.html">Р5</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="dropdown4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Громаді</a>
+                    <ul class="dropdown-menu" aria-labelledby="dropdown4">
+                        <li class="dropdown-item"><a href="html/region.html">Розвиток регіону</a></li>
+                        <li class="dropdown-item"><a href="html/sport.html">Спорт</a></li>
+                        <li class="dropdown-item"><a href="html/culture.html">Культура</a></li>
+                        <li class="dropdown-item"><a href="html/sanitation.html">Оздоровлення</a></li>
+                        <li class="dropdown-item"><a href="html/hotel.html">Готель</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+</div> -->
