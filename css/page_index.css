@@ -2313,15 +2313,14 @@ button.next {
 
 .why__item-icon {
   margin: -5px 15px 0 0;
-  width: 80px;
   display: inline-block;
   text-align: center;
 }
 
 .why__item-icon-img {
-  background-size: 75px;
-  max-width: 75px;
-  height: 70px;
+  background-size: 55px;
+  max-width: 55px;
+  height: 50px;
 }
 
 .why__item-title h3 {
@@ -2346,6 +2345,11 @@ button.next {
   }
   .why__item {
     width: 50%;
+  }
+  .why__item-icon-img {
+    background-size: 75px;
+    max-width: 75px;
+    height: 70px;
   }
 }
 

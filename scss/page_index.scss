@@ -675,13 +675,13 @@
         color: #fff;
         &-icon {
             margin: -5px 15px 0 0;
-            width: 80px;
+            // width: 60px;
             display: inline-block;
             text-align: center;
             &-img {
-                background-size: 75px;
-                max-width: 75px;
-                height: 70px;
+                background-size: 55px;
+                max-width: 55px;
+                height: 50px;
             }
         }
         &-title h3 {
@@ -701,6 +701,14 @@
         }
         &__item {
             width: 50%;
+            &-icon {
+                // width: 80px;
+                &-img {
+                    background-size: 75px;
+                    max-width: 75px;
+                    height: 70px;
+                }
+            }
         }
     }
     @media(min-width: 1000px) {
