@@ -23,13 +23,13 @@
             display: inline-block;
             width: 3px;
             height: 24px;
-            background-color: #005B99;
+            background-color: $blue3;
         }
         &-submenu {
             margin-top: 16px;
         }
-        & .active {
-            color: #005B99;
+        & .active span{
+            color: $blue4;
         }
         &>ul {
             margin: 32px 0 0 0;
@@ -37,12 +37,19 @@
         }
         & li {
             list-style: none;
+            & span {
+                cursor: pointer;
+                &:hover{
+                    color: $blue3;
+                }
+            }
         }
         & h3 {
             font-size: 18px;
         }
     }
     &__content {
+        min-height: 550px;
         margin-left: 300px;
         height: 55vh;
         & p {

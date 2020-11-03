@@ -1,5 +1,6 @@
 @import "_colors";
 .footer {
+    margin-top: 40px;
     background-color: #005B99;
     position: relative;
     &__title {
@@ -83,6 +84,7 @@
         }
     }
     @media(min-width: 768px) {
+        margin-top: 60px;
         &__content {
             flex-direction: row;
         }
@@ -110,6 +112,7 @@
         }
     }
     @media (min-width: 1000px) {
+        margin-top: 80px;
         &__logo {
             &:after {
                 content: "";
