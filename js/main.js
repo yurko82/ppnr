@@ -25,8 +25,8 @@
     }, (e) => {
         $(e.currentTarget).removeClass('on-hover');
     });
-    if (window.innerWidth < 1000){
-         $('.dropdown-menu a.dropdown-toggle').on('click', function(e) {
+    if (window.innerWidth < 1000) {
+        $('.dropdown-menu a.dropdown-toggle').on('click', function(e) {
             if (!$(this).next().hasClass('show')) {
                 $(this).parents('.dropdown-menu').first().find('.show').removeClass("show");
             }
@@ -41,6 +41,7 @@
     window.addEventListener("resize", () => {
         checkMenuItemDropright();
     });
+
     function checkMenuItemDropright() {
         if (window.innerWidth >= 1000) $('header .navbar-collapse li.dropdown:not(.nav-item)').addClass("dropright");
         else $('header .navbar-collapse li.dropdown:not(.nav-item)').removeClass("dropright");
@@ -131,14 +132,17 @@
         }
     })
     if ($(window).width() < 1000) {
-        $(document).mouseup(function(e) { // событие клика по веб-документу
+        let menuClosed = function(e) { // событие клика по веб-документу
             let div = $(".navbar-collapse, .navbar-toggler");
             if (!div.is(e.target) && div.has(e.target).length === 0 && $('.navbar-toggler').attr("data-show") === "true") {
                 $(".navbar-collapse").css('transform', 'translateX(-310px)');
                 $(".body__overlay").css({ 'opacity': '0' });
                 $('.navbar-toggler').toggleClass("active").attr("data-show", "false");
             }
-        });
+        };
+        $(document)
+            .scroll(menuClosed)
+            .mouseup(menuClosed)
     };
 
 
