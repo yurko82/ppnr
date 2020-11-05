@@ -28,7 +28,7 @@
         &-submenu {
             margin-top: 16px;
         }
-        & .active span{
+        & .active span {
             color: $blue4;
         }
         &>ul {
@@ -39,7 +39,7 @@
             list-style: none;
             & span {
                 cursor: pointer;
-                &:hover{
+                &:hover {
                     color: $blue3;
                 }
             }
@@ -51,7 +51,6 @@
     &__content {
         min-height: 550px;
         margin-left: 300px;
-        height: 55vh;
         & p {
             padding: 0 0 24px 0;
         }
