@@ -297,4 +297,11 @@
     };
     WebP.src = 'data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA';
 
+
+
 })();
+
+function viewLeaders() {
+    let leader = document.querySelector(".leaders")
+    leader.classList.toggle('allView')
+}

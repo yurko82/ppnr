@@ -101,14 +101,14 @@
     
     .to-top {
         margin-top: 90px;
-        @media (min-width:768px){
+        @media (min-width: 768px) {
             margin-top: 120px;
         }
-        @media (min-width:1000px){
+        @media (min-width:1000px) {
             margin-top: 160px;
         }
     }
-
+    
     .mt120 {
         margin-top: 120px;
     }
@@ -441,12 +441,10 @@
                 transition-timing-function: ease-out;
             }
             &:hover:before,
-            &:focus:before,
             &:active:before {
                 transform: scaleX(1);
             }
             &:hover,
-            &:focus,
             &:active {
                 background-color: transparent;
             }
@@ -510,20 +508,20 @@
         margin: 0;
         display: flex;
         align-items: center;
-        @media(max-width: 360px){
-            & .btn-arrow{
+        @media(max-width: 360px) {
+            & .btn-arrow {
                 padding: 10px 12px;
                 font-size: 14px;
             }
         }
-        @media(max-width: 768px){
-            & .btn-arrow{
+        @media(max-width: 768px) {
+            & .btn-arrow {
                 padding: 10px 16px;
                 font-size: 16px;
             }
         }
-        @media(max-width: 1000px){
-            & .btn-arrow{
+        @media(max-width: 1000px) {
+            & .btn-arrow {
                 padding: 10px 20px;
             }
         }
