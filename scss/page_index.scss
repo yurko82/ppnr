@@ -133,41 +133,41 @@
 /*----info start----*/
 
 .info {
-    height: 550px;
-    &__parallax {
+    display: grid;
+
+    &>div {
+        grid-area:1/1;
+    }
+    & .tns-outer {
+        height: 100%;
+    }
+    & .tns-inner {
+        height: 100%;
+    }
+    &__parallax-slider{
+        height:100%;
+    }
+    &__parallax-item {
         background-attachment: fixed;
         background-size: cover;
-        z-index: 0;
         max-height: 550px;
-        position: relative;
+        min-height: 20px;
+        height:100%;
+        width: 100vw;
     }
-    &__content__slider {
-        z-index: 1;
+    &__parallax-content{
         max-height: 550px;
-        top: -550px;
-        max-width: 1240;
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
     }
-    &__actions {
-        top: -1100px;
-        max-height: 550px;
+    &__block{
         position: relative;
-        z-index: 12;
-    }
-    &__block {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
     }
     &__item {
+        width: 100%;
         max-width: 1240px;
         max-height: 300px;
-        // @media(min-width: 480px) {
-        //     display: block !important;
-        // }
     }
     &__statistic {
         width: 100%;
@@ -232,10 +232,6 @@
                 padding: 30px 0 16px 0;
             }
         }
-    }
-    &__btn {
-        position: relative;
-        top: 300px;
     }
 }
 
