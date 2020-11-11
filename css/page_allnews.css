@@ -588,11 +588,11 @@ button.next {
     -webkit-transition-timing-function: ease-out;
             transition-timing-function: ease-out;
   }
-  .btn_to-right:hover:before, .btn_to-right:focus:before, .btn_to-right:active:before {
+  .btn_to-right:hover:before, .btn_to-right:active:before {
     -webkit-transform: scaleX(1);
             transform: scaleX(1);
   }
-  .btn_to-right:hover, .btn_to-right:focus, .btn_to-right:active {
+  .btn_to-right:hover, .btn_to-right:active {
     background-color: transparent;
   }
 }
