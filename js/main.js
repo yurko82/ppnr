@@ -102,7 +102,7 @@
     })
     if ($(window).width() > 767) {
         $(document).mouseup(function(e) {
-            console.log('click absde');
+            // console.log('click absde');
             var div = $(".widget");
             if (!div.is(e.target) &&
                 div.has(e.target).length === 0) { // и не по его дочерним элементам
@@ -304,4 +304,21 @@
 function viewLeaders() {
     let leader = document.querySelector(".leaders")
     leader.classList.toggle('allView')
+}
+
+if ($(window).width() < 768) {
+    function closeAboutMenu() {
+        document.querySelectorAll(".allabout__menu-submenu ul").forEach(allUl => { allUl.style.display = "none" })
+    }
+    closeAboutMenu()
+
+    function viewLeader(e) {
+        closeAboutMenu()
+        ulDisplay = e.lastElementChild
+        if (ulDisplay.style.display == "none") {
+            ulDisplay.style.display = 'block'
+        } else {
+            ulDisplay.style.display = 'none'
+        }
+    }
 }

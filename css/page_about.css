@@ -1556,11 +1556,6 @@ button.next {
 }
 
 .allabout__menu {
-  position: -webkit-sticky;
-  position: sticky;
-  left: 0;
-  top: 120px;
-  float: left;
   z-index: 1005;
   padding-left: 24px;
 }
@@ -1607,9 +1602,25 @@ button.next {
 
 .allabout__content {
   min-height: 550px;
-  margin-left: 300px;
 }
 
 .allabout__content p {
   padding: 0 0 24px 0;
+}
+
+@media (min-width: 768px) {
+  .allabout__menu {
+    position: -webkit-sticky;
+    position: sticky;
+    left: 0;
+    top: 120px;
+    float: left;
+  }
+  .allabout__content {
+    min-height: 550px;
+    margin-left: 300px;
+  }
+  .allabout__content p {
+    padding: 0 0 24px 0;
+  }
 }

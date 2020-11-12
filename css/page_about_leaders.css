@@ -1578,13 +1578,17 @@ button.next {
 
 .leader__name {
   text-transform: uppercase;
-  font-size: 12px;
+  font-size: 18px;
   font-weight: 500;
-  line-height: 12px;
+  line-height: 24px;
 }
 
 .leader__info {
   color: #757575;
+}
+
+.leader:nth-child(n+3) {
+  display: none;
 }
 
 @media (min-width: 768px) {
@@ -1603,11 +1607,13 @@ button.next {
   .leader:first-child, .leader:nth-child(2) {
     width: 100%;
   }
-  .leader:nth-child(n+3) {
-    display: none;
-  }
   .leader__name {
-    font-size: 20px;
-    line-height: 20px;
+    font-size: 18px;
+    line-height: 24px;
+    margin-top: 8px;
+    cursor: pointer;
+  }
+  .leader__name:hover {
+    color: #005b99;
   }
 }
