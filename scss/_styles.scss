@@ -98,7 +98,14 @@
             justify-content: center;
         }
     }
-    
+
+    .container {
+        @media (max-width: 1300px) {
+              width: 100%;
+              max-width: 1280px;
+        }
+    }
+
     .to-top {
         margin-top: 90px;
         @media (min-width: 768px) {
