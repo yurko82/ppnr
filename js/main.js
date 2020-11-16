@@ -77,9 +77,8 @@
     // //slick slider for widget
     $('#slick-slide-control10').focus();
     $('.widget__slider').slick({
-        prevArrow: '<button class="prev btn-h"><i class="fas fa-chevron-left"></i></button>',
-        nextArrow: '<button class="next btn-h"><i class="fas fa-chevron-right"></i></button>',
-        speed: 1000,
+
+        speed: 500,
         dots: true,
         arrows: false,
         fade: true,
@@ -117,15 +116,21 @@
         $(this).toggleClass("active");
         if ($(this).attr("data-show") === "false") {
             $(this).attr("data-show", "true");
-            $('.navbar-collapse').css({
-                'transform': 'translateX(-20px)',
-            });
 
+            if ($(window).width() < 768) {
+                $('.navbar-collapse').css({
+                    'transform': 'translateX(-12px)'
+                });
+            } else {
+                $('.navbar-collapse').css({
+                    'transform': 'translateX(-20px)'
+                });
+            }
             $(".body__overlay").css({ 'left': '0', 'opacity': '0.7' });
         } else {
             $(this).attr("data-show", "false");
             $('.navbar-collapse').css({
-                'transform': 'translateX(-310px)',
+                'transform': 'translateX(-310px)'
             });
             $(".body__overlay").css({ 'opacity': '0' });
             setTimeout(function() { $(".body__overlay").css({ 'left': '-110vw' }); }, 1000);

@@ -817,6 +817,20 @@ button.next {
   font-size: 18px;
 }
 
+.header__social-icons.menu {
+  padding: 8px 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header__social-icons.menu .header__social-icon {
+  font-size: 32px;
+}
+
 .navbar {
   z-index: 1000;
   height: 60px;
@@ -860,8 +874,13 @@ button.next {
 }
 
 .navbar-toggler:focus, .navbar-toggler:active {
-  border: none;
-  outline: none;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+  outline: none !important;
+}
+
+.navbar-toggler::-moz-focus-inner {
+  border: 0 !important;
 }
 
 .navbar-toggler span {
@@ -1077,7 +1096,9 @@ button.next {
   ul.navbar-nav .show .dropdown-menu a {
     padding-left: 20px;
   }
-  ul.navbar-nav .show .dropdown-menu :hover, ul.navbar-nav .show .dropdown-menu a:active, ul.navbar-nav .show .dropdown-menu a:focus {
+  ul.navbar-nav .show .dropdown-menu :hover,
+  ul.navbar-nav .show .dropdown-menu a:active,
+  ul.navbar-nav .show .dropdown-menu a:focus {
     color: #005b99;
   }
   ul.navbar-nav .show .dropdown-menu .dropdown-menu a {
@@ -1099,6 +1120,9 @@ button.next {
 @media (min-width: 768px) {
   .header {
     max-height: 90px;
+  }
+  .header__social-icons.menu .header__social-icon i {
+    font-size: 32px;
   }
   .navbar {
     height: 90px;
@@ -1203,8 +1227,11 @@ button.next {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: end;
-    -ms-flex-pack: end;
-    justify-content: flex-end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .header__social-icons.menu {
+    display: none;
   }
   .header__social-icon i {
     color: #005b99;
