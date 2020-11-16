@@ -1393,6 +1393,24 @@ button.next {
   position: relative;
 }
 
+.footer__social-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.footer__social-icons li {
+  font-size: 32px;
+  padding: 8px;
+}
+
+.footer__social-icons li i {
+  color: #fff;
+}
+
 .footer__title {
   font-weight: 400;
   color: #fff;
@@ -1450,7 +1468,6 @@ button.next {
 }
 
 .footer__logo {
-  padding-top: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1470,7 +1487,6 @@ button.next {
           flex-direction: row;
   position: absolute;
   left: 197px;
-  top: 20px;
 }
 
 .footer__logo-naek {
@@ -1519,10 +1535,14 @@ button.next {
         -ms-flex-direction: row;
             flex-direction: row;
   }
+  .footer__logo {
+    padding-top: 20px;
+  }
   .footer__logo:after {
     content: "";
     height: 40px;
     left: 207px;
+    top: 20px;
   }
   .footer__logo-naek {
     height: 40px;
