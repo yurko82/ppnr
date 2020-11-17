@@ -180,6 +180,7 @@
                         });
                         $('section.info #info-items-slider').on('afterChange', () => isAnimate = false);
                         $('section.info .slick-list.draggable').css('height','100%');
+                        _btn();
                     }
                 }
                 Array.prototype.forEach.call($('section.info #info-items-slider img.info__item'), el => { if (el.src) el.onload = () => __onLoadImg(); });
@@ -202,7 +203,14 @@
             if (current<0) current=arrayInfo.length-1;
         }
         _changeTitle(arrayInfo[current].title);
-        container.find('button.info__btn').attr('href', arrayInfo[current].url);
+        _btn();
+    }
+
+    function _btn(){
+        container.find('button.info__btn').on('click', ()=>{
+            window.location = window.location.href.replace('index.html','') + arrayInfo[current].url;
+            return false;
+        });
     }
 
     function _changeTitle(stNew) {
