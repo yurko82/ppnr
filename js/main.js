@@ -22,14 +22,14 @@
 
     // for header main menu
     $('header .navbar-nav li').hover((e)=>{
-        if (window.innerWidth >= 1000) $(e.currentTarget).addClass('on-hover');
+        $(e.currentTarget).addClass('on-hover');
     }, (e)=>{
         $(e.currentTarget).removeClass('on-hover');
     });
     
     $('.dropdown-menu a.dropdown-toggle').on('click', function(e){
         if (window.innerWidth < 1000) {
-            if (!$(this).next().hasClass('show')) 
+            if (!$(this).next().hasClass('show'))
                 $(this).parents('.dropdown-menu').first().find('.show').removeClass("show");
             let $subMenu = $(this).next(".dropdown-menu");
             $subMenu.toggleClass('show');
@@ -79,7 +79,8 @@
             breakpoint: 768,
             settings: {
                 dots: true,
-                arrows: false
+                arrows: false,
+                swipe: false
             }
         }]
     });
