@@ -996,20 +996,6 @@ button.next {
   padding-bottom: 30px;
 }
 
-.navbar .angle-right {
-  vertical-align: middle;
-  font-size: 10px;
-  margin-left: 8px;
-  color: #daf4fa;
-}
-
-@media (max-width: 999px) {
-  .navbar .angle-right {
-    color: #005b99;
-    margin-left: 0;
-  }
-}
-
 .navbar .dropdown-toggle {
   cursor: pointer;
 }
@@ -1047,9 +1033,29 @@ button.next {
   display: none;
 }
 
+.navbar .nav-item .angle-right {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 10px;
+  margin-left: 8px;
+  color: #daf4fa;
+}
+
 @media (max-width: 999px) {
-  .navbar .nav-item:hover {
-    background-color: #eeeeee;
+  .navbar .nav-item .angle-right {
+    color: #005b99;
+    margin-left: 0;
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+    -webkit-transition: .3s;
+    transition: .3s;
+  }
+}
+
+@media (max-width: 999px) {
+  .navbar .nav-item > a.show i {
+    -webkit-transform: rotate(270deg);
+            transform: rotate(270deg);
   }
 }
 
@@ -1068,6 +1074,15 @@ button.next {
 .logo img {
   max-height: 48px;
   margin-left: 16px;
+}
+
+@media (max-width: 999px) {
+  ul.navbar-nav .on-hover {
+    background-color: #eeeeee;
+  }
+  ul.navbar-nav .on-hover .dropdown-menu {
+    background-color: #eeeeee;
+  }
 }
 
 @media (min-width: 1000px) {

@@ -139,16 +139,6 @@
     &-nav {
         padding-bottom: 30px;
     }
-    & .angle-right {
-        vertical-align: middle;
-        font-size: 10px;
-        margin-left: 8px;
-        color: $blue6;
-        @media (max-width: 999px) {
-            color: $blue3;
-            margin-left: 0;
-        }
-    }
     & .dropdown-toggle {
         cursor: pointer;
     }
@@ -179,9 +169,22 @@
         display: none;
     }
     & .nav-item {
+        & .angle-right {
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 10px;
+            margin-left: 8px;
+            color: $blue6;
+            @media (max-width: 999px) {
+                color: $blue3;
+                margin-left: 0;
+                transform: rotate(90deg);
+                transition: .3s;
+            }
+        }
         @media (max-width: 999px) {
-            &:hover {
-                background-color: $grey6;
+            &>a.show i {
+                transform: rotate(270deg);
             }
         }
         &>a i {
@@ -206,6 +209,12 @@
 }
 
 ul.navbar-nav .on-hover {
+    @media(max-width: 999px) {
+        background-color: $grey6;
+        & .dropdown-menu {
+            background-color: $grey6;
+        }
+    }
     @media (min-width: 1000px) {
         background-color: $blue3;
         & a.nav-link {
@@ -235,7 +244,7 @@ ul.navbar-nav .show {
             & a {
                 padding-left: 20px;
             }
-             :hover,
+            :hover,
             & a:active,
             & a:focus {
                 color: $blue3;
