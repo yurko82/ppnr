@@ -13,7 +13,7 @@
     <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css" integrity="sha384-DhY6onE6f3zzKbjUPRc2hOzGAdEf4/Dz+WJwBvEYL/lkkIsI3ihufq9hk9K4lVoK" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="fonts/fontawesome/all.css">
     <link rel="stylesheet" href="css/lib/slick.css">
-    <link rel="stylesheet" href="css/lib/tiny-slider.css">
+    <!-- <link rel="stylesheet" href="css/lib/tiny-slider.css"> -->
     <link rel="stylesheet" href="fonts/GothamPro/stylesheet.css">
     <link rel="stylesheet" href="fonts/rnpp-icons/rnpp-icons.css">
     <link rel="stylesheet" href="css/lib/aos.css">
@@ -269,19 +269,21 @@
 
     <section class="info">
         <div id="info-bg-slider" class="info__parallax-slider"> </div>
-        <div class="container info__parallax-content">
-            <div class="info__block"> 
-                <div class="title t-d">
-                    <span>Title</span>
+        <div class="info__container-content">
+            <div class="container info__parallax-content">
+                <div class="info__block"> 
+                    <div class="title t-d">
+                        <span>Title</span>
+                    </div>
+                    <div class="btn-arrow-container">
+                        <button class="btn-arrow btn-arrow-left btn-d pointer"><a class="icon-left-arrow"></a></button>
+                        <button class="btn-arrow btn-arrow-right btn-d pointer"><a class="icon-right-arrow"></a></button>
+                    </div>
                 </div>
-                <div class="btn-arrow-container">
-                    <button class="btn-arrow btn-arrow-left btn-d pointer"><a class="icon-left-arrow"></a></button>
-                    <button class="btn-arrow btn-arrow-right btn-d pointer"><a class="icon-right-arrow"></a></button>
+                <div id="info-items-slider_container"> </div>
+                <div style="position: relative">
+                    <button class="btn btn-d btn_to-right btn_full-width info__btn">Подробиці</button>
                 </div>
-            </div>
-            <div id="info-items-slider" class="splide"> </div>
-            <div>
-                <button class="btn btn-d btn_to-right btn_full-width info__btn">Подробиці</button>
             </div>
         </div>
     </section>
@@ -606,10 +608,8 @@
     <script src="js/lib/bootstrap5.min.js "></script>
     <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.bundle.min.js" integrity="sha384-BOsAfwzjNJHrJ8cZidOg56tcQWfp6y72vEJ8xQ9w6Quywb24iOsW913URv1IS4GD" crossorigin="anonymous"></script> -->
     <script src="js/lib/slick.min.js "></script>
-    <script src="js/lib/tiny-slider.js "></script>
     <script src="js/main.js "></script>
-    <!-- <script src="js/index__info-block.js "></script> -->
-    <script src="js/index__info-block_new.js "></script>
+    <script src="js/index__info-block.js "></script>
     <script src="js/index__news-block.js "></script>
 
 </body>

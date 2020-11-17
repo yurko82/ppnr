@@ -134,14 +134,16 @@
 
 .info {
     display: grid;
-
     &>div {
         grid-area:1/1;
     }
-    & .tns-outer {
-        height: 100%;
+    & .slick-slide img{
+        height: auto;
+        @media(min-width: 1280px) {
+            height: 300px;
+        }
     }
-    & .tns-inner {
+    & .slick-track, & .slick-list, & .slick-slide>div {
         height: 100%;
     }
     &__parallax-slider{
@@ -155,8 +157,18 @@
         height:100%;
         width: 100vw;
     }
+    &__container-content{
+        display: flex;
+        justify-content: center;
+        width: 100vw;
+    }
     &__parallax-content{
+        margin:0;
         max-height: 550px;
+        max-width: 1280px;
+        @media(max-width:1280px){
+            max-width: calc(100vw - 15px);
+        }
     }
     &__block{
         position: relative;
@@ -171,7 +183,8 @@
     }
     &__statistic {
         width: 100%;
-        height: 300px;
+        height: 100%;
+        max-height: 300px;
         line-height: 115%;
         display: flex;
         justify-content: space-between;

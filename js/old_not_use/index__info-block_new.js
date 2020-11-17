@@ -156,25 +156,32 @@
         }
         document.querySelector('section.info #info-items-slider').innerHTML = html;
 
-        if (slideBG) slideBG.destroy();
-        if (slideItems) slideItems.destroy();
-
         if (arrayInfo.length>1) {
             document.querySelector('section.info .btn-arrow-container').style.display ='flex';
-            slideBG = tns({
-                container: '#info-bg-slider',
-                mode: 'gallery',
-                nav: false,
-                controls: false,
-                preventActionWhenRunning: true
-            });
-            slideItems = tns({
-                container: '#info-items-slider',
-                nav: false,
-                controls: false,
-                preventActionWhenRunning: true,
-                responsive:{}
-            });
+            if (slideBG) {
+                slideBG.destroy();
+                slideBG = slideBG.rebuild();
+            } else {
+                slideBG = tns({
+                    container: '#info-bg-slider',
+                    mode: 'gallery',
+                    nav: false,
+                    controls: false,
+                    preventActionWhenRunning: true
+                });
+            }
+            if (slideItems) {
+                slideItems.destroy();
+                slideItems = slideItems.rebuild();
+            } else {
+                slideItems = tns({
+                    container: '#info-items-slider',
+                    nav: false,
+                    controls: false,
+                    preventActionWhenRunning: true,
+                    responsive:{}
+                });
+            }
         } else document.querySelector('section.info .btn-arrow-container').style.display ='none';
     }
 
