@@ -148,6 +148,7 @@
     }
     &__parallax-slider {
         height: 100%;
+        width: 100vw;
     }
     &__parallax-item {
         background-attachment: fixed;
@@ -155,7 +156,7 @@
         max-height: 550px;
         min-height: 20px;
         height: 100%;
-        width: 100vw;
+        width: 100%;
     }
     &__container-content{
         display: flex;

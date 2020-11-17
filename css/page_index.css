@@ -1779,6 +1779,7 @@ button.next {
 
 .info__parallax-slider {
   height: 100%;
+  width: 100vw;
 }
 
 .info__parallax-item {
@@ -1787,7 +1788,7 @@ button.next {
   max-height: 550px;
   min-height: 20px;
   height: 100%;
-  width: 100vw;
+  width: 100%;
 }
 
 .info__container-content {
