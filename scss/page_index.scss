@@ -135,7 +135,7 @@
 .info {
     display: grid;
     &>div {
-        grid-area:1/1;
+        grid-area: 1/1;
     }
     & .slick-slide img{
         height: auto;
@@ -146,17 +146,18 @@
     & .slick-track, & .slick-list, & .slick-slide>div {
         height: 100%;
     }
-    &__parallax-slider{
-        height:100%;
+    &__parallax-slider {
+        height: 100%;
     }
     &__parallax-item {
         background-attachment: fixed;
         background-size: cover;
         max-height: 550px;
         min-height: 20px;
-        height:100%;
+        height: 100%;
         width: 100vw;
     }
+<<<<<<< HEAD
     &__container-content{
         display: flex;
         justify-content: center;
@@ -164,13 +165,16 @@
     }
     &__parallax-content{
         margin:0;
+=======
+    &__parallax-content {
+>>>>>>> 199927bb3e134f308dffd95260b6dd6a76c94262
         max-height: 550px;
         max-width: 1280px;
         @media(max-width:1280px){
             max-width: calc(100vw - 15px);
         }
     }
-    &__block{
+    &__block {
         position: relative;
         display: flex;
         flex-direction: row;

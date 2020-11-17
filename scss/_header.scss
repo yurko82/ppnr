@@ -9,6 +9,16 @@
     & i.icon-close {
         font-size: 18px;
     }
+    &__social-icons {
+        &.menu {
+            padding: 8px 12px;
+            display: flex;
+            justify-content: space-between;
+            & .header__social-icon {
+                font-size: 32px;
+            }
+        }
+    }
 }
 
 .navbar {
@@ -26,7 +36,7 @@
         transform: translateX(-310px);
         background-color: #fff;
         transition: all 1s;
-        @media (max-width: 999px){
+        @media (max-width: 999px) {
             box-shadow: inset 0px 2px 5px -2px $grey1;
             padding-top: 15px;
         }
@@ -40,9 +50,13 @@
         position: relative;
         width: 24px;
         height: 20px;
-        &:focus, &:active {
-            border: none;
-            outline: none;
+        &:focus,
+        &:active {
+            box-shadow: none!important;
+            outline: none!important;
+        }
+        &::-moz-focus-inner {
+            border: 0!important;
         }
         & span {
             position: absolute;
@@ -130,7 +144,7 @@
         font-size: 10px;
         margin-left: 8px;
         color: $blue6;
-        @media (max-width: 999px){
+        @media (max-width: 999px) {
             color: $blue3;
             margin-left: 0;
         }
@@ -164,13 +178,13 @@
     & a.dropdown-toggle::after {
         display: none;
     }
-    & .nav-item{
-        @media (max-width: 999px){
-            &:hover{
+    & .nav-item {
+        @media (max-width: 999px) {
+            &:hover {
                 background-color: $grey6;
             }
         }
-        &>a i{
+        &>a i {
             @media (min-width: 1000px) {
                 display: none;
             }
@@ -179,7 +193,7 @@
 }
 
 .marginleftfix {
-    @media (min-width: 1000px){
+    @media (min-width: 1000px) {
         margin-left: 0 !important;
     }
 }
@@ -192,7 +206,7 @@
 }
 
 ul.navbar-nav .on-hover {
-    @media (min-width: 1000px){
+    @media (min-width: 1000px) {
         background-color: $blue3;
         & a.nav-link {
             color: $red5;
@@ -206,7 +220,7 @@ ul.navbar-nav .on-hover {
                 &>a {
                     color: $red5;
                     background-color: #0662A2;
-                    &>i{
+                    &>i {
                         color: $red5;
                     }
                 }
@@ -214,13 +228,16 @@ ul.navbar-nav .on-hover {
         }
     }
 }
-ul.navbar-nav .show{
-    @media (max-width: 999px){
+
+ul.navbar-nav .show {
+    @media (max-width: 999px) {
         & .dropdown-menu {
             & a {
                 padding-left: 20px;
             }
-            :hover, & a:active, & a:focus {
+             :hover,
+            & a:active,
+            & a:focus {
                 color: $blue3;
             }
             & .dropdown-menu {
@@ -231,7 +248,7 @@ ul.navbar-nav .show{
                     padding-left: 40px;
                 }
             }
-        }   
+        }
     }
 }
 
@@ -246,6 +263,13 @@ ul.navbar-nav .show{
 @media (min-width: 768px) {
     .header {
         max-height: 90px;
+        &__social-icons {
+            &.menu {
+                & .header__social-icon i {
+                    font-size: 32px;
+                }
+            }
+        }
     }
     .navbar {
         height: 90px;
@@ -326,12 +350,11 @@ ul.navbar-nav .show{
             transition: 0.5s;
         }
         &__social-icons {
-            display: -webkit-box;
-            display: -ms-flexbox;
             display: flex;
-            -webkit-box-pack: end;
-            -ms-flex-pack: end;
             justify-content: flex-end;
+            &.menu {
+                display: none;
+            }
         }
         &__social-icon i {
             color: $blue3;
