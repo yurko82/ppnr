@@ -157,7 +157,6 @@
         height: 100%;
         width: 100vw;
     }
-<<<<<<< HEAD
     &__container-content{
         display: flex;
         justify-content: center;
@@ -165,9 +164,6 @@
     }
     &__parallax-content{
         margin:0;
-=======
-    &__parallax-content {
->>>>>>> 199927bb3e134f308dffd95260b6dd6a76c94262
         max-height: 550px;
         max-width: 1280px;
         @media(max-width:1280px){
