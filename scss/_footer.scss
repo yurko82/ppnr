@@ -6,11 +6,15 @@
     &__social-icons {
         display: flex;
         justify-content: flex-start;
+        z-index: 1;
         & li {
             font-size: 32px;
             padding: 8px;
             & i {
                 color: #fff;
+            }
+            & a:hover {
+                text-decoration: none;
             }
         }
     }
@@ -25,18 +29,6 @@
         color: $grey5;
         padding-bottom: 30px;
         flex-direction: column;
-        &::before {
-            content: '';
-            position: absolute;
-            display: block;
-            background-image: url(../images/svg/o_naek_blue.svg);
-            background-size: 284px;
-            width: 284px;
-            height: 244px;
-            right: 0px;
-            bottom: 70px;
-            opacity: 0.25;
-        }
         & a {
             color: $blue5;
             &:hover {
@@ -96,6 +88,18 @@
         margin-top: 60px;
         &__content {
             flex-direction: row;
+            &::before {
+                content: '';
+                position: absolute;
+                display: block;
+                background-image: url(../images/svg/o_naek_blue.svg);
+                background-size: 284px;
+                width: 284px;
+                height: 244px;
+                right: 0px;
+                bottom: 70px;
+                opacity: 0.25;
+            }
         }
         &__logo {
             padding-top: 20px;

@@ -1400,6 +1400,7 @@ button.next {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  z-index: 1;
 }
 
 .footer__social-icons li {
@@ -1409,6 +1410,10 @@ button.next {
 
 .footer__social-icons li i {
   color: #fff;
+}
+
+.footer__social-icons li a:hover {
+  text-decoration: none;
 }
 
 .footer__title {
@@ -1430,19 +1435,6 @@ button.next {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-}
-
-.footer__content::before {
-  content: '';
-  position: absolute;
-  display: block;
-  background-image: url(../images/svg/o_naek_blue.svg);
-  background-size: 284px;
-  width: 284px;
-  height: 244px;
-  right: 0px;
-  bottom: 70px;
-  opacity: 0.25;
 }
 
 .footer__content a {
@@ -1534,6 +1526,18 @@ button.next {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+  }
+  .footer__content::before {
+    content: '';
+    position: absolute;
+    display: block;
+    background-image: url(../images/svg/o_naek_blue.svg);
+    background-size: 284px;
+    width: 284px;
+    height: 244px;
+    right: 0px;
+    bottom: 70px;
+    opacity: 0.25;
   }
   .footer__logo {
     padding-top: 20px;
