@@ -21,26 +21,46 @@
     });
 
     // for header main menu
+<<<<<<< HEAD
     $('header .navbar-nav li').hover((e) => {
         $(e.currentTarget).addClass('on-hover');
     }, (e) => {
+=======
+    $('header .navbar-nav li').hover((e)=>{
+        if (window.innerWidth >= 1000) $(e.currentTarget).addClass('on-hover');
+    }, (e)=>{
+>>>>>>> 1146fc96b7b759a5f2cad6191775f9cdefcd8ee5
         $(e.currentTarget).removeClass('on-hover');
     });
 
     $('.dropdown-menu a.dropdown-toggle').on('click', function(e) {
         if (window.innerWidth < 1000) {
-            if (!$(this).next().hasClass('show'))
+            if ($(this).next().hasClass('show')) {
+                $(this).removeClass('show');
+            } else {
                 $(this).parents('.dropdown-menu').first().find('.show').removeClass("show");
+                $(this).addClass('show');
+            }
             let $subMenu = $(this).next(".dropdown-menu");
             $subMenu.toggleClass('show');
+<<<<<<< HEAD
             $(this).parents('li.nav-item.dropdown.show').on('hidden.bs.dropdown', function(e) {
                 $('.dropdown-submenu .show').removeClass("show");
+=======
+            $(this).parents('li.nav-item.dropdown.show').on('hidden.bs.dropdown', function(e){
+                $('.dropdown-submenu .show, .dropdown-menu a.dropdown-toggle').removeClass("show");
+>>>>>>> 1146fc96b7b759a5f2cad6191775f9cdefcd8ee5
             });
         }
         return false;
     });
+<<<<<<< HEAD
 
     window.addEventListener("resize", () => {
+=======
+ 
+    window.addEventListener("resize", ()=>{
+>>>>>>> 1146fc96b7b759a5f2cad6191775f9cdefcd8ee5
         checkMenuItemDropright();
     });
 
