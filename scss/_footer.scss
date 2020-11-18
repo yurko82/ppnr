@@ -128,6 +128,9 @@
     }
     @media (min-width: 1000px) {
         margin-top: 80px;
+        // &__social-icons {
+        //     display: none;
+        // }
         &__logo {
             &:after {
                 content: "";
