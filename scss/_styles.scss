@@ -320,17 +320,19 @@
     
     .title {
         padding: 20px 0;
-        font-size: 36px;
+        font-size: 26px;
         line-height: 115%;
         letter-spacing: 1px;
         font-weight: 300;
         display: flex;
         align-items: center;
         @media (min-width: 480px) {
+            font-size: 28px;
             letter-spacing: 2px;
             padding: 24px 0;
         }
         @media (min-width: 768px) {
+            font-size: 30px;
             padding: 32px 0;
         }
         @media (min-width: 1000px) {
@@ -404,7 +406,7 @@
     
     .btn-d {
         color: $grey2;
-        border: 1px solid $grey3;
+        border: 1px solid $grey4;
         &:before {
             background: $blue3;
         }
@@ -491,7 +493,7 @@
     
     .btn-arrow {
         display: inline-block;
-        border: 1px solid $grey3;
+        border: 1px solid $grey4;
         color: $grey3;
         font-size: 12px;
         line-height: 0;
