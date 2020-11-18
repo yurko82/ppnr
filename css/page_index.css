@@ -1829,7 +1829,9 @@ button.next {
   }
 }
 
-.info .slick-track, .info .slick-list, .info .slick-slide > div {
+.info .slick-track,
+.info .slick-list,
+.info .slick-slide > div {
   height: 100%;
 }
 
@@ -2047,6 +2049,7 @@ button.next {
 
 .widget span {
   padding-bottom: 2px;
+  padding-left: 2px;
 }
 
 @media (max-width: 768px) {

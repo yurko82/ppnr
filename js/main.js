@@ -118,7 +118,7 @@
             $(this).attr("data-show", "false");
             $('.navbar-collapse').css({ 'transform': 'translateX(-310px)' });
             $(".body__overlay").css({ 'opacity': '0' });
-            setTimeout(function() { $(".body__overlay").css({ 'left': '-110vw' }); }, 1000);
+            setTimeout(function() { $(".body__overlay").css({ 'left': '-110vw' }); }, 500);
         }
     });
     let menuClosed = function(e) {
@@ -128,6 +128,7 @@
                 $(".navbar-collapse").css('transform', 'translateX(-310px)');
                 $(".body__overlay").css({ 'opacity': '0' });
                 $('.navbar-toggler').toggleClass("active").attr("data-show", "false");
+                setTimeout(function() { $(".body__overlay").css({ 'left': '-110vw' }); }, 500);
             }
         }
     };
