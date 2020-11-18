@@ -22,24 +22,28 @@
 
     // for header main menu
     $('header .navbar-nav li').hover((e)=>{
-        $(e.currentTarget).addClass('on-hover');
+        if (window.innerWidth >= 1000) $(e.currentTarget).addClass('on-hover');
     }, (e)=>{
         $(e.currentTarget).removeClass('on-hover');
     });
     
     $('.dropdown-menu a.dropdown-toggle').on('click', function(e){
         if (window.innerWidth < 1000) {
-            if (!$(this).next().hasClass('show'))
+            if ($(this).next().hasClass('show')) {
+                $(this).removeClass('show');
+            } else {
                 $(this).parents('.dropdown-menu').first().find('.show').removeClass("show");
+                $(this).addClass('show');
+            }
             let $subMenu = $(this).next(".dropdown-menu");
             $subMenu.toggleClass('show');
             $(this).parents('li.nav-item.dropdown.show').on('hidden.bs.dropdown', function(e){
-                $('.dropdown-submenu .show').removeClass("show");
+                $('.dropdown-submenu .show, .dropdown-menu a.dropdown-toggle').removeClass("show");
             });
         }
         return false;
     });
-
+ 
     window.addEventListener("resize", ()=>{
         checkMenuItemDropright();
     });

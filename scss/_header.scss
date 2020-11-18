@@ -135,6 +135,10 @@
         right: 24px;
         color: $blue3;
         cursor: pointer;
+        @media (max-width:999px){
+            font-size: 20px;
+            right: 20px;
+        }
     }
     &-nav {
         padding-bottom: 30px;
@@ -153,7 +157,14 @@
     }
     & .dropdown-item {
         border-radius: 0;
-        padding: 0.5rem 0 0.5rem 0.7rem;
+        padding: 0.5rem 0 0.5rem 1rem;
+        @media (max-width:999px){
+            padding: 0 0 0.5rem 1.2rem;
+            &:hover, &:focus{
+                color: $blue3;
+                background-color: white;
+            }
+        }
     }
     & .dropdown:hover>.dropdown-menu {
         @media (min-width: 1000px) {
@@ -183,8 +194,12 @@
             }
         }
         @media (max-width: 999px) {
-            &>a.show i {
-                transform: rotate(270deg);
+            & a.show {
+                font-weight: 500;
+                padding-bottom: 4px;
+                & i {
+                    transform: rotate(270deg);
+                }
             }
         }
         &>a i {
@@ -209,12 +224,6 @@
 }
 
 ul.navbar-nav .on-hover {
-    @media(max-width: 999px) {
-        background-color: $grey6;
-        & .dropdown-menu {
-            background-color: $grey6;
-        }
-    }
     @media (min-width: 1000px) {
         background-color: $blue3;
         & a.nav-link {
@@ -244,17 +253,12 @@ ul.navbar-nav .show {
             & a {
                 padding-left: 20px;
             }
-            :hover,
-            & a:active,
-            & a:focus {
-                color: $blue3;
-            }
             & .dropdown-menu {
                 & a {
-                    padding-left: 30px;
+                    padding-left: 1.5rem;
                 }
                 & .dropdown-menu a {
-                    padding-left: 40px;
+                    padding-left: 1.8rem;
                 }
             }
         }
