@@ -10,11 +10,13 @@
     let lowVision = 0;
     $('i.icon-eye').click(function() {
         if (lowVision == 0) {
-            $('body').css('filter', 'grayscale(100%)').addClass('lowvision');
+            $('section, footer, .logo, .btn_up').css('filter', 'grayscale(100%)');
+            $('.header').addClass('lowvision');
             lowVision = 1;
             $(this).addClass('icon-eye_full');
         } else {
-            $('body').css('filter', 'none').removeClass('lowvision');
+            $('section, footer, .logo, .btn_up').css('filter', 'none');
+            $('.header').removeClass('lowvision');
             lowVision = 0;
             $(this).removeClass('icon-eye_full');
         }

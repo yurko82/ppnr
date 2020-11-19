@@ -3,6 +3,11 @@
 .header {
     background-color: #fff;
     max-height: 60px;
+    &.lowvision * {
+        color: #000;
+        background-color: #fff;
+        border-color: #000;
+    }
     &__social {
         display: none;
     }
@@ -100,7 +105,7 @@
         font-size: 18px;
         margin: 0 10px;
         color: $blue3;
-        @media (max-width:999px){
+        @media (max-width: 999px) {
             font-size: 22px;
             margin: 0 14px;
         }
@@ -140,7 +145,7 @@
         right: 24px;
         color: $blue3;
         cursor: pointer;
-        @media (max-width:999px){
+        @media (max-width: 999px) {
             font-size: 20px;
             right: 20px;
         }
@@ -163,9 +168,10 @@
     & .dropdown-item {
         border-radius: 0;
         padding: 0.5rem 0 0.5rem 1rem;
-        @media (max-width:999px){
+        @media (max-width: 999px) {
             padding: 0 0 0.5rem 1.2rem;
-            &:hover, &:focus{
+            &:hover,
+            &:focus {
                 color: $blue3;
                 background-color: white;
             }
@@ -186,7 +192,6 @@
     }
     & .nav-item {
         & .angle-right {
-            
             vertical-align: middle;
             font-size: 10px;
             margin-left: 8px;
@@ -246,6 +251,31 @@ ul.navbar-nav .on-hover {
                     background-color: #0662A2;
                     &>i {
                         color: $red5;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.lowvision ul.navbar-nav .on-hover {
+    @media (min-width: 1000px) {
+        background-color: #fff;
+        & a.nav-link {
+            color: #000;
+        }
+        & ul {
+            background-color: #fff;
+            & a {
+                color: #000;
+            }
+            & li:hover {
+                &>a {
+                    color: #000;
+                    background-color: #fff;
+                    font-weight: 500;
+                    &>i {
+                        color: #000;
                     }
                 }
             }
@@ -477,11 +507,16 @@ ul.navbar-nav .show {
                 display: none;
             }
         }
-        @media (max-width: 999px){
+        @media (max-width: 999px) {
             top: 28px;
             a {
                 font-size: 16px;
             }
         }
     }
+}
+
+.lowvision .lang__drop a:hover {
+    background-color: $grey1;
+    color: #fff;
 }
