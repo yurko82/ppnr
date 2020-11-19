@@ -40,7 +40,7 @@
         top: 60px;
         transform: translateX(-310px);
         background-color: #fff;
-        transition: all 1s;
+        transition: all .5s;
         @media (max-width: 999px) {
             box-shadow: inset 0px 2px 5px -2px $grey1;
             padding-top: 15px;

@@ -8,7 +8,7 @@
             slidesToShow: 1,
             slidesToScroll: 1,
             vertical: false,
-            speed: 2000,
+            speed: 1000,
             adaptiveHeight:true,
             useTransform: false,
             arrows: false,

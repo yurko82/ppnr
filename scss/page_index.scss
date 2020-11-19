@@ -134,6 +134,7 @@
 
 .info {
     display: grid;
+    max-height: 600px;
     &>div {
         grid-area: 1/1;
     }
