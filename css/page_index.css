@@ -851,7 +851,7 @@ button.next {
 .navbar-collapse {
   display: block;
   width: 270px;
-  height: 100vh;
+  height: calc(100vh - 60px);
   position: absolute;
   top: 60px;
   -webkit-transform: translateX(-310px);
@@ -865,7 +865,10 @@ button.next {
   .navbar-collapse {
     -webkit-box-shadow: inset 0px 2px 5px -2px #363636;
             box-shadow: inset 0px 2px 5px -2px #363636;
-    padding-top: 15px;
+    overflow-y: scroll;
+  }
+  .navbar-collapse_inner-container {
+    padding-top: 10px;
   }
 }
 
@@ -1691,6 +1694,10 @@ button.next {
   }
 }
 
+section {
+  position: relative;
+}
+
 .body__overlay {
   position: fixed;
   width: 100%;
@@ -1792,8 +1799,6 @@ button.next {
 }
 
 .head-slider__overlay {
-  /*background: -webkit-gradient(linear, left top, right top, color-stop(2%, #005B99), color-stop(50%, transparent));
-    background: linear-gradient(to right, #005B99 2%, transparent 50%);*/
   background-image: url(../images/img/grid.png);
   height: 100vh;
   width: 100%;
@@ -1846,6 +1851,7 @@ button.next {
   display: -ms-grid;
   display: grid;
   max-height: 600px;
+  overflow: hidden;
 }
 
 .info > div {
@@ -2024,7 +2030,6 @@ button.next {
 /*----widget start----*/
 .widget {
   background-color: #39b791;
-  position: relative;
   color: #fff;
 }
 

@@ -851,7 +851,7 @@ button.next {
 .navbar-collapse {
   display: block;
   width: 270px;
-  height: 100vh;
+  height: calc(100vh - 60px);
   position: absolute;
   top: 60px;
   -webkit-transform: translateX(-310px);
@@ -865,7 +865,10 @@ button.next {
   .navbar-collapse {
     -webkit-box-shadow: inset 0px 2px 5px -2px #363636;
             box-shadow: inset 0px 2px 5px -2px #363636;
-    padding-top: 15px;
+    overflow-y: scroll;
+  }
+  .navbar-collapse_inner-container {
+    padding-top: 10px;
   }
 }
 

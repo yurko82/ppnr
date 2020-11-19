@@ -35,7 +35,7 @@
     &-collapse {
         display: block;
         width: 270px;
-        height: 100vh;
+        height: calc(100vh - 60px);
         position: absolute;
         top: 60px;
         transform: translateX(-310px);
@@ -43,7 +43,10 @@
         transition: all .5s;
         @media (max-width: 999px) {
             box-shadow: inset 0px 2px 5px -2px $grey1;
-            padding-top: 15px;
+            overflow-y: scroll;
+            &_inner-container{
+                padding-top: 10px;
+            } 
         }
     }
     &-icon {
