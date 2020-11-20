@@ -128,7 +128,6 @@
         }
     });
     let menuClosed = function(e) {
-        console.log(e);
         if ($(window).width() < 1000) {
             let div = $(".navbar-collapse, .navbar-toggler");
             if (!div.is(e.target) && div.has(e.target).length == 0 && $('.navbar-toggler').attr("data-show") == "true") {

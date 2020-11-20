@@ -43,9 +43,10 @@
         transition: all .5s;
         @media (max-width: 999px) {
             box-shadow: inset 0px 2px 5px -2px $grey1;
-            overflow-y: scroll;
+            overflow-y: auto;
             &_inner-container{
                 padding-top: 10px;
+                width: 260px;
             } 
         }
     }
@@ -172,7 +173,7 @@
         border-radius: 0;
         padding: 0.5rem 0 0.5rem 1rem;
         @media (max-width: 999px) {
-            padding: 0 0 0.5rem 1.2rem;
+            padding: 0 0 8px 16px;
             &:hover,
             &:focus {
                 color: $blue3;
@@ -290,16 +291,24 @@ ul.navbar-nav .show {
     @media (max-width: 999px) {
         & .dropdown-menu {
             & a {
-                padding-left: 20px;
+                padding-left: 32px;
+            }
+            & li:last-child a {
+                padding-bottom: 16px;
             }
             & .dropdown-menu {
                 & a {
-                    padding-left: 1.5rem;
+                    padding-left: 48px;
+                    white-space: pre-wrap;
+                    line-height: 1;
+                    padding-top: 4px;
+                    padding-bottom: 10px;
                 }
-                & .dropdown-menu a {
-                    padding-left: 1.8rem;
+                & li:last-child a {
+                    padding-bottom: 16px;
                 }
             }
+          
         }
     }
 }
