@@ -825,15 +825,15 @@ button.next {
   color: #000;
 }
 
-.header.lowvision * button {
+.header.lowvision * .navbar-toggler {
   border: none;
 }
 
-.header.lowvision * button::after, .header.lowvision * button::before {
+.header.lowvision * .navbar-toggler::after, .header.lowvision * .navbar-toggler::before {
   background-color: #000;
 }
 
-.header.lowvision * button span {
+.header.lowvision * .navbar-toggler span {
   background-color: #000;
 }
 
