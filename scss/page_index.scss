@@ -1,7 +1,6 @@
 @import '_styles';
 @import "_header";
 @import "_footer";
-
 section {
     position: relative;
 }
@@ -527,7 +526,7 @@ section {
             display: block;
         }
         &__content {
-            padding: 0 15px 0 36px;
+            padding: 0 36px 0 36px;
             max-width: 635px;
         }
     }
