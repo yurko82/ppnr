@@ -1041,6 +1041,13 @@ button.next {
   }
 }
 
+@media (min-width: 1000px) and (max-width: 1350px) {
+  .navbar .dropdown-menu-right-1350 {
+    right: 0;
+    left: auto;
+  }
+}
+
 .navbar .dropdown-item {
   border-radius: 0;
   padding: 0.5rem 0 0.5rem 1rem;
