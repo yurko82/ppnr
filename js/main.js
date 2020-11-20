@@ -86,8 +86,6 @@
         responsive: [{
             breakpoint: 768,
             settings: {
-                dots: true,
-                arrows: false,
                 swipe: false
             }
         }]
@@ -98,7 +96,6 @@
         let $bgColor = $(this).css("background-color");
         $('.widget').css({ 'background-color': $bgColor, 'transform': 'translateX(0px)' });
     });
-
     $(document).mouseup(function(e) {
         if ($(window).width() > 767) {
             let div = $(".widget");

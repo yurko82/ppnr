@@ -1863,8 +1863,7 @@ section {
 /*----head-slider end----*/
 /*----info start----*/
 .info {
-  display: -ms-grid;
-  display: grid;
+  display: none;
   max-height: 600px;
   overflow: hidden;
 }

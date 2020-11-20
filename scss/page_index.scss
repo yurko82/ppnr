@@ -126,7 +126,8 @@ section {
 /*----info start----*/
 
 .info {
-    display: grid;
+    // display: grid;
+    display: none;
     max-height: 600px;
     overflow: hidden;
     &>div {
