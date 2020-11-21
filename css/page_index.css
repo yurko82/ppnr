@@ -2231,11 +2231,9 @@ section {
     top: 50vh;
     right: 0;
     margin-top: -110px;
-    -webkit-transform: translateX(328px);
-            transform: translateX(328px);
-    width: 328px;
-    -webkit-transition: all 1s;
-    transition: all 1s;
+    width: 0px;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
   }
   .widget__slider {
     margin: 0px;
@@ -2248,6 +2246,13 @@ section {
     position: absolute;
     top: 0;
     left: -80px;
+    width: 60px;
+  }
+  .widget .slick-track {
+    width: 864px !important;
+  }
+  .widget .slick-slide {
+    width: 288px !important;
   }
   .widget .text {
     font-size: 16px;

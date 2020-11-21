@@ -94,13 +94,17 @@
     //tabs for widget
     $('.widget .slick-dots li  button').click(function() {
         let $bgColor = $(this).css("background-color");
-        $('.widget').css({ 'background-color': $bgColor, 'transform': 'translateX(0px)' });
+        if ($(window).width() > 767) {
+            $('.widget').css({ 'background-color': $bgColor, 'width': '328px' });
+        } else {
+            $('.widget').css({ 'background-color': $bgColor, 'width': '100%' });
+        }
     });
     $(document).mouseup(function(e) {
         if ($(window).width() > 767) {
             let div = $(".widget");
             if (!div.is(e.target) && div.has(e.target).length == 0)
-                div.css('transform', 'translateX(328px)');
+                div.css('width', '0');
         }
     });
 
@@ -113,13 +117,13 @@
             if ($(window).width() < 768) $('.navbar-collapse').css({ 'transform': 'translateX(-12px)' });
             else $('.navbar-collapse').css({ 'transform': 'translateX(-20px)' });
             $(".body__overlay").css({ 'left': '0', 'opacity': '0.7' });
-            document.body.style.overflow='hidden';
+            document.body.style.overflow = 'hidden';
         } else {
             $(this).attr("data-show", "false");
             $('.navbar-collapse').css({ 'transform': 'translateX(-310px)' });
             $(".body__overlay").css({ 'opacity': '0' });
             setTimeout(function() { $(".body__overlay").css({ 'left': '-110vw' }); }, 300);
-            document.body.style.overflow='';
+            document.body.style.overflow = '';
         }
     });
     let menuClosed = function(e) {
@@ -130,9 +134,9 @@
                 $(".body__overlay").css({ 'opacity': '0' });
                 $('.navbar-toggler').toggleClass("active").attr("data-show", "false");
                 setTimeout(function() { $(".body__overlay").css({ 'left': '-110vw' }); }, 300);
-                document.body.style.overflow='';
+                document.body.style.overflow = '';
             }
-        } else document.body.style.overflow='';
+        } else document.body.style.overflow = '';
     };
     $(document).scroll(menuClosed).mouseup(menuClosed);
 
