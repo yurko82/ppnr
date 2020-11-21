@@ -113,8 +113,6 @@
             if ($(window).width() < 768) $('.navbar-collapse').css({ 'transform': 'translateX(-12px)' });
             else $('.navbar-collapse').css({ 'transform': 'translateX(-20px)' });
             $(".body__overlay").css({ 'left': '0', 'opacity': '0.7' });
-            // document.body.style.position = 'fixed';
-            // document.body.style.top = `-${window.scrollY}px`;
             document.body.style.overflow='hidden';
         } else {
             $(this).attr("data-show", "false");
@@ -132,10 +130,6 @@
                 $(".body__overlay").css({ 'opacity': '0' });
                 $('.navbar-toggler').toggleClass("active").attr("data-show", "false");
                 setTimeout(function() { $(".body__overlay").css({ 'left': '-110vw' }); }, 300);
-                // let scrollY = document.body.style.top;
-                // document.body.style.position = '';
-                // document.body.style.top = '';
-                // window.scrollTo(0, parseInt(scrollY || '0') * -1);
                 document.body.style.overflow='';
             }
         } else document.body.style.overflow='';
@@ -147,10 +141,10 @@
             $(this).toggleClass("icon-close");
             $('.navbar__form').toggleClass("active");
         });
-        ['facebook', 'youtube', 'twitter', 'instagram', 'telegram'].forEach((n) => $('i.icon-' + n).hover(
-            function() { $(this).addClass('icon-' + n + '_full'); },
-            function() { $(this).removeClass('icon-' + n + '_full'); }));
     }
+    ['facebook', 'youtube', 'twitter', 'instagram', 'telegram'].forEach((n) => $('i.icon-' + n).hover(
+        function() { $(this).addClass('icon-' + n + '_full'); },
+        function() { $(this).removeClass('icon-' + n + '_full'); }));
 
     //scroll page - menu
     $(window).on("scroll", function() {
@@ -279,7 +273,6 @@
     //audit support WEBP browser
     var WebP = new Image();
     WebP.onload = WebP.onerror = function() {
-        // console.log(WebP.height); // =2
         if (WebP.height != 2) {
             let webps = $("*[style*='webp']");
             for (let webp of webps) {

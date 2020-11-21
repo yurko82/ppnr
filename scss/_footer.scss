@@ -9,7 +9,10 @@
         z-index: 1;
         & li {
             font-size: 32px;
-            padding: 8px;
+            padding: 24px 8px 12px 8px;
+            &:first-child {
+                padding-left: 0;
+            }
             & i {
                 color: #fff;
             }
