@@ -1757,7 +1757,7 @@ section {
   height: calc(var(--vh, 1vh) * 100);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: top center;
+  background-position: 50% 0%;
   position: relative;
   overflow: hidden;
 }
@@ -2306,7 +2306,7 @@ section {
   }
 }
 
-#slick-slide-control10 {
+#slick-slide-control00 {
   background-color: #39b791;
   background-image: url(../images/svg/widget_battery.svg);
   background-position: center;
@@ -2316,17 +2316,17 @@ section {
   cursor: pointer;
 }
 
-#slick-slide-control10:focus {
+#slick-slide-control00:focus {
   outline: none;
 }
 
 @media (max-width: 480px) {
-  #slick-slide-control10 {
+  #slick-slide-control00 {
     background-size: 30px;
   }
 }
 
-#slick-slide-control11 {
+#slick-slide-control01 {
   background-color: #009a31;
   background-image: url(../images/svg/widget_lyst.svg);
   background-position: center;
@@ -2336,17 +2336,17 @@ section {
   cursor: pointer;
 }
 
-#slick-slide-control11:focus {
+#slick-slide-control01:focus {
   outline: none;
 }
 
 @media (max-width: 480px) {
-  #slick-slide-control11 {
+  #slick-slide-control01 {
     background-size: 30px;
   }
 }
 
-#slick-slide-control12 {
+#slick-slide-control02 {
   background-color: #41b6e6;
   background-image: url(../images/svg/widget_cloud.svg);
   background-position: center;
@@ -2356,12 +2356,12 @@ section {
   cursor: pointer;
 }
 
-#slick-slide-control12:focus {
+#slick-slide-control02:focus {
   outline: none;
 }
 
 @media (max-width: 480px) {
-  #slick-slide-control12 {
+  #slick-slide-control02 {
     background-size: 34px;
   }
 }
