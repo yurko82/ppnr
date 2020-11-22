@@ -240,6 +240,7 @@
         return values[1].split(/,\s?/g);
     }
 
-    document.addEventListener( 'DOMContentLoaded', function(){ _initScreenWidth(); });
+    // document.addEventListener( 'DOMContentLoaded', function(){ _initScreenWidth(); });
     window.addEventListener('resize', _checkScreenWidth);
+    _checkScreenWidth();
 })();

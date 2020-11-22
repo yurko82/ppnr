@@ -166,7 +166,8 @@
         $('.slide1').slick('slickNext');
     });
 
-    document.addEventListener( 'DOMContentLoaded', _checkScreenW);
+    // document.addEventListener( 'DOMContentLoaded', _checkScreenW);
     window.addEventListener('resize', _checkScreenW);
+    _checkScreenW();
     
 })();

@@ -73,7 +73,7 @@
         return html;
     }
 
-    document.addEventListener('DOMContentLoaded',()=>{
+    // document.addEventListener('DOMContentLoaded',()=>{
         let WebP = new Image();
         WebP.onload = WebP.onerror = ()=> {
             isWebP = (WebP.height === 2);
@@ -81,6 +81,6 @@
             _checkScreenW();
         }
         WebP.src = 'data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA';
-    });
+    // });
     
 })();
