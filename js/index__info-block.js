@@ -1,6 +1,6 @@
 (function() {
 
-    let current = 0, screenW, pictureW, isAnimate=false, isFade, container = $('section.info');
+    let current = 0, screenW=0, pictureW, isAnimate=false, isFade, container = $('section.info'), arrayInfo=[];
 
     let data = [{
         type: "baner",
@@ -47,9 +47,9 @@
         else if (w > 700) t = 1000;
         else if (w >= 500) t = 650;
         else t = 400;
-        if (t != pictureW || w < 768 && screenW >= 768 || w >= 768 && screenW < 768) {
+        if (screenW  == 0 || t != pictureW || w < 768 && screenW >= 768 || w >= 768 && screenW < 768) {
             pictureW = t;
-            if (w < 768 && screenW >= 768 || w >= 768 && screenW < 768) _checkArrayInfo(w);
+            if (screenW  == 0 || w < 768 && screenW >= 768 || w >= 768 && screenW < 768) _checkArrayInfo(w);
             _update();
         }
         screenW = w;
@@ -242,5 +242,5 @@
 
     // document.addEventListener( 'DOMContentLoaded', function(){ _initScreenWidth(); });
     window.addEventListener('resize', _checkScreenWidth);
-    _checkScreenWidth();
+    _initScreenWidth();
 })();
