@@ -380,9 +380,9 @@ section {
             top: 50vh;
             right: 0;
             margin-top: -110px;
-            transform: translateX(328px);
-            width: 328px;
-            transition: all 1s;
+            // transform: translateX(328px);
+            width: 0px;
+            transition: all 0.5s;
         }
         &__slider {
             margin: 0px;
@@ -395,6 +395,13 @@ section {
             position: absolute;
             top: 0;
             left: -80px;
+            width: 60px;
+        }
+        .slick-track {
+            width: 864px!important;
+        }
+        .slick-slide {
+            width: 288px!important;
         }
         & .text {
             font-size: 16px;
@@ -659,7 +666,7 @@ section {
         bottom: 15px;
         font-size: 16px;
     }
-    &__item-img{
+    &__item-img {
         display: block;
         height: 250px;
         width: 100%;
@@ -669,7 +676,7 @@ section {
         background-position: top center;
         background-position: 50% 50%;
     }
-      @media(min-width: 1000px) {
+    @media(min-width: 1000px) {
         &__items {
             width: 32.5%;
         }
