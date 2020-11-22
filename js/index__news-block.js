@@ -99,7 +99,7 @@
                     <div class="news__item-img" style="background-image: url(${ar[i].photo})"></div>
                     <div class="news__item-title"> <h3>${ar[i].title}</h3> </div>
                     <span class="news__item-date">${ar[i].date}</span>
-                    <span class="news__item-type ${r[2]}"><i class="${r[1]}"></i>${r[3]}</span>
+                    <div class="news__item-type ${r[2]}"><i class="${r[1]}"></i><span>${r[3]}</span></div>
                 </div>`;
         }
         html+='</div>';

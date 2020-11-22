@@ -2459,7 +2459,12 @@ section {
   color: white;
   font-size: 16px;
   padding: 0px 6px;
-  line-height: 22px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .news__item-type i {
