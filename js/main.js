@@ -57,24 +57,24 @@
     checkMenuItemDropright();
 
     //random slide on home screen
-    let $divs = $('.head-slider__items>div'),
-        arr = [];
-    $divs.each(function() { arr.push($(this).detach()); });
-    arr.sort(function(a, b) { return 0.5 - Math.random(); });
-    for (let index in arr) {
-        if (index < 4) $('.head-slider__items').append(arr[index]); //-slides count
-    }
+    // let $divs = $('.head-slider__items>div'),
+    //     arr = [];
+    // $divs.each(function() { arr.push($(this).detach()); });
+    // arr.sort(function(a, b) { return 0.5 - Math.random(); });
+    // for (let index in arr) {
+    //     if (index < 4) $('.head-slider__items').append(arr[index]); //-slides count
+    // }
 
     //slick slider for home screen
-    $('.head-slider__items').slick({
-        autoplay: true,
-        autoplaySpeed: 4000,
-        speed: 3000,
-        dots: true,
-        arrows: false,
-        fade: true,
-        pauseOnHover: false
-    });
+    // $('.head-slider__items').slick({
+    //     autoplay: true,
+    //     autoplaySpeed: 4000,
+    //     speed: 3000,
+    //     dots: true,
+    //     arrows: false,
+    //     fade: true,
+    //     pauseOnHover: false
+    // });
 
     // //slick slider for widget
     $('#slick-slide-control10').focus();
@@ -285,19 +285,19 @@
     WebP.src = 'data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA';
 
     //adaptive bg slider img
-    function adpSliderBg(width) {
-        let sliderImgs = $('.head-slider__item');
-        for (let sliderImg of sliderImgs) {
-            let sldBgImg = sliderImg.style.backgroundImage;
-            let slBGRep = sldBgImg.replace(/bg\//, 'bg/' + width + '/');
-            sliderImg.style.backgroundImage = slBGRep;
-        }
-    }
-    if ($(window).width() < 600) {
-        adpSliderBg(600)
-    } else if ($(window).width() < 1000) {
-        adpSliderBg(1000)
-    }
+    // function adpSliderBg(width) {
+    //     let sliderImgs = $('.head-slider__item');
+    //     for (let sliderImg of sliderImgs) {
+    //         let sldBgImg = sliderImg.style.backgroundImage;
+    //         let slBGRep = sldBgImg.replace(/bg\//, 'bg/' + width + '/');
+    //         sliderImg.style.backgroundImage = slBGRep;
+    //     }
+    // }
+    // if ($(window).width() < 600) {
+    //     adpSliderBg(600)
+    // } else if ($(window).width() < 1000) {
+    //     adpSliderBg(1000)
+    // }
 
 
 })();

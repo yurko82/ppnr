@@ -118,14 +118,11 @@
         return [className,icon,bgColor,title];
     }
 
-    window.addEventListener('resize', _checkScreenW);
-    _checkScreenW();
-
     function initNewsSlide(el) {
         el.slick({
             slidesToShow: 1,
             slidesToScroll: 1,
-            speed: 700,
+            speed: 800,
             adaptiveHeight:true,
             useTransform: false,
             arrows: false,
@@ -169,5 +166,7 @@
         $('.slide1').slick('slickNext');
     });
 
+    document.addEventListener( 'DOMContentLoaded', _checkScreenW);
+    window.addEventListener('resize', _checkScreenW);
     
 })();
