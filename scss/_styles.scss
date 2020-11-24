@@ -59,6 +59,7 @@
         text-rendering: optimizeSpeed;
         line-height: 1.5;
         overflow-x: hidden;
+        touch-action: manipulation;
     }
     
     button {
