@@ -6,6 +6,17 @@
         once: true
     });
 
+    // try disable double-tap zoomnig in mobile safari
+    if (navigator.userAgent.indexOf("Safari") > -1 && userAgentString.indexOf("Chrome") == -1){
+        let doubleTapTime=0;
+        document.addEventListener('touchstart', function(e){
+            let now= +(new Date());
+            if (doubleTapTime+500>now) e.preventDefault();
+            doubleTapTime=now;
+        })
+    }
+    
+
     //low vision
     let lowVision = 0;
     $('i.icon-eye').click(function() {
@@ -249,7 +260,7 @@
         e.stopPropagation();
         alert('browser viewport- w:' + $(window).width() + ', h:' + $(window).height() +
             ' || html document- w:' + $(document).width() + ', h:' + $(document).height() +
-            ' || screen- w:' + window.screen.width + ', h:' + window.screen.height);
+            ' || screen- w:' + window.screen.width + ', h:' + window.screen.height + ' v: 234');
     });
 
     //news-slider on news.html page
