@@ -1,55 +1,11 @@
 @import '_styles';
 @import "_header";
 @import "_footer";
+@import "_about_menu";
+
 .allabout {
     &__block {
         position: relative;
-    }
-    &__title h2 {
-        font-weight: 300;
-    }
-    &__menu {
-        // position: sticky;
-        // left: 0;
-        // top: 120px;
-        // float: left;
-        z-index: 1005;
-        padding-left: 24px;
-        &::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 7px;
-            display: inline-block;
-            width: 3px;
-            height: 24px;
-            background-color: $blue3;
-        }
-        &-submenu {
-            margin-top: 16px;
-            // & ul {
-            //     display: none;
-            // }
-        }
-        & .active span {
-            color: $blue4;
-        }
-        &>ul {
-            margin: 32px 0 0 0;
-            padding: 0;
-        }
-        & li {
-            list-style: none;
-            & span {
-                cursor: pointer;
-                &:hover {
-                    color: $blue3;
-                }
-            }
-        }
-        & h3 {
-            font-size: 18px;
-        }
     }
     &__content {
         min-height: 550px;
@@ -59,18 +15,6 @@
         }
     }
     @media(min-width: 768px) {
-        &__menu {
-            position: sticky;
-            left: 0;
-            top: 120px;
-            float: left;
-            // &-submenu {
-            //     & ul {
-            //         display: none;
-            //     }
-            //     ;
-            // }
-        }
         &__content {
             min-height: 550px;
             margin-left: 300px;

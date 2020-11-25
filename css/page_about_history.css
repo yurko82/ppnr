@@ -1794,25 +1794,3 @@ button.next {
     float: left;
   }
 }
-
-.allabout__block {
-  position: relative;
-}
-
-.allabout__content {
-  min-height: 550px;
-}
-
-.allabout__content p {
-  padding: 0 0 24px 0;
-}
-
-@media (min-width: 768px) {
-  .allabout__content {
-    min-height: 550px;
-    margin-left: 300px;
-  }
-  .allabout__content p {
-    padding: 0 0 24px 0;
-  }
-}
