@@ -9,13 +9,14 @@
     <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
     <title>Рівненська АЕС</title>
 
+    <!-- <script src='js/_version.js?v=(add some version)'></script> -->
     <link href="css/lib/bootstrap5.css" rel="stylesheet" id="bootstrap-css">
-    <!-- <link rel="stylesheet" href="fonts/fontawesome/all.css"> -->
     <link rel="stylesheet" href="css/lib/slick.css">
     <link rel="stylesheet" href="fonts/GothamPro/stylesheet.css">
     <link rel="stylesheet" href="fonts/rnpp-icons/rnpp-icons.css">
     <link rel="stylesheet" href="css/lib/aos.css">
-    <link rel="stylesheet" href="css/page_index.css">
+    <!-- without version: <link rel="stylesheet" href="css/page_index.css"> -->
+    <!-- <script>  _v.add('css/page_index.css',1);  </script> /* use this */ -->  
 </head>
 
 <body>
@@ -473,9 +474,6 @@
                         <a href="http://www.energoatom.kiev.ua/"><img class="footer__logo-naek" src="images/svg/naek_logo_w.svg" alt=""></a>
                         <img class="footer__logo-raes" src="images/svg/logo_white.svg" alt="">
                     </div>
-                    <!-- <div class="footer__trustbox">
-                        <a href="#"><img src="images/svg/stop.svg" alt=""></a>
-                    </div> -->
                     <ul class="footer__social-icons">
                         <li class="footer__social-icon"><a href="https://www.facebook.com/rnppofficial" title="Facebook"><i class="icon-facebook"></i></a></li>
                         <li class="footer__social-icon"><a href="https://twitter.com/rnppofficial" title="Twitter"><i class="icon-twitter"></i></a></li>
@@ -495,15 +493,37 @@
             </div>
         </div>
     </footer>
+    
     <script src="js/lib/jquery.min.js"></script>
     <script src="js/lib/aos.js"></script>
     <script src="js/lib/bootstrap5.min.js"></script>
     <script src="js/lib/slick.min.js"></script>
-    <script src="js/main.js"></script>
+    <!-- without version: <script src="js/main.js"></script>
     <script src="js/index_page.js"></script>
     <script src="js/index__head-slider-block.js"></script>
     <script src="js/index__info-block.js"></script>
-    <script src="js/index__news-block.js"></script>
+    <script src="js/index__news-block.js"></script> -->
+    <!-- <script> /* use this */
+        _v.add('js/main.js'); 
+        _v.add('js/index_page.js'); 
+        _v.add('js/index__head-slider-block.js');
+        _v.add('js/index__info-block.js'); 
+        _v.add('js/index__news-block.js'); 
+    </script> -->
+
+    <script> /* temporary script */
+        let s=document.createElement('script');
+        s.setAttribute('src','js/_version.js?v='+parseInt(Math.random()*1000000));
+        s.onload=function(){
+            _v.add('css/page_index.css',1); 
+            _v.add('js/main.js'); 
+            _v.add('js/index_page.js'); 
+            _v.add('js/index__head-slider-block.js');
+            _v.add('js/index__info-block.js'); 
+            _v.add('js/index__news-block.js'); 
+        };
+        document.head.appendChild(s);
+    </script>
 
 </body>
 

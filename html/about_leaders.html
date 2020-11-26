@@ -9,10 +9,12 @@
     <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
     <title>Лідери</title>
 
+    <!-- <script src='../js/_version.js?v=(add some version)'></script> -->
     <link href="../css/lib/bootstrap5.css" rel="stylesheet" id="bootstrap-css">
     <link rel="stylesheet" href="../fonts/GothamPro/stylesheet.css">
     <link rel="stylesheet" href="../fonts/rnpp-icons/rnpp-icons.css">
-    <link rel="stylesheet" href="../css/page_about_leaders.css">
+    <!-- without version: <link rel="stylesheet" href="../css/page_about_leaders.css"> -->
+    <!-- <script>  _v.add('../css/page_about_leaders.css',1);  </script> /* use this */ --> 
 </head>
 
 <body>
@@ -261,7 +263,7 @@
       </div>
     </section>
 
-     <footer class=" footer ">
+    <footer class=" footer ">
         <div class="container">
             <div class="footer__content">
                 <div class="footer__mail">
@@ -311,10 +313,27 @@
             </div>
         </div>
     </footer>
-        <script src="../js/lib/jquery.min.js "></script>
-        <script src="../js/lib/bootstrap5.min.js "></script>
-        <script src="../js/main.js "></script>
-        <script src="../js/leaders_page.js "></script>
+
+    <script src="../js/lib/jquery.min.js "></script>
+    <script src="../js/lib/bootstrap5.min.js "></script>
+    <!-- without version: <script src="../js/main.js"></script> 
+    <script src="../js/leaders_page.js "></script>-->
+    <!-- <script> /* use this */
+        _v.add('js/main.js'); 
+        _v.add('js/leaders_page.js'); 
+    </script> -->
+
+    <script> /* temporary script */
+        let s=document.createElement('script');
+        s.setAttribute('src','../js/_version.js?v='+parseInt(Math.random()*1000000));
+        s.onload=function(){
+            _v.add('../css/page_about_leaders.css',1); 
+            _v.add('../js/main.js'); 
+            _v.add('../js/leaders_page.js'); 
+        };
+        document.head.appendChild(s);
+    </script>
+
 </body>
 
 </html>

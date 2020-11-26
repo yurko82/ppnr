@@ -9,10 +9,12 @@
     <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
     <title>Керівник</title>    <!--  need change via code for every chief -->
 
+     <!-- <script src='../js/_version.js?v=(add some version)'></script> -->
     <link href="../css/lib/bootstrap5.css" rel="stylesheet" id="bootstrap-css">
     <link rel="stylesheet" href="../fonts/GothamPro/stylesheet.css">
     <link rel="stylesheet" href="../fonts/rnpp-icons/rnpp-icons.css">
-    <link rel="stylesheet" href="../css/page_about_leaders.css">
+    <!-- without version: <link rel="stylesheet" href="../css/page_about_leaders.css"> -->
+    <!-- <script>  _v.add('../css/page_about_leaders.css',1);  </script> /* use this */ --> 
 </head>
 
 <body>
@@ -171,7 +173,7 @@
               <li class="about_side_menu-submenu">
                 <h3>Хто ми</h3>
                 <ul>
-                  <li class="active"><span>Загальна інформація</span></li>
+                  <li><span>Загальна інформація</span></li>
                   <li><span>Місія, бачення, цінності</span></li>
                   <li><span>Історія</span></li>
                   <li><span>Діяльність</span></li>
@@ -181,7 +183,7 @@
               <li class="about_side_menu-submenu">
                 <h3>Наша команда</h3>
                 <ul>
-                  <li><span>Лідери</span></li>
+                  <li class="active"><span>Лідери</span></li>
                   <li><span>Професіонали</span></li>
                   <li><span>Працівнику</span></li>
                   <li><span>Кар’єра і HR</span></li>
@@ -271,10 +273,27 @@
             </div>
         </div>
     </footer>
-        <script src="../js/lib/jquery.min.js "></script>
-        <script src="../js/lib/bootstrap5.min.js "></script>
-        <script src="../js/main.js "></script>
-        <script src="../js/leaders_page.js "></script>
+
+    <script src="../js/lib/jquery.min.js "></script>
+    <script src="../js/lib/bootstrap5.min.js "></script>
+    <!-- without version: <script src="../js/main.js"></script> 
+    <script src="../js/leaders_page.js "></script>-->
+    <!-- <script> /* use this */
+        _v.add('js/main.js'); 
+        _v.add('js/leaders_page.js'); 
+    </script> -->
+
+    <script> /* temporary script */
+        let s=document.createElement('script');
+        s.setAttribute('src','../js/_version.js?v='+parseInt(Math.random()*1000000));
+        s.onload=function(){
+            _v.add('../css/page_about_leaders.css',1); 
+            _v.add('../js/main.js'); 
+            _v.add('../js/leaders_page.js'); 
+        };
+        document.head.appendChild(s);
+    </script>
+
 </body>
 
 </html>

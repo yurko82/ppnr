@@ -1,6 +1,12 @@
 (function() {
 // index.html
 
+    AOS.init({
+        offset: 30,
+        duration: 800,
+        once: true
+    });
+
  //fix index head-slider
     function vhSlideDebug() {
         let vh = window.innerHeight * 0.01;

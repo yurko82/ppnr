@@ -1,11 +1,5 @@
 (function() {
 
-    AOS.init({
-        offset: 30,
-        duration: 800,
-        once: true
-    });
-
     // try disable double-tap zoomnig in mobile safari
     if (window.navigator.userAgent.indexOf("Safari") > -1 && window.navigator.userAgent.indexOf("Chrome") == -1){
         let doubleTapTime=0;

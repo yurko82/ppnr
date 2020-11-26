@@ -9,10 +9,12 @@
     <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
     <title>Історія</title>
 
+    <!-- <script src='../js/_version.js?v=(add some version)'></script> -->
     <link href="../css/lib/bootstrap5.css" rel="stylesheet" id="bootstrap-css">
     <link rel="stylesheet" href="../fonts/GothamPro/stylesheet.css">
     <link rel="stylesheet" href="../fonts/rnpp-icons/rnpp-icons.css">
-    <link rel="stylesheet" href="../css/page_history.css">
+    <!-- without version: <link rel="stylesheet" href="../css/page_about_history.css"> -->
+    <!-- <script>  _v.add('../css/page_about_history.css',1);  </script> /* use this */ --> 
 </head>
 
 <body>
@@ -158,11 +160,10 @@
         </div>
     </header>
 
-
     <div class="to-top"></div>
 
 
-
+    some history
 
 
 
@@ -218,7 +219,20 @@
     </footer>
     <script src="../js/lib/jquery.min.js"></script>
     <script src="../js/lib/bootstrap5.min.js"></script>
-    <script src="../js/main.js"></script>
+    <!-- without version: <script src="../js/main.js"></script> -->
+    <!-- <script> /* use this */
+        _v.add('../js/main.js'); 
+    </script> -->
+
+    <script> /* temporary script */
+        let s=document.createElement('script');
+        s.setAttribute('src','../js/_version.js?v='+parseInt(Math.random()*1000000));
+        s.onload=function(){
+            _v.add('../css/page_about_history.css',1); 
+            _v.add('../js/main.js'); 
+        };
+        document.head.appendChild(s);
+    </script>
 
 </body>
 
