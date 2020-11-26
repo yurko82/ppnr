@@ -132,7 +132,10 @@ section {
     max-height: 600px;
     overflow: hidden;
     &>div {
-        grid-area: 1/1;
+        grid-row-start: 1;
+        grid-column-start: 1;
+        grid-row-end: auto;
+        grid-column-end: auto;
     }
     & .slick-slide img {
         height: auto;
