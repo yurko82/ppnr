@@ -1,6 +1,4 @@
-@import '_styles';
-@import "_header";
-@import "_footer";
+@import "_colors";
 
 section {
     position: relative;
@@ -18,9 +16,7 @@ section {
     transition: opacity .5s linear .2s;
 }
 
-
 /*----slider start----*/
-
 .head-slider {
     &__item {
         width: 100%;

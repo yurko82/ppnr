@@ -11,13 +11,14 @@ let _v = (function(){
     };
 
     let versionCSS = {
-        'page_index':3,
-        'page_news':3,
-        'page_allnews':3,
-        'page_about':3,
-        'page_about_history':3,
-        'page_about_leader':3,
-        'rnpp-icons':3
+        'rnpp-icons':3,
+        'page_index':7,
+        'page_news':7,
+        'page_allnews':7,
+        'page_about':7,
+        'page_about_history':7,
+        'page_about_leader':7,
+        'common':1
     }
 
     let getJSversion=function(filename){ return versionJS[filename]||''; }
