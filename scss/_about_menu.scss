@@ -1,45 +1,69 @@
-.about_side_menu {
-    z-index: 1005;
-    padding-left: 24px;
-    &::before {
-        content: '';
-        position: absolute;
-        left: 0;
-        top: 7px;
-        display: inline-block;
-        width: 3px;
-        height: 24px;
-        background-color: $blue3;
+@import "_colors";
+
+.allabout {
+    color: $grey1;
+    &__block {
+        position: relative;
     }
-    &-title h2 {
-        font-weight: 300;
+    &__content {
+        min-height: 550px;
+        & p {
+            padding: 0 0 24px 0;
+        }
     }
-    &-submenu {
-        margin-top: 16px;
-    }
-    & .active span {
-        color: $blue4;
-    }
-    &>ul {
-        margin: 32px 0 0 0;
-        padding: 0;
-    }
-    & li {
-        list-style: none;
-        & span {
-            cursor: pointer;
-            &:hover {
-                color: $blue3;
+    @media(min-width: 768px) {
+        &__content {
+            min-height: 550px;
+            margin-left: 300px;
+            & p {
+                padding: 0 0 24px 0;
             }
         }
     }
-    & h3 {
-        font-size: 18px;
-    }
-    @media(min-width: 768px) {
-        position: sticky;
-        left: 0;
-        top: 120px;
-        float: left;
+
+    & .about_side_menu {
+        z-index: 1005;
+        padding-left: 24px;
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 7px;
+            display: inline-block;
+            width: 3px;
+            height: 24px;
+            background-color: $blue3;
+        }
+        &-title h2 {
+            font-weight: 300;
+        }
+        &-submenu {
+            margin-top: 16px;
+        }
+        & .active span {
+            color: $blue4;
+        }
+        &>ul {
+            margin: 32px 0 0 0;
+            padding: 0;
+        }
+        & li {
+            list-style: none;
+            & span {
+                cursor: pointer;
+                &:hover {
+                    color: $blue3;
+                }
+            }
+        }
+        & h3 {
+            font-size: 18px;
+        }
+        @media(min-width: 768px) {
+            position: sticky;
+            left: 0;
+            top: 120px;
+            float: left;
+        }
     }
 }

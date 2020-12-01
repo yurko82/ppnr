@@ -1,2 +1,156 @@
-@import "_colors";
 @import "_about_menu";
+
+img, video, svg { 
+    max-width: 100%; 
+}
+
+.timeline {
+    overflow: hidden;
+    padding: 32px 0;
+    @media (min-width: 1000px){
+        padding: 40px 0;    
+    }
+    &__container {
+        width: 100%;
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 18px;
+            height: 100%;
+            width: 4px;
+            background: $blue6;
+            @media (min-width: 1000px){
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+    }
+    &__block {
+        display: flex;
+        position: relative;
+        z-index: 1;
+        margin-bottom: 32px;
+        &:last-child{
+            margin-bottom: 0;
+        }
+        @media (min-width: 1000px) {
+            margin-bottom: 40px;
+            &:nth-child(even) {
+                flex-direction: row-reverse;
+                & .timeline__date {
+                    left: auto;
+                    right: 0;
+                    text-align: center;
+                }
+                & .timeline__box {
+                    margin-right: calc(5% - (20px + 10*((100vw - 1000px)/280)));
+                }
+            }
+            &:nth-child(odd) .timeline__content::before {
+                right: auto;
+                left: 100%;
+                width: 0;
+                height: 0;
+                border: 7px solid transparent;
+                border-left-color: $blue4;
+            }
+        }
+        @media (min-width: 1280px){
+            &:nth-child(even) .timeline__box {
+                margin-right: calc(5% - 30px);
+            }
+        }
+    }
+    &__content {
+        flex-grow: 1;
+        position: relative;
+        margin-left: 20px;
+        background: white;
+        border: 1px solid $blue5;
+        padding: 0 12px 12px 12px;
+        @media (min-width: 1000px){
+            margin-left: 24px;
+            padding: 0 20px 20px 20px;
+            width: 45%;
+            flex-grow: 0;
+            will-change: transform;
+            margin: 0;
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            top: 12px;
+            right: 100%;
+            width: 0;
+            height: 0;
+            border: 7px solid transparent;
+            border-right-color: $blue4;
+            @media (min-width: 1000px) {
+                top: calc(12px + 8*((100vw - 1000px)/280));
+            }
+            @media (min-width: 1280px){
+                top: 20px;
+            }
+        }
+        & h2 {
+            color: $grey1;
+            font-size: 16px;
+            padding: 12px 0;
+            font-weight: 400;
+            line-height: 115%;
+            @media (min-width: 768px){
+                font-size: 18px;
+                padding: 16px 0;
+            }
+            @media (min-width: 1000px){
+                font-size: 20px;
+                padding: 20px 0;
+            }
+        }
+    }
+    &__box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $blue4;
+        flex-shrink: 0;
+        width: 40px;
+        height: 40px;
+        border: 1px solid $blue4;
+        @media (min-width: 1000px){
+            width: calc(40px + 20*((100vw - 1000px)/280));
+            height: calc(40px + 20*((100vw - 1000px)/280));
+            order: 1;
+            margin-left: calc(5% - (20px + 10*((100vw - 1000px)/280)));
+            will-change: transform;
+        }
+        @media (min-width:1280px){
+            width: 60px;
+            height: 60px;
+            margin-left: calc(5% - 30px);
+        }
+    }
+    &__date {
+        color: white;
+        font-weight: 900;
+        line-height: 150%;
+        width: 100%;
+        left: 0;
+        text-align: center;
+        font-size: 14px;
+        @media (min-width: 1000px) {
+            position: absolute;
+            font-size: calc(14px + 6*((100vw - 1000px)/280));
+        }
+        @media (min-width:1280px){
+            font-size: 20px;
+        }
+    }
+    
+}
+
