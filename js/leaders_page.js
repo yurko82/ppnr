@@ -6,7 +6,7 @@ function viewLeaders() {
 }
 if ($(window).width() < 768) {
     function closeAboutMenu() {
-        document.querySelectorAll(".allabout__menu-submenu ul").forEach(allUl => { allUl.style.display = "none" });
+        document.querySelectorAll(".about_side_menu-submenu ul").forEach(allUl => { allUl.style.display = "none" });
     }
     closeAboutMenu();
 
