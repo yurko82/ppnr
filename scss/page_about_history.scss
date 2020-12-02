@@ -121,7 +121,6 @@ img, video, svg {
         flex-shrink: 0;
         width: 40px;
         height: 40px;
-        border: 1px solid $blue4;
         @media (min-width: 1000px){
             width: calc(40px + 20*((100vw - 1000px)/280));
             height: calc(40px + 20*((100vw - 1000px)/280));
