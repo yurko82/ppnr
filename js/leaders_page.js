@@ -5,8 +5,20 @@ function viewLeaders() {
     leader.classList.toggle('allView');
 }
 if ($(window).width() < 768) {
+    window.onload = openActiveMenu
+
+    function openActiveMenu() {
+        let activeLI = document.querySelector(".about_side_menu-submenu ul li.active")
+        if (activeLI) {
+            console.log(activeLI)
+            activeLI.parentNode.style.display = "block"
+        }
+    }
+
     function closeAboutMenu() {
-        document.querySelectorAll(".about_side_menu-submenu ul").forEach(allUl => { allUl.style.display = "none" });
+        let submenuUl = document.querySelectorAll(".about_side_menu-submenu ul")
+        submenuUl.forEach(allUl => { allUl.style.display = "none" });
+
     }
     closeAboutMenu();
 
@@ -17,4 +29,7 @@ if ($(window).width() < 768) {
             ulDisplay.style.display = 'block';
         else ulDisplay.style.display = 'none';
     }
+    let menuUl = document.querySelectorAll(".about_side_menu-submenu h3")
+    console.log(menuUl)
+    menuUl.forEach(allLi => { allLi.classList.add("btn-d") });
 }

@@ -50,18 +50,7 @@
 
 .allabout .about_side_menu {
   z-index: 1005;
-  padding-left: 24px;
-}
-
-.allabout .about_side_menu::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 7px;
-  display: inline-block;
-  width: 3px;
-  height: 24px;
-  background-color: #005b99;
+  padding: 0;
 }
 
 .allabout .about_side_menu-title h2 {
@@ -69,7 +58,12 @@
 }
 
 .allabout .about_side_menu-submenu {
-  margin-top: 16px;
+  margin-top: 8px;
+  text-align: center;
+}
+
+.allabout .about_side_menu-submenu h3 {
+  line-height: 32px;
 }
 
 .allabout .about_side_menu .active span {
@@ -99,10 +93,24 @@
 
 @media (min-width: 768px) {
   .allabout .about_side_menu {
+    padding-left: 24px;
     position: -webkit-sticky;
     position: sticky;
     left: 0;
     top: 120px;
     float: left;
+  }
+  .allabout .about_side_menu-submenu {
+    margin-top: 16px;
+  }
+  .allabout .about_side_menu::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 7px;
+    display: inline-block;
+    width: 3px;
+    height: 24px;
+    background-color: #005b99;
   }
 }

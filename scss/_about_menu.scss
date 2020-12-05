@@ -1,5 +1,4 @@
 @import "_colors";
-
 .allabout {
     color: $grey1;
     &__block {
@@ -20,25 +19,18 @@
             }
         }
     }
-
     & .about_side_menu {
         z-index: 1005;
-        padding-left: 24px;
-        &::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 7px;
-            display: inline-block;
-            width: 3px;
-            height: 24px;
-            background-color: $blue3;
-        }
+        padding: 0;
         &-title h2 {
             font-weight: 300;
         }
         &-submenu {
-            margin-top: 16px;
+            margin-top: 8px;
+            text-align: center;
+            & h3 {
+                line-height: 32px;
+            }
         }
         & .active span {
             color: $blue4;
@@ -60,10 +52,24 @@
             font-size: 18px;
         }
         @media(min-width: 768px) {
+            padding-left: 24px;
             position: sticky;
             left: 0;
             top: 120px;
             float: left;
+            &-submenu {
+                margin-top: 16px;
+            }
+            &::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 7px;
+                display: inline-block;
+                width: 3px;
+                height: 24px;
+                background-color: $blue3;
+            }
         }
     }
 }
