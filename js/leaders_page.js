@@ -7,12 +7,17 @@ function viewLeaders() {
 if ($(window).width() < 768) {
     window.onload = openActiveMenu
 
+    function openSubmenu() {
+        document.querySelector(".about_side_menu ul").classList.toggle('open')
+    }
+
     function openActiveMenu() {
         let activeLI = document.querySelector(".about_side_menu-submenu ul li.active")
         if (activeLI) {
             console.log(activeLI)
             activeLI.parentNode.style.display = "block"
         }
+        document.querySelector(".about_side_menu-current").innerText = activeLI.innerText
     }
 
     function closeAboutMenu() {
@@ -30,6 +35,6 @@ if ($(window).width() < 768) {
         else ulDisplay.style.display = 'none';
     }
     let menuUl = document.querySelectorAll(".about_side_menu-submenu h3")
-    console.log(menuUl)
     menuUl.forEach(allLi => { allLi.classList.add("btn-d") });
+
 }
