@@ -1,15 +1,15 @@
 (function() {
 
     // try disable double-tap zoomnig in mobile safari
-    if (window.navigator.userAgent.indexOf("Safari") > -1 && window.navigator.userAgent.indexOf("Chrome") == -1){
-        let doubleTapTime=0;
-        document.addEventListener('touchstart', function(e){
-            let now= +(new Date());
-            if (doubleTapTime+500>now) e.preventDefault();
-            doubleTapTime=now;
+    if (window.navigator.userAgent.indexOf("Safari") > -1 && window.navigator.userAgent.indexOf("Chrome") == -1) {
+        let doubleTapTime = 0;
+        document.addEventListener('touchstart', function(e) {
+            let now = +(new Date());
+            if (doubleTapTime + 500 > now) e.preventDefault();
+            doubleTapTime = now;
         })
     }
-    
+
     //low vision
     let lowVision = 0;
     $('i.icon-eye').click(function() {
@@ -51,6 +51,7 @@
     window.addEventListener("resize", () => {
         checkMenuItemDropright();
     });
+
     function checkMenuItemDropright() {
         if (window.innerWidth >= 1000) $('header .navbar-collapse li.dropdown:not(.nav-item)').addClass("dropright");
         else $('header .navbar-collapse li.dropdown:not(.nav-item)').removeClass("dropright");
@@ -87,7 +88,7 @@
         } else document.body.style.overflow = '';
     };
     $(document).scroll(menuClosed).mouseup(menuClosed);
-    
+
     // header menu icons
     $('i.icon-search').click(function() {
         if ($(window).width() > 999) {
@@ -124,6 +125,7 @@
     $('.lang__block .lang_UA').click(() => changeLanguage('UA'));
     $('.lang__block .lang_RU').click(() => changeLanguage('RU'));
     $('.lang__block .lang_EN').click(() => changeLanguage('EN'));
+
     function changeLanguage(l) {
         switch (currentLang) {
             case "UA":
@@ -192,5 +194,42 @@
     };
     WebP.src = 'data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA';
 
+
 })();
 
+//about submenu start
+if ($(window).width() < 768) {
+    window.onload = openActiveMenu
+
+    function openSubmenu() {
+        document.querySelector(".about_side_menu ul").classList.toggle('open')
+    }
+
+    function openActiveMenu() {
+        let activeLI = document.querySelector(".about_side_menu-submenu ul li.active")
+        if (activeLI) {
+            console.log(activeLI)
+            activeLI.parentNode.style.display = "block"
+        }
+        document.querySelector(".about_side_menu-current").innerText = activeLI.innerText
+    }
+
+    function closeAboutMenu() {
+        let submenuUl = document.querySelectorAll(".about_side_menu-submenu ul")
+        submenuUl.forEach(allUl => { allUl.style.display = "none" });
+
+    }
+    closeAboutMenu();
+
+    function viewLeader(e) {
+        closeAboutMenu();
+        ulDisplay = e.lastElementChild;
+        if (ulDisplay.style.display == "none")
+            ulDisplay.style.display = 'block';
+        else ulDisplay.style.display = 'none';
+    }
+    let menuUl = document.querySelectorAll(".about_side_menu-submenu h3")
+    menuUl.forEach(allLi => { allLi.classList.add("btn-d") });
+
+}
+//about submenu end
