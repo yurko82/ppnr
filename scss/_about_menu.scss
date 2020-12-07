@@ -86,11 +86,15 @@
             left: 0;
             top: 120px;
             float: left;
+            &>ul {
+                display: block;
+            }
             &-select {
                 display: none;
             }
             &-submenu {
                 margin-top: 16px;
+                text-align: left;
             }
             &::before {
                 content: '';

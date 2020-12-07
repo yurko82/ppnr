@@ -157,11 +157,15 @@
     top: 120px;
     float: left;
   }
+  .allabout .about_side_menu > ul {
+    display: block;
+  }
   .allabout .about_side_menu-select {
     display: none;
   }
   .allabout .about_side_menu-submenu {
     margin-top: 16px;
+    text-align: left;
   }
   .allabout .about_side_menu::before {
     content: '';
