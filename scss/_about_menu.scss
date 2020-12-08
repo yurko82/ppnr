@@ -1,122 +1,130 @@
-@import "_colors";
-.allabout {
-    color: $grey1;
-    &__block {
-        position: relative;
-    }
-    &__content {
-        min-height: 550px;
-        & p {
-            padding: 0 0 24px 0;
-        }
-    }
-    @media(min-width: 768px) {
-        &__content {
-            min-height: 550px;
-            margin-left: 300px;
-            & p {
-                padding: 0 0 24px 0;
+        @import "_colors";
+        .allabout {
+            color: $grey1;
+            &__block {
+                position: relative;
             }
-        }
-    }
-    & .about_side_menu {
-        z-index: 1005;
-        padding: 0;
-        &-title h2 {
-            font-weight: 400;
-            padding-left: 8px;
-            &:before {
-                content: "";
-                position: absolute;
-                top: 0;
-                left: 0;
-                height: 30px;
-                width: 3px;
-                background-color: $blue3;
+            &__content {
+                min-height: 550px;
+                & p {
+                    padding: 0 0 24px 0;
+                }
             }
-        }
-        &-select {
-            display: block;
-            position: relative;
-            line-height: 32px;
-            text-align: center;
-            color: $blue4;
-            &:after {
-                content: "\21D5";
-                position: absolute;
-                right: 12px;
-                top: 0;
-                font-size: 30px;
+            @media(min-width: 768px) {
+                &__content {
+                    min-height: 550px;
+                    margin-left: 300px;
+                    & p {
+                        padding: 0 0 24px 0;
+                    }
+                }
             }
-        }
-        &-submenu {
-            margin-top: 8px;
-            text-align: center;
-            & h3 {
-                line-height: 32px;
-            }
-        }
-        &-current {
-            display: block;
-            position: relative;
-            color: $grey3;
-            line-height: 16px;
-            font-size: 14px;
-            margin: 10px 0 0 0;
-            font-weight: 300;
-        }
-        & .active span {
-            color: $blue4;
-        }
-        &>ul {
-            margin: 8px 0 0 0;
-            padding: 0;
-            display: none;
-            &.open {
-                display: block;
-            }
-        }
-        & li {
-            list-style: none;
-            & span {
-                cursor: pointer;
-                &:hover {
-                    color: $blue3;
+            & .about_side_menu {
+                z-index: 1005;
+                padding: 0;
+                &-title h2 {
+                    font-weight: 400;
+                    padding-left: 8px;
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        top: 4px;
+                        left: 0;
+                        height: 20px;
+                        width: 3px;
+                        background-color: $blue3;
+                    }
+                }
+                &-select {
+                    display: block;
+                    position: relative;
+                    line-height: 32px;
+                    text-align: center;
+                    color: $blue4;
+                    &:after {
+                        content: "\21D5";
+                        position: absolute;
+                        right: 12px;
+                        top: 0;
+                        font-size: 30px;
+                    }
+                }
+                &-submenu {
+                    margin-top: 8px;
+                    text-align: center;
+                    & h3 {
+                        line-height: 32px;
+                    }
+                }
+                &-current {
+                    display: block;
+                    position: relative;
+                    color: $grey3;
+                    line-height: 16px;
+                    font-size: 14px;
+                    margin: 10px 0 0 0;
+                    font-weight: 300;
+                }
+                & .active span {
+                    color: $blue4;
+                }
+                &>ul {
+                    margin: 8px 0 0 0;
+                    padding: 0;
+                    display: none;
+                    &.open {
+                        display: block;
+                    }
+                }
+                & li {
+                    list-style: none;
+                    & span {
+                        cursor: pointer;
+                        &:hover {
+                            color: $blue3;
+                        }
+                    }
+                }
+                & h3 {
+                    font-size: 18px;
+                }
+                @media(min-width: 768px) {
+                    padding-left: 24px;
+                    position: sticky;
+                    left: 0;
+                    top: 120px;
+                    float: left;
+                    &-title h2 {
+                        padding-left: 0;
+                        &:before {
+                            content: "";
+                            width: 0;
+                            height: 0;
+                        }
+                    }
+                    &>ul {
+                        display: block;
+                    }
+                    &-select {
+                        display: none;
+                    }
+                    &-submenu {
+                        margin-top: 16px;
+                        text-align: left;
+                    }
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        top: 7px;
+                        display: inline-block;
+                        width: 3px;
+                        height: 24px;
+                        background-color: $blue3;
+                    }
+                    &-current {
+                        display: none;
+                    }
                 }
             }
         }
-        & h3 {
-            font-size: 18px;
-        }
-        @media(min-width: 768px) {
-            padding-left: 24px;
-            position: sticky;
-            left: 0;
-            top: 120px;
-            float: left;
-            &>ul {
-                display: block;
-            }
-            &-select {
-                display: none;
-            }
-            &-submenu {
-                margin-top: 16px;
-                text-align: left;
-            }
-            &::before {
-                content: '';
-                position: absolute;
-                left: 0;
-                top: 7px;
-                display: inline-block;
-                width: 3px;
-                height: 24px;
-                background-color: $blue3;
-            }
-            &-current {
-                display: none;
-            }
-        }
-    }
-}
