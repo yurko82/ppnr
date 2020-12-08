@@ -201,17 +201,21 @@
 if ($(window).width() < 768) {
     window.onload = openActiveMenu
 
-    function openSubmenu() {
+    function openSubmenu(e) {
         document.querySelector(".about_side_menu ul").classList.toggle('open')
+        e.style.display = "none"
     }
 
     function openActiveMenu() {
+
         let activeLI = document.querySelector(".about_side_menu-submenu ul li.active")
         if (activeLI) {
-            console.log(activeLI)
             activeLI.parentNode.style.display = "block"
+
         }
-        document.querySelector(".about_side_menu-current").innerText = activeLI.innerText
+        document.querySelector(".about_side_menu-select").innerText = activeLI.innerText
+        let titleActiveLi = activeLI.closest(".about_side_menu-submenu").firstChild.nextSibling.innerText
+        document.querySelector(".about_side_menu-current").innerText = titleActiveLi + " > " + activeLI.innerText
     }
 
     function closeAboutMenu() {
