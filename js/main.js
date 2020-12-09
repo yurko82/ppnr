@@ -201,17 +201,23 @@
 if ($(window).width() < 768) {
     window.onload = openActiveMenu
 
+    document.onclick = function(e) {
+        if (e.target.className != 'btn-d' && e.target.className != 'about_side_menu-select btn-d') {
+            document.querySelector(".about_side_menu ul").classList.remove('open')
+            document.querySelector(".about_side_menu-select").style.display = "block"
+        };
+    };
+
     function openSubmenu(e) {
-        document.querySelector(".about_side_menu ul").classList.toggle('open')
+        document.querySelector(".about_side_menu ul").classList.add('open')
         e.style.display = "none"
+
     }
 
     function openActiveMenu() {
-
         let activeLI = document.querySelector(".about_side_menu-submenu ul li.active")
         if (activeLI) {
             activeLI.parentNode.style.display = "block"
-
         }
         document.querySelector(".about_side_menu-select").innerText = activeLI.innerText
         let titleActiveLi = activeLI.closest(".about_side_menu-submenu").firstChild.nextSibling.innerText
