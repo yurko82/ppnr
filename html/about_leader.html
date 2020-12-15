@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, maximum-scale=1">
     <meta name="description" content="">
     <meta name="keywords" content="">
     <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
-    <title>Керівник</title>    <!--  need change via code for every chief -->
+    <title>Керівник</title>
+    <!--  need change via code for every chief -->
 
-     <!-- <script src='../js/_version.js?v=(add some version)'></script> -->
+    <!-- <script src='../js/_version.js?v=(add some version)'></script> -->
     <link href="../css/lib/bootstrap5.css" rel="stylesheet" id="bootstrap-css">
     <link rel="stylesheet" href="../fonts/GothamPro/stylesheet.css">
     <link rel="stylesheet" href="../fonts/rnpp-icons/rnpp-icons.css">
 
     <link rel="stylesheet" href="../css/common.css">
     <!-- without version: <link rel="stylesheet" href="../css/page_about_leaders.css"> -->
-    <!-- <script>  _v.add('../css/page_about_leaders.css',1);  </script> /* use this */ --> 
+    <!-- <script>  _v.add('../css/page_about_leaders.css',1);  </script> /* use this */ -->
 </head>
 
 <body>
@@ -164,68 +165,75 @@
 
     <div class="to-top"></div>
     <section class="allabout">
-      <div class="container">
-        <div class="allabout__block">
+        <div class="container">
+            <div class="allabout__block">
 
-          <nav class="about_side_menu">
-            <div class="about_side_menu-title">
-              <h2>Про нас</h2>
-            </div>
-            <ul>
-              <li class="about_side_menu-submenu">
-                <h3>Хто ми</h3>
-                <ul>
-                  <li><span>Загальна інформація</span></li>
-                  <li><span>Місія, бачення, цінності</span></li>
-                  <li><span>Історія</span></li>
-                  <li><span>Діяльність</span></li>
-                  <li><span>Дізнатися більше</span></li>
-                </ul>
-              </li>
-              <li class="about_side_menu-submenu">
-                <h3>Наша команда</h3>
-                <ul>
-                  <li class="active"><span>Лідери</span></li>
-                  <li><span>Професіонали</span></li>
-                  <li><span>Працівнику</span></li>
-                  <li><span>Кар’єра і HR</span></li>
-                  <li><span>Нагороди</span></li>
-                </ul>
-              </li>
-              <li class="about_side_menu-submenu">
-                <h3>Наші партнери</h3>
-                <ul>
-                  <li><span>Профспілка</span></li>
-                  <li><span>УкрЯТ</span></li>
-                  <li><span>УЯФ</span></li>
-                  <li><span>ВАО АЕС</span></li>
-                  <li><span>МАГАТЕ</span></li>
-                  <li><span>Ділові партнери</span></li>
-                </ul>
-              </li>
-            </ul>
-          </nav>
+                <nav class="about_side_menu">
 
-          <div class="allabout__content">
-            <div class="leaders">
-              <div class="leader">
-                <img
-                  class="leader__img"
-                  src="../images/leader/pavlishin.jpg"
-                  alt="Павлишин П.Я."
-                />
-                <div class="leader__name">Павлишин Павло Яремович</div>
-                <div class="leader__info">Генеральний директор ВП РАЕС</div>
-              </div>           
+                    <div class="about_side_menu-title">
+                        <h2>Про нас</h2>
+                    </div>
+                    <div class="about_side_menu-current"></div>
+                    <div class="about_side_menu-select btn-d" onclick="openSubmenu(this)">Оберіть рубрику</div>
+                    <ul>
+                        <li class="about_side_menu-submenu" onclick="viewLeader(this)">
+                            <h3>Хто ми</h3>
+                            <ul>
+                                <li><span>Загальна інформація</span></li>
+                                <li><span>Місія, бачення, цінності</span></li>
+                                <li class="active"><span>Історія</span></li>
+                                <li><span>Діяльність</span></li>
+                                <li><span>Дізнатися більше</span></li>
+                            </ul>
+                        </li>
+                        <li class="about_side_menu-submenu" onclick="viewLeader(this)">
+                            <h3>Наша команда</h3>
+                            <ul>
+                                <li><span><a href="about_leaders.html">Лідери</a></span></li>
+                                <li><span>Професіонали</span></li>
+                                <li><span>Працівнику</span></li>
+                                <li><span>Кар’єра і HR</span></li>
+                                <li><span>Нагороди</span></li>
+                            </ul>
+                        </li>
+                        <li class="about_side_menu-submenu" onclick="viewLeader(this)">
+                            <h3>Наші партнери</h3>
+                            <ul>
+                                <li><span>Профспілка</span></li>
+                                <li><span>УкрЯТ</span></li>
+                                <li><span>УЯФ</span></li>
+                                <li><span>ВАО АЕС</span></li>
+                                <li><span>МАГАТЕ</span></li>
+                                <li><span>Ділові партнери</span></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                </nav>
+
+                <div class="allabout__content">
+                    <div class="backpage"><a class="icon-left-arrow" href="about_leaders.html"><span>Лідери</span></a></div>
+                    <div class="leaders">
+                        <div class="leader">
+                            <img class="leader__img" src="../images/leader/pavlishin.jpg" alt="Павлишин П.Я." />
+                            <div class="leader__name">Павлишин Павло Яремович</div>
+                            <div class="leader__info">Генеральний директор ВП РАЕС</div>
+                            <div class="leader__text">Народився 08.04.1967 р. у смт Орєшноє Манського району Красноярського краю, Росія. По завершенні служби в Збройних Силах і навчання в Одеському політехнічному інституті за спеціальністю «Атомні електростанції та установки»,
+                                в березні 1992 року прийнятий на роботу оператором реакторного відділення реакторного цеху №2 Рівненської АЕС. Працював інженером з експлуатації реакторного устаткування реакторного цеху №2, провідним інженером з керування
+                                реактором РЦ №2. З 1998 року - на керівних посадах: начальник зміни РЦ №2, заступник начальника навчально-тренувального центру (НТЦ), начальник НТЦ, заступник головного інженера з експлуатації блоків 3, 4 ВП «Рівненська
+                                АЕС», заступник головного інженера з підготовки персоналу - начальник НТЦ. З червня 2012 року обіймає посаду генерального директора ВП «Рівненська АЕС». З грудня 2019 року до квітня 2020 року тимчасово виконував обов’язки
+                                президента ДП «НАЕК «Енергоатом». Одружений. Має двох синів.
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
     </section>
 
 
 
-     <footer class=" footer ">
+    <footer class=" footer ">
         <div class="container">
             <div class="footer__content">
                 <div class="footer__mail">
@@ -285,13 +293,14 @@
         _v.add('js/leaders_page.js'); 
     </script> -->
 
-    <script> /* temporary script */
-        let s=document.createElement('script');
-        s.setAttribute('src','../js/_version.js?v='+parseInt(Math.random()*1000000));
-        s.onload=function(){
-            _v.add('../css/page_about_leaders.css',1); 
-            _v.add('../js/main.js'); 
-            _v.add('../js/leaders_page.js'); 
+    <script>
+        /* temporary script */
+        let s = document.createElement('script');
+        s.setAttribute('src', '../js/_version.js?v=' + parseInt(Math.random() * 1000000));
+        s.onload = function() {
+            _v.add('../css/page_about_leaders.css', 1);
+            _v.add('../js/main.js');
+            _v.add('../js/leaders_page.js');
         };
         document.head.appendChild(s);
     </script>

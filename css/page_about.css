@@ -26,6 +26,26 @@
   color: #363636;
 }
 
+.allabout .backpage {
+  font-size: 12px;
+  padding-top: 16px;
+}
+
+.allabout .backpage a {
+  margin-left: -5px;
+  color: #999999;
+}
+
+.allabout .backpage a span {
+  font-size: 16px;
+  margin-left: 4px;
+  font-family: 'Gotham Pro' !important;
+}
+
+.allabout .backpage a:hover {
+  color: #005b99;
+}
+
 .allabout__block {
   position: relative;
 }
@@ -99,7 +119,7 @@
   color: #757575;
   line-height: 16px;
   font-size: 14px;
-  margin: 10px 0 0 0;
+  margin: 4px 0 8px 0;
   font-weight: 300;
 }
 
@@ -126,6 +146,14 @@
 }
 
 .allabout .about_side_menu li span:hover {
+  color: #005b99;
+}
+
+.allabout .about_side_menu li span a {
+  color: #363636;
+}
+
+.allabout .about_side_menu li span a:hover {
   color: #005b99;
 }
 

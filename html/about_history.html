@@ -168,10 +168,12 @@
             <div class="allabout__block">
 
                 <nav class="about_side_menu">
+
                     <div class="about_side_menu-title">
                         <h2>Про нас</h2>
                     </div>
-                    <div class="about_side_menu-select btn-d" onclick="openSubmenu()">Оберіть рубрику</div>
+                    <div class="about_side_menu-current"></div>
+                    <div class="about_side_menu-select btn-d" onclick="openSubmenu(this)">Оберіть рубрику</div>
                     <ul>
                         <li class="about_side_menu-submenu" onclick="viewLeader(this)">
                             <h3>Хто ми</h3>
@@ -186,7 +188,7 @@
                         <li class="about_side_menu-submenu" onclick="viewLeader(this)">
                             <h3>Наша команда</h3>
                             <ul>
-                                <li><span>Лідери</span></li>
+                                <li><span><a href="about_leaders.html">Лідери</a></span></li>
                                 <li><span>Професіонали</span></li>
                                 <li><span>Працівнику</span></li>
                                 <li><span>Кар’єра і HR</span></li>
@@ -205,7 +207,7 @@
                             </ul>
                         </li>
                     </ul>
-                    <div class="about_side_menu-current"></div>
+
                 </nav>
 
                 <div class="allabout__content timeline">
