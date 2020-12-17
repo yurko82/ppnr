@@ -6,7 +6,7 @@ let _v = (function(){
         'index__head-slider-block':2,
         'index__info-block':2,
         'index__news-block':2,
-        'leaders_page':3,
+        'leaders_page':4,
         'news_page':3
     };
 
@@ -16,8 +16,8 @@ let _v = (function(){
         'page_news':7,
         'page_allnews':7,
         'page_about':7,
-        'page_about_history':7,
-        'page_about_leader':7,
+        'page_about_history':9,
+        'page_about_leader':8,
         'common':1
     }
 
