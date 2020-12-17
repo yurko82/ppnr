@@ -172,8 +172,7 @@
                     <div class="about_side_menu-title">
                         <h2>Про нас</h2>
                     </div>
-                    <div class="about_side_menu-current"></div>
-                    <div class="about_side_menu-select btn-d" onclick="openSubmenu(this)">Оберіть рубрику</div>
+                    <div class="about_side_menu-select" onclick="openSubmenu(this)"><span>Оберіть рубрику</span><div class="icon-up-down"><i class="icon-left-arrow"></i><i class="icon-right-arrow"></i></div></div>
                     <ul>
                         <li class="about_side_menu-submenu" onclick="viewLeader(this)">
                             <h3>Хто ми</h3>
@@ -430,7 +429,9 @@
         s.setAttribute('src', '../js/_version.js?v=' + parseInt(Math.random() * 1000000));
         s.onload = function() {
             _v.add('../css/page_about_history.css', 1);
-            _v.add('../js/main.js');
+            // _v.add('../js/main.js');
+            _v.add('../js/__temp.js'); // temp!!!
+            _v.add('../js/about_menu.js'); // temp!!!
         };
         document.head.appendChild(s);
     </script>
