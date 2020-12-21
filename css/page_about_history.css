@@ -28,7 +28,7 @@
 
 .allabout .backpage {
   font-size: 12px;
-  padding-top: 16px;
+  padding: 16px 0 16px 0;
 }
 
 .allabout .backpage a {
