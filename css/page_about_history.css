@@ -76,7 +76,7 @@
 .allabout .about_side_menu-title h2 {
   font-weight: 100;
   padding-left: 16px;
-  color: #005b99;
+  color: #999999;
 }
 
 .allabout .about_side_menu-select {
@@ -170,6 +170,7 @@
 .allabout .about_side_menu > ul {
   margin: 24px 0 0 0;
   padding: 0;
+  display: block;
   display: none;
 }
 
