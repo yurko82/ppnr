@@ -101,7 +101,7 @@
     position: relative;
     color: #505050;
     border: 1px solid #999999;
-    margin-top: 20px;
+    margin-top: 30px;
   }
   .allabout .about_side_menu-select > span {
     margin: 8px;
@@ -148,6 +148,7 @@
   -webkit-transition: .3s;
   transition: .3s;
   font-size: 12px;
+  padding-top: 3px;
 }
 
 @media (max-width: 768px) {
