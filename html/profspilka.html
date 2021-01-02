@@ -167,12 +167,14 @@
             <div class="allabout__block">
 
                 <nav class="about_side_menu">
+
                     <div class="about_side_menu-title">
                         <h2>Про нас</h2>
                     </div>
+                    <div class="about_side_menu-select" onclick="openSideMenu()"><span>Оберіть рубрику</span><div class="icon-up-down"><i class="icon-left-arrow"></i><i class="icon-right-arrow"></i></div></div>
                     <ul>
-                        <li class="about_side_menu-submenu">
-                            <h3>Хто ми</h3>
+                        <li class="about_side_menu-submenu" onclick="openSideSubMenu(this)">
+                            <h3>Хто ми <i class="icon-right-arrow angle-down"></i></h3>
                             <ul>
                                 <li><span>Загальна інформація</span></li>
                                 <li><span>Місія, бачення, цінності</span></li>
@@ -181,20 +183,20 @@
                                 <li><span>Дізнатися більше</span></li>
                             </ul>
                         </li>
-                        <li class="about_side_menu-submenu">
-                            <h3>Наша команда</h3>
+                        <li class="about_side_menu-submenu" onclick="openSideSubMenu(this)">
+                            <h3>Наша команда <i class="icon-right-arrow angle-down"></i></h3>
                             <ul>
-                                <li><span>Лідери</span></li>
+                                <li><span><a href="about_leaders.html">Лідери</a></span></li>
                                 <li><span>Професіонали</span></li>
                                 <li><span>Працівнику</span></li>
                                 <li><span>Кар’єра і HR</span></li>
                                 <li><span>Нагороди</span></li>
                             </ul>
                         </li>
-                        <li class="about_side_menu-submenu">
-                            <h3>Наші партнери</h3>
+                        <li class="about_side_menu-submenu" onclick="openSideSubMenu(this)">
+                            <h3>Наші партнери <i class="icon-right-arrow angle-down"></i></h3>
                             <ul>
-                                <li  class="active"><span>Профспілка</span></li>
+                                <li class="active"><span>Профспілка</span></li>
                                 <li><span>УкрЯТ</span></li>
                                 <li><span>УЯФ</span></li>
                                 <li><span>ВАО АЕС</span></li>
@@ -203,8 +205,8 @@
                             </ul>
                         </li>
                     </ul>
-                </nav>
 
+                </nav>
                 <div class="allabout__content">
                     <p><b>Первинна профспілкова організація (ППО) РАЕС</b> створена 31 жовтня 1975 року й об’єднує працівників та непрацюючих пенсіонерів електростанції. 
                         Профспілкове членство складає 96,23% від загальної кількості працюючих. Голова ППО РАЕС – Мельник Іван Михайлович. 
@@ -300,6 +302,7 @@
         s.onload=function(){
             _v.add('../css/page_about.css',1); 
             _v.add('../js/main.js'); 
+            _v.add('../js/about_menu.js'); 
         };
         document.head.appendChild(s);
     </script>

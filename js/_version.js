@@ -1,13 +1,14 @@
 let _v = (function(){
 
     let versionJS = {
-        'main':3,
+        'main':4,
         'index_page':3,
         'index__head-slider-block':2,
         'index__info-block':2,
         'index__news-block':2,
         'leaders_page':4,
-        'news_page':3
+        'news_page':3,
+        'about_menu':1
     };
 
     let versionCSS = {
@@ -16,9 +17,9 @@ let _v = (function(){
         'page_news':7,
         'page_allnews':7,
         'page_about':7,
-        'page_about_history':9,
+        'page_about_history':10,
         'page_about_leader':8,
-        'common':1
+        'common':2
     }
 
     let getJSversion=function(filename){ return versionJS[filename]||''; }

@@ -44,10 +44,9 @@ function openSideSubMenu(el) {
                 $(e).find('h3 > i').removeClass('show');
             }
         });
-
     }
 }
-$( window ).resize(function() {
+$(window).resize(function() {
     if ($(window).width() > 768) {
         submenu.forEach(el=>{ $(el).removeClass('not-open-ul'); });
         activeSubmenu=null;

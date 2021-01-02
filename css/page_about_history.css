@@ -201,6 +201,10 @@
   color: #005b99;
 }
 
+.allabout .about_side_menu li.active a {
+  color: #41b6e6;
+}
+
 @media (max-width: 768px) {
   .allabout .about_side_menu li {
     margin: 24px auto;

@@ -51,6 +51,7 @@
 }
 
 .allabout__content {
+  padding-top: 40px;
   min-height: 550px;
 }
 
@@ -60,8 +61,8 @@
 
 @media (min-width: 768px) {
   .allabout__content {
-    min-height: 550px;
     margin-left: 300px;
+    padding-top: 60px;
   }
   .allabout__content p {
     padding: 0 0 24px 0;
@@ -74,53 +75,96 @@
 }
 
 .allabout .about_side_menu-title h2 {
-  font-weight: 400;
-  padding-left: 8px;
-}
-
-.allabout .about_side_menu-title h2:before {
-  content: "";
-  position: absolute;
-  top: 4px;
-  left: 0;
-  height: 20px;
-  width: 3px;
-  background-color: #005b99;
+  font-weight: 100;
+  padding: 0;
+  color: #005b99;
+  text-transform: uppercase;
+  font-size: 24px;
 }
 
 .allabout .about_side_menu-select {
-  display: block;
-  position: relative;
-  line-height: 32px;
-  text-align: center;
-  color: #41b6e6;
+  display: none;
 }
 
-.allabout .about_side_menu-select:after {
-  content: "\21D5";
-  position: absolute;
-  right: 12px;
-  top: 0;
-  font-size: 30px;
+@media (max-width: 768px) {
+  .allabout .about_side_menu-select {
+    cursor: pointer;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: relative;
+    color: #505050;
+    border: 1px solid #999999;
+    margin-top: 30px;
+  }
+  .allabout .about_side_menu-select > span {
+    margin: 8px;
+    font-size: 20px;
+  }
+  .allabout .about_side_menu-select.hidden {
+    display: none;
+  }
 }
 
 .allabout .about_side_menu-submenu {
   margin-top: 8px;
   text-align: center;
+  color: #505050;
+}
+
+.allabout .about_side_menu-submenu.not-open-ul > ul {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .allabout .about_side_menu-submenu {
+    cursor: pointer;
+  }
 }
 
 .allabout .about_side_menu-submenu h3 {
-  line-height: 32px;
+  margin-bottom: 4px;
+  font-size: 18px;
+  margin: 0;
 }
 
-.allabout .about_side_menu-current {
-  display: block;
-  position: relative;
-  color: #757575;
-  line-height: 16px;
-  font-size: 14px;
-  margin: 4px 0 8px 0;
-  font-weight: 300;
+@media (max-width: 768px) {
+  .allabout .about_side_menu-submenu h3 {
+    text-transform: uppercase;
+    font-size: 20px;
+  }
+}
+
+.allabout .about_side_menu-submenu h3 .angle-down {
+  display: none;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  -webkit-transition: .3s;
+  transition: .3s;
+  font-size: 12px;
+  padding-top: 3px;
+}
+
+@media (max-width: 768px) {
+  .allabout .about_side_menu-submenu h3 .angle-down {
+    display: inline-block;
+  }
+  .allabout .about_side_menu-submenu h3 .angle-down.show {
+    -webkit-transform: rotate(270deg);
+            transform: rotate(270deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .allabout .about_side_menu-submenu {
+    margin-top: 12px;
+  }
 }
 
 .allabout .about_side_menu .active span {
@@ -128,7 +172,7 @@
 }
 
 .allabout .about_side_menu > ul {
-  margin: 8px 0 0 0;
+  margin: 30px 0 0 0;
   padding: 0;
   display: none;
 }
@@ -157,8 +201,40 @@
   color: #005b99;
 }
 
-.allabout .about_side_menu h3 {
-  font-size: 18px;
+.allabout .about_side_menu li.active a {
+  color: #41b6e6;
+}
+
+@media (max-width: 768px) {
+  .allabout .about_side_menu li {
+    margin: 24px auto;
+    font-size: 20px;
+  }
+  .allabout .about_side_menu li ul {
+    padding: 0;
+  }
+  .allabout .about_side_menu li ul li {
+    margin: 8px auto;
+  }
+  .allabout .about_side_menu li ul:last-child {
+    margin-bottom: 16px;
+  }
+}
+
+.allabout .about_side_menu .icon-up-down {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.allabout .about_side_menu .icon-up-down i {
+  font-size: 10px;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
 }
 
 @media (min-width: 768px) {
@@ -169,14 +245,6 @@
     left: 0;
     top: 120px;
     float: left;
-  }
-  .allabout .about_side_menu-title h2 {
-    padding-left: 0;
-  }
-  .allabout .about_side_menu-title h2:before {
-    content: "";
-    width: 0;
-    height: 0;
   }
   .allabout .about_side_menu > ul {
     display: block;
@@ -189,14 +257,7 @@
     text-align: left;
   }
   .allabout .about_side_menu::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 7px;
-    display: inline-block;
-    width: 3px;
     height: 24px;
-    background-color: #005b99;
   }
   .allabout .about_side_menu-current {
     display: none;
