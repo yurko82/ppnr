@@ -1078,7 +1078,7 @@ button.next {
 
 @media (max-width: 999px) {
   .navbar .dropdown-item {
-    padding: 0 0 8px 16px;
+    padding: 0 0 16px 16px;
     font-size: 18px;
   }
   .navbar .dropdown-item:hover, .navbar .dropdown-item:focus {
