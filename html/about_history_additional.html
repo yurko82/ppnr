@@ -171,36 +171,44 @@
                     <div class="about_side_menu-title">
                         <h2>Про нас</h2>
                     </div>
+                    <div class="about_side_menu-select" onclick="openSideMenu()"><span>Оберіть рубрику</span><div class="icon-up-down"><i class="icon-left-arrow"></i><i class="icon-right-arrow"></i></div></div>
                     <ul>
-                        <li class="about_side_menu-submenu">
-                            <h3>Хто ми</h3>
+                        <li class="about_side_menu-submenu" onclick="openSideSubMenu(this)">
+                            <h3>Хто ми <i class="icon-right-arrow angle-down"></i></h3>
                             <ul>
-                                <li><span>Загальна інформація</span></li>
-                                <li><span>Місія, бачення, цінності</span></li>
-                                <li class="active"><span>Історія</span></li>
-                                <li><span>Діяльність</span></li>
-                                <li><span>Дізнатися більше</span></li>
+                                <li><a href="about_info.html">Загальна інформація</a></li>
+                                <li><a href="about_mission.html">Місія, бачення, цінності</a></li>
+                                <li class="active"><a href="about_history.html">Історія</a></li>
+                                <li class="about_side_menu-submenu2"><a>Діяльність <i class="icon-right-arrow angle-down"></i></a>
+                                    <ul class="hidden">
+                                        <li><a href="about_activity_production.html">Технологія виробництва</a></li>
+                                        <li><a href="about_activity_declaration.html">Заяви</a></li>
+                                        <li><a href="about_activity_licensed.html">Ліцензовані види діяльності</a></li>
+                                        <li><a href="about_activity_safety.html">Безпека і надійність</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="about_more.html">Дізнатися більше</a></li>
                             </ul>
                         </li>
-                        <li class="about_side_menu-submenu">
-                            <h3>Наша команда</h3>
+                        <li class="about_side_menu-submenu" onclick="openSideSubMenu(this)">
+                            <h3>Наша команда <i class="icon-right-arrow angle-down"></i></h3>
                             <ul>
-                                <li><span>Лідери</span></li>
-                                <li><span>Професіонали</span></li>
-                                <li><span>Працівнику</span></li>
-                                <li><span>Кар’єра і HR</span></li>
-                                <li><span>Нагороди</span></li>
+                                <li><a href="about_leaders.html">Лідери</a></li>
+                                <li><a href="team.html">Професіонали</a></li>
+                                <li><a href="employee.html">Працівнику</a></li>
+                                <li><a href="career.html">Кар’єра і HR</a></li>
+                                <li><a href="awards.html">Нагороди</a></li>
                             </ul>
                         </li>
-                        <li class="about_side_menu-submenu">
-                            <h3>Наші партнери</h3>
+                        <li class="about_side_menu-submenu" onclick="openSideSubMenu(this)">
+                            <h3>Наші партнери <i class="icon-right-arrow angle-down"></i></h3>
                             <ul>
-                                <li><span>Профспілка</span></li>
-                                <li><span>УкрЯТ</span></li>
-                                <li><span>УЯФ</span></li>
-                                <li><span>ВАО АЕС</span></li>
-                                <li><span>МАГАТЕ</span></li>
-                                <li><span>Ділові партнери</span></li>
+                                <li><a href="profspilka.html">Профспілка</a></li>
+                                <li><a href="ukrns.html">УкрЯТ</a></li>
+                                <li><a href="uaf.html">УЯФ</a></li>
+                                <li><a href="waoaes.html">ВАО АЕС</a></li>
+                                <li><a href="magate.html">МАГАТЕ</a></li>
+                                <li><a href="partners.html">Ділові партнери</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -1304,6 +1312,7 @@
         s.onload = function() {
             _v.add('../css/page_about_history_additional.css', 1);
             _v.add('../js/main.js');
+            _v.add('../js/about_menu.js');
             _v.add('../js/history_additional.js');
         };
         document.head.appendChild(s);
