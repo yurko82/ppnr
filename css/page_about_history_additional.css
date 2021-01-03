@@ -179,6 +179,7 @@
 }
 
 .allabout .about_side_menu-submenu2 .angle-down {
+  pointer-events: none;
   display: inline-block;
 }
 

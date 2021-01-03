@@ -112,6 +112,7 @@
                 }
             }
             & .angle-down{
+                pointer-events: none;
                 display: inline-block;
             }
         }
