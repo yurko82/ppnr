@@ -58,7 +58,8 @@ $(window).resize(function() {
     }
 });
 
-$('.about_side_menu li.about_side_menu-submenu2 a').click((e)=>{
+$('.about_side_menu li.about_side_menu-submenu2 > a').click((e)=>{
+    console.log(e.target);
     let p=$(e.target).parent();
     $(p).find('ul').first().toggleClass('hidden');
     $(p).find('i').first().toggleClass('show');
