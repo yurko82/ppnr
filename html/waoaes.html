@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ВАО АЕС</title>
+
+    <!-- <script src='../js/_version.js?v=(add some version)'></script> -->
+    <link href="../css/lib/bootstrap5.css" rel="stylesheet" id="bootstrap-css">
+    <!-- <link rel="stylesheet" href="../fonts/fontawesome/all.css"> -->
+    <link rel="stylesheet" href="../fonts/GothamPro/stylesheet.css">
+    <link rel="stylesheet" href="../fonts/rnpp-icons/rnpp-icons.css">
+
+    <link rel="stylesheet" href="../css/common.css">
+    <!-- without version: <link rel="stylesheet" href="../css/page_about.css"> -->
+    <!-- <script>  _v.add('../css/page_about.css',1);  </script> /* use this */ -->
+</head>
+
+<body>
+    <div class="body__overlay"></div>
+    <!------ Include the above in your HEAD tag ---------->
+    <header class="header fixed-top shadow">
+        <div class="container">
+            <div class="header__wrap position-relative">
+                <div class="header__social">
+                    <ul class="header__social-icons pr-4">
+                        <li class="header__social-icon"><a href="https://www.facebook.com/rnppofficial" title="Facebook"><i class="icon-facebook"></i></a></li>
+                        <li class="header__social-icon"><a href="https://twitter.com/rnppofficial" title="Twitter"><i class="icon-twitter"></i></a></li>
+                        <li class="header__social-icon"><a href="https://www.instagram.com/rnppofficial" title="Instagram"><i class="icon-instagram"></i></a></li>
+                        <li class="header__social-icon"><a href="https://t.me/rnppofficial" title="Telegram"><i class="icon-telegram"></i></a></li>
+                        <li class="header__social-icon"><a href="https://www.youtube.com/channel/UCRrM8pysKmTiDqlfTPMzyCg" title="Youtube"><i class="icon-youtube"></i></a></li>
+                    </ul>
+                    <ul class="header__social-icons">
+                        <li class="header__social-icon"><i class="icon-search pointer" title="Пошук"></i></li>
+                        <li class="header__social-icon"><i class="icon-eye pr-3 pointer" title="Перегляд для людей з вадами зору"></i></li>
+                        <li class="header__social-icon">
+                            <div class="lang__block">
+                                <button class="lang__btn lang">
+                                    <span class="text">Укр</span><i class="icon-right-arrow lang__angle-bottom"></i>
+                                </button>
+                                <div class="lang__drop">
+                                    <a class="active lang_UA" href="#">Укр</a>
+                                    <a class="lang_RU" href="#">Рус</a>
+                                    <a class="lang_EN" href="#">Eng</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="logo-nav">
+                    <nav class="navbar navbar-expand-lg  align-items-center p-0" role="navigation">
+
+                        <!-- data-target="#navbarCollapse" -->
+                        <button class="navbar-toggler" type="button" data-show="false">
+                            <span class="navbar-icon"></span>
+                        </button>
+                        <a href="../index.html" class="logo"><img src="../images/svg/logo.svg" alt=""></a>
+                        <div class="flex-grow-1"></div>
+                        <div class="lang__block">
+                            <button class="lang__btn lang">
+                                <span class="text">Укр</span><i class="icon-right-arrow lang__angle-bottom"></i>
+                            </button>
+                            <div class="lang__drop">
+                                <a class="active lang_UA" href="#">Укр</a>
+                                <a class="lang_RU" href="#">Рус</a>
+                                <a class="lang_EN" href="#">Eng</a>
+                            </div>
+                        </div>
+                        <div class="navbar__sett"><i class="icon-eye"></i></div>
+                        <div class="navbar-collapse align-self-end" id="navbarCollapse">
+                            <div class="navbar-collapse_inner-container">
+                                <ul class="navbar-nav ml-auto">
+                                    <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="dropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Про нас <i class="icon-right-arrow angle-right"></i></a>
+                                        <ul class="dropdown-menu" aria-labelledby="dropdown1">
+                                            <li class="dropdown-submenu dropdown"><a class="dropdown-item dropdown-toggle" href="#">Хто ми <i class="icon-right-arrow angle-right"></i></a>
+                                                <ul class="dropdown-menu marginleftfix">
+                                                    <li><a class="dropdown-item" href="about_info.html">Загальна інформація</a></li>
+                                                    <li><a class="dropdown-item" href="about_mission.html">Місія, бачення, цінності</a></li>
+                                                    <li><a class="dropdown-item" href="about_history.html">Історія</a></li>
+                                                    <li class="dropdown-submenu dropdown dropright"><a class="dropdown-item dropdown-toggle" href="#">Діяльність <i class="icon-right-arrow angle-right"></i></a>
+                                                        <ul class="dropdown-menu marginleftfix">
+                                                            <li><a class="dropdown-item" href="about_activity_production.html">Технологія виробництва</a></li>
+                                                            <li><a class="dropdown-item" href="about_activity_declaration.html">Заяви</a></li>
+                                                            <li><a class="dropdown-item" href="about_activity_licensed.html">Ліцензовані види діяльності</a></li>
+                                                            <li><a class="dropdown-item" href="about_activity_safety.html">Безпека і надійність</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><a class="dropdown-item" href="about_more.html">Дізнатися більше</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown-submenu dropdown"><a class="dropdown-item dropdown-toggle" href="#">Наша команда <i class="icon-right-arrow angle-right"></i></a>
+                                                <ul class="dropdown-menu marginleftfix">
+                                                    <li><a class="dropdown-item" href="about_leaders.html">Лідери</a></li>
+                                                    <li><a class="dropdown-item" href="team.html">Професіонали</a></li>
+                                                    <li><a class="dropdown-item" href="employee.html">Працівнику</a></li>
+                                                    <li><a class="dropdown-item" href="career.html">Кар’єра і HR</a></li>
+                                                    <li><a class="dropdown-item" href="awards.html">Нагороди</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown-submenu dropdown"><a class="dropdown-item dropdown-toggle" href="#">Наші партнери <i class="icon-right-arrow angle-right"></i></a>
+                                                <ul class="dropdown-menu marginleftfix">
+                                                    <li><a class="dropdown-item" href="profspilka.html">Профспілка</a></li>
+                                                    <li><a class="dropdown-item" href="ukrns.html">УкрЯТ</a></li>
+                                                    <li><a class="dropdown-item" href="uaf.html">УЯФ</a></li>
+                                                    <li><a class="dropdown-item" href="waoaes.html">ВАО АЕС</a></li>
+                                                    <li><a class="dropdown-item" href="magate.html">МАГАТЕ</a></li>
+                                                    <li><a class="dropdown-item" href="partners.html">Ділові партнери</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="dropdown2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Новини <i class="icon-right-arrow angle-right"></i></a>
+                                        <ul class="dropdown-menu" aria-labelledby="dropdown2">
+                                            <li><a class="dropdown-item" href="allnews.html?news">Новини</a></li>
+                                            <li><a class="dropdown-item" href="allnews.html?announcements">Анонси</a></li>
+                                            <li><a class="dropdown-item" href="allnews.html?newspapers">Газета «Енергія»</a></li>
+                                            <li><a class="dropdown-item" href="allnews.html?videos">Телеканал «Енергоатом»</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" id="dropdown3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Чому АЕС <i class="icon-right-arrow angle-right"></i></a>
+                                        <ul class="dropdown-menu" aria-labelledby="dropdown3">
+                                            <li><a class="dropdown-item" href="climate.html">Клімат і довкілля</a></li>
+                                            <li><a class="dropdown-item" href="available_energy.html">Доступна енергія</a></li>
+                                            <li><a class="dropdown-item" href="support_nuclear.html">Підтримую ядерну енергію</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link dropdown-toggle" aria-haspopup="true" aria-expanded="false" href="rfive.html">Р5</a>
+                                    </li>
+                                    <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="dropdown4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Громаді <i class="icon-right-arrow angle-right"></i></a>
+                                        <ul class="dropdown-menu dropdown-menu-right-1350" aria-labelledby="dropdown4">
+                                            <li><a class="dropdown-item" href="region.html">Розвиток регіону</a></li>
+                                            <li><a class="dropdown-item" href="sduty.html">Навчання</a></li>
+                                            <li><a class="dropdown-item" href="sport.html">Спорт</a></li>
+                                            <li><a class="dropdown-item" href="culture.html">Культура</a></li>
+                                            <li><a class="dropdown-item" href="rest.html">Відпочинок</a></li>
+                                            <li><a class="dropdown-item" href="hotel.html">Готель</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <form class="navbar__form form-inline">
+                                    <input class="navbar__form-input" type="search" placeholder="Пошук" aria-label="Search">
+                                    <button class="navbar__form-btn" type="submit"><i class="icon-search"></i></button>
+                                </form>
+
+                                <ul class="header__social-icons menu">
+                                    <li class="header__social-icon"><a href="https://www.facebook.com/rnppofficial" title="Facebook"><i class="icon-facebook"></i></a></li>
+                                    <li class="header__social-icon"><a href="https://twitter.com/rnppofficial" title="Twitter"><i class="icon-twitter"></i></a></li>
+                                    <li class="header__social-icon"><a href="https://www.instagram.com/rnppofficial" title="Instagram"><i class="icon-instagram"></i></a></li>
+                                    <li class="header__social-icon"><a href="https://t.me/rnppofficial" title="Telegram"><i class="icon-telegram"></i></a></li>
+                                    <li class="header__social-icon"><a href="https://www.youtube.com/channel/UCRrM8pysKmTiDqlfTPMzyCg" title="Youtube"><i class="icon-youtube"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="to-top"></div>
+
+    <section class="allabout">
+        <div class="container">
+            <div class="allabout__block">
+
+                <nav class="about_side_menu">
+
+                    <div class="about_side_menu-title">
+                        <h2>Про нас</h2>
+                    </div>
+                    <div class="about_side_menu-select" onclick="openSideMenu()"><span>Оберіть рубрику</span>
+                        <div class="icon-up-down"><i class="icon-left-arrow"></i><i class="icon-right-arrow"></i></div>
+                    </div>
+                    <ul>
+                        <li class="about_side_menu-submenu" onclick="openSideSubMenu(this)">
+                            <h3>Хто ми <i class="icon-right-arrow angle-down"></i></h3>
+                            <ul>
+                                <li><span>Загальна інформація</span></li>
+                                <li><span>Місія, бачення, цінності</span></li>
+                                <li><span>Історія</span></li>
+                                <li><span>Діяльність</span></li>
+                                <li><span>Дізнатися більше</span></li>
+                            </ul>
+                        </li>
+                        <li class="about_side_menu-submenu" onclick="openSideSubMenu(this)">
+                            <h3>Наша команда <i class="icon-right-arrow angle-down"></i></h3>
+                            <ul>
+                                <li><span><a href="about_leaders.html">Лідери</a></span></li>
+                                <li><span>Професіонали</span></li>
+                                <li><span>Працівнику</span></li>
+                                <li><span>Кар’єра і HR</span></li>
+                                <li><span>Нагороди</span></li>
+                            </ul>
+                        </li>
+                        <li class="about_side_menu-submenu" onclick="openSideSubMenu(this)">
+                            <h3>Наші партнери <i class="icon-right-arrow angle-down"></i></h3>
+                            <ul>
+                                <li><span>Профспілка</span></li>
+                                <li><span>УкрЯТ</span></li>
+                                <li><span>УЯФ</span></li>
+                                <li class="active"><span>ВАО АЕС</span></li>
+                                <li><span>МАГАТЕ</span></li>
+                                <li><span>Ділові партнери</span></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                </nav>
+
+                <div class="allabout__content">
+
+                    <p><strong>Програми ВАО АЕС</strong></p>
+
+                    <p>Реалізація програм ВАО АЕС в основному виконується самими експлуатуючими організаціями, водночас персонал регіональних центрів ВАО АЕС координує роботи за програмами. При цьому приділяється увага тому, щоб в Радах Керуючих ВАО АЕС
+                        відбувалось представництво членів з різних держав.</p>
+
+                    <p>Діяльність ВАО АЕС базується на чотирьох основних програмах, кожна з яких забезпечує підтримку місії Асоціації і надає практичну допомогу її членам:</p>
+
+                    <ul>
+                        <li>Партнерські перевірки:
+                            <ul>
+                                <li>Партнерську перевірку, що проводиться на запрошення електростанції, здійснює міжнародна група, яка складається з експертів інших членів Асоціації. Група перевіряє роботу електростанції за ключовими областями відповідно
+                                    до конкретних завдань і критеріїв.</li>
+                            </ul>
+                        </li>
+                        <li>Надання підтримки: позитивна практика, місії підтримки, підтримка нових блоків, бенчмаркінг.</li>
+                        <li>Аналіз виробничої діяльності: виробничі показники, досвід експлуатації.</li>
+                        <li>Навчання та розвиток: семінари, конференції, робочі зустрічі.</li>
+                    </ul>
+
+                    <p>Таким чином, члени ВАО АЕС можуть брати участь в різних програмах і заходах Асоціації. Завдання програм – допомагати обмінюватися інформацією, порівнювати досвід і практику експлуатації та вчитися, як працювати краще.&nbsp;<br> Члени
+                        ВАО АЕС можуть порівнювати результати експлуатації своїх електростанцій з результатами інших АЕС в усьому світі.<br> &nbsp;
+                    </p>
+
+                    <p><strong>Молодіжний рух ВАО АЕС на РАЕС</strong></p>
+
+                    <p>Молодіжний рух ВАО АЕС - це неформальне, некомерційне об'єднання молодих атомників-професіоналів - членів ВАО АЕС. Рух базується на принципі добровільної та безоплатної участі в діяльності ВАО АЕС з підвищення безпеки і надійності
+                        АЕС у світі.</p>
+
+                    <p>Діяльність МР ВАО АЕС на майданчику РАЕС реалізується через уповноваженого представника Асоціації на майданчику РАЕС, а також при безпосередньому ухваленні та сприянні діяльності членів МР з боку РАЕС.</p>
+
+                    <p>До функцій МР відносяться:</p>
+
+                    <ul>
+                        <li>Допомога та підтримка планів і завдань ВАО АЕС з боку молодих працівників.</li>
+                        <li>Спілкування та обмін досвідом на особистому рівні між молодими працівниками як на самому майданчику, так і з молоддю різних підприємств і країн.</li>
+                        <li>Підвищення кваліфікації і майстерності, професійне зростання молоді на РАЕС.</li>
+                        <li>Взаємодія з ВАО АЕС для підвищення рівня безпеки та надійності АЕС через представника ВАО АЕС на майданчику РАЕС.</li>
+                        <li>Взаємодія з ВАО АЕС для підвищення рівня знань і умінь, професійного зростання шляхом проведення заходів Асоціації або за її підтримки.</li>
+                        <li>Участь в заходах ВАО АЕС, у тому числі, в ролі спостерігачів.</li>
+                        <li>Участь в організації та проведенні заходів ВАО АЕС на РАЕС.</li>
+                    </ul>
+
+                    <p><u>Посилання на публікації</u></p>
+
+                    <ul>
+                        <li><u><a href="https://www.wano.info/news-events/inside-wano?lang=ru-ru" target="_blank">Inside WANO</a></u></li>
+                        <li><u><a href="/assets/DocSite/deyatelnost/2020-03-06_08-56_MC_Newsletter_Январь_2020.pdf" target="_blank">News Letters 2020</a></u></li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class=" footer ">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__mail">
+                    <div class="footer__contact">
+                        <h4 class="footer__title h3">Контакти</h4>
+                        <p>Рівненська АЕС</p>
+                        <p>м. Вараш</p>
+                        <p>Рівненська обл.</p>
+                        <p>34400</p>
+                        <p>Україна</p>
+                        <p><a href="mailto:office@rnpp.atom.gov.ua">office@rnpp.atom.gov.ua</a></p>
+                        <p><a href="mailto:pr@rnpp.atom.gov.ua">pr@rnpp.atom.gov.ua</a></p>
+                    </div>
+                </div>
+                <div class="footer__link">
+                    <div class="footer__info mb-4">
+                        <h4 class="footer__title h3">Інформаційний центр</h4>
+                        <p>+38 (03636) 64-123</p>
+                        <p><a href="mailto:info@info.atom.gov.ua">info@rnpp.atom.gov.ua</a></p>
+                    </div>
+                    <ul class="footer__link-links">
+                        <li class="footer__link-link"><a href="links.html">Посилання</a></li>
+                        <li class="footer__link-link"><a href="corruption.html">Протидія корупції</a></li>
+                        <li class="footer__link-politic"><a href="privacy_policy.html">Політика конфедеційності та захисту персональних даних</a></li>
+                    </ul>
+                </div>
+                <div class="footer__right">
+                    <div class="footer__logo">
+                        <a href="http://www.energoatom.kiev.ua/"><img class="footer__logo-naek" src="../images/svg/naek_logo_w.svg" alt=""></a>
+                        <img class="footer__logo-raes" src="../images/svg/logo_white.svg" alt="">
+                    </div>
+                    <ul class="footer__social-icons">
+                        <li class="footer__social-icon"><a href="https://www.facebook.com/rnppofficial" title="Facebook"><i class="icon-facebook"></i></a></li>
+                        <li class="footer__social-icon"><a href="https://twitter.com/rnppofficial" title="Twitter"><i class="icon-twitter"></i></a></li>
+                        <li class="footer__social-icon"><a href="https://www.instagram.com/rnppofficial" title="Instagram"><i class="icon-instagram"></i></a></li>
+                        <li class="footer__social-icon"><a href="https://t.me/rnppofficial" title="Telegram"><i class="icon-telegram"></i></a></li>
+                        <li class="footer__social-icon"><a href="https://www.youtube.com/channel/UCRrM8pysKmTiDqlfTPMzyCg" title="Youtube"><i class="icon-youtube"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        <div class="footer__wrap"></div>
+        <div class="footer__copy t3">
+            <div class="container">
+                <p>©2020, Рівненська Атомна Електростанція. Усі права захищено.</p>
+                <p>Копіювання, публікування або інше поширення інформації, у т.ч. окремих частин текстів чи зображень, розміщених на веб-сайті ВП РАЕС, без письмового дозволу забороняється. <a href="mailto:pr@rnpp.atom.gov.ua">pr@rnpp.atom.gov.ua</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/lib/jquery.min.js "></script>
+    <script src="../js/lib/bootstrap5.min.js "></script>
+    <!-- without version: <script src="../js/main.js"></script> -->
+    <!-- <script> /* use this */
+        _v.add('js/main.js'); 
+    </script> -->
+
+    <script>
+        /* temporary script */
+        let s = document.createElement('script');
+        s.setAttribute('src', '../js/_version.js?v=' + parseInt(Math.random() * 1000000));
+        s.onload = function() {
+            _v.add('../css/page_about.css', 1);
+            _v.add('../js/main.js');
+            _v.add('../js/about_menu.js');
+        };
+        document.head.appendChild(s);
+    </script>
+
+</body>
+
+</html>
