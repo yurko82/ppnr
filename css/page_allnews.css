@@ -22,6 +22,10 @@
   background-color: #fd5d0f;
 }
 
+.text-blue5 {
+  color: #74d2e7;
+}
+
 .allnews__block {
   display: -webkit-box;
   display: -ms-flexbox;

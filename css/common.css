@@ -31,6 +31,10 @@
   background-color: #fd5d0f;
 }
 
+.text-blue5 {
+  color: #74d2e7;
+}
+
 *,
 *::before,
 *::after {
@@ -808,6 +812,10 @@ button.next {
   background-color: #fd5d0f;
 }
 
+.text-blue5 {
+  color: #74d2e7;
+}
+
 .header {
   background-color: #fff;
   max-height: 60px;
@@ -1513,6 +1521,10 @@ button.next {
 
 .bg-red3 {
   background-color: #fd5d0f;
+}
+
+.text-blue5 {
+  color: #74d2e7;
 }
 
 .footer {
