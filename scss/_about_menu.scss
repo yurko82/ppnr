@@ -108,7 +108,9 @@
                 padding-left: 12px;
                 padding-right: 8px;
                 & li a{
-                    color: $grey3;
+                    @media(max-width: 768px) {
+                        color: $grey3;
+                    }
                 }
             }
             & .angle-down{

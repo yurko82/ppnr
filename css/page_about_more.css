@@ -291,6 +291,35 @@
   }
 }
 
-a {
-  color: #41b6e6;
+.block-title {
+  padding: 20px;
+  cursor: pointer;
+}
+
+.block-title span {
+  margin-left: 10px;
+  pointer-events: none;
+}
+
+.block-title .angle-down {
+  display: inline-block;
+  pointer-events: none;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  -webkit-transition: 350ms;
+  transition: 350ms;
+  font-size: 12px;
+}
+
+.block-title .angle-down.show {
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg);
+}
+
+.block-content {
+  padding-left: 20px;
+}
+
+.block-content.content-hidden {
+  display: none;
 }

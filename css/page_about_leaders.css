@@ -34,6 +34,10 @@
   background-color: #fd5d0f;
 }
 
+.bg-grey6 {
+  background-color: #eeeeee;
+}
+
 .text-blue5 {
   color: #74d2e7;
 }
@@ -72,6 +76,10 @@
 
 .bg-red3 {
   background-color: #fd5d0f;
+}
+
+.bg-grey6 {
+  background-color: #eeeeee;
 }
 
 .text-blue5 {
@@ -230,8 +238,10 @@
   padding-right: 8px;
 }
 
-.allabout .about_side_menu-submenu2 ul li a {
-  color: #757575;
+@media (max-width: 768px) {
+  .allabout .about_side_menu-submenu2 ul li a {
+    color: #757575;
+  }
 }
 
 .allabout .about_side_menu-submenu2 .angle-down {

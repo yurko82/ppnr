@@ -1,12 +1,11 @@
 $('.about_side_menu .about_side_menu-select>span').text($('.about_side_menu .about_side_menu-submenu li.active').text());
 $('.about_side_menu ul.active').click(()=>openSideMenu(false));
 $(document).click((e)=>{ 
+    if (!$(e.target).parents('.about_side_menu').length) return;
     if (!$(e.target).parents('.about_side_menu-submenu').length && !$(e.target).hasClass('about_side_menu-submenu')
         && !$(e.target).hasClass('about_side_menu-select') && !$(e.target).parents('.about_side_menu-select').length
-        && !$(e.target).parents('.about_side_menu-submenu2').length && !$(e.target).hasClass('about_side_menu-submenu2')) {
-            console.log(e.target);
-        openSideMenu(false); 
-        }
+        && !$(e.target).parents('.about_side_menu-submenu2').length && !$(e.target).hasClass('about_side_menu-submenu2')) 
+            openSideMenu(false); 
 });
 
 function openSideMenu(open=true){
