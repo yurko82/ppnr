@@ -4,18 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Навчання</title>
+    <title>УкрЯТ</title>
 
     <!-- <script src='../js/_version.js?v=(add some version)'></script> -->
     <link href="../css/lib/bootstrap5.css" rel="stylesheet" id="bootstrap-css">
-    <link rel="stylesheet" href="../fonts/fontawesome/all.css">
-    <link rel="stylesheet" href="../css/lib/slick.css">
+    <!-- <link rel="stylesheet" href="../fonts/fontawesome/all.css"> -->
     <link rel="stylesheet" href="../fonts/GothamPro/stylesheet.css">
     <link rel="stylesheet" href="../fonts/rnpp-icons/rnpp-icons.css">
 
     <link rel="stylesheet" href="../css/common.css">
-    <!-- without version: <link rel="stylesheet" href="../css/page_news.css"> -->
-    <!-- <script>  _v.add('../css/page_news.css',1);  </script> /* use this */ -->
+    <!-- without version: <link rel="stylesheet" href="../css/page_about.css"> -->
+    <!-- <script>  _v.add('../css/page_about.css',1);  </script> /* use this */ --> 
 </head>
 
 <body>
@@ -133,7 +132,7 @@
                                     <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="dropdown4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Громаді <i class="icon-right-arrow angle-right"></i></a>
                                         <ul class="dropdown-menu dropdown-menu-right-1350" aria-labelledby="dropdown4">
                                             <li><a class="dropdown-item" href="region.html">Розвиток регіону</a></li>
-                                            <li><a class="dropdown-item" href="study.html">Навчання</a></li>
+                                            <li><a class="dropdown-item" href="sduty.html">Навчання</a></li>
                                             <li><a class="dropdown-item" href="sport.html">Спорт</a></li>
                                             <li><a class="dropdown-item" href="culture.html">Культура</a></li>
                                             <li><a class="dropdown-item" href="rest.html">Відпочинок</a></li>
@@ -160,103 +159,82 @@
             </div>
         </div>
     </header>
-    <!-- <div class="content" style="padding: 120px 50px 50px 50px;"></div> -->
-    <!-- <div class="overlay"></div> -->
 
-    <!-- Post start -->
-    <section class="post">
-        <div class="container-full">
-            <div class="post__img" style="background-image: url('../images/news/1-1.jpg');"></div>
-        </div>
-        <div class="post__container">
-            <div class="post__title">
-                <h1>ПТУ - центр підготовки робітничих кадрів</h1>
-            </div>
-            <div class="post__text">
+    <div class="to-top"></div>
+    
+    <section class="allabout">
+        <div class="container">
+            <div class="allabout__block">
 
-                <p>Професійно-технічне училище будувалось одночасно з Рівненською АЕС. У 1982 році заклад гостинно запросив перших учнів у свої світлі аудиторії, добре обладнані майстерні. Сьогодні училище – це сучасний державний заклад професійної (професійно-технічної)
-                    освіти ІІ атестаційного рівня, що здійснює підготовку робітників, як правило, з числа випускників закладів загальної середньої освіти та перепідготовку робітників Рівненської атомної електричної станції. Щорічно заклад освіти випускає
-                    понад 70 учнів.</p>
+                <nav class="about_side_menu">
+                    <div class="about_side_menu-title">
+                        <h2>Про нас</h2>
+                    </div>
+                    <div class="about_side_menu-select" onclick="openSideMenu()"><span>Оберіть рубрику</span><div class="icon-up-down"><i class="icon-left-arrow"></i><i class="icon-right-arrow"></i></div></div>
+                    <ul>
+                        <li class="about_side_menu-submenu" onclick="openSideSubMenu(this)">
+                            <h3>Хто ми <i class="icon-right-arrow angle-down"></i></h3>
+                            <ul>
+                                <li><a href="about_info.html">Загальна інформація</a></li>
+                                <li><a href="about_mission.html">Місія, бачення, цінності</a></li>
+                                <li><a href="about_history.html">Історія</a></li>
+                                <li class="about_side_menu-submenu2"><a>Діяльність <i class="icon-right-arrow angle-down"></i></a>
+                                    <ul class="hidden">
+                                        <li><a href="about_activity_production.html">Технологія виробництва</a></li>
+                                        <li><a href="about_activity_declaration.html">Заяви</a></li>
+                                        <li><a href="about_activity_licensed.html">Ліцензовані види діяльності</a></li>
+                                        <li><a href="about_activity_safety.html">Безпека і надійність</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="about_more.html">Дізнатися більше</a></li>
+                            </ul>
+                        </li>
+                        <li class="about_side_menu-submenu" onclick="openSideSubMenu(this)">
+                            <h3>Наша команда <i class="icon-right-arrow angle-down"></i></h3>
+                            <ul>
+                                <li><a href="about_leaders.html">Лідери</a></li>
+                                <li><a href="team.html">Професіонали</a></li>
+                                <li><a href="employee.html">Працівнику</a></li>
+                                <li><a href="career.html">Кар’єра і HR</a></li>
+                                <li><a href="awards.html">Нагороди</a></li>
+                            </ul>
+                        </li>
+                        <li class="about_side_menu-submenu" onclick="openSideSubMenu(this)">
+                            <h3>Наші партнери <i class="icon-right-arrow angle-down"></i></h3>
+                            <ul>
+                                <li><a href="profspilka.html">Профспілка</a></li>
+                                <li class="active"><a href="ukrns.html">УкрЯТ</a></li>
+                                <li><a href="uaf.html">УЯФ</a></li>
+                                <li><a href="waoaes.html">ВАО АЕС</a></li>
+                                <li><a href="magate.html">МАГАТЕ</a></li>
+                                <li><a href="partners.html">Ділові партнери</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
 
-                <p>З грудня 1995 року училище увійшло в структуру відокремленого підрозділу «Рівненська АЕС» ДП «НАЕК «Енергоатом».</p>
+                <div class="allabout__content">
+                    <p><b>Українське Ядерне Товариство</b> – найбільша громадська ядерна науково-технічна організація, що об'єднує основні підприємства 
+                        та навчальні заклади атомної промисловості України. <a href="https://www.facebook.com/UkrNSRivne" >Відокремлений підрозділ ГО «УкрЯТ» 
+                        у Рівненській області</a> налічує понад 200 членів, у числі яких працівники та непрацюючі пенсіонери Рівненської&nbsp;АЕС.</p>
+                    <p>З 2017 року рівненський осередок ВП ГО «УкрЯТ» має статус юридичної особи. Товариство у тандемі із керівництвом Рівненської АЕС 
+                        є організатором низки профорієнтаційних та соціально важливих проєктів: Ядерна школа РАЕС, конкурс наукових доповідей серед школярів 
+                        зони спостереження РАЕС, Літня Ядерна Школа для абітурієнтів профільних ЗВО, відкриті уроки з профільних для галузі предметів, 
+                        різноманітні волонтерські проєкти тощо.</p>
+                    <p>Голова ВП ГО «УкрЯТ» в Рівненській області – Гуцало Сергій Миколайович, його заступник – Ошурко Олександр Михайлович.</p>
 
-                <p>Для кожної з професій створено і відповідно обладнано кабінети професійно-теоретичної підготовки та навчально-виробничі майстерні.</p>
-
-                <p>Комплексна забудова училища включає:</p>
-
-                <ul>
-                    <li>навчальний корпус на 450 учнівських місць;</li>
-                    <li>бібліотеку з фондом 22904&nbsp;екземплярів книг;</li>
-                    <li>актову та спортивну зали;</li>
-                    <li>спортивний майданчик;</li>
-                    <li>сім навчальних майстерень;</li>
-                    <li>лабораторію КВПтаА;</li>
-                    <li>монтажний полігон.</li>
-                </ul>
-
-                <p>В училищі створені всі умови для здобуття таких професій:</p>
-
-                <ul>
-                    <li>слюсар з ремонту реакторно-турбінного устаткування;</li>
-                    <li>слюсар з контрольно-вимірювальних приладів і автоматики (електромеханіка);</li>
-                    <li>слюсар з виготовлення деталей та вузлів систем вентиляції, кондиціювання повітря й аспірації,</li>
-                    <li>електрогазозварник, контролер зварювальних робіт;</li>
-                    <li>монтажник устаткування атомних електричних станцій;</li>
-                    <li>електромонтер з ремонту та обслуговування електроустаткування;</li>
-                    <li>електрослюсар з ремонту устаткування розподільчих пристроїв;</li>
-                    <li>монтажник санітарно-технічних систем і устаткування;</li>
-                    <li>столяр будівельний;</li>
-                    <li>різьбяр по дереву та бересту;</li>
-                    <li>стропальник;</li>
-                    <li>газорізальник;</li>
-                    <li>електромеханік з ліфтів;</li>
-                    <li>ліфтер;</li>
-                    <li>машиніст компресорних установок;</li>
-                    <li>слюсар з ремонту реакторно-турбінного устаткування, електрогазозварник;</li>
-                    <li>слюсар з контрольно-вимірювальних приладів і автоматики (електромеханіка), електромонтер з ремонту апаратури релейного захисту й автоматики;</li>
-                    <li>токар.</li>
-                </ul>
-
-                <p><a href="/assets/images/news/2020/06/2020-06-02_10-42_оголошення_2020_вступ.pdf">Оголошення для абітурієнтів 2020 року</a></p>
-
-                <p>Інженерно-педагогічний колектив налічує 59 працівників. В училищі функціонують спортивні гуртки з волейболу, баскетболу, настільного тенісу, атлетичної гімнастики. Окрім спортивних активно працює гурток художньої самодіяльності.</p>
-
-                <p>За час існування училища підготовлено понад 6 тисяч кваліфікованих робітників та проведено перепідготовку більше 20 тисяч працівників ВП РАЕС.</p>
-
-                <ul class="gallery clearfix" id="galereya">
-                    <li>
-                        <a class="highslide" onclick="return hs.expand(this)" href="assets/images/ptu/p01.jpg"><img alt="Загальний вигляд ПТУ ВП РАЕС" src="assets/components/directresize/cache/dr_p01_w170_h118.jpg" title="Загальний вигляд ПТУ ВП РАЕС"></a>
-                    </li>
-                    <li>
-                        <a class="highslide " onclick="return hs.expand(this)" href="assets/images/ptu/p02.jpg"><img alt="Кабінет енергетичних дисциплін" src="assets/components/directresize/cache/dr_p02_w170_h118.jpg" title="Кабінет енергетичних дисциплін"></a>
-                    </li>
-                    <li>
-                        <a class="highslide" onclick="return hs.expand(this)" href="assets/images/ptu/p03.jpg"><img alt="Слюсарна майстерня" src="assets/components/directresize/cache/dr_p03_w170_h113.jpg" title="Слюсарна майстерня"></a>
-                    </li>
-                    <li>
-                        <a class="highslide" onclick="return hs.expand(this)" href="assets/images/ptu/p04.jpg"><img alt="Майстерня зварювання" src="assets/components/directresize/cache/dr_p04_w170_h113.jpg" title="Майстерня зварювання"></a>
-                    </li>
-                    <li>
-                        <a class="highslide" onclick="return hs.expand(this)" href="assets/images/ptu/p05.jpg"><img alt="Деревообробна майстерня" src="assets/components/directresize/cache/dr_p05_w170_h88.jpg" title="Деревообробна майстерня"></a>
-                    </li>
-                    <li>
-                        <a class="highslide" onclick="return hs.expand(this)" href="assets/images/ptu/p06.jpg"><img alt="Бібліотека" src="assets/components/directresize/cache/dr_p06_w170_h113.jpg" title="Бібліотека"></a>
-                    </li>
-                    <li>
-                        <a class="highslide" onclick="return hs.expand(this)" href="assets/images/ptu/p07.jpg"><img alt="Кабінет загальноосвітніх дисциплін" src="assets/components/directresize/cache/dr_p07_w170_h114.jpg" title="Кабінет загальноосвітніх дисциплін"></a>
-                    </li>
-                    <li>
-                        <a class="highslide" onclick="return hs.expand(this)" href="assets/images/ptu/p08.jpg"><img alt="Кабінет спецтехнологій зварників" src="assets/components/directresize/cache/dr_p08_w170_h113.jpg" title="Кабінет спецтехнологій зварників"></a>
-                    </li>
-                    <li>
-                        <a class="highslide" onclick="return hs.expand(this)" href="assets/images/ptu/p09.jpg"><img alt="Спортзал" src="assets/components/directresize/cache/dr_p09_w170_h114.jpg" title="Спортзал"></a>
-                    </li>
-                </ul>
-
+                    <p></p>
+                    <p><b>Контакти</b></p>
+                    Тел.: +38 (03636) 62-465<br>
+                    E-mail: <a href="mailto:gusn@rnpp.atom.gov.ua">gusn@rnpp.atom.gov.ua</a><br><br>
+                    <span>Бланки для вступу:</span>
+                    <br><a href="https://drive.google.com/file/d/1_rdzlELDcc5n2OaQnigW2Ra84Oau9-E5/view?usp=sharing" target="_blank">Заява про членство</a>
+                    <br><a href="https://drive.google.com/file/d/1jIIrNtAGEUbguGp-6lsXdezog4xUTT8I/view?usp=sharing" target="_blank">Заява на внески</a>
+                    
+                </div>
             </div>
         </div>
     </section>
-    <!-- news end -->
 
     <footer class=" footer ">
         <div class="container">
@@ -299,6 +277,7 @@
                     </ul>
                 </div>
             </div>
+
         </div>
         <div class="footer__wrap"></div>
         <div class="footer__copy t3">
@@ -311,22 +290,18 @@
 
     <script src="../js/lib/jquery.min.js "></script>
     <script src="../js/lib/bootstrap5.min.js "></script>
-    <script src="../js/lib/slick.min.js"></script>
-    <!-- without version: <script src="../js/main.js"></script> 
-    <script src="../js/leaders_page.js "></script>-->
+    <!-- without version: <script src="../js/main.js"></script> -->
     <!-- <script> /* use this */
         _v.add('js/main.js'); 
-        _v.add('js/news_page.js'); 
     </script> -->
 
-    <script>
-        /* temporary script */
-        let s = document.createElement('script');
-        s.setAttribute('src', '../js/_version.js?v=' + parseInt(Math.random() * 1000000));
-        s.onload = function() {
-            _v.add('../css/page_news.css', 1);
-            _v.add('../js/main.js');
-            _v.add('../js/news_page.js');
+    <script> /* temporary script */
+        let s=document.createElement('script');
+        s.setAttribute('src','../js/_version.js?v='+parseInt(Math.random()*1000000));
+        s.onload=function(){
+            _v.add('../css/page_about.css',1); 
+            _v.add('../js/main.js'); 
+            _v.add('../js/about_menu.js'); 
         };
         document.head.appendChild(s);
     </script>
