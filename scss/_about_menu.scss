@@ -25,7 +25,7 @@
         position: relative;
     }
     &__content {
-        padding-top: 40px;
+        padding-top: 20px;
         min-height: 550px;
         & p {
             padding: 0 0 24px 0;
@@ -33,7 +33,7 @@
     }
     @media(min-width: 768px) {
         &__content {
-            margin-left: 300px;
+            margin-left: 320px;
             padding-top: 60px;
             & p {
                 padding: 0 0 24px 0;

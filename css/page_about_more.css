@@ -75,7 +75,7 @@
 }
 
 .allabout__content {
-  padding-top: 40px;
+  padding-top: 20px;
   min-height: 550px;
 }
 
@@ -85,7 +85,7 @@
 
 @media (min-width: 768px) {
   .allabout__content {
-    margin-left: 300px;
+    margin-left: 320px;
     padding-top: 60px;
   }
   .allabout__content p {
@@ -291,6 +291,168 @@
   }
 }
 
+.row > .column {
+  padding: 8px;
+  display: inline-block;
+  width: 33%;
+}
+
+@media (min-width: 768px) {
+  .row > .column {
+    width: 24%;
+  }
+}
+
+@media (min-width: 1000px) {
+  .row > .column {
+    width: 19%;
+  }
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.columns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.columns .column {
+  display: inline-block;
+  width: 32%;
+  padding-bottom: 8px;
+}
+
+@media (min-width: 768px) {
+  .columns .column {
+    width: 24%;
+  }
+}
+
+@media (min-width: 1000px) {
+  .columns .column {
+    width: 19%;
+  }
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 100000;
+  padding-top: 30px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.95);
+}
+
+@media (max-width: 768px) {
+  .modal {
+    padding-top: 20px;
+  }
+}
+
+.modal .caption-container {
+  text-align: left;
+  padding: 0;
+  color: white;
+  width: 90%;
+  margin: 8px auto;
+}
+
+.modal .caption-container p {
+  padding: 0;
+}
+
+.modal .close {
+  color: white;
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  font-size: 30px;
+}
+
+.modal .close:hover, .modal .close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-content {
+  position: relative;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  max-width: 1200px;
+  background-color: transparent;
+}
+
+.modal-content .bigphoto {
+  display: none;
+}
+
+.modal-content .options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 16px 0;
+}
+
+.modal-content .options .numbertext {
+  color: white;
+  font-size: 18px;
+  padding: 0;
+}
+
+.modal-content .options .white {
+  color: white;
+  border-color: white;
+}
+
+@media (max-width: 768px) {
+  .modal-content .options .white:hover, .modal-content .options .white:active {
+    background-color: transparent;
+  }
+}
+
+.halftransparent {
+  opacity: 0.4;
+}
+
+.active, .halftransparent:hover {
+  opacity: 1;
+}
+
+img.hover-shadow {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.hover-shadow:hover {
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
 .block-title {
   padding: 20px;
   cursor: pointer;
@@ -322,4 +484,10 @@
 
 .block-content.content-hidden {
   display: none;
+}
+
+@media (max-width: 768px) {
+  .block-content {
+    padding-left: 0;
+  }
 }

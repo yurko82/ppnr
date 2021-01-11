@@ -64,3 +64,4 @@ $('.about_side_menu li.about_side_menu-submenu2 > a').click((e)=>{
     e.preventDefault();
     e.stopPropagation();
 });
+

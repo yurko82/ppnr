@@ -75,7 +75,7 @@
 }
 
 .allabout__content {
-  padding-top: 40px;
+  padding-top: 20px;
   min-height: 550px;
 }
 
@@ -85,7 +85,7 @@
 
 @media (min-width: 768px) {
   .allabout__content {
-    margin-left: 300px;
+    margin-left: 320px;
     padding-top: 60px;
   }
   .allabout__content p {
@@ -194,8 +194,10 @@
   padding-right: 8px;
 }
 
-.allabout .about_side_menu-submenu2 ul li a {
-  color: #757575;
+@media (max-width: 768px) {
+  .allabout .about_side_menu-submenu2 ul li a {
+    color: #757575;
+  }
 }
 
 .allabout .about_side_menu-submenu2 .angle-down {

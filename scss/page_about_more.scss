@@ -1,4 +1,5 @@
 @import "_about_menu";
+@import "_rnpp_lightbox";
 
 .block {
     &-title {
@@ -23,6 +24,9 @@
         padding-left: 20px;
         &.content-hidden{
             display: none;
+        }
+        @media (max-width:768px){
+            padding-left: 0;
         }
     }
 }

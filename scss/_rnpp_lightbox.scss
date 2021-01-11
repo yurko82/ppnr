@@ -1,0 +1,110 @@
+
+  .row > .column {
+    padding: 8px;
+    display: inline-block;
+    width: 33%;
+    @media (min-width: 768px){
+      width: 24%;
+    }
+    @media (min-width: 1000px){
+      width: 19%;
+    }
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  .columns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    & .column {
+      display: inline-block;
+      width: 32%;
+      padding-bottom: 8px;
+      @media (min-width: 768px){
+        width: 24%;
+      }
+      @media (min-width: 1000px){
+        width: 19%;
+      }
+    }
+  }
+   
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 100000;
+    padding-top: 30px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.95);
+    @media (max-width: 768px){
+      padding-top: 20px;
+    }
+    & .caption-container {
+      text-align: left;
+      padding: 0;
+      color: white;
+      width: 90%;
+      margin: 8px auto;
+      & p {
+        padding: 0;
+      }
+    }
+    & .close {
+      color: white;
+      position: absolute;
+      top: 25px;
+      right: 25px;
+      font-size: 30px;
+      &:hover, &:focus {
+        color: #999;
+        text-decoration: none;
+        cursor: pointer;
+      }
+    }
+    &-content {
+      position: relative;
+      margin: auto;
+      padding: 0;
+      width: 90%;
+      max-width: 1200px;
+      background-color: transparent;
+      & .bigphoto {
+        display: none;
+      }
+      & .options{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 16px 0;
+        & .numbertext {
+          color: white;
+          font-size: 18px;
+          padding: 0;
+        }
+        & .white {
+          color: white;
+          border-color: white;
+          @media (max-width: 768px){
+            &:hover, &:active {
+              background-color: transparent;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  .halftransparent { opacity: 0.4; }
+  .active, .halftransparent:hover { opacity: 1; }
+  img.hover-shadow { transition: 0.3s; }
+  .hover-shadow:hover { box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
