@@ -1,0 +1,230 @@
+@import "_colors";
+.article {
+    & p,
+    img {
+        padding-top: 20px;
+    }
+    &__container {
+        max-width: 900px;
+        width: 100%;
+        // padding: 0 270px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    &__img {
+        height: 800px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    &__head {
+        display: flex;
+        justify-content: space-between;
+        padding: 8px 0;
+        color: $grey4;
+        &-wrap {
+            flex: 1;
+        }
+    }
+    &__title {
+        color: $blue3;
+        h1 {
+            font-weight: 400;
+        }
+    }
+    &__quote {
+        width: 100vw;
+        margin-left: calc(-50vw + 50%);
+        background: $blue6;
+        padding: 0 0 20px 0;
+        font-style: italic;
+        &-block {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            &>i {
+                position: absolute;
+                left: -61px;
+                top: 24px;
+                color: $blue4;
+                font-size: 40px;
+            }
+        }
+        &-text {
+            padding-top: 20px;
+            font-size: 18px;
+        }
+    }
+    &__img {
+        &-slider {
+            margin-top: 40px;
+            &>.slick-dots {
+                display: flex;
+                position: absolute;
+                left: 0;
+                top: -30px;
+                & button {
+                    padding-right: 5px;
+                    color: $grey2;
+                }
+                &::before {
+                    content: "Фото";
+                    padding-right: 16px;
+                    font-size: 18px;
+                    color: $grey4;
+                }
+            }
+        }
+        &-slid {
+            height: 500px;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    }
+    &__footer {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 0;
+        color: $grey2;
+        & a {
+            color: $blue3;
+            border: 1px solid $blue3;
+            padding: 0 3px;
+        }
+        &-tags {
+            &>span {
+                font-size: 18px;
+                color: $grey4;
+            }
+        }
+        &-autor {
+            font-style: italic;
+            & span {
+                font-style: normal;
+                color: $grey4;
+                font-size: 18px;
+            }
+        }
+    }
+    &__social {
+        font-size: 40px;
+        color: $grey4;
+        text-align: center;
+    }
+    &__button {
+        display: flex;
+        justify-content: space-between;
+        padding: 12px 0;
+        & button {
+            padding: 3px;
+        }
+    }
+    &__others {
+        color: $grey4;
+        &>span {
+            font-size: 18px;
+        }
+        &-items {
+            display: flex;
+            justify-content: space-between;
+            margin: 15px 0 20px 0;
+        }
+        &-item {
+            width: 30%;
+            border: 1px solid $grey5;
+            padding: 5px;
+        }
+        &-title {
+            color: $blue3;
+            & h5 {
+                font-weight: 400;
+                color: $blue3;
+                font-size: 18px;
+            }
+        }
+        &-footer {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+}
+
+.lang {
+    &__block {
+        position: relative;
+        & .lang {
+            display: flex;
+            border: none;
+            font-size: 15px;
+            color: $blue3;
+            box-shadow: none;
+            padding: 0 5px;
+            transition: .5s;
+            & i {
+                margin: auto 0;
+                transition: .3s;
+            }
+            & .arrow-down {
+                margin-left: 9px;
+                font-size: 20px;
+                transition: .3s;
+                position: relative;
+                width: 12px;
+                height: 6px;
+                top: 9px;
+                & span:first-child,
+                 :last-child {
+                    content: '';
+                    width: 2px;
+                    height: 7px;
+                    position: absolute;
+                    display: block;
+                }
+            }
+            & text {
+                text-transform: uppercase;
+                font-size: 13px;
+            }
+        }
+        & .slideDown i {
+            transform: rotate(180deg);
+            transition: .3s;
+        }
+    }
+    &__drop {
+        display: flex;
+        flex-direction: column;
+        opacity: 0;
+        position: absolute;
+        z-index: 3;
+        min-height: 0;
+        overflow: hidden;
+        left: 0;
+        width: 100%;
+        top: 32px;
+        transition: .3s;
+        &.open {
+            opacity: 1;
+            max-height: 999px;
+        }
+        & a {
+            padding: 8px 8px;
+            text-align: center;
+            transition: .3s all;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 1px solid $grey4;
+            font-size: 13px;
+            font-weight: 600;
+            color: $blue3;
+            background-color: #fff;
+            &:hover {
+                background-color: $blue6;
+            }
+            &.active {
+                background-color: $blue6;
+            }
+        }
+    }
+}
