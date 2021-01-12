@@ -26,7 +26,7 @@
     }
     &__content {
         padding-top: 20px;
-        min-height: 550px;
+        min-height: 300px;
         & p {
             padding: 0 0 24px 0;
         }
@@ -35,6 +35,7 @@
         &__content {
             margin-left: 320px;
             padding-top: 60px;
+            min-height: 550px;
             & p {
                 padding: 0 0 24px 0;
             }

@@ -38,6 +38,10 @@
   background-color: #eeeeee;
 }
 
+.text-blue3 {
+  color: #005b99;
+}
+
 .text-blue5 {
   color: #74d2e7;
 }
@@ -76,7 +80,7 @@
 
 .allabout__content {
   padding-top: 20px;
-  min-height: 550px;
+  min-height: 300px;
 }
 
 .allabout__content p {
@@ -87,6 +91,7 @@
   .allabout__content {
     margin-left: 320px;
     padding-top: 60px;
+    min-height: 550px;
   }
   .allabout__content p {
     padding: 0 0 24px 0;
@@ -292,7 +297,7 @@
 }
 
 .row > .column {
-  padding: 8px;
+  padding: 4px;
   display: inline-block;
   width: 33%;
 }
@@ -305,6 +310,7 @@
 
 @media (min-width: 1000px) {
   .row > .column {
+    padding: 8px;
     width: 19%;
   }
 }
@@ -372,10 +378,17 @@
   color: white;
   width: 90%;
   margin: 8px auto;
+  font-size: 16px;
 }
 
 .modal .caption-container p {
   padding: 0;
+}
+
+@media (max-width: 768px) {
+  .modal .caption-container {
+    font-size: 18px;
+  }
 }
 
 .modal .close {
@@ -453,9 +466,19 @@ img.hover-shadow {
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+.block:nth-child(2n) {
+  background-color: #f0f0f0;
+}
+
 .block-title {
   padding: 20px;
+  font-size: 18px;
   cursor: pointer;
+}
+
+.block-title.show {
+  font-weight: 700;
+  color: #41b6e6;
 }
 
 .block-title span {
@@ -476,6 +499,13 @@ img.hover-shadow {
 .block-title .angle-down.show {
   -webkit-transform: rotate(270deg);
           transform: rotate(270deg);
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .block-title {
+    font-size: 20px;
+  }
 }
 
 .block-content {
@@ -489,5 +519,128 @@ img.hover-shadow {
 @media (max-width: 768px) {
   .block-content {
     padding-left: 0;
+    margin: 0 10px;
+  }
+}
+
+.block-content .info p, .block-content .info li, .block-content .info span {
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  .block-content .info p, .block-content .info li, .block-content .info span {
+    font-size: 18px;
+  }
+}
+
+.block-content .presentations > a {
+  display: block;
+  padding: 10px;
+  color: #005b99;
+  font-size: 16px;
+}
+
+.block-content .presentations > a:first-child {
+  padding-top: 0;
+}
+
+.block-content .presentations > a:last-child {
+  padding-bottom: 20px;
+}
+
+.block-content .presentations > a:hover {
+  color: #41b6e6;
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .block-content .presentations > a {
+    font-size: 18px;
+  }
+}
+
+.block-content .zaput label, .block-content .zaput span {
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  .block-content .zaput label, .block-content .zaput span {
+    font-size: 18px;
+  }
+}
+
+.block-content .zaput label {
+  margin-left: 10px;
+}
+
+.block-content .accreditation > div {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+.block-content .accreditation > div span {
+  width: 25%;
+}
+
+.block-content .accreditation > div select {
+  font-size: 16px;
+  width: 200px;
+}
+
+.block-content .accreditation > div input, .block-content .accreditation > div select, .block-content .accreditation > div textarea {
+  border: 1px solid #d1d1d1;
+  color: #505050;
+  padding: 4px;
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  .block-content .accreditation > div {
+    font-size: 18px;
+  }
+  .block-content .accreditation > div input, .block-content .accreditation > div select, .block-content .accreditation > div textarea {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 900px) {
+  .block-content .accreditation > div {
+    margin: 20px 0;
+    padding-left: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .block-content .accreditation > div span {
+    width: 100%;
+  }
+  .block-content .accreditation > div input, .block-content .accreditation > div select, .block-content .accreditation > div textarea {
+    width: 100%;
+    padding: 8px;
+  }
+}
+
+.block-content .accreditation > span {
+  font-size: 16px;
+}
+
+.block-content .accreditation > span a {
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  .block-content .accreditation > span {
+    font-size: 18px;
+  }
+  .block-content .accreditation > span a {
+    font-size: 18px;
   }
 }

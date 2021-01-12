@@ -1,4 +1,5 @@
 $(".block-title").click((e)=>{
+    $(e.target).toggleClass('show');
     $(e.target).find('.angle-down').toggleClass('show');
     $(e.target).parent().find('.block-content').toggle(300);
 });

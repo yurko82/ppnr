@@ -47,6 +47,10 @@
   background-color: #eeeeee;
 }
 
+.text-blue3 {
+  color: #005b99;
+}
+
 .text-blue5 {
   color: #74d2e7;
 }
@@ -820,6 +824,10 @@ button.next {
   background-color: #eeeeee;
 }
 
+.text-blue3 {
+  color: #005b99;
+}
+
 .text-blue5 {
   color: #74d2e7;
 }
@@ -1545,6 +1553,10 @@ button.next {
 
 .bg-grey6 {
   background-color: #eeeeee;
+}
+
+.text-blue3 {
+  color: #005b99;
 }
 
 .text-blue5 {

@@ -1,12 +1,13 @@
 
   .row > .column {
-    padding: 8px;
+    padding: 4px;
     display: inline-block;
     width: 33%;
     @media (min-width: 768px){
       width: 24%;
     }
     @media (min-width: 1000px){
+      padding: 8px;
       width: 19%;
     }
   }
@@ -57,6 +58,10 @@
       margin: 8px auto;
       & p {
         padding: 0;
+      }
+      font-size: 16px;
+      @media (max-width: 768px){
+        font-size: 18px;
       }
     }
     & .close {
