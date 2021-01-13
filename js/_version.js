@@ -8,7 +8,11 @@ let _v = (function(){
         'index__news-block':2,
         'leaders_page':4,
         'news_page':3,
-        'about_menu':1
+        'about_menu':2,
+        'about_more_page':1,
+        'article_page':1,
+        'history_additional':1,
+        'rnpp_lightbox':1
     };
 
     let versionCSS = {
@@ -16,10 +20,10 @@ let _v = (function(){
         'page_index':7,
         'page_news':7,
         'page_allnews':7,
-        'page_about':7,
+        'page_about':8,
         'page_about_history':10,
         'page_about_leader':8,
-        'common':2
+        'common':3
     }
 
     let getJSversion=function(filename){ return versionJS[filename]||''; }
