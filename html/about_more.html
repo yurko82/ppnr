@@ -387,8 +387,6 @@
 
     <script src="../js/lib/jquery.min.js "></script>
     <script src="../js/lib/bootstrap5.min.js "></script>
-    <script src="../js/rnpp_touches.js"></script>
-    <script src="../js/rnpp_lightbox.js"></script>
     <!-- without version: <script src="../js/main.js"></script> -->
     <!-- <script> /* use this */
         _v.add('js/main.js'); 
@@ -399,7 +397,9 @@
         s.setAttribute('src','../js/_version.js?v='+parseInt(Math.random()*1000000));
         s.onload=function(){
             _v.add('../css/page_about_more.css',1); 
-            _v.add('../js/main.js'); 
+            _v.add('../js/main.js');
+            _v.add('../js/rnpp_touches.js');
+            _v.add('../js/rnpp_lightbox.js');
             _v.add('../js/about_menu.js');
             _v.add('../js/about_more_page.js');
         };
