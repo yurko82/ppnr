@@ -19,8 +19,8 @@ class RnppLightbox {
         <div class="caption-container"><p>Caption</p></div>
         <div class="modal-content">`;
         for (i=0;i<l;i++){
-            html+=`<div class="bigphoto">
-                    <img src="${this.photos[i]}" style="width:100%">
+            html+=`<div class="bigphoto" draggable="false">
+                    <img draggable="false" src="${this.photos[i]}" style="width:100%">
                 </div>`;
         }
         html+=`<div class="options"><div><span class="numbertext">0/0</span></div> 
@@ -34,11 +34,14 @@ class RnppLightbox {
         }
         html+='</div></div>';
         this.parent.html(html);
-        this.bigphotos=this.parent.find(".bigphoto");
-        this.dots=this.parent.find(".halftransparent");
+        this.bigphotos=this.parent.find(".bigphoto").toArray();
+        this.dots=this.parent.find(".halftransparent").toArray();
         this.modal=this.parent.find(".modal");
         this.captionText = this.parent.find(".caption-container p");
         this.numberText = this.parent.find('.numbertext');
+        this.bigphotos.forEach(el => {
+            new RnppTouches(el, {swipeLeft: ()=>this.plusSlides(1), swipeRight: ()=>this.plusSlides(-1), touch:true, mouse:true});
+        });
     }
 
     openModal(){ this.modal.css("display", "block"); }

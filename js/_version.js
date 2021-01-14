@@ -12,7 +12,8 @@ let _v = (function(){
         'about_more_page':1,
         'article_page':1,
         'history_additional':1,
-        'rnpp_lightbox':1
+        'rnpp_lightbox':2,
+        'rnpp_touches':1
     };
 
     let versionCSS = {
