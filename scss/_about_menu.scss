@@ -1,8 +1,8 @@
 @import "_colors";
-
 .hidden {
     display: none !important;
 }
+
 .allabout {
     color: $grey1;
     & .backpage {
@@ -27,6 +27,9 @@
     &__content {
         padding-top: 20px;
         min-height: 300px;
+        & .img-info {
+            width: 100%;
+        }
         & p {
             padding: 0 0 24px 0;
         }
@@ -36,6 +39,9 @@
             margin-left: 320px;
             padding-top: 60px;
             min-height: 550px;
+            & .img-info {
+                width: 50vw;
+            }
             & p {
                 padding: 0 0 24px 0;
             }
@@ -72,9 +78,9 @@
             margin-top: 8px;
             text-align: center;
             color: $grey2;
-            &.not-open-ul > ul {
+            &.not-open-ul>ul {
                 display: none;
-            } 
+            }
             @media(max-width: 768px) {
                 cursor: pointer;
             }
@@ -93,7 +99,7 @@
                 transition: .3s;
                 font-size: 12px;
                 padding-top: 3px;
-                &.show{
+                &.show {
                     transform: rotate(270deg);
                 }
                 @media(max-width: 768px) {
@@ -108,13 +114,13 @@
             & ul {
                 padding-left: 12px;
                 padding-right: 8px;
-                & li a{
+                & li a {
                     @media(max-width: 768px) {
                         color: $grey3;
                     }
                 }
             }
-            & .angle-down{
+            & .angle-down {
                 pointer-events: none;
                 display: inline-block;
             }
@@ -136,7 +142,7 @@
                     color: $blue3;
                 }
             }
-            &.active a{
+            &.active a {
                 color: $blue4;
             }
             @media(max-width: 768px) {
@@ -151,7 +157,7 @@
                         margin-bottom: 16px;
                     }
                 }
-            } 
+            }
         }
         & .icon-up-down {
             display: flex;
