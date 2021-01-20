@@ -377,12 +377,17 @@
   text-align: left;
   padding: 0;
   color: white;
-  margin: 8px auto;
+  width: 90%;
+  margin: 8px 0;
   font-size: 18px;
 }
 
 .modal .caption-container p {
   padding: 0;
+}
+
+.modal-arrow-container {
+  display: none;
 }
 
 .modal .close {
@@ -401,7 +406,7 @@
 
 .modal-content {
   position: relative;
-  margin: auto;
+  margin: 5px auto;
   padding: 0;
   width: 90%;
   max-width: 1200px;
@@ -409,6 +414,10 @@
 }
 
 .modal-content .bigphoto {
+  display: none;
+}
+
+.modal-content .bigphoto .numbertext-container {
   display: none;
 }
 
@@ -448,6 +457,9 @@
   }
   .modal .caption-container {
     font-size: 16px;
+  }
+  .modal-arrow-container {
+    display: block;
   }
 }
 
