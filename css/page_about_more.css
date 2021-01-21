@@ -378,7 +378,7 @@
   padding: 0;
   color: white;
   width: 90%;
-  margin: 8px 0;
+  margin-bottom: 8px;
   font-size: 18px;
 }
 
@@ -406,7 +406,7 @@
 
 .modal-content {
   position: relative;
-  margin: 5px auto;
+  margin: 15px auto;
   padding: 0;
   width: 90%;
   max-width: 1200px;
@@ -455,11 +455,40 @@
   .modal {
     padding-top: 30px;
   }
-  .modal .caption-container {
-    font-size: 16px;
+  .modal .bigphotos {
+    position: relative;
   }
-  .modal-arrow-container {
+  .modal .bigphotos .bigphoto {
+    position: relative;
+  }
+  .modal .bigphotos .bigphoto .numbertext-container {
+    font-size: 16px;
     display: block;
+    position: absolute;
+    color: white;
+    bottom: 16px;
+    left: 16px;
+  }
+  .modal .bigphotos .bigphoto .caption-container {
+    font-size: 16px;
+    display: block;
+    position: absolute;
+    color: white;
+    top: 16px;
+    left: 16px;
+  }
+  .modal .bigphotos .bigphoto-arrow-container {
+    display: block;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+  .modal .options {
+    display: none;
+  }
+  .modal .columns {
+    margin-top: 20px;
   }
 }
 
