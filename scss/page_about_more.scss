@@ -32,12 +32,12 @@
         }
     }
     &-content {
-        padding-left: 20px;
+        padding: 0 20px;
         &.content-hidden {
             display: none;
         }
         @media (max-width:768px) {
-            padding-left: 0;
+            paddingt: 0;
             margin: 0 10px;
         }
         & .info {
