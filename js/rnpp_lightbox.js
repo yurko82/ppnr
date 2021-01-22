@@ -19,19 +19,19 @@ class RnppLightbox {
         <div class="modal-content"><div class="bigphotos">`;
         for (i=0;i<l;i++){
             html+=`<div class="bigphoto" draggable="false">
-                    <img draggable="false" src="${this.photos[i]}" style="width:100%">
                     <div class="caption-container"><span>${this.texts[i]}</span></div>
+                    <img draggable="false" src="${this.photos[i]}" style="width:100%">
                     <div class="numbertext-container"><span>${parseInt(i+1)} / ${parseInt(l)}</span></div> 
                 </div>`;
         }
         html+=`<div class="bigphoto-arrow-container">
-            <button class="btn-arrow btn-d btn-arrow-left pointer white" onclick="lightbox.plusSlides(-1)"><a class="icon-left-arrow"></a></button>
-            <button class="btn-arrow btn-d btn-arrow-right pointer white" onclick="lightbox.plusSlides(1)"><a class="icon-right-arrow"></a></button>
+            <button class="btn-arrow-lightbox btn-arrow-left" onclick="lightbox.plusSlides(-1)"><a class="icon-left-arrow"></a></button>
+            <button class="btn-arrow-lightbox btn-arrow-right" onclick="lightbox.plusSlides(1)"><a class="icon-right-arrow"></a></button>
         </div></div>
         <div class="options"><div><span class="numbertext">0/0</span></div> 
                 <div class="btn-arrow-container">
-                    <button class="btn-arrow btn-d btn-arrow-left pointer white" onclick="lightbox.plusSlides(-1)"><a class="icon-left-arrow"></a></button>
-                    <button class="btn-arrow btn-d btn-arrow-right pointer white" onclick="lightbox.plusSlides(1)"><a class="icon-right-arrow"></a></button>
+                    <button class="btn-arrow-lightbox btn-arrow-left" onclick="lightbox.plusSlides(-1)"><a class="icon-left-arrow"></a></button>
+                    <button class="btn-arrow-lightbox btn-arrow-right" onclick="lightbox.plusSlides(1)"><a class="icon-right-arrow"></a></button>
                 </div></div>`;
         html+='<div class="columns">';
         for (i=0;i<l;i++){
