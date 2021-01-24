@@ -1,5 +1,3 @@
-(function() {
-
     let arBlocks = $('.allabout__content .block').toArray();
     $(".block-title").click((e)=>{
         let bt, p=$(e.target).parent().toArray()[0];
@@ -34,4 +32,3 @@
     let texts=['Опис 1', 'Опис 2', '', 'Опис 4', 'Опис 5', 'Опис 6', 'Опис 7', 'Опис 8', 'Опис 9', 'Опис 10'];
     let lightbox = new RnppLightbox('photo-gallery', arURLs, texts);
 
-})();
