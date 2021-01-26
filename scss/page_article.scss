@@ -1,17 +1,23 @@
 @import "_colors";
-
-
 .article {
-    & p, img {
+    & p,
+    img {
         padding-top: 20px;
     }
     & .container-full {
         position: relative;
+        padding-top: 60px;
+        @media(min-width: 768px) {
+            padding-top: 90px;
+        }
+        @media(min-width:999px) {
+            padding-top: 120px;
+        }
     }
     &__container {
         max-width: 900px;
         width: 100%;
-        margin-top:30px;
+        margin-top: 30px;
         margin-right: auto;
         margin-left: auto;
     }
@@ -26,10 +32,10 @@
             width: 100%;
             position: absolute;
             opacity: 0.3;
-            top:0;
-            left:0;
+            top: 0;
+            left: 0;
         }
-        @media(max-width:768px){
+        @media(max-width:768px) {
             height: 300px;
             &-overlay {
                 height: 300px;
@@ -53,12 +59,14 @@
     }
     &__text {
         font-size: 16px;
-        & p, a {
+        & p,
+        a {
             font-size: 16px;
         }
-        @media(max-width:768px){
+        @media(max-width:768px) {
             font-size: 18px;
-            & p, a {
+            & p,
+            a {
                 font-size: 18px;
             }
         }
@@ -84,12 +92,14 @@
         &-text {
             padding-top: 20px;
             font-size: 16px;
-            & p, a {
+            & p,
+            a {
                 font-size: 16px;
             }
-            @media(max-width:768px){
+            @media(max-width:768px) {
                 font-size: 18px;
-                & p, a {
+                & p,
+                a {
                     font-size: 18px;
                 }
             }
