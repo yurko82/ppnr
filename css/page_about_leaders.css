@@ -379,6 +379,7 @@
 }
 
 .leaders .leader__person {
+  width: 100%;
   margin-top: 12px;
 }
 
@@ -390,6 +391,10 @@
 
 .leader__img {
   width: 100%;
+}
+
+.leader:nth-last-child(n+1) {
+  margin: 0 auto;
 }
 
 .leader:first-child, .leader:nth-child(2) {
