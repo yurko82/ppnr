@@ -3,6 +3,8 @@
 .leaders {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
     &.allView {
         & .leader:nth-child(n+3) {
             display: block;
@@ -24,9 +26,6 @@
     line-height: 115%;
     &__img {
         width: 100%;
-    }
-    &:nth-last-child(n+1) {
-        margin: 0 auto;
     }
     &:first-child,
     &:nth-child(2) {
