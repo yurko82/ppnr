@@ -360,6 +360,9 @@ img, video, svg {
         -ms-flex-direction: row-reverse;
             flex-direction: row-reverse;
   }
+  .timeline__block:nth-child(even) .timeline__content2 h2 {
+    text-align: right;
+  }
   .timeline__block:nth-child(even) .timeline__date {
     left: auto;
     right: 0;
@@ -398,36 +401,16 @@ img, video, svg {
 @media (min-width: 1000px) {
   .timeline__content {
     margin-left: 24px;
-    padding: 0 20px 20px 20px;
+    padding: 20px;
     width: 45%;
     -webkit-box-flex: 0;
         -ms-flex-positive: 0;
             flex-grow: 0;
     will-change: transform;
     margin: 0;
-  }
-}
-
-.timeline__content::before {
-  content: '';
-  position: absolute;
-  top: 12px;
-  right: 100%;
-  width: 0;
-  height: 0;
-  border: 7px solid transparent;
-  border-right-color: #41b6e6;
-}
-
-@media (min-width: 1000px) {
-  .timeline__content::before {
-    top: calc(12px + 8*((100vw - 1000px)/280));
-  }
-}
-
-@media (min-width: 1280px) {
-  .timeline__content::before {
-    top: 20px;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
   }
 }
 
@@ -450,6 +433,35 @@ img, video, svg {
   .timeline__content h2 {
     font-size: 20px;
     padding: 20px 0;
+    display: none;
+  }
+}
+
+.timeline__content2 {
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  position: relative;
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
+  display: none;
+}
+
+.timeline__content2 h2 {
+  text-align: left;
+}
+
+@media (min-width: 1000px) {
+  .timeline__content2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 20px;
+    width: 45%;
   }
 }
 
@@ -474,9 +486,9 @@ img, video, svg {
   .timeline__box {
     width: calc(40px + 20*((100vw - 1000px)/280));
     height: calc(40px + 20*((100vw - 1000px)/280));
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
     margin-left: calc(5% - (20px + 10*((100vw - 1000px)/280)));
     will-change: transform;
   }
