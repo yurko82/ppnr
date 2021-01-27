@@ -224,46 +224,9 @@
                     <p>Інженерно-педагогічний колектив налічує 59 працівників. В училищі функціонують спортивні гуртки з волейболу, баскетболу, настільного тенісу, атлетичної гімнастики. Окрім спортивних активно працює гурток художньої самодіяльності.</p>
 
                     <p>За час існування училища підготовлено понад 6 тисяч кваліфікованих робітників та проведено перепідготовку більше 20 тисяч працівників ВП РАЕС.</p>
+                   
+                    <div id="photo-gallery"></div>
 
-                    <ul class="gallery clearfix" id="galereya">
-                        <li>
-                            <a class="highslide " onclick="return hs.expand(this)" href="assets/images/ptu/p01.jpg"><img alt="Загальний вигляд ПТУ ВП РАЕС" src="assets/components/directresize/cache/dr_p01_w170_h118.jpg" title="Загальний вигляд ПТУ ВП РАЕС"></a>
-                        </li>
-                        <li>
-                            <a class="highslide" onclick="return hs.expand(this)" href="assets/images/ptu/p02.jpg"><img alt="Кабінет енергетичних дисциплін" src="assets/components/directresize/cache/dr_p02_w170_h118.jpg" title="Кабінет енергетичних дисциплін"></a>
-                        </li>
-                        <li>
-                            <a class="highslide" onclick="return hs.expand(this)" href="assets/images/ptu/p03.jpg"><img alt="Слюсарна майстерня" src="assets/components/directresize/cache/dr_p03_w170_h113.jpg" title="Слюсарна майстерня"></a>
-                        </li>
-                        <li>
-                            <a class="highslide" onclick="return hs.expand(this)" href="assets/images/ptu/p04.jpg"><img alt="Майстерня зварювання" src="assets/components/directresize/cache/dr_p04_w170_h113.jpg" title="Майстерня зварювання"></a>
-                        </li>
-                        <li>
-                            <a class="highslide" onclick="return hs.expand(this)" href="assets/images/ptu/p05.jpg"><img alt="Деревообробна майстерня" src="assets/components/directresize/cache/dr_p05_w170_h88.jpg" title="Деревообробна майстерня"></a>
-                        </li>
-                        <li>
-                            <a class="highslide" onclick="return hs.expand(this)" href="assets/images/ptu/p06.jpg"><img alt="Бібліотека" src="assets/components/directresize/cache/dr_p06_w170_h113.jpg" title="Бібліотека"></a>
-                        </li>
-                        <li>
-                            <a class="highslide" onclick="return hs.expand(this)" href="assets/images/ptu/p07.jpg"><img alt="Кабінет загальноосвітніх дисциплін" src="assets/components/directresize/cache/dr_p07_w170_h114.jpg" title="Кабінет загальноосвітніх дисциплін"></a>
-                        </li>
-                        <li>
-                            <a class="highslide" onclick="return hs.expand(this)" href="assets/images/ptu/p08.jpg"><img alt="Кабінет спецтехнологій зварників" src="assets/components/directresize/cache/dr_p08_w170_h113.jpg" title="Кабінет спецтехнологій зварників"></a>
-                        </li>
-                        <li>
-                            <a class="highslide" onclick="return hs.expand(this)" href="assets/images/ptu/p09.jpg"><img alt="Спортзал" src="assets/components/directresize/cache/dr_p09_w170_h114.jpg" title="Спортзал"></a>
-                        </li>
-                    </ul>
-
-                </div>
-                <div class="article__img-slider">
-                    <div class="article__img-slid" style="background-image: url(../images/article/study1-2.jpg);"></div>
-                    <div class="article__img-slid" style="background-image: url(../images/article/study1-3.jpg);"></div>
-                    <div class="article__img-slid" style="background-image: url(../images/article/study1-4.jpg);"></div>
-                    <div class="article__img-slid" style="background-image: url(../images/article/study1-5.jpg);"></div>
-                    <div class="article__img-slid" style="background-image: url(../images/article/study1-6.jpg);"></div>
-                    <div class="article__img-slid" style="background-image: url(../images/article/study1-7.jpg);"></div>
-                </div>
             </div>
         </div>
     </section>
@@ -322,7 +285,7 @@
 
     <script src="../js/lib/jquery.min.js "></script>
     <script src="../js/lib/bootstrap5.min.js "></script>
-    <script src="../js/lib/slick.min.js"></script>
+    <!-- <script src="../js/lib/slick.min.js"></script> -->
     <!-- without version: <script src="../js/main.js"></script> 
     <script src="../js/leaders_page.js "></script>-->
     <!-- <script> /* use this */
@@ -335,9 +298,11 @@
         let s = document.createElement('script');
         s.setAttribute('src', '../js/_version.js?v=' + parseInt(Math.random() * 1000000));
         s.onload = function() {
-            _v.add('../css/page_article.css', 1);
+            _v.add('../css/page_study.css', 1);
             _v.add('../js/main.js');
-            _v.add('../js/article_page.js');
+            _v.add('../js/rnpp_touches.js');
+            _v.add('../js/rnpp_lightbox.js');
+            _v.add('../js/study_page.js');
         };
         document.head.appendChild(s);
     </script>
