@@ -416,7 +416,7 @@ img, video, svg {
 
 .timeline__content h2 {
   color: #363636;
-  font-size: 16px;
+  font-size: 18px;
   padding: 12px 0;
   font-weight: 400;
   line-height: 115%;
@@ -424,7 +424,6 @@ img, video, svg {
 
 @media (min-width: 768px) {
   .timeline__content h2 {
-    font-size: 18px;
     padding: 16px 0;
   }
 }
@@ -450,6 +449,9 @@ img, video, svg {
 
 .timeline__content2 h2 {
   text-align: left;
+  font-size: 24px;
+  font-weight: 400;
+  color: #505050;
 }
 
 @media (min-width: 1000px) {
@@ -462,6 +464,14 @@ img, video, svg {
             align-items: center;
     padding: 20px;
     width: 45%;
+  }
+}
+
+@media (min-width: 1280px) {
+  .timeline__content2 h2 {
+    font-size: 24px;
+    font-weight: 500;
+    color: #757575;
   }
 }
 
