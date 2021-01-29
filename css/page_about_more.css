@@ -643,7 +643,7 @@ img.hover-shadow {
 
 @media (max-width: 768px) {
   .block-content {
-    paddingt: 0;
+    padding: 0;
     margin: 0 10px;
   }
 }
@@ -659,6 +659,25 @@ img.hover-shadow {
   .block-content .info li,
   .block-content .info span {
     font-size: 18px;
+  }
+}
+
+.block-content .youtube {
+  display: block;
+  width: 100%;
+  max-height: 500px;
+  height: calc(90vw * 315 / 560);
+}
+
+@media (min-width: 768px) {
+  .block-content .youtube {
+    height: calc(70vw * 315 / 560);
+  }
+}
+
+@media (min-width: 1280px) {
+  .block-content .youtube {
+    height: 500px;
   }
 }
 
