@@ -38,6 +38,11 @@ img, video, svg {
             margin-bottom: 40px;
             &:nth-child(even) {
                 flex-direction: row-reverse;
+                & .timeline__content2 {
+                    & h2 {
+                        text-align: right;
+                    }
+                }
                 & .timeline__date {
                     left: auto;
                     right: 0;
@@ -71,41 +76,67 @@ img, video, svg {
         padding: 0 12px 12px 12px;
         @media (min-width: 1000px){
             margin-left: 24px;
-            padding: 0 20px 20px 20px;
+            padding: 20px;
             width: 45%;
             flex-grow: 0;
             will-change: transform;
             margin: 0;
+            order: 1;
         }
-        &::before {
-            content: '';
-            position: absolute;
-            top: 12px;
-            right: 100%;
-            width: 0;
-            height: 0;
-            border: 7px solid transparent;
-            border-right-color: $blue4;
-            @media (min-width: 1000px) {
-                top: calc(12px + 8*((100vw - 1000px)/280));
-            }
-            @media (min-width: 1280px){
-                top: 20px;
-            }
-        }
+        // &::before {
+        //     content: '';
+        //     position: absolute;
+        //     top: 12px;
+        //     right: 100%;
+        //     width: 0;
+        //     height: 0;
+        //     border: 7px solid transparent;
+        //     border-right-color: $blue4;
+        //     @media (min-width: 1000px) {
+        //         top: calc(12px + 8*((100vw - 1000px)/280));
+        //     }
+        //     @media (min-width: 1280px){
+        //         top: 20px;
+        //     }
+        // }
         & h2 {
             color: $grey1;
-            font-size: 16px;
+            font-size: 18px;
             padding: 12px 0;
             font-weight: 400;
             line-height: 115%;
             @media (min-width: 768px){
-                font-size: 18px;
                 padding: 16px 0;
             }
             @media (min-width: 1000px){
                 font-size: 20px;
                 padding: 20px 0;
+                display: none;
+            }
+        }
+    }
+    &__content2 {
+        flex-grow: 0;
+        position: relative;
+        order: 3;
+        display: none;
+        & h2 {
+            text-align: left;
+            font-size: 24px;
+            font-weight: 400;
+            color: $grey2;
+        }
+        @media (min-width: 1000px){
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            width: 45%;
+        }
+        @media (min-width: 1280px){
+            & h2{
+                font-size: 24px;
+                font-weight: 500;
+                color: $grey3;
             }
         }
     }
@@ -120,7 +151,7 @@ img, video, svg {
         @media (min-width: 1000px){
             width: calc(40px + 20*((100vw - 1000px)/280));
             height: calc(40px + 20*((100vw - 1000px)/280));
-            order: 1;
+            order: 2;
             margin-left: calc(5% - (20px + 10*((100vw - 1000px)/280)));
             will-change: transform;
         }
