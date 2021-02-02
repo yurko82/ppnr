@@ -3,20 +3,18 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, maximum-scale=1">
-    <meta name="description" content="">
-    <meta name="keywords" content="">
-    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
-    <title>Лідери</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ВАО АЕС</title>
 
     <!-- <script src='../js/_version.js?v=(add some version)'></script> -->
     <link href="../css/lib/bootstrap5.css" rel="stylesheet" id="bootstrap-css">
+    <!-- <link rel="stylesheet" href="../fonts/fontawesome/all.css"> -->
     <link rel="stylesheet" href="../fonts/GothamPro/stylesheet.css">
     <link rel="stylesheet" href="../fonts/rnpp-icons/rnpp-icons.css">
 
     <link rel="stylesheet" href="../css/common.css">
-    <!-- without version: <link rel="stylesheet" href="../css/page_about_leaders.css"> -->
-    <!-- <script>  _v.add('../css/page_about_leaders.css',1);  </script> /* use this */ -->
+    <!-- without version: <link rel="stylesheet" href="../css/page_about.css"> -->
+    <!-- <script>  _v.add('../css/page_about.css',1);  </script> /* use this */ -->
 </head>
 
 <body>
@@ -133,12 +131,12 @@
                                     </li>
                                     <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="dropdown4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Громаді <i class="icon-right-arrow angle-right"></i></a>
                                         <ul class="dropdown-menu dropdown-menu-right-1350" aria-labelledby="dropdown4">
-                                            <li><a class="dropdown-item" href="html/region.html">Розвиток регіону</a></li>
-                                            <li><a class="dropdown-item" href="html/career.html">Робочі місця</a></li>
-                                            <li><a class="dropdown-item" href="html/study.html">Навчання</a></li>
-                                            <li><a class="dropdown-item" href="html/sport.html">Спорт</a></li>
-                                            <li><a class="dropdown-item" href="html/rest.html">Відпочинок</a></li>
-                                            <li><a class="dropdown-item" href="html/culture.html">Культура</a></li>
+                                            <li><a class="dropdown-item" href="region.html">Розвиток регіону</a></li>
+                                            <li><a class="dropdown-item" href="study.html">Навчання</a></li>
+                                            <li><a class="dropdown-item" href="sport.html">Спорт</a></li>
+                                            <li><a class="dropdown-item" href="culture.html">Культура</a></li>
+                                            <li><a class="dropdown-item" href="rest.html">Відпочинок</a></li>
+                                            <li><a class="dropdown-item" href="hotel.html">Готель</a></li>
                                         </ul>
                                     </li>
                                 </ul>
@@ -163,6 +161,7 @@
     </header>
 
     <div class="to-top"></div>
+
     <section class="allabout">
         <div class="container">
             <div class="allabout__block">
@@ -195,7 +194,7 @@
                         <li class="about_side_menu-submenu" onclick="openSideSubMenu(this)">
                             <h3>Наша команда <i class="icon-right-arrow angle-down"></i></h3>
                             <ul>
-                                <li class="active"><a href="about_leaders.html">Лідери</a></li>
+                                <li><a href="about_leaders.html">Лідери</a></li>
                                 <li><a href="team.html">Професіонали</a></li>
                                 <li><a href="employee.html">Працівнику</a></li>
                                 <li><a href="career.html">Кар’єра і HR</a></li>
@@ -208,7 +207,7 @@
                                 <li><a href="profspilka.html">Профспілка</a></li>
                                 <li><a href="ukrns.html">УкрЯТ</a></li>
                                 <li><a href="uaf.html">УЯФ</a></li>
-                                <li><a href="waoaes.html">ВАО АЕС</a></li>
+                                <li class="active"><a href="waoaes.html">ВАО АЕС</a></li>
                                 <li><a href="magate.html">МАГАТЕ</a></li>
                                 <li><a href="partners.html">Ділові партнери</a></li>
                             </ul>
@@ -217,59 +216,56 @@
                 </nav>
 
                 <div class="allabout__content">
-                    <div class="leaders pointer">
-                        <div class="leader" onclick="window.location.href='about_leader1.html?gd'">
-                            <img class="leader__img" src="../images/leader/pavlishin.jpg" alt="Павлишин П.Я." />
-                            <div class="leader__name">Павлишин Павло Яремович</div>
-                            <div class="leader__info">Генеральний директор</div>
-                        </div>
-                        <div class="leader" onclick="window.location.href='about_leader2.html?gi'">
-                            <img class="leader__img" src="../images/leader/kovtonyk.jpg" alt="Ковтонюк П.І." />
-                            <div class="leader__name">Ковтонюк Павло Іванович</div>
-                            <div class="leader__info">Головний інженер - перший заступник генерального директора </div>
-                        </div>
-                        <div class="leader" onclick="window.location.href='about_leader3.html?zgdui'">
-                            <img class="leader__img" src="../images/leader/goshovskiy.jpg" alt="Гошовський Р.В." />
-                            <div class="leader__name">Гошовський<br />Роман Васильович</div>
-                            <div class="leader__info">Заступник генерального директора з управління інфраструктурою</div>
-                        </div>
-                        <div class="leader" onclick="window.location.href='about_leader4.html?zgdp'">
-                            <img class="leader__img" src="../images/leader/vitkovskiy.jpg" alt="Вітковський І.В." />
-                            <div class="leader__name">Вітковський<br />Ігор Вікторович</div>
-                            <div class="leader__info">Заступник генерального директора з персоналу</div>
-                        </div>
-                        <div class="leader" onclick="window.location.href='about_leader5.html?zgdzv'">
-                            <img class="leader__img" src="../images/leader/sharloimov.jpg" alt="Шарлоімов С.В." />
-                            <div class="leader__name">Шарлоімов<br />Сергій Володимирович</div>
-                            <div class="leader__info">Заступник генерального директора із забезпечення виробництва</div>
-                        </div>
-                        <div class="leader" onclick="window.location.href='about_leader6.html?zgdef'">
-                            <img class="leader__img" src="../images/leader/bondarenko.jpg" alt="Бондаренко В.М." />
-                            <div class="leader__name">Бондаренко<br />Володимир Миколайович</div>
-                            <div class="leader__info">Заступник генерального директора з економіки та фінансів</div>
-                        </div>
-                        <div class="leader" onclick="window.location.href='about_leader7.html?zgdkp'">
-                            <img class="leader__img" src="../images/leader/kuroedov.jpg" alt="Куроєдов С.В." />
-                            <div class="leader__name">Куроєдов<br />Сергій Вікторович</div>
-                            <div class="leader__info">заступник генерального директора з капітального будівництва - начальник управління капітального будівництва</div>
-                        </div>
-                        <div class="leader" onclick="window.location.href='about_leader8.html?zgdyu'">
-                            <img class="leader__img" src="../images/leader/kravec.jpg" alt="Кравець В.П." />
-                            <div class="leader__name">Кравець<br />Віктор Павлович</div>
-                            <div class="leader__info">Заступник генерального директора з якості та управління</div>
-                        </div>
-                        <div class="leader" onclick="window.location.href='about_leader9.html?zgdfzr'">
-                            <img class="leader__img" src="../images/leader/petrunyak.jpg" alt="Петруняк Ю.В." />
-                            <div class="leader__name">Петруняк<br />Юрій Валерійович</div>
-                            <div class="leader__info">Заступник генерального директора з фізичного захисту та режиму</div>
-                        </div>
-                        <div class="leader" onclick="window.location.href='about_leader10.html?gins'">
-                            <img class="leader__img" src="../images/leader/pavlov.jpg" alt="Павлов Ю.О." />
-                            <div class="leader__name">Павлов<br />Юрій Олександрович</div>
-                            <div class="leader__info">Головний інспектор</div>
-                        </div>
-                    </div>
-                    <button class="btn btn-d btn_to-right btn_full-width about__btn" onclick="viewLeaders()">Дивитись далі</button>
+
+                    <p><strong>Програми ВАО АЕС</strong></p>
+
+                    <p>Реалізація програм ВАО АЕС в основному виконується самими експлуатуючими організаціями, водночас персонал регіональних центрів ВАО АЕС координує роботи за програмами. При цьому приділяється увага тому, щоб в Радах Керуючих ВАО АЕС
+                        відбувалось представництво членів з різних держав.</p>
+
+                    <p>Діяльність ВАО АЕС базується на чотирьох основних програмах, кожна з яких забезпечує підтримку місії Асоціації і надає практичну допомогу її членам:</p>
+
+                    <ul>
+                        <li>Партнерські перевірки:
+                            <ul>
+                                <li>Партнерську перевірку, що проводиться на запрошення електростанції, здійснює міжнародна група, яка складається з експертів інших членів Асоціації. Група перевіряє роботу електростанції за ключовими областями відповідно
+                                    до конкретних завдань і критеріїв.</li>
+                            </ul>
+                        </li>
+                        <li>Надання підтримки: позитивна практика, місії підтримки, підтримка нових блоків, бенчмаркінг.</li>
+                        <li>Аналіз виробничої діяльності: виробничі показники, досвід експлуатації.</li>
+                        <li>Навчання та розвиток: семінари, конференції, робочі зустрічі.</li>
+                    </ul>
+
+                    <p>Таким чином, члени ВАО АЕС можуть брати участь в різних програмах і заходах Асоціації. Завдання програм – допомагати обмінюватися інформацією, порівнювати досвід і практику експлуатації та вчитися, як працювати краще.&nbsp;<br> Члени
+                        ВАО АЕС можуть порівнювати результати експлуатації своїх електростанцій з результатами інших АЕС в усьому світі.<br> &nbsp;
+                    </p>
+
+                    <p><strong>Молодіжний рух ВАО АЕС на РАЕС</strong></p>
+
+                    <p>Молодіжний рух ВАО АЕС - це неформальне, некомерційне об'єднання молодих атомників-професіоналів - членів ВАО АЕС. Рух базується на принципі добровільної та безоплатної участі в діяльності ВАО АЕС з підвищення безпеки і надійності
+                        АЕС у світі.</p>
+
+                    <p>Діяльність МР ВАО АЕС на майданчику РАЕС реалізується через уповноваженого представника Асоціації на майданчику РАЕС, а також при безпосередньому ухваленні та сприянні діяльності членів МР з боку РАЕС.</p>
+
+                    <p>До функцій МР відносяться:</p>
+
+                    <ul>
+                        <li>Допомога та підтримка планів і завдань ВАО АЕС з боку молодих працівників.</li>
+                        <li>Спілкування та обмін досвідом на особистому рівні між молодими працівниками як на самому майданчику, так і з молоддю різних підприємств і країн.</li>
+                        <li>Підвищення кваліфікації і майстерності, професійне зростання молоді на РАЕС.</li>
+                        <li>Взаємодія з ВАО АЕС для підвищення рівня безпеки та надійності АЕС через представника ВАО АЕС на майданчику РАЕС.</li>
+                        <li>Взаємодія з ВАО АЕС для підвищення рівня знань і умінь, професійного зростання шляхом проведення заходів Асоціації або за її підтримки.</li>
+                        <li>Участь в заходах ВАО АЕС, у тому числі, в ролі спостерігачів.</li>
+                        <li>Участь в організації та проведенні заходів ВАО АЕС на РАЕС.</li>
+                    </ul>
+
+                    <p><u>Посилання на публікації</u></p>
+
+                    <ul>
+                        <li><u><a href="https://www.wano.info/news-events/inside-wano?lang=ru-ru" target="_blank">Inside WANO</a></u></li>
+                        <li><u><a href="/assets/DocSite/deyatelnost/2020-03-06_08-56_MC_Newsletter_Январь_2020.pdf" target="_blank">News Letters 2020</a></u></li>
+                    </ul>
+
                 </div>
             </div>
         </div>
@@ -316,6 +312,7 @@
                     </ul>
                 </div>
             </div>
+
         </div>
         <div class="footer__wrap"></div>
         <div class="footer__copy t3">
@@ -328,11 +325,9 @@
 
     <script src="../js/lib/jquery.min.js "></script>
     <script src="../js/lib/bootstrap5.min.js "></script>
-    <!-- without version: <script src="../js/main.js"></script> 
-    <script src="../js/leaders_page.js "></script>-->
+    <!-- without version: <script src="../js/main.js"></script> -->
     <!-- <script> /* use this */
         _v.add('js/main.js'); 
-        _v.add('js/leaders_page.js'); 
     </script> -->
 
     <script>
@@ -340,10 +335,9 @@
         let s = document.createElement('script');
         s.setAttribute('src', '../js/_version.js?v=' + parseInt(Math.random() * 1000000));
         s.onload = function() {
-            _v.add('../css/page_about_leaders.css', 1);
+            _v.add('../css/page_about.css', 1);
             _v.add('../js/main.js');
             _v.add('../js/about_menu.js');
-            _v.add('../js/leaders_page.js');
         };
         document.head.appendChild(s);
     </script>

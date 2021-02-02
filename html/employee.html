@@ -3,20 +3,18 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, maximum-scale=1">
-    <meta name="description" content="">
-    <meta name="keywords" content="">
-    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
-    <title>Лідери</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Працівнику</title>
 
     <!-- <script src='../js/_version.js?v=(add some version)'></script> -->
     <link href="../css/lib/bootstrap5.css" rel="stylesheet" id="bootstrap-css">
+    <!-- <link rel="stylesheet" href="../fonts/fontawesome/all.css"> -->
     <link rel="stylesheet" href="../fonts/GothamPro/stylesheet.css">
     <link rel="stylesheet" href="../fonts/rnpp-icons/rnpp-icons.css">
 
     <link rel="stylesheet" href="../css/common.css">
-    <!-- without version: <link rel="stylesheet" href="../css/page_about_leaders.css"> -->
-    <!-- <script>  _v.add('../css/page_about_leaders.css',1);  </script> /* use this */ -->
+    <!-- without version: <link rel="stylesheet" href="../css/page_about.css"> -->
+    <!-- <script>  _v.add('../css/page_about.css',1);  </script> /* use this */ -->
 </head>
 
 <body>
@@ -133,12 +131,12 @@
                                     </li>
                                     <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="dropdown4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Громаді <i class="icon-right-arrow angle-right"></i></a>
                                         <ul class="dropdown-menu dropdown-menu-right-1350" aria-labelledby="dropdown4">
-                                            <li><a class="dropdown-item" href="html/region.html">Розвиток регіону</a></li>
-                                            <li><a class="dropdown-item" href="html/career.html">Робочі місця</a></li>
-                                            <li><a class="dropdown-item" href="html/study.html">Навчання</a></li>
-                                            <li><a class="dropdown-item" href="html/sport.html">Спорт</a></li>
-                                            <li><a class="dropdown-item" href="html/rest.html">Відпочинок</a></li>
-                                            <li><a class="dropdown-item" href="html/culture.html">Культура</a></li>
+                                            <li><a class="dropdown-item" href="region.html">Розвиток регіону</a></li>
+                                            <li><a class="dropdown-item" href="study.html">Навчання</a></li>
+                                            <li><a class="dropdown-item" href="sport.html">Спорт</a></li>
+                                            <li><a class="dropdown-item" href="culture.html">Культура</a></li>
+                                            <li><a class="dropdown-item" href="rest.html">Відпочинок</a></li>
+                                            <li><a class="dropdown-item" href="hotel.html">Готель</a></li>
                                         </ul>
                                     </li>
                                 </ul>
@@ -163,6 +161,7 @@
     </header>
 
     <div class="to-top"></div>
+
     <section class="allabout">
         <div class="container">
             <div class="allabout__block">
@@ -195,9 +194,9 @@
                         <li class="about_side_menu-submenu" onclick="openSideSubMenu(this)">
                             <h3>Наша команда <i class="icon-right-arrow angle-down"></i></h3>
                             <ul>
-                                <li class="active"><a href="about_leaders.html">Лідери</a></li>
+                                <li><a href="about_leaders.html">Лідери</a></li>
                                 <li><a href="team.html">Професіонали</a></li>
-                                <li><a href="employee.html">Працівнику</a></li>
+                                <li class="active"><a href="employee.html">Працівнику</a></li>
                                 <li><a href="career.html">Кар’єра і HR</a></li>
                                 <li><a href="awards.html">Нагороди</a></li>
                             </ul>
@@ -217,59 +216,88 @@
                 </nav>
 
                 <div class="allabout__content">
-                    <div class="leaders pointer">
-                        <div class="leader" onclick="window.location.href='about_leader1.html?gd'">
-                            <img class="leader__img" src="../images/leader/pavlishin.jpg" alt="Павлишин П.Я." />
-                            <div class="leader__name">Павлишин Павло Яремович</div>
-                            <div class="leader__info">Генеральний директор</div>
-                        </div>
-                        <div class="leader" onclick="window.location.href='about_leader2.html?gi'">
-                            <img class="leader__img" src="../images/leader/kovtonyk.jpg" alt="Ковтонюк П.І." />
-                            <div class="leader__name">Ковтонюк Павло Іванович</div>
-                            <div class="leader__info">Головний інженер - перший заступник генерального директора </div>
-                        </div>
-                        <div class="leader" onclick="window.location.href='about_leader3.html?zgdui'">
-                            <img class="leader__img" src="../images/leader/goshovskiy.jpg" alt="Гошовський Р.В." />
-                            <div class="leader__name">Гошовський<br />Роман Васильович</div>
-                            <div class="leader__info">Заступник генерального директора з управління інфраструктурою</div>
-                        </div>
-                        <div class="leader" onclick="window.location.href='about_leader4.html?zgdp'">
-                            <img class="leader__img" src="../images/leader/vitkovskiy.jpg" alt="Вітковський І.В." />
-                            <div class="leader__name">Вітковський<br />Ігор Вікторович</div>
-                            <div class="leader__info">Заступник генерального директора з персоналу</div>
-                        </div>
-                        <div class="leader" onclick="window.location.href='about_leader5.html?zgdzv'">
-                            <img class="leader__img" src="../images/leader/sharloimov.jpg" alt="Шарлоімов С.В." />
-                            <div class="leader__name">Шарлоімов<br />Сергій Володимирович</div>
-                            <div class="leader__info">Заступник генерального директора із забезпечення виробництва</div>
-                        </div>
-                        <div class="leader" onclick="window.location.href='about_leader6.html?zgdef'">
-                            <img class="leader__img" src="../images/leader/bondarenko.jpg" alt="Бондаренко В.М." />
-                            <div class="leader__name">Бондаренко<br />Володимир Миколайович</div>
-                            <div class="leader__info">Заступник генерального директора з економіки та фінансів</div>
-                        </div>
-                        <div class="leader" onclick="window.location.href='about_leader7.html?zgdkp'">
-                            <img class="leader__img" src="../images/leader/kuroedov.jpg" alt="Куроєдов С.В." />
-                            <div class="leader__name">Куроєдов<br />Сергій Вікторович</div>
-                            <div class="leader__info">заступник генерального директора з капітального будівництва - начальник управління капітального будівництва</div>
-                        </div>
-                        <div class="leader" onclick="window.location.href='about_leader8.html?zgdyu'">
-                            <img class="leader__img" src="../images/leader/kravec.jpg" alt="Кравець В.П." />
-                            <div class="leader__name">Кравець<br />Віктор Павлович</div>
-                            <div class="leader__info">Заступник генерального директора з якості та управління</div>
-                        </div>
-                        <div class="leader" onclick="window.location.href='about_leader9.html?zgdfzr'">
-                            <img class="leader__img" src="../images/leader/petrunyak.jpg" alt="Петруняк Ю.В." />
-                            <div class="leader__name">Петруняк<br />Юрій Валерійович</div>
-                            <div class="leader__info">Заступник генерального директора з фізичного захисту та режиму</div>
-                        </div>
-                        <div class="leader" onclick="window.location.href='about_leader10.html?gins'">
-                            <img class="leader__img" src="../images/leader/pavlov.jpg" alt="Павлов Ю.О." />
-                            <div class="leader__name">Павлов<br />Юрій Олександрович</div>
-                            <div class="leader__info">Головний інспектор</div>
+
+                    <div class="block">
+                        <div class="block-title"><i class="icon-right-arrow angle-down"></i><span>Соціальні гарантії</span></div>
+                        <div class="block-content content-hidden">
+                            <div class="info">
+                                <p>Соціально-трудові гарантії працівників РАЕС передбачені <b>Колективним договором</b> між роботодавцем та профспілковим органом, що представляє інтереси трудового колективу.</p>
+                                <p>Соціальний пакет складається із заходів, спрямованих на збереження здоров'я</p>
+                                <ul>
+                                    <li>проведення щорічних періодичних профілактичних медичних оглядів;</li>
+                                    <li>направлення на обстеження (лікування) у спеціалізовані медичні заклади області;</li>
+                                    <li>забезпечення лікування та оздоровлення з наданням пільгових умов придбання путівок.
+                                    </li>
+                                </ul>
+                                <p>та надання <b>матеріальної допомоги</b>.</p>
+                                <ul>
+                                    <li>на утримання дитини з інвалідністю;</li>
+                                    <li>дітям, в яких померли батьки (один з батьків);</li>
+                                    <li>на поховання;</li>
+                                    <li>при народженні дитини;</li>
+                                    <li>по догляду за дитиною до досягнення нею трирічного (за наявності медичного висновку шестирічного) віку;</li>
+                                    <li>малозабезпеченій родині;</li>
+                                    <li>на лікування;</li>
+                                    <li>для укладення договору добровільного медичного страхування;</li>
+                                    <li>одноразова грошова виплата при виході на пенсію;</li>
+                                    <li>безвідсоткова позика на оплату діагностичних, лабораторних досліджень та лікування працівників ВП «Рівненська АЕС» та членів їх сімей (подружжя, дітей).</li>
+                                </ul>
+                                <p>Питання покращення житлових умов рівненських атомників вирішується двома шляхами: надання житла у безоплатне користування працівникам або надання довгострокових безвідсоткових цільових позик для придбання житла.</p>
+                                <p>Впродовж 2020 року покращили свої житлові умови 16 сімей працівників РАЕС, 4 з яких отримали безвідсоткові цільові позики для придбання квартир на вторинному ринку, а 12 сімей – квартири в безоплатне користування із вивільненого
+                                    житлового фонду.</p>
+                            </div>
                         </div>
                     </div>
-                    <button class="btn btn-d btn_to-right btn_full-width about__btn" onclick="viewLeaders()">Дивитись далі</button>
+
+                    <div class="block">
+                        <div class="block-title"><i class="icon-right-arrow angle-down"></i><span>Навчально-тренувальний центр</span></div>
+                        <div class="block-content content-hidden">
+                            <div class="info">
+                                <p>Навчально-тренувальний центр – це спеціалізований структурний підрозділ РАЕС, який здійснює організацію та проведення професійного навчання персоналу з метою підвищення професійних якостей робітників, формування навичок
+                                    безпечної і надійної експлуатації АЕС, дотримання принципів культури безпеки. Важливою частиною роботи НТЦ є підготовка та підтримання кваліфікації ліцензованого персоналу.</p>
+                                <p>НТЦ оснащено двома повномасштабними тренажерами ПМТ-440 (енергоблок-прототип №2) та ПМТ-1000 (енергоблок-прототип № 3) Підготовка на повномасштабних тренажерах дозволяє поставити навчання оперативного персоналу БЩК на рівень,
+                                    який відповідає сучасним світовим стандартам.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="block">
+                        <div class="block-title"><i class="icon-right-arrow angle-down"></i><span>Реабілітаційно-оздоровчий центр</span></div>
+                        <div class="block-content content-hidden">
+                            <div class="info">
+                                <p>З 2019 року на базі НТЦ функціонує реабілітаційно-оздоровчий центр (РОЦ). У ньому спеціалісти відділу розвитку персоналу та відділу функціонального підтримання кваліфікації працівників надають спортивно-оздоровчі, реабілітаційні
+                                    та рекреаційні послуги, в тому числі за індивідуальними програмами, ліцензованому персоналу. Основні напрямки діяльності РОЦ це симбіоз прикладної оздоровчої фізкультури та психофізіологічного обстеження й розвантаження.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="block">
+                        <div class="block-title"><i class="icon-right-arrow angle-down"></i><span>Санаторій-профілакторій РАЕС</span></div>
+                        <div class="block-content content-hidden">
+                            <div class="info">
+                                <p>Медичне обслуговування, якісну реабілітацію, рекреацію, профілактичне лікування працівників електростанції без відриву від виробництва й ветеранів підприємства безкоштовно та у відповідності до призначення лікарів закладу
+                                    впродовж року здійснює санаторій-профілакторій РАЕС. Щорічно 1400 осіб отримують профілактичне лікування та медичну реабілітацію, спрямовану на відновлення здоров’я та працездатність працівника. На сьогоднішній день
+                                    у закладі використовується більше 100 різноманітних фізіотерапевтичних апаратів, пристроїв, тренажерів. А кваліфікований й досвідчений персонал проводить ефективний комплекс реабілітаційних та оздоровчих заходів. Заклад
+                                    функціонує за безперервним графіком 14 заїздів на рік. Тривалість заїзду 17 робочих днів.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="block">
+                        <div class="block-title"><i class="icon-right-arrow angle-down"></i><span>Медичне страхування</span></div>
+                        <div class="block-content content-hidden">
+                            <div class="info">
+                                <p>З листопада 2020 року у ДП «НАЕК «Енергоатом» триває компанія із добровільного медичного страхування персоналу. Керівництвом Компанії прийняте рішення виділити матеріальну допомогу працівникам для укладення договорів добровільного
+                                    медичного страхування. Право на отримання матеріальної допомоги мають працівники, які працюютьна умовах трудового договору та ті, які укладуть договори добровільного медичного страхування.</p>
+                                <p>У 2021 році матеріальна допомога буде надаватися у розмірі річного страхового внеску за вибраною працівником програмою страхування, але не більше 8000 гривень на рік. Бухгалтерією РАЕС буде здійснено нарахування та виплату
+                                    матеріальної допомоги шляхом перерахування коштів на рахунок страхових компаній. Податки та збори із суми наданої матеріальної допомоги будуть відшкодовуватися за рахунок коштів працівника.
+                                </p>
+                                <p>Перелік страхових компаній, гарантом зобов’язань яких виступає ППО ДП «НАЕК «Енергоатом»: <a href="https://www.rnpp.rv.ua/assets/DocSite/social/medical/2020-11-30_12-15_UNIKA.zip"> ПАТ «Страхова компанія «УНІКА»</a> ;
+                                    <a href="https://www.rnpp.rv.ua/assets/DocSite/social/medical/2020-11-30_12-15_ALFA.zip"> ПАТ «Страхова компанія «Альфа Страхування»</a> ; <a href="https://www.rnpp.rv.ua/assets/DocSite/social/medical/2020-11-30_12-15_TAS.zip ">ПАТ «Страхова група «ТАС»</a>                                    .</p>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -316,6 +344,7 @@
                     </ul>
                 </div>
             </div>
+
         </div>
         <div class="footer__wrap"></div>
         <div class="footer__copy t3">
@@ -328,11 +357,9 @@
 
     <script src="../js/lib/jquery.min.js "></script>
     <script src="../js/lib/bootstrap5.min.js "></script>
-    <!-- without version: <script src="../js/main.js"></script> 
-    <script src="../js/leaders_page.js "></script>-->
+    <!-- without version: <script src="../js/main.js"></script> -->
     <!-- <script> /* use this */
         _v.add('js/main.js'); 
-        _v.add('js/leaders_page.js'); 
     </script> -->
 
     <script>
@@ -340,43 +367,15 @@
         let s = document.createElement('script');
         s.setAttribute('src', '../js/_version.js?v=' + parseInt(Math.random() * 1000000));
         s.onload = function() {
-            _v.add('../css/page_about_leaders.css', 1);
+            _v.add('../css/page_about_more.css', 1);
             _v.add('../js/main.js');
+            _v.add('../js/rnpp_touches.js');
+            _v.add('../js/rnpp_lightbox.js');
             _v.add('../js/about_menu.js');
-            _v.add('../js/leaders_page.js');
+            _v.add('../js/about_more_page.js');
         };
         document.head.appendChild(s);
     </script>
-
-</body>
-
-</html>
-<p>Копіювання, публікування або інше поширення інформації, у т.ч. окремих частин текстів чи зображень, розміщених на веб-сайті ВП РАЕС, без письмового дозволу забороняється. <a href="mailto:pr@rnpp.atom.gov.ua">pr@rnpp.atom.gov.ua</a></p>
-</div>
-</div>
-</footer>
-
-<script src="../js/lib/jquery.min.js "></script>
-<script src="../js/lib/bootstrap5.min.js "></script>
-<!-- without version: <script src="../js/main.js"></script> -->
-<!-- <script> /* use this */
-        _v.add('js/main.js'); 
-    </script> -->
-
-<script>
-    /* temporary script */
-    let s = document.createElement('script');
-    s.setAttribute('src', '../js/_version.js?v=' + parseInt(Math.random() * 1000000));
-    s.onload = function() {
-        _v.add('../css/page_about_more.css', 1);
-        _v.add('../js/main.js');
-        _v.add('../js/rnpp_touches.js');
-        _v.add('../js/rnpp_lightbox.js');
-        _v.add('../js/about_menu.js');
-        _v.add('../js/about_more_page.js');
-    };
-    document.head.appendChild(s);
-</script>
 
 </body>
 

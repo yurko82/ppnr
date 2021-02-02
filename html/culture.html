@@ -3,20 +3,19 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, maximum-scale=1">
-    <meta name="description" content="">
-    <meta name="keywords" content="">
-    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
-    <title>Лідери</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Культура</title>
 
     <!-- <script src='../js/_version.js?v=(add some version)'></script> -->
     <link href="../css/lib/bootstrap5.css" rel="stylesheet" id="bootstrap-css">
+    <link rel="stylesheet" href="../fonts/fontawesome/all.css">
+    <link rel="stylesheet" href="../css/lib/slick.css">
     <link rel="stylesheet" href="../fonts/GothamPro/stylesheet.css">
     <link rel="stylesheet" href="../fonts/rnpp-icons/rnpp-icons.css">
 
     <link rel="stylesheet" href="../css/common.css">
-    <!-- without version: <link rel="stylesheet" href="../css/page_about_leaders.css"> -->
-    <!-- <script>  _v.add('../css/page_about_leaders.css',1);  </script> /* use this */ -->
+    <!-- without version: <link rel="stylesheet" href="../css/page_article.css"> -->
+    <!-- <script>  _v.add('../css/page_article.css',1);  </script> /* use this */ -->
 </head>
 
 <body>
@@ -114,9 +113,9 @@
                                     </li>
                                     <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="dropdown2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Новини <i class="icon-right-arrow angle-right"></i></a>
                                         <ul class="dropdown-menu" aria-labelledby="dropdown2">
-                                            <li><a class="dropdown-item" href="allnews.html?news">Новини</a></li>
+                                            <li><a class="dropdown-item" href="allnews.html?article">Новини</a></li>
                                             <li><a class="dropdown-item" href="allnews.html?announcements">Анонси</a></li>
-                                            <li><a class="dropdown-item" href="allnews.html?newspapers">Газета «Енергія»</a></li>
+                                            <li><a class="dropdown-item" href="allnews.html?articlepapers">Газета «Енергія»</a></li>
                                             <li><a class="dropdown-item" href="allnews.html?videos">Телеканал «Енергоатом»</a></li>
                                         </ul>
                                     </li>
@@ -133,12 +132,12 @@
                                     </li>
                                     <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="dropdown4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Громаді <i class="icon-right-arrow angle-right"></i></a>
                                         <ul class="dropdown-menu dropdown-menu-right-1350" aria-labelledby="dropdown4">
-                                            <li><a class="dropdown-item" href="html/region.html">Розвиток регіону</a></li>
-                                            <li><a class="dropdown-item" href="html/career.html">Робочі місця</a></li>
-                                            <li><a class="dropdown-item" href="html/study.html">Навчання</a></li>
-                                            <li><a class="dropdown-item" href="html/sport.html">Спорт</a></li>
-                                            <li><a class="dropdown-item" href="html/rest.html">Відпочинок</a></li>
-                                            <li><a class="dropdown-item" href="html/culture.html">Культура</a></li>
+                                            <li><a class="dropdown-item" href="region.html">Розвиток регіону</a></li>
+                                            <li><a class="dropdown-item" href="study.html">Навчання</a></li>
+                                            <li><a class="dropdown-item" href="sport.html">Спорт</a></li>
+                                            <li><a class="dropdown-item" href="culture.html">Культура</a></li>
+                                            <li><a class="dropdown-item" href="rest.html">Відпочинок</a></li>
+                                            <li><a class="dropdown-item" href="hotel.html">Готель</a></li>
                                         </ul>
                                     </li>
                                 </ul>
@@ -161,119 +160,101 @@
             </div>
         </div>
     </header>
+    <!-- <div class="content" style="padding: 120px 50px 50px 50px;"></div> -->
+    <!-- <div class="overlay"></div> -->
 
-    <div class="to-top"></div>
-    <section class="allabout">
-        <div class="container">
-            <div class="allabout__block">
-
-                <nav class="about_side_menu">
-                    <div class="about_side_menu-title">
-                        <h2>Про нас</h2>
-                    </div>
-                    <div class="about_side_menu-select" onclick="openSideMenu()"><span>Оберіть рубрику</span>
-                        <div class="icon-up-down"><i class="icon-left-arrow"></i><i class="icon-right-arrow"></i></div>
-                    </div>
-                    <ul>
-                        <li class="about_side_menu-submenu" onclick="openSideSubMenu(this)">
-                            <h3>Хто ми <i class="icon-right-arrow angle-down"></i></h3>
-                            <ul>
-                                <li><a href="about_info.html">Загальна інформація</a></li>
-                                <li><a href="about_mission.html">Місія, бачення, цінності</a></li>
-                                <li><a href="about_history.html">Історія</a></li>
-                                <li class="about_side_menu-submenu2"><a>Діяльність <i class="icon-right-arrow angle-down"></i></a>
-                                    <ul class="hidden">
-                                        <li><a href="about_activity_production.html">Технологія виробництва</a></li>
-                                        <li><a href="about_activity_declaration.html">Заяви</a></li>
-                                        <li><a href="about_activity_licensed.html">Ліцензовані види діяльності</a></li>
-                                        <li><a href="about_activity_safety.html">Безпека і надійність</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="about_more.html">Дізнатися більше</a></li>
-                            </ul>
-                        </li>
-                        <li class="about_side_menu-submenu" onclick="openSideSubMenu(this)">
-                            <h3>Наша команда <i class="icon-right-arrow angle-down"></i></h3>
-                            <ul>
-                                <li class="active"><a href="about_leaders.html">Лідери</a></li>
-                                <li><a href="team.html">Професіонали</a></li>
-                                <li><a href="employee.html">Працівнику</a></li>
-                                <li><a href="career.html">Кар’єра і HR</a></li>
-                                <li><a href="awards.html">Нагороди</a></li>
-                            </ul>
-                        </li>
-                        <li class="about_side_menu-submenu" onclick="openSideSubMenu(this)">
-                            <h3>Наші партнери <i class="icon-right-arrow angle-down"></i></h3>
-                            <ul>
-                                <li><a href="profspilka.html">Профспілка</a></li>
-                                <li><a href="ukrns.html">УкрЯТ</a></li>
-                                <li><a href="uaf.html">УЯФ</a></li>
-                                <li><a href="waoaes.html">ВАО АЕС</a></li>
-                                <li><a href="magate.html">МАГАТЕ</a></li>
-                                <li><a href="partners.html">Ділові партнери</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </nav>
-
-                <div class="allabout__content">
-                    <div class="leaders pointer">
-                        <div class="leader" onclick="window.location.href='about_leader1.html?gd'">
-                            <img class="leader__img" src="../images/leader/pavlishin.jpg" alt="Павлишин П.Я." />
-                            <div class="leader__name">Павлишин Павло Яремович</div>
-                            <div class="leader__info">Генеральний директор</div>
-                        </div>
-                        <div class="leader" onclick="window.location.href='about_leader2.html?gi'">
-                            <img class="leader__img" src="../images/leader/kovtonyk.jpg" alt="Ковтонюк П.І." />
-                            <div class="leader__name">Ковтонюк Павло Іванович</div>
-                            <div class="leader__info">Головний інженер - перший заступник генерального директора </div>
-                        </div>
-                        <div class="leader" onclick="window.location.href='about_leader3.html?zgdui'">
-                            <img class="leader__img" src="../images/leader/goshovskiy.jpg" alt="Гошовський Р.В." />
-                            <div class="leader__name">Гошовський<br />Роман Васильович</div>
-                            <div class="leader__info">Заступник генерального директора з управління інфраструктурою</div>
-                        </div>
-                        <div class="leader" onclick="window.location.href='about_leader4.html?zgdp'">
-                            <img class="leader__img" src="../images/leader/vitkovskiy.jpg" alt="Вітковський І.В." />
-                            <div class="leader__name">Вітковський<br />Ігор Вікторович</div>
-                            <div class="leader__info">Заступник генерального директора з персоналу</div>
-                        </div>
-                        <div class="leader" onclick="window.location.href='about_leader5.html?zgdzv'">
-                            <img class="leader__img" src="../images/leader/sharloimov.jpg" alt="Шарлоімов С.В." />
-                            <div class="leader__name">Шарлоімов<br />Сергій Володимирович</div>
-                            <div class="leader__info">Заступник генерального директора із забезпечення виробництва</div>
-                        </div>
-                        <div class="leader" onclick="window.location.href='about_leader6.html?zgdef'">
-                            <img class="leader__img" src="../images/leader/bondarenko.jpg" alt="Бондаренко В.М." />
-                            <div class="leader__name">Бондаренко<br />Володимир Миколайович</div>
-                            <div class="leader__info">Заступник генерального директора з економіки та фінансів</div>
-                        </div>
-                        <div class="leader" onclick="window.location.href='about_leader7.html?zgdkp'">
-                            <img class="leader__img" src="../images/leader/kuroedov.jpg" alt="Куроєдов С.В." />
-                            <div class="leader__name">Куроєдов<br />Сергій Вікторович</div>
-                            <div class="leader__info">заступник генерального директора з капітального будівництва - начальник управління капітального будівництва</div>
-                        </div>
-                        <div class="leader" onclick="window.location.href='about_leader8.html?zgdyu'">
-                            <img class="leader__img" src="../images/leader/kravec.jpg" alt="Кравець В.П." />
-                            <div class="leader__name">Кравець<br />Віктор Павлович</div>
-                            <div class="leader__info">Заступник генерального директора з якості та управління</div>
-                        </div>
-                        <div class="leader" onclick="window.location.href='about_leader9.html?zgdfzr'">
-                            <img class="leader__img" src="../images/leader/petrunyak.jpg" alt="Петруняк Ю.В." />
-                            <div class="leader__name">Петруняк<br />Юрій Валерійович</div>
-                            <div class="leader__info">Заступник генерального директора з фізичного захисту та режиму</div>
-                        </div>
-                        <div class="leader" onclick="window.location.href='about_leader10.html?gins'">
-                            <img class="leader__img" src="../images/leader/pavlov.jpg" alt="Павлов Ю.О." />
-                            <div class="leader__name">Павлов<br />Юрій Олександрович</div>
-                            <div class="leader__info">Головний інспектор</div>
-                        </div>
-                    </div>
-                    <button class="btn btn-d btn_to-right btn_full-width about__btn" onclick="viewLeaders()">Дивитись далі</button>
-                </div>
+    <!-- article start -->
+    <section class="article">
+        <div class="container-full">
+            <div class="article__img" style="background-image: url('../images/article/culture1-1.jpg');"></div>
+        </div>
+        <div class="article__container">
+            <div class="article__title">
+                <h1>Палац культури ім. Л.Українки ВП «Рівненська АЕС»</h1>
             </div>
+            <div class="article__text">
+
+                <p>Палац культури ім. Лесі Українки функціонує в структурі ВП «Рівненська АЕС» з 1990 року. Тут створені належні умови для реалізації основного призначення культурно-просвітницького закладу:</p>
+
+                <ul>
+                    <li>популяризація всіх видів, жанрів аматорського мистецтва, художніх промислів та сприяння розвитку творчих здібностей атомників та членів їх сімей, пошуку талановитих дітей, молоді та всебічна підтримка у їх духовному, естетичному та
+                        мистецькому вихованні;</li>
+                    <li>організація змістовних масових заходів до державних, професійних, календарних, народних, обрядових свят, тематичних концертів, ювілеїв, шоу-програм, корпоративних заходів, конкурсів та інших форм дозвілля для дітей і дорослих;</li>
+                    <li>впровадження інноваційних арт-проектів, довгострокових комплексних програм, які зорієнтовані на розвиток творчого потенціалу, організацію вільного часу відвідувачів;</li>
+                    <li>забезпечення проведення гастрольної концертної діяльності провідних артистів, гуртів, колективів України та світу.</li>
+                </ul>
+
+                <p>Для організації культурно-дозвіллєвої, спортивно-оздоровчої діяльності та надання послуг населенню в Палаці культури облаштовано відповідні приміщення: Велика зала (сцена та глядацька зала на 630 місць), Золота зала (фойє ІІ поверху),
+                    Конференц-зала, дві танцювальні зали, гримерні кімнати, танцювальний клас, спортивний та тренажерний зали, кабінет психолога, кабінети гурткової роботи тощо.</p>
+
+                <p>Реалізацію основних завдань закладу культури забезпечує 99 працівників – висококваліфіковані фахівці галузі культури, досвідчений обслуговуючий та технічний персонал.</p>
+
+                <p>В Палаці культури функціонує 38 клубних формувань. Заняттями у клубах за інтересами, студіях, колективах, гуртках охоплено 1199 осіб (з них 752 дітини): працівники РАЕС, члени їх сімей, мешканці міста-супутника та навколишніх населених
+                    пунктів.
+                </p>
+
+                <p>Сектор гурткової роботи нараховує 31 колектив художньої творчості – це гуртки та колективи інструментального, вокального, фольклорного, хореографічного, театрального, образотворчого, туристичного та фізкультурно-оздоровчого напрямків.
+                    Діє студія раннього мистецького розвитку дітей віком 4-7 років «Промінчики».</p>
+
+                <p>З 2018 року введено в дію нові за формою організації та змістом роботи клубні формування: гуртки вокального (з елементами фольку) та образотворчого мистецтва; любительські об’єднання для прихильників рок-музики та гімнастики ушу. Всього
+                    протягом 2018 року проведено 274 заходи, які відвідали понад 95 тисяч осіб.</p>
+
+                <p>При ПК діє громадська організація «Естрадно-духовий оркестр «Енергія Полісся», метою якої є об’єднання творчої еліти та поліпшення рівня культурного обслуговування населення. Духовому оркестру присвоєно звання «народний аматорський». За
+                    результатами атестаційної комісії управління культури і туризму Рівненської ОДА, звання «народний аматорський» і «зразковий аматорський» в березні 2018 року підтверджено ще 8 творчим колективам ПК.</p>
+
+                <p>В закладі культури Рівненської АЕС запроваджено ряд молодіжних проектів, культурно-дозвіллєвих заходів, концертів, розважальних програм, корпоративних вечорів, дитячих розваг тощо.</p>
+
+                <p>З метою формування позитивного іміджу та широкого висвітлення інформації про РАЕС, розкриття інтелектуального та творчого потенціалу дітей і молоді, розвитку і налагодження творчих зв’язків започатковано регіональний фестиваль «Аніматор
+                    шоу»; проводиться багатожанровий дитячо-юнацький фестиваль-конкурс «Зірки, на сцену»; відбувається вручення перших «медалей успіху» на святі «Віват гуртківці»; започатковано молодіжний арт-проект «Under street», що проходить влітку
+                    у внутрішньому дворику ПК.</p>
+
+                <p>З метою популяризації атомної енергетики в регіоні, демонстрації значущості професії атомника запроваджено проведення свята «День народження Рівненської АЕС» та організовуються урочисті культурно-мистецькі заходи до Дня енергетика. Підтримуються
+                    зв’язки з творчими спілками, громадськими об’єднаннями й організаціями, суб’єктами підприємницької діяльності. Працівники ПК є співорганізаторами та учасниками першого регіонального фестивалю військово-патріотичної пісні «Відлуння...»,
+                    Всеукраїнського молодіжного соціально-екологічного форуму «Біле озеро» та заходів, що проходять у рамках реалізації спортивно-оздоровчих проектів, благодійних акцій ППО РАЕС.</p>
+
+                <p>В приміщеннях установи організовуються арт-галереї митців-аматорів ВП РАЕС, гостей та мешканців міста, виставки, презентації, фотоколажі, інсталяції, перформанси, фотозони тощо.</p>
+
+                <p>Палац культури приймає замовлення на проведення тематичних, святкових, розважальних, ігрових, театралізованих програм для дітей і молоді, днів іменинника, корпоративних заходів, шоу-програм, вечірок, вечорів відпочинку, ювілеїв та інших
+                    свят для різних вікових груп населення. Надаються в платне користування приміщення та прилегла територія ПК для проведення концертів, вистав, культурно-дозвіллєвих, спортивно-оздоровчих та інших мистецьких і масових заходів.</p>
+
+                <p><a href="/assets/images/news/2020/2020-12-22_13-56_Перелік_платних_послуг_Палацу_культури.xls">Перелік платних послуг Палацу культури</a></p>
+
+                <p><em>Палац культури працює щодня з 08:00 до 22:00</em></p>
+
+                <p><em>Електронна адреса</em><em>: kultura.raes@ukr.net</em></p>
+
+                <p><em>Фейсбук: www.fb.com/114134649219632</em></p>
+
+                <p>&nbsp;</p>
+
+                <p><em>Детальну інформацію можна отримати за телефонами:</em></p>
+
+                <p><em>Директор: (03636) 6-44-79.</em></p>
+
+                <p><em>Заступник директора: (03636) 2-44-47.</em></p>
+
+                <p><em>Адміністратор: (03636) 2-48-73.</em></p>
+
+                <p><em>Сектор гурткової роботи: (03636) 2-44-45.</em></p>
+
+                <p><em>Сектор культурно-освітньої роботи та організації дозвілля: (03636) 2-46-46.</em></p>
+
+
+
+            </div>
+            <div class="article__img-slider">
+                <div class="article__img-slid" style="background-image: url(../images/article/culture1-2.jpg);"></div>
+                <div class="article__img-slid" style="background-image: url(../images/article/culture1-3.jpg);"></div>
+                <div class="article__img-slid" style="background-image: url(../images/article/culture1-4.jpg);"></div>
+                <div class="article__img-slid" style="background-image: url(../images/article/culture1-5.jpg);"></div>
+                <div class="article__img-slid" style="background-image: url(../images/article/culture1-6.jpg);"></div>
+                <div class="article__img-slid" style="background-image: url(../images/article/culture1-7.jpg);"></div>
+                <div class="article__img-slid" style="background-image: url(../images/article/culture1-7.jpg);"></div>
+            </div>
+
         </div>
     </section>
+    <!-- article end -->
 
     <footer class=" footer ">
         <div class="container">
@@ -328,11 +309,12 @@
 
     <script src="../js/lib/jquery.min.js "></script>
     <script src="../js/lib/bootstrap5.min.js "></script>
+    <script src="../js/lib/slick.min.js"></script>
     <!-- without version: <script src="../js/main.js"></script> 
     <script src="../js/leaders_page.js "></script>-->
     <!-- <script> /* use this */
         _v.add('js/main.js'); 
-        _v.add('js/leaders_page.js'); 
+        _v.add('js/article_page.js'); 
     </script> -->
 
     <script>
@@ -340,10 +322,9 @@
         let s = document.createElement('script');
         s.setAttribute('src', '../js/_version.js?v=' + parseInt(Math.random() * 1000000));
         s.onload = function() {
-            _v.add('../css/page_about_leaders.css', 1);
+            _v.add('../css/page_article.css', 1);
             _v.add('../js/main.js');
-            _v.add('../js/about_menu.js');
-            _v.add('../js/leaders_page.js');
+            _v.add('../js/article_page.js');
         };
         document.head.appendChild(s);
     </script>
