@@ -3,3 +3,26 @@
 a {
     color: $blue4;
 }
+
+.to_top120{
+    margin-top: 60px;
+    @media (min-width: 768px) {
+        margin-top: 90px;
+    }
+    @media (min-width:1000px) {
+        margin-top: 120px;
+    }
+}
+.about_info_cover {
+    padding:30px 0 60px 0; 
+    background: url(../images/img/about_info/6_768.jpg) 50% 100% no-repeat; 
+    background-size: cover;
+    @media (min-width: 768px) {
+        background: url(../images/img/about_info/6_1000.jpg) 50% 80% no-repeat; 
+        background-size: cover;
+    }
+    @media (min-width:1000px) {
+        background: url(../images/img/about_info/6.jpg) 50% 60% no-repeat; 
+        background-size: cover;
+    }
+}

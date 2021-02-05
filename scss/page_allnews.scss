@@ -14,9 +14,20 @@
     &__head-btn {
         display: flex;
         justify-content: flex-end;
-        color: #005B99;
+        color: $blue3;
+        cursor: pointer;
         & li {
-            margin: 0 5px;
+            margin: 0 4px;
+            font-size: 18px;
+            padding: 4px;
+            display: flex;
+            align-items: center;
+            &.news-type{
+                width: 18px;
+            }
+            & .active {
+                border: 1px solid $blue3;
+            }
         }
     }
     &__btn {

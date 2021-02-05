@@ -74,11 +74,28 @@
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  color: #005B99;
+  color: #005b99;
+  cursor: pointer;
 }
 
 .allnews__head-btn li {
-  margin: 0 5px;
+  margin: 0 4px;
+  font-size: 18px;
+  padding: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.allnews__head-btn li.news-type {
+  width: 18px;
+}
+
+.allnews__head-btn li .active {
+  border: 1px solid #005b99;
 }
 
 .allnews__btn {

@@ -3,24 +3,21 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, maximum-scale=1">
-    <meta name="description" content="">
-    <meta name="keywords" content="">
-    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
-    <title>Керівник</title>
-    <!--  need change via code for every chief -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Загальна інформація</title>
 
     <!-- <script src='../js/_version.js?v=(add some version)'></script> -->
     <link href="../css/lib/bootstrap5.css" rel="stylesheet" id="bootstrap-css">
+    <!-- <link rel="stylesheet" href="../fonts/fontawesome/all.css"> -->
     <link rel="stylesheet" href="../fonts/GothamPro/stylesheet.css">
     <link rel="stylesheet" href="../fonts/rnpp-icons/rnpp-icons.css">
 
     <link rel="stylesheet" href="../css/common.css">
-    <!-- without version: <link rel="stylesheet" href="../css/page_about_leaders.css"> -->
-    <!-- <script>  _v.add('../css/page_about_leaders.css',1);  </script> /* use this */ -->
+    <!-- without version: <link rel="stylesheet" href="../css/page_about.css"> -->
+    <!-- <script>  _v.add('../css/page_about.css',1);  </script> /* use this */ -->
 </head>
 
-<body>
+<body class="">
     <div class="body__overlay"></div>
     <!------ Include the above in your HEAD tag ---------->
     <header class="header fixed-top shadow">
@@ -135,11 +132,11 @@
                                     <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="dropdown4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Громаді <i class="icon-right-arrow angle-right"></i></a>
                                         <ul class="dropdown-menu dropdown-menu-right-1350" aria-labelledby="dropdown4">
                                             <li><a class="dropdown-item" href="region.html">Розвиток регіону</a></li>
-                                            <li><a class="dropdown-item" href="career.html">Робочі місця</a></li>
                                             <li><a class="dropdown-item" href="study.html">Навчання</a></li>
                                             <li><a class="dropdown-item" href="sport.html">Спорт</a></li>
-                                            <li><a class="dropdown-item" href="rest.html">Відпочинок</a></li>
                                             <li><a class="dropdown-item" href="culture.html">Культура</a></li>
+                                            <li><a class="dropdown-item" href="rest.html">Відпочинок</a></li>
+                                            <li><a class="dropdown-item" href="hotel.html">Готель</a></li>
                                         </ul>
                                     </li>
                                 </ul>
@@ -163,8 +160,9 @@
         </div>
     </header>
 
-    <div class="to-top"></div>
-    <section class="allabout">
+    <div class='to_top120'></div>
+
+    <section class="allabout about_info_cover">
         <div class="container">
             <div class="allabout__block">
 
@@ -179,7 +177,7 @@
                         <li class="about_side_menu-submenu" onclick="openSideSubMenu(this)">
                             <h3>Хто ми <i class="icon-right-arrow angle-down"></i></h3>
                             <ul>
-                                <li><a href="about_info.html">Загальна інформація</a></li>
+                                <li class="active"><a href="about_info.html">Загальна інформація</a></li>
                                 <li><a href="about_mission.html">Місія, бачення, цінності</a></li>
                                 <li><a href="about_history.html">Історія</a></li>
                                 <li class="about_side_menu-submenu2"><a>Діяльність <i class="icon-right-arrow angle-down"></i></a>
@@ -196,7 +194,7 @@
                         <li class="about_side_menu-submenu" onclick="openSideSubMenu(this)">
                             <h3>Наша команда <i class="icon-right-arrow angle-down"></i></h3>
                             <ul>
-                                <li class="active"><a href="about_leaders.html">Лідери</a></li>
+                                <li><a href="about_leaders.html">Лідери</a></li>
                                 <li><a href="team.html">Професіонали</a></li>
                                 <li><a href="employee.html">Працівнику</a></li>
                                 <li><a href="career.html">Кар’єра і HR</a></li>
@@ -218,28 +216,22 @@
                 </nav>
 
                 <div class="allabout__content">
-                    <div class="backpage"><a class="icon-left-arrow" href="about_leaders.html"><span>Лідери</span></a></div>
-                    <div class="leaders">
-                        <div class="leader__person">
-                            <img class="leader__img" src="../images/leader/kuroedov.jpg" alt="Куроєдов С.В." />
-                            <div class="leader__name">Куроєдов Сергій Вікторович</div>
-                            <div class="leader__info">Заступник генерального директора з капітального будівництва - начальник управління капітального будівництва</div><br>
-                            <div class="leader__text">
-                                <p>Сергій Вікторович Куроєдов обіймає посаду заступника генерального директора з листопада 2013 року.</p>
-                                <p>Сергій Вікторович має дві вищі освіти: закінчив Самарський інститут інженерів залізничного транспорту за спеціальністю «Автоматика, телемеханіка і зв’язок на залізничному транспорті» та Одеський національний політехнічний
-                                    університет за спеціальністю «Атомна енергетика».</p>
-                                <p>З вересня 1998 року Сергій Куроєдов працює на Рівненській АЕС. Пройшов щаблі кар’єрного росту від начальника дільниці в управлінні електричних мереж до заступника головного інженера із загальностанційних об’єктів.</p>
-                            </div>
-                        </div>
-                    </div>
+                    <p><b>Рівненська АЕС</b> є відокремленим підрозділом державного підприємства «НАЕК «Енергоатом». РАЕС це найбільше підприємство Полісся, що розташоване на північному заході Рівненської області, в 120 км від м. Рівне, на березі річки Стир.
+                    </p>
+                    <p><b>РАЕС експлуатує чотири енергоблоки</b> два з реакторами ВВЕР-440 та два з реакторами ВВЕР-1000 cумарною встановленою потужністю – 2 млн 835 тис. кВт. </p>
+                    <ul>
+                        <li>Початок будівництва &ndash; 1973 рік</li>
+                        <li>Введення в експлуатацію &ndash; 1980 рік</li>
+                        <li>Вид діяльності &ndash; екологічне виробництво електричної та теплової енергії</li>
+                        <li>Пріоритет діяльності &ndash; безпека</li>
+                        <li>Проєктний КВВП &ndash; 74,2%</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-
-
-    <footer class=" footer ">
+    <footer class=" footer " style='margin-top:0'>
         <div class="container">
             <div class="footer__content">
                 <div class="footer__mail">
@@ -280,6 +272,7 @@
                     </ul>
                 </div>
             </div>
+
         </div>
         <div class="footer__wrap"></div>
         <div class="footer__copy t3">
@@ -292,11 +285,9 @@
 
     <script src="../js/lib/jquery.min.js "></script>
     <script src="../js/lib/bootstrap5.min.js "></script>
-    <!-- without version: <script src="../js/main.js"></script> 
-    <script src="../js/leaders_page.js "></script>-->
+    <!-- without version: <script src="../js/main.js"></script> -->
     <!-- <script> /* use this */
         _v.add('js/main.js'); 
-        _v.add('js/leaders_page.js'); 
     </script> -->
 
     <script>
@@ -304,10 +295,9 @@
         let s = document.createElement('script');
         s.setAttribute('src', '../js/_version.js?v=' + parseInt(Math.random() * 1000000));
         s.onload = function() {
-            _v.add('../css/page_about_leaders.css', 1);
+            _v.add('../css/page_about.css', 1);
             _v.add('../js/main.js');
             _v.add('../js/about_menu.js');
-            _v.add('../js/leaders_page.js');
         };
         document.head.appendChild(s);
     </script>
