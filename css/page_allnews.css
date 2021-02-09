@@ -94,7 +94,7 @@
   width: 18px;
 }
 
-.allnews__head-btn li .active {
+.allnews__head-btn li.active {
   border: 1px solid #005b99;
 }
 

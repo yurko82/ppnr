@@ -16,13 +16,6 @@
     });
 
     // allnews.html
-    function checkNewsType() {
-        let url = window.location.href.split('?');
-        if (url[1]) console.log('news type: ' + url[1]); // use this for news filter
-    }
-    checkNewsType();
-
-    // allnews.html
     $('.news-type').on('click', function() {
         if ($(this).children('i').hasClass("fa-th")) {
             $(this).children('i').removeClass("fa-th").addClass("fa-bars");
@@ -36,5 +29,25 @@
             $('.news__block-img').css("display", "block");
         }
     });
+
+
+    // allnews.html
+    function activateTypeNews(icon){ 
+        console.log(icon);
+        $('ul.allnews__head-btn li.active').removeClass('active');
+        $('ul.allnews__head-btn i.fa-'+icon).parent().addClass('active');
+     }
+    $('ul.allnews__head-btn li:not(.news-type)').click((e)=>{ 
+        activateTypeNews(e.target.classList[1].replace('fa-','')); 
+    });
+    let url = window.location.href.split('?');
+    switch (url[1]) {
+        case 'news': activateTypeNews('scroll'); break;
+        case 'announcements': activateTypeNews('bookmark'); break;
+        case 'newspapers': activateTypeNews('book-open'); break;
+        case 'videos': activateTypeNews('video'); break;
+        default: break;
+    } 
+
 
 })();
