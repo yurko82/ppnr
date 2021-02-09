@@ -30,10 +30,8 @@
         }
     });
 
-
     // allnews.html
     function activateTypeNews(icon){ 
-        console.log(icon);
         $('ul.allnews__head-btn li.active').removeClass('active');
         $('ul.allnews__head-btn i.fa-'+icon).parent().addClass('active');
      }
@@ -49,5 +47,7 @@
         default: break;
     } 
 
-
 })();
+
+// allnews.html
+function shownews(n){ window.location.href = window.location.href.replace(/allnews\.html\?.*/, 'news.html?n='+n); }

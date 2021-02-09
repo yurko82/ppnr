@@ -109,6 +109,7 @@
 
 .news__block {
   margin-top: 20px;
+  cursor: pointer;
 }
 
 .news__block:hover {
