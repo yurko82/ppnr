@@ -3,21 +3,19 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, maximum-scale=1">
-    <meta name="description" content="">
-    <meta name="keywords" content="">
-    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
-    <title>Керівник</title>
-    <!--  need change via code for every chief -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Доступна енергія</title>
 
     <!-- <script src='../js/_version.js?v=(add some version)'></script> -->
     <link href="../css/lib/bootstrap5.css" rel="stylesheet" id="bootstrap-css">
+    <link rel="stylesheet" href="../fonts/fontawesome/all.css">
+    <link rel="stylesheet" href="../css/lib/slick.css">
     <link rel="stylesheet" href="../fonts/GothamPro/stylesheet.css">
     <link rel="stylesheet" href="../fonts/rnpp-icons/rnpp-icons.css">
 
     <link rel="stylesheet" href="../css/common.css">
-    <!-- without version: <link rel="stylesheet" href="../css/page_about_leaders.css"> -->
-    <!-- <script>  _v.add('../css/page_about_leaders.css',1);  </script> /* use this */ -->
+    <!-- without version: <link rel="stylesheet" href="../css/page_article.css"> -->
+    <!-- <script>  _v.add('../css/page_article.css',1);  </script> /* use this */ -->
 </head>
 
 <body>
@@ -115,9 +113,9 @@
                                     </li>
                                     <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="dropdown2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Новини <i class="icon-right-arrow angle-right"></i></a>
                                         <ul class="dropdown-menu" aria-labelledby="dropdown2">
-                                            <li><a class="dropdown-item" href="allnews.html?news">Новини</a></li>
+                                            <li><a class="dropdown-item" href="allnews.html?article">Новини</a></li>
                                             <li><a class="dropdown-item" href="allnews.html?announcements">Анонси</a></li>
-                                            <li><a class="dropdown-item" href="allnews.html?newspapers">Газета «Енергія»</a></li>
+                                            <li><a class="dropdown-item" href="allnews.html?articlepapers">Газета «Енергія»</a></li>
                                             <li><a class="dropdown-item" href="allnews.html?videos">Телеканал «Енергоатом»</a></li>
                                         </ul>
                                     </li>
@@ -162,84 +160,19 @@
             </div>
         </div>
     </header>
+    <!-- <div class="content" style="padding: 120px 50px 50px 50px;"></div> -->
+    <!-- <div class="overlay"></div> -->
 
     <div class="to-top"></div>
-    <section class="allabout">
-        <div class="container">
-            <div class="allabout__block">
+    <!-- article start -->
+    <section class="article">
 
-                <nav class="about_side_menu">
-                    <div class="about_side_menu-title">
-                        <h2>Про нас</h2>
-                    </div>
-                    <div class="about_side_menu-select" onclick="openSideMenu()"><span>Оберіть рубрику</span>
-                        <div class="icon-up-down"><i class="icon-left-arrow"></i><i class="icon-right-arrow"></i></div>
-                    </div>
-                    <ul>
-                        <li class="about_side_menu-submenu" onclick="openSideSubMenu(this)">
-                            <h3>Хто ми <i class="icon-right-arrow angle-down"></i></h3>
-                            <ul>
-                                <li><a href="about_info.html">Загальна інформація</a></li>
-                                <li><a href="about_mission.html">Місія, бачення, цінності</a></li>
-                                <li><a href="about_history.html">Історія</a></li>
-                                <li class="about_side_menu-submenu2"><a>Діяльність <i class="icon-right-arrow angle-down"></i></a>
-                                    <ul class="hidden">
-                                        <li><a href="about_activity_production.html">Технологія виробництва</a></li>
-                                        <li><a href="about_activity_declaration.html">Заяви</a></li>
-                                        <li><a href="about_activity_licensed.html">Ліцензовані види діяльності</a></li>
-                                        <li><a href="about_activity_safety.html">Безпека і надійність</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="about_more.html">Дізнатися більше</a></li>
-                            </ul>
-                        </li>
-                        <li class="about_side_menu-submenu" onclick="openSideSubMenu(this)">
-                            <h3>Наша команда <i class="icon-right-arrow angle-down"></i></h3>
-                            <ul>
-                                <li class="active"><a href="about_leaders.html">Лідери</a></li>
-                                <li><a href="team.html">Професіонали</a></li>
-                                <li><a href="employee.html">Працівнику</a></li>
-                                <li><a href="career.html">Кар’єра і HR</a></li>
-                                <li><a href="awards.html">Нагороди</a></li>
-                            </ul>
-                        </li>
-                        <li class="about_side_menu-submenu" onclick="openSideSubMenu(this)">
-                            <h3>Наші партнери <i class="icon-right-arrow angle-down"></i></h3>
-                            <ul>
-                                <li><a href="profspilka.html">Профспілка</a></li>
-                                <li><a href="ukrns.html">УкрЯТ</a></li>
-                                <li><a href="uaf.html">УЯФ</a></li>
-                                <li><a href="waoaes.html">ВАО АЕС</a></li>
-                                <li><a href="magate.html">МАГАТЕ</a></li>
-                                <li><a href="partners.html">Ділові партнери</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </nav>
-
-                <div class="allabout__content">
-                    <div class="backpage"><a class="icon-left-arrow" href="about_leaders.html"><span>Лідери</span></a></div>
-                    <div class="leaders">
-                        <div class="leader__person">
-                            <img class="leader__img" src="../images/leader/kovtonyk.jpg" alt="Павлишин П.Я." />
-                            <div class="leader__name">Ковтонюк Павло Іванович</div>
-                            <div class="leader__info">головний інженер - перший заступник генерального директора</div><br>
-                            <div class="leader__text">
-                                <p>Павло Іванович Ковтонюк працює головним інженером - першим заступником генерального директора з лютого 2009 року.</p>
-                                <p>Свій трудовий шлях на Рівненській АЕС розпочав у 1977 році інженером в електричному цеху після навчання у Львівському політехнічному інституті за спеціальністю «інженер-електрик». У 1978 році став начальником зміни електроцеху,
-                                    а в 1981-му - начальником зміни АЕС. У 1992-му Павло Іванович очолив цех наладки і випробування устаткування, а за 5 років - управління технічного та експлуатаційного контролю.</p>
-                                <p>Протягом 2001-2008 рр. працював заступником головного інженера Рівненської АЕС.
-                                </p>
-                                <p>Заслужений енергетик України.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div style="min-height:300px; width:100%; text-align: center;">
+            ... Контент ...
         </div>
+
     </section>
-
-
+    <!-- article end -->
 
     <footer class=" footer ">
         <div class="container">
@@ -294,11 +227,12 @@
 
     <script src="../js/lib/jquery.min.js "></script>
     <script src="../js/lib/bootstrap5.min.js "></script>
+    <!-- <script src="../js/lib/slick.min.js"></script> -->
     <!-- without version: <script src="../js/main.js"></script> 
     <script src="../js/leaders_page.js "></script>-->
     <!-- <script> /* use this */
         _v.add('js/main.js'); 
-        _v.add('js/leaders_page.js'); 
+        _v.add('js/article_page.js'); 
     </script> -->
 
     <script>
@@ -306,13 +240,79 @@
         let s = document.createElement('script');
         s.setAttribute('src', '../js/_version.js?v=' + parseInt(Math.random() * 1000000));
         s.onload = function() {
-            _v.add('../css/page_about_leaders.css', 1);
+            _v.add('../css/page_available_energy.css', 1);
             _v.add('../js/main.js');
-            _v.add('../js/about_menu.js');
-            _v.add('../js/leaders_page.js');
         };
         document.head.appendChild(s);
     </script>
+
+</body>
+
+</html>
+<p>Рівненська обл.</p>
+<p>34400</p>
+<p>Україна</p>
+<p><a href="mailto:office@rnpp.atom.gov.ua">office@rnpp.atom.gov.ua</a></p>
+<p><a href="mailto:pr@rnpp.atom.gov.ua">pr@rnpp.atom.gov.ua</a></p>
+</div>
+</div>
+<div class="footer__link">
+    <div class="footer__info mb-4">
+        <h4 class="footer__title h3">Інформаційний центр</h4>
+        <p>+38 (03636) 64-123</p>
+        <p><a href="mailto:info@info.atom.gov.ua">info@rnpp.atom.gov.ua</a></p>
+    </div>
+    <ul class="footer__link-links">
+        <li class="footer__link-link"><a href="links.html">Посилання</a></li>
+        <li class="footer__link-link"><a href="corruption.html">Протидія корупції</a></li>
+        <li class="footer__link-politic"><a href="privacy_policy.html">Політика конфедеційності та захисту персональних даних</a></li>
+    </ul>
+</div>
+<div class="footer__right">
+    <div class="footer__logo">
+        <a href="http://www.energoatom.kiev.ua/"><img class="footer__logo-naek" src="../images/svg/naek_logo_w.svg" alt=""></a>
+        <img class="footer__logo-raes" src="../images/svg/logo_white.svg" alt="">
+    </div>
+    <ul class="footer__social-icons">
+        <li class="footer__social-icon"><a href="https://www.facebook.com/rnppofficial" title="Facebook"><i class="icon-facebook"></i></a></li>
+        <li class="footer__social-icon"><a href="https://twitter.com/rnppofficial" title="Twitter"><i class="icon-twitter"></i></a></li>
+        <li class="footer__social-icon"><a href="https://www.instagram.com/rnppofficial" title="Instagram"><i class="icon-instagram"></i></a></li>
+        <li class="footer__social-icon"><a href="https://t.me/rnppofficial" title="Telegram"><i class="icon-telegram"></i></a></li>
+        <li class="footer__social-icon"><a href="https://www.youtube.com/channel/UCRrM8pysKmTiDqlfTPMzyCg" title="Youtube"><i class="icon-youtube"></i></a></li>
+    </ul>
+</div>
+</div>
+</div>
+<div class="footer__wrap"></div>
+<div class="footer__copy t3">
+    <div class="container">
+        <p>©2020, Рівненська Атомна Електростанція. Усі права захищено.</p>
+        <p>Копіювання, публікування або інше поширення інформації, у т.ч. окремих частин текстів чи зображень, розміщених на веб-сайті ВП РАЕС, без письмового дозволу забороняється. <a href="mailto:pr@rnpp.atom.gov.ua">pr@rnpp.atom.gov.ua</a></p>
+    </div>
+</div>
+</footer>
+
+<script src="../js/lib/jquery.min.js "></script>
+<script src="../js/lib/bootstrap5.min.js "></script>
+<!-- without version: <script src="../js/main.js"></script> 
+    <script src="../js/leaders_page.js "></script>-->
+<!-- <script> /* use this */
+        _v.add('js/main.js'); 
+        _v.add('js/leaders_page.js'); 
+    </script> -->
+
+<script>
+    /* temporary script */
+    let s = document.createElement('script');
+    s.setAttribute('src', '../js/_version.js?v=' + parseInt(Math.random() * 1000000));
+    s.onload = function() {
+        _v.add('../css/page_about_leaders.css', 1);
+        _v.add('../js/main.js');
+        _v.add('../js/about_menu.js');
+        _v.add('../js/leaders_page.js');
+    };
+    document.head.appendChild(s);
+</script>
 
 </body>
 
