@@ -617,3 +617,8 @@ img.hover-shadow {
   -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(167, 167, 167, 0.19);
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(167, 167, 167, 0.19);
 }
+
+.profession_list {
+  margin: 12px 0;
+  display: none;
+}
