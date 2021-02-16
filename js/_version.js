@@ -13,7 +13,8 @@ let _v = (function(){
         'article_page':1,
         'history_additional':1,
         'rnpp_lightbox':2,
-        'rnpp_touches':1
+        'rnpp_touches':1,
+        'text_blocks':1
     };
 
     let versionCSS = {
