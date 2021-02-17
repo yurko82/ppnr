@@ -670,3 +670,42 @@ img.hover-shadow {
   margin: 12px 0;
   display: none;
 }
+
+.culture_phones {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.culture_phones > div {
+  padding: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.culture_phones > div:nth-child(2n-1) {
+  background-color: #eeeeee;
+}
+
+@media (max-width: 600px) {
+  .culture_phones > div {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .culture_phones > div .culture_phone {
+    text-align: end;
+    font-weight: 500;
+  }
+}

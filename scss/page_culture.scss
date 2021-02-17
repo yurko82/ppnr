@@ -6,3 +6,23 @@
     margin: 12px 0;
     display: none;
 }
+.culture_phones{
+    display: flex;
+    flex-direction: column;
+    &>div{
+        padding: 4px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        &:nth-child(2n-1) {
+            background-color: $grey6;
+        }
+        @media(max-width:600px){
+            flex-direction: column;
+            & .culture_phone{
+                text-align: end;
+                font-weight: 500;
+            }
+        }
+    }
+}

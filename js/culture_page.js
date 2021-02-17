@@ -23,7 +23,3 @@ let arURLs=[
 ];
 let texts=[];
 let lightbox = new RnppLightbox('photo-gallery', arURLs, texts);
-
-function toogleProfList(){
-    $('.profession_list').toggle(300);
-}

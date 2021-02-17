@@ -3,7 +3,7 @@
 
 .block {
     &:nth-child(2n) {
-        background-color: rgb(240, 240, 240);
+        background-color: $grey6;
     }
     &-title {
         padding: 20px;
