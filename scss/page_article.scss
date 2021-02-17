@@ -64,6 +64,18 @@
         h1 {
             font-weight: 400;
         }
+        h2 {
+            font-size: 24px;
+            padding: 0;
+            @media(min-width:768px){
+                font-size: 28px;
+                padding: 12px 0;
+            }
+            @media(min-width:1000px){
+                font-size: 32px;
+                padding: 16px 0;
+            }
+        }
     }
     &__text {
         font-size: 16px;
