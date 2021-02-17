@@ -2,7 +2,7 @@ class RnppLightbox {
     constructor(parentID, photoURLs, descriptions){
         this.parent=$('#'+parentID);
         this.photos=photoURLs;
-        this.texts=descriptions;
+        this.texts=descriptions||[];
         this.slideIndex = 1;
 
         this.createHTML();
@@ -19,7 +19,7 @@ class RnppLightbox {
         <div class="modal-content"><div class="bigphotos">`;
         for (i=0;i<l;i++){
             html+=`<div class="bigphoto" draggable="false">
-                    <div class="caption-container"><span>${this.texts[i]}</span></div>
+                    <div class="caption-container"><span>${this.texts[i]||''}</span></div>
                     <img draggable="false" src="${this.photos[i]}" style="width:100%">
                     <div class="numbertext-container"><span>${parseInt(i+1)} / ${parseInt(l)}</span></div> 
                 </div>`;
