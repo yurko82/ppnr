@@ -195,4 +195,9 @@
     WebP.src = 'data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA';
 
 
+
 })();
+
+function toogleList(list) {
+    $('.' + list).toggle(300);
+}
