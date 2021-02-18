@@ -5,3 +5,30 @@
     margin: 12px 0;
     display: none;
 }
+
+.rest_phones {
+    display: flex;
+    flex-direction: column;
+    &>div {
+        padding: 4px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        &:nth-child(2n) {
+            background-color: $grey6;
+        }
+        & span {
+            &>span {
+                font-size: 12px!important;
+                line-height: 24px;
+            }
+        }
+        @media(max-width:600px) {
+            flex-direction: column;
+            & .rest_phone {
+                text-align: end;
+                font-weight: 500;
+            }
+        }
+    }
+}
