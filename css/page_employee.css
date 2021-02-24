@@ -1,0 +1,11 @@
+.employee .info img {
+  width: 100%;
+}
+
+@media (min-width: 1000px) {
+  .employee .info img {
+    width: 33%;
+    float: right;
+    margin: 0 0 8px 8px;
+  }
+}
