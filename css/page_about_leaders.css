@@ -46,6 +46,14 @@
   color: #74d2e7;
 }
 
+.text-grey3 {
+  color: #757575;
+}
+
+.text-grey4 {
+  color: #999999;
+}
+
 .bg-green1 {
   background-color: #39b791;
 }
@@ -92,6 +100,14 @@
 
 .text-blue5 {
   color: #74d2e7;
+}
+
+.text-grey3 {
+  color: #757575;
+}
+
+.text-grey4 {
+  color: #999999;
 }
 
 .hidden {
@@ -174,12 +190,15 @@
   .allabout .about_side_menu-select {
     cursor: pointer;
     display: -webkit-box;
+    display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
+    -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center;
     -webkit-box-pack: center;
+    -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center;
     position: relative;
@@ -225,8 +244,10 @@
 .allabout .about_side_menu-submenu .angle-down {
   display: none;
   -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
           transform: rotate(90deg);
   -webkit-transition: .3s;
+  -o-transition: .3s;
   transition: .3s;
   font-size: 12px;
   padding-top: 3px;
@@ -234,6 +255,7 @@
 
 .allabout .about_side_menu-submenu .angle-down.show {
   -webkit-transform: rotate(270deg);
+      -ms-transform: rotate(270deg);
           transform: rotate(270deg);
 }
 
@@ -310,10 +332,12 @@
 
 .allabout .about_side_menu .icon-up-down {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
 }
@@ -321,6 +345,7 @@
 .allabout .about_side_menu .icon-up-down i {
   font-size: 10px;
   -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
           transform: rotate(90deg);
 }
 
@@ -353,15 +378,19 @@
 
 .leaders {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
       -ms-flex-direction: row;
           flex-direction: row;
   -webkit-box-pack: space-evenly;
+  -webkit-justify-content: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
 }

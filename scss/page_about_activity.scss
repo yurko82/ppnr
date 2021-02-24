@@ -1,7 +1,44 @@
-@import "_about_menu";
-@import "_rnpp_lightbox";
-.block {
-    & .safety {
-        display: none;
+    @import "_about_menu";
+    @import "_rnpp_lightbox";
+    .block {
+        & .safety {
+            display: none;
+        }
     }
-}
+    
+    .declaration {
+        & h2 {
+            font-size: 20px;
+        }
+        & li {
+            padding-top: 12px;
+            & a {
+                color: $blue3;
+                &:hover {
+                    color: $blue4;
+                }
+            }
+        }
+    }
+    
+    .licensed {
+        & p {
+            padding: 0 0 8px 0;
+            color: $grey3;
+            font-weight: 600;
+        }
+        ul.licensed-doc {
+            padding: revert;
+            & li {
+                & div {
+                    display: none;
+                }
+                & a {
+                    color: $blue3;
+                    &:hover {
+                        color: $blue4;
+                    }
+                }
+            }
+        }
+    }
