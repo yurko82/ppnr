@@ -637,6 +637,43 @@ img.hover-shadow {
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(167, 167, 167, 0.19);
 }
 
+.rnpp-content-hidder {
+  overflow: hidden;
+}
+
+.rnpp-content-hidder_white-gradient {
+  width: 100%;
+  height: 90px;
+  position: absolute;
+  bottom: 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(white), to(white));
+  background: linear-gradient(rgba(255, 255, 255, 0), white, white);
+}
+
+.rnpp-content-hidder_cont {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.rnpp-content-hidder_btn {
+  font-size: 16px;
+  line-height: 20px;
+  padding: 8px 16px;
+  margin: 0;
+}
+
+.rnpp-content-hidder_btn:active, .rnpp-content-hidder_btn:focus {
+  outline: none;
+}
+
 .profession_list {
   margin: 12px 0;
   display: none;
