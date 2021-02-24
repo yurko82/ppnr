@@ -9,7 +9,6 @@
     <!-- <script src='../js/_version.js?v=(add some version)'></script> -->
     <link href="../css/lib/bootstrap5.css" rel="stylesheet" id="bootstrap-css">
     <link rel="stylesheet" href="../fonts/fontawesome/all.css">
-    <!-- <link rel="stylesheet" href="../css/lib/slick.css"> -->
     <link rel="stylesheet" href="../fonts/GothamPro/stylesheet.css">
     <link rel="stylesheet" href="../fonts/rnpp-icons/rnpp-icons.css">
 
@@ -174,7 +173,7 @@
                 <div class="article__title">
                     <h2 class="font-bold text-blue5">ПТУ - центр підготовки робітничих кадрів</h2>
                 </div>
-                <div class="article__text">
+                <div class="article__text rnpp-content-hidder">
 
                     <p>У структурі РАЕС функціонує професійно-технічне училище, як центр підготовки робітничих кадрів для АЕС. Тривалість навчання після 9 класу становить 3 роки, після 11 класу – 1 рік. Випускники закладу, які успішно закінчили навчання,
                         гарантовано можуть працевлаштуватися на РАЕС без додаткових співбесід за спрощеною процедурою професійного відбору. В училищі можливо здобути <a href="javascript:toogleList('profession_list')">низку професій.</a> </p>
@@ -269,7 +268,6 @@
 
     <script src="../js/lib/jquery.min.js "></script>
     <script src="../js/lib/bootstrap5.min.js "></script>
-    <!-- <script src="../js/lib/slick.min.js"></script> -->
     <!-- without version: <script src="../js/main.js"></script> 
     <script src="../js/leaders_page.js "></script>-->
     <!-- <script> /* use this */
@@ -283,8 +281,11 @@
         s.setAttribute('src', '../js/_version.js?v=' + parseInt(Math.random() * 1000000));
         s.onload = function() {
             _v.add('../css/page_study.css', 1);
+            _v.add('../js/rnpp_touches.js');
+            _v.add('../js/rnpp_lightbox.js');
             _v.add('../js/main.js');
             _v.add('../js/study_page.js');
+            _v.add('../js/rnpp_content_hidder.js');
         };
         document.head.appendChild(s);
     </script>
