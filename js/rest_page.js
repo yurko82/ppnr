@@ -43,7 +43,7 @@ let texts3 = ['Загальний вигляд ПТУ ВП РАЕС', 'Кабі�
 let texts4 = ['Загальний вигляд ПТУ ВП РАЕС', 'Кабінет енергетичних дисциплін', 'Слюсарна майстерня', 'Майстерня зварювання', 'Деревообробна майстерня',
     'Бібліотека', 'Кабінет загальноосвітніх дисциплін', 'Кабінет спецтехнологій зварників', 'Спортзал'
 ];
-let lightbox = new RnppLightbox('photo-gallery-1', arTip1, texts1);
-let lightbox2 = new RnppLightbox('photo-gallery-2', arTip2, texts2);
-let lightbox3 = new RnppLightbox('photo-gallery-3', arTip3, texts3);
-let lightbox4 = new RnppLightbox('photo-gallery-4', arTip4, texts4);
+let lightbox1 = new RnppLightbox('photo-gallery-1', arTip1, texts1,1);
+let lightbox2 = new RnppLightbox('photo-gallery-2', arTip2, texts2,2);
+let lightbox3 = new RnppLightbox('photo-gallery-3', arTip3, texts3,3);
+let lightbox4 = new RnppLightbox('photo-gallery-4', arTip4, texts4,4);
