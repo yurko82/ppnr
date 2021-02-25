@@ -1,8 +1,7 @@
 class RnppLightbox {
-    constructor(parentID, photoURLs, descriptions, galleryID) {
+    constructor(parentID, photoURLs, descriptions) {
         this.parent = $('#' + parentID);
         this.photos = photoURLs;
-        this.galleryId = (!galleryID) ? '' : galleryID;
         this.texts = descriptions || [];
         this.slideIndex = 1;
 
@@ -12,12 +11,12 @@ class RnppLightbox {
 
     createHTML() {
         let i, l = this.photos.length,
-            html = '<div class="rnpp_lightbox"><div class="row">';
+            html = '<div class="rnpp_lightbox"><div class="smallphotos">';
         for (i = 0; i < l; i++) {
-            html += `<div class="column pointer"><img src="${this.photos[i]}" style="width:100%" onclick="lightbox${this.galleryId}.openModal();lightbox.currentSlide(${parseInt(i+1)})" class="hover-shadow cursor"></div>`;
+            html += `<div class="photo_item"><img src="${this.photos[i]}" style="width:100%" data-num=${parseInt(i+1)} class="hover-shadow pointer"></div>`;
         }
         html += `</div>  <div class="modal">
-        <button onclick="lightbox${this.galleryId}.closeModal()"><a class="icon-close close cursor"></a></button>
+        <button class="close_button"><a class="icon-close close pointer"></a></button>
         <div class="modal-content"><div class="bigphotos">`;
         for (i = 0; i < l; i++) {
             html += `<div class="bigphoto" draggable="false">
@@ -27,17 +26,17 @@ class RnppLightbox {
                 </div>`;
         }
         html += `<div class="bigphoto-arrow-container">
-            <button class="btn-arrow-lightbox btn-arrow-left" onclick="lightbox${this.galleryId}.plusSlides(-1)"><a class="icon-left-arrow"></a></button>
-            <button class="btn-arrow-lightbox btn-arrow-right" onclick="lightbox${this.galleryId}.plusSlides(1)"><a class="icon-right-arrow"></a></button>
+            <button class="btn-arrow-lightbox btn-arrow-left"><a class="icon-left-arrow"></a></button>
+            <button class="btn-arrow-lightbox btn-arrow-right"><a class="icon-right-arrow"></a></button>
         </div></div>
         <div class="options"><div><span class="numbertext">0/0</span></div> 
                 <div class="btn-arrow-container">
-                    <button class="btn-arrow-lightbox btn-arrow-left" onclick="lightbox${this.galleryId}.plusSlides(-1)"><a class="icon-left-arrow"></a></button>
-                    <button class="btn-arrow-lightbox btn-arrow-right" onclick="lightbox${this.galleryId}.plusSlides(1)"><a class="icon-right-arrow"></a></button>
+                    <button class="btn-arrow-lightbox btn-arrow-left"><a class="icon-left-arrow"></a></button>
+                    <button class="btn-arrow-lightbox btn-arrow-right"><a class="icon-right-arrow"></a></button>
                 </div></div>`;
-        html += '<div class="columns">';
+        html += '<div class="modal-smallphotos">';
         for (i = 0; i < l; i++) {
-            html += `<div class="column"><img class="halftransparent pointer" src="${this.photos[i]}" style="width:100%" onclick="lightbox${this.galleryId}.currentSlide(${parseInt(i+1)})" alt=""></div>`;
+            html += `<div class="photo_item"><img class="halftransparent pointer" src="${this.photos[i]}" style="width:100%" data-num=${parseInt(i+1)} alt=""></div>`;
         }
         html += '</div></div>';
         this.parent.html(html);
@@ -48,6 +47,16 @@ class RnppLightbox {
         this.bigphotos.forEach(el => {
             new RnppTouches(el, { swipeLeft: () => this.plusSlides(1), swipeRight: () => this.plusSlides(-1), touch: true, mouse: true });
         });
+        this.parent.find('.smallphotos img').click((e)=>{
+            this.openModal();
+            this.currentSlide(e.target.dataset.num);
+        });
+        this.parent.find('.modal-smallphotos img').click((e)=>{
+            this.currentSlide(e.target.dataset.num);
+        });
+        this.parent.find('.close_button').click(()=>this.closeModal());
+        this.parent.find('button.btn-arrow-left').click(()=>this.plusSlides(-1));
+        this.parent.find('button.btn-arrow-right').click(()=>this.plusSlides(1));
     }
 
     openModal() { this.modal.css("display", "block"); }
