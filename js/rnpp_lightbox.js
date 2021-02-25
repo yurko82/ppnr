@@ -2,7 +2,7 @@ class RnppLightbox {
     constructor(parentID, photoURLs, descriptions, galleryID) {
         this.parent = $('#' + parentID);
         this.photos = photoURLs;
-        this.galleryId = galleryID;
+        this.galleryId = (!galleryID) ? '' : galleryID;
         this.texts = descriptions || [];
         this.slideIndex = 1;
 
