@@ -315,36 +315,47 @@
   cursor: pointer;
 }
 
-.smallphotos:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-.smallphotos .photo_item {
-  padding: 4px;
-  display: inline-block;
-  width: 33%;
+.grid-smallphotos {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 8px;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
 }
 
 @media (min-width: 768px) {
-  .smallphotos .photo_item {
-    width: 24%;
+  .grid-smallphotos {
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
   }
 }
 
 @media (min-width: 1000px) {
-  .smallphotos .photo_item {
-    padding: 8px;
-    width: 19%;
+  .grid-smallphotos {
+    -ms-grid-columns: (1fr)[5];
+        grid-template-columns: repeat(5, 1fr);
   }
+}
+
+.photo_item {
+  display: inline-block;
+  overflow: hidden;
+  height: 120px;
+}
+
+.photo_item-inner {
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .modal {
   display: none;
   position: fixed;
   z-index: 100000;
-  padding-top: 20px;
   left: 0;
   top: 0;
   width: 100%;
@@ -374,56 +385,42 @@
   display: none;
 }
 
-.modal .close {
-  color: white;
-  position: absolute;
-  top: 25px;
-  right: 25px;
-  font-size: 30px;
-}
-
-.modal .close:hover, .modal .close:focus {
-  color: #999;
-  text-decoration: none;
-}
-
 .modal-smallphotos {
-  display: -ms-grid;
-  display: grid;
-  -webkit-column-gap: 8px;
-          column-gap: 8px;
-  row-gap: 8px;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
-  width: 90%;
-  max-width: 1200px;
-  margin: 20px auto;
+  margin: 10px auto;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1000px), (orientation: portrait) {
   .modal-smallphotos {
-    -ms-grid-columns: (1fr)[5];
-        grid-template-columns: repeat(5, 1fr);
+    max-width: 1200px;
+    width: 90%;
   }
-}
-
-@media (min-width: 1000px) {
-  .modal-smallphotos {
-    -ms-grid-columns: (1fr)[6];
-        grid-template-columns: repeat(6, 1fr);
+  .modal-smallphotos .modal-smallphotos-line {
+    overflow-x: scroll;
+    white-space: nowrap;
   }
-}
-
-@media (min-width: 1280px) {
-  .modal-smallphotos {
-    -ms-grid-columns: (1fr)[8];
-        grid-template-columns: repeat(8, 1fr);
+  .modal-smallphotos .modal-smallphotos-line::-webkit-scrollbar {
+    height: 10px;
+    cursor: pointer;
+  }
+  .modal-smallphotos .modal-smallphotos-line::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  .modal-smallphotos .modal-smallphotos-line::-webkit-scrollbar-thumb {
+    background: #74d2e7;
+  }
+  .modal-smallphotos .modal-smallphotos-line::-webkit-scrollbar-thumb:hover {
+    background: #41b6e6;
+  }
+  .modal-smallphotos .modal-smallphotos-line .photo_item {
+    height: 80px;
+    width: 100px;
+    padding-right: 4px;
   }
 }
 
 .modal-content {
   position: relative;
-  margin: 15px auto;
+  margin: 0 auto;
   padding: 0;
   background-color: transparent;
 }
@@ -473,9 +470,6 @@
 }
 
 @media (min-width: 769px) {
-  .modal {
-    padding-top: 30px;
-  }
   .modal .bigphotos {
     position: relative;
   }
@@ -526,61 +520,71 @@
   }
 }
 
-.btn-arrow-lightbox {
-  display: inline-block;
-  border: 1px solid white;
-  color: white;
+.btn-lightbox {
   font-size: 16px;
+  color: white;
   line-height: 0;
-  padding: 10px 20px;
   background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 0;
-  margin: 0;
+  margin: 4px;
   cursor: pointer;
 }
 
-.btn-arrow-lightbox:focus {
+.btn-lightbox:focus {
   outline: none;
 }
 
-.btn-arrow-lightbox a {
+.btn-lightbox a {
   color: inherit;
 }
 
-.btn-arrow-lightbox:before {
-  background: #005b99;
+.btn-lightbox:before {
+  background: #74d2e7;
 }
 
-.btn-arrow-lightbox:hover {
-  background-color: #005b99;
-  border-color: #005b99;
+.btn-lightbox:hover {
+  background-color: #74d2e7;
+  border-color: #74d2e7;
+}
+
+.btn-lightbox-arrow {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 1px solid white;
+  border-radius: 0;
+}
+
+.btn-lightbox-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 48px;
+  height: 48px;
 }
 
 @media (min-width: 768px) {
-  .btn-arrow-lightbox {
+  .btn-lightbox {
     font-size: 16px;
-    padding: 8px 8px;
-    margin: 4px;
+    padding: 8px;
   }
 }
 
 @media (min-width: 1000px) {
-  .btn-arrow-lightbox {
+  .btn-lightbox {
     font-size: 20px;
-    padding: 10px 10px;
+    padding: 10px;
   }
 }
 
 @media (min-width: 1280px) {
-  .btn-arrow-lightbox {
+  .btn-lightbox {
     font-size: 24px;
-    padding: 12px 12px;
+    padding: 12px;
   }
 }
 
 @media (min-width: 1400px) {
-  .btn-arrow-lightbox {
-    margin: 0 calc((100vw - 1200px)/4 - 40px);
+  .btn-lightbox {
+    margin: 4px calc((100vw - 1200px)/4 - 40px);
   }
 }
 
