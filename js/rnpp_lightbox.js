@@ -21,7 +21,7 @@ class RnppLightbox {
         for (i = 0; i < l; i++) {
             html += `<div class="bigphoto" draggable="false">
                     <div class="caption-container"><span>${this.texts[i]||''}</span></div>
-                    <img draggable="false" src="${this.photos[i]}" style="width:100%">
+                    <div class="bigphoto_img" style="background-image: url(${this.photos[i]})" draggable="false"></div>
                     <div class="numbertext-container"><span>${parseInt(i+1)} / ${parseInt(l)}</span></div> 
                 </div>`;
         }
