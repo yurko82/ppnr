@@ -54,18 +54,50 @@
     &-arrow-container{
       display: none;
     }
+
     &-smallphotos {
       margin: 10px auto;
-      @media (min-width:1000px), (orientation: portrait) {
+      width: 90%;
+      overflow-y: scroll;
+      overflow-x: hidden;
+      &::-webkit-scrollbar {
+        width: 10px;
+        cursor: pointer;
+        &-track { 
+          background: #f1f1f1; 
+        }
+        &-thumb {
+          background: $blue5;
+          &:hover{
+            background: $blue4;
+          }
+        }
+      }
+      & .modal-smallphotos-line {
+        overflow: hidden;
+        display: grid;
+        grid-gap: 8px;
+        grid-template-columns: repeat(3, 1fr);
+        padding-bottom:10px;
+        @media (min-width: 768px){
+          grid-template-columns: repeat(4, 1fr);
+        }
+        & .photo_item {
+          height: 80px;
+        }
+      }
+      @media (min-width:1000px), (orientation: landscape) and (max-width:999px) {
           max-width:1200px;
-          width: 90%;
+          overflow: hidden;
           & .modal-smallphotos-line {
+            display: block;
             overflow-x: scroll;
+            overflow-y: hidden;
             white-space: nowrap;
             &::-webkit-scrollbar {
               height: 10px;
               cursor: pointer;
-              &-track {
+              &-track { 
                 background: #f1f1f1; 
               }
               &-thumb {

@@ -434,15 +434,58 @@
 
 .modal-smallphotos {
   margin: 10px auto;
+  width: 90%;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
-@media (min-width: 1000px), (orientation: portrait) {
+.modal-smallphotos::-webkit-scrollbar {
+  width: 10px;
+  cursor: pointer;
+}
+
+.modal-smallphotos::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.modal-smallphotos::-webkit-scrollbar-thumb {
+  background: #74d2e7;
+}
+
+.modal-smallphotos::-webkit-scrollbar-thumb:hover {
+  background: #41b6e6;
+}
+
+.modal-smallphotos .modal-smallphotos-line {
+  overflow: hidden;
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 8px;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  padding-bottom: 10px;
+}
+
+@media (min-width: 768px) {
+  .modal-smallphotos .modal-smallphotos-line {
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.modal-smallphotos .modal-smallphotos-line .photo_item {
+  height: 80px;
+}
+
+@media (min-width: 1000px), (orientation: landscape) and (max-width: 999px) {
   .modal-smallphotos {
     max-width: 1200px;
-    width: 90%;
+    overflow: hidden;
   }
   .modal-smallphotos .modal-smallphotos-line {
+    display: block;
     overflow-x: scroll;
+    overflow-y: hidden;
     white-space: nowrap;
   }
   .modal-smallphotos .modal-smallphotos-line::-webkit-scrollbar {
