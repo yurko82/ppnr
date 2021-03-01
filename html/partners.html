@@ -215,7 +215,7 @@
                     </ul>
                 </nav>
 
-                <div class="allabout__content">
+                <div class="allabout__content partners">
 
                     <p>Метою міжнародного співробітництва на Рівненській АЕС є підвищення рівня безпеки та надійності роботи діючих енергоблоків, розвиток ділового і культурно-спортивного співробітництва із зарубіжними компаніями. Щорічно Рівненську АЕС
                         відвідують майже 100 делегацій іноземних фірм та компаній, робота з якими будується на засадах доброзичливості та відкритості.
@@ -223,6 +223,20 @@
                     <p>Основними напрямками співпраці є реалізація проєктів міжнародної технічної допомоги, членство в міжнародних організаціях, постачання обладнання та надання послуг за комерційними контрактами відповідно до результатів конкурсних торгів,
                         проведення заходів різних напрямів та рівнів тощо.</p>
 
+                    <div class="partners_logos">
+                        <div class="partners_logo">
+                            <a href="https://www.bosch.ua/">
+                                <img src="/images/partners/bosch.png" alt="bosch">
+                                <span>Bosch</span>
+                            </a>
+                        </div>
+                        <div class="partners_logo">
+                            <a href="http://siemens.com/">
+                                <img src="/images/partners/siemens.png" alt="siemens">
+                                <span>Siemens</span>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -293,6 +307,7 @@
         s.setAttribute('src', '../js/_version.js?v=' + parseInt(Math.random() * 1000000));
         s.onload = function() {
             _v.add('../css/page_about.css', 1);
+            _v.add('../css/page_partners.css', 1);
             _v.add('../js/main.js');
             _v.add('../js/about_menu.js');
         };
