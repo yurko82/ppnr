@@ -85,7 +85,7 @@
     }
     &-content {
       position: relative;
-      margin: 0 auto;
+      margin: 5px auto;
       padding: 0;
       height: 100%;
       background-color: transparent;
@@ -107,7 +107,7 @@
           height:100%;
           min-height: 200px;
           background-repeat: no-repeat;
-          background-size: cover;
+          background-size: contain;
           background-position: center;
         }
       }
@@ -183,14 +183,20 @@
 }
 
 .btn-lightbox {
-  font-size: 16px;
+  
   color: white;
   line-height: 0;
   background-color: rgba(0, 0, 0, 0.5);
   margin: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
   &:focus { outline: none; }
-  & a { color: inherit; }
+  & a { 
+    color: inherit; 
+    font-size:inherit;
+  }
   &:before { background: $blue5;  }
   &:hover {
       background-color: $blue5;
@@ -198,6 +204,7 @@
   }
   &-arrow {
     display: inline-block;
+    font-size: 16px;
     padding: 10px 20px;
     border: 1px solid white;
     border-radius: 0;
@@ -208,18 +215,37 @@
     right:0;
     width: 48px;
     height: 48px;
+    font-size: 24px;
   }
   @media(min-width:768px){
     font-size: 16px;
     padding: 8px;
+    &-close {
+      font-size:24px;
+      &:hover{
+        font-size: 20px;
+      }
+    }
   }
   @media(min-width:1000px){
     font-size: 20px;
     padding: 10px;
+    &-close {
+      font-size:24px;
+      &:hover{
+        font-size: 20px;
+      }
+    }
   }
   @media(min-width:1280px){
     font-size: 24px;
     padding: 12px;
+    &-close {
+      font-size:30px;
+      &:hover{
+        font-size: 24px;
+      }
+    }
   }
   @media(min-width:1400px){
     margin: 4px calc((100vw - 1200px)/4 - 40px);
