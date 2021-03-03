@@ -5,7 +5,11 @@ class RnppLightbox {
         this.texts = descriptions || [];
         this.slideIndex = 1;
         this.isDrag=false;
+        this.landscape=false;
         this.createHTML();
+
+        window.addEventListener('resize',()=> this.checkScreenW());
+        this.checkScreenW('init');
     }
 
     createHTML() {
@@ -58,7 +62,6 @@ class RnppLightbox {
         this.parent.find('button.btn-lightbox-close').click(()=>this.closeModal());
         this.parent.find('button.btn-arrow-left').click(()=>this.plusSlides(-1));
         this.parent.find('button.btn-arrow-right').click(()=>this.plusSlides(1));
-        this.releaseDrag(this.parent.find('.modal-smallphotos-line')[0]);
     }
 
     openModal() { this.modal.css("display", "block"); }
@@ -69,7 +72,7 @@ class RnppLightbox {
         while (this.slideIndex > this.photos.length) this.slideIndex -= this.photos.length;
         this.showSlides(this.slideIndex);
     }
-    currentSlide(n) { this.showSlides(this.slideIndex = n); }
+    currentSlide(n) { this.slideIndex = parseInt(n); this.showSlides(this.slideIndex); }
 
     showSlides(n) {
         let i;
@@ -86,21 +89,65 @@ class RnppLightbox {
         this.numberText.text(n + ' / ' + this.bigphotos.length);
     }
 
-    releaseDrag(cont){
-        let x,xD,xInit, $cont=$(cont);
-        $cont.mousedown((e)=>{ 
-            xInit = x = e.pageX;
-            $cont.mouseup((e)=>{
-                $cont.unbind('mouseup');
-                $cont.unbind('mousemove');
-                this.isDrag=false;
-            });
-            $cont.mousemove((e)=>{
-                xD = x - e.pageX;
-                x = e.clientX;
-                cont.scrollLeft += xD;
-                if (!this.isDrag && Math.abs(xInit-x)>5) this.isDrag=true;
-            });
-        })
+    releaseDrag(){
+        let contX=this.parent.find('.modal-smallphotos-line')[0];
+        let contY=this.parent.find('.modal-smallphotos')[0];
+        if (!contX || !contY) return;
+        let a,aD,aInit, $contX=$(contX), $contY=$(contY);
+        contY.scrollTop=0;
+        contX.scrollLeft=0;
+        $contX.unbind('mouseup');
+        $contX.unbind('mousemove');
+        $contX.unbind('mousedown');
+        $contY.unbind('mouseup');
+        $contY.unbind('mousemove');
+        $contY.unbind('mousedown');
+
+        if (this.landscape) {
+            $contX.mousedown((e)=>{ 
+                aInit = a = e.pageX;
+                $contX.mouseup((e)=>{
+                    $contX.unbind('mouseup');
+                    $contX.unbind('mousemove');
+                    this.isDrag=false;
+                });
+                $contX.mousemove((e)=>{
+                    aD = a - e.pageX;
+                    a = e.pageX;
+                    contX.scrollLeft += aD;
+                    if (!this.isDrag && Math.abs(aInit-a)>5 ) this.isDrag=true;
+                });
+            })
+        } else{
+            $contY.mousedown((e)=>{ 
+                aInit = a = e.pageY;
+                $contY.mouseup((e)=>{
+                    $contY.unbind('mouseup');
+                    $contY.unbind('mousemove');
+                    this.isDrag=false;
+                });
+                $contY.mousemove((e)=>{
+                    aD = a - e.pageY;
+                    a = e.pageY;
+                    contY.scrollTop += aD;
+                    if (!this.isDrag && Math.abs(aInit-a)>5) this.isDrag=true;
+                });
+            })
+        }
+        $(document).mouseup((e)=>{
+            if (!this.isDrag) return;
+            if (this.landscape) $contX.triggerHandler('mouseup');
+            else $contY.triggerHandler('mouseup');
+        });
+    }
+
+    checkScreenW(e){
+        let w = $(window).width(), h = $(window).height();
+        let ls = w>=1280 || w*0.98 > h;
+        if (this.landscape != ls || e=="init") {
+            this.landscape = ls;
+            this.releaseDrag();
+        }
+
     }
 }

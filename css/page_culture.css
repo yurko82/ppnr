@@ -433,14 +433,15 @@
 }
 
 .modal-smallphotos {
-  margin: 10px auto;
+  margin: 0 auto;
   width: 90%;
   overflow-y: scroll;
   overflow-x: hidden;
+  padding-bottom: 0;
 }
 
 .modal-smallphotos::-webkit-scrollbar {
-  width: 10px;
+  width: 8px;
   cursor: pointer;
 }
 
@@ -477,19 +478,23 @@
   height: 80px;
 }
 
-@media (min-width: 1000px), (orientation: landscape) and (max-width: 999px) {
+@media (min-width: 1280px), (orientation: landscape) {
   .modal-smallphotos {
     max-width: 1200px;
     overflow: hidden;
+    padding-bottom: 16px;
+    padding-top: 10px;
   }
   .modal-smallphotos .modal-smallphotos-line {
     display: block;
+    padding: 0;
+    margin: 0;
     overflow-x: scroll;
     overflow-y: hidden;
     white-space: nowrap;
   }
   .modal-smallphotos .modal-smallphotos-line::-webkit-scrollbar {
-    height: 10px;
+    height: 8px;
     cursor: pointer;
   }
   .modal-smallphotos .modal-smallphotos-line::-webkit-scrollbar-track {
