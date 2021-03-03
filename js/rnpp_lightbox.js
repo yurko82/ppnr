@@ -6,6 +6,7 @@ class RnppLightbox {
         this.slideIndex = 1;
         this.isDrag=false;
         this.landscape=false;
+        this.screenW=0;
         this.createHTML();
 
         window.addEventListener('resize',()=> this.checkScreenW());
@@ -15,11 +16,12 @@ class RnppLightbox {
     createHTML() {
         let i, l = this.photos.length,
             html = '<div class="rnpp_lightbox"><div class="grid-smallphotos">';
-        for (i = 0; i < l; i++) {
+         for (i = 0; i < l; i++) {
             html += `<div class="photo_item">
                 <div class="photo_item-inner hover-shadow pointer" style="background-image: url(${this.photos[i]})" data-num=${parseInt(i+1)}></div>
             </div>`;
         }
+        html+=`<div class="photo_item photo_item-show_more" data-num="0"><span>Більше<br>фото</span></div>`;
         html += `</div>  <div class="modal">
         <div class="modal-content"><div class="bigphotos">`;
         for (i = 0; i < l; i++) {
@@ -53,8 +55,7 @@ class RnppLightbox {
         this.bigphotos.forEach(el => {
             new RnppTouches(el, { swipeLeft: () => this.plusSlides(1), swipeRight: () => this.plusSlides(-1), touch: true, mouse: true });
         });
-        this.parent.find('.grid-smallphotos .photo_item-inner').click((e)=>{
-            console.log(e.target);
+        this.parent.find('.grid-smallphotos .photo_item-inner, .grid-smallphotos .photo_item-show_more').click((e)=>{
             this.openModal();
             this.currentSlide(e.target.dataset.num);
         });
@@ -72,7 +73,16 @@ class RnppLightbox {
         while (this.slideIndex > this.photos.length) this.slideIndex -= this.photos.length;
         this.showSlides(this.slideIndex);
     }
-    currentSlide(n) { this.slideIndex = parseInt(n); this.showSlides(this.slideIndex); }
+    currentSlide(num) { 
+        num=parseInt(num);
+        if (!num) {
+            if (this.screenW==1000) num=10;
+            else if (this.screenW==768) num=8;
+            else num=6;
+        }
+        this.slideIndex = num; 
+        this.showSlides(this.slideIndex); 
+    }
 
     showSlides(n) {
         let i;
@@ -142,11 +152,28 @@ class RnppLightbox {
     }
 
     checkScreenW(e){
-        let w = $(window).width(), h = $(window).height();
-        let ls = w>=1280 || w*0.98 > h;
+        let wmin, w = window.innerWidth, h = window.innerHeight;
+        let ls = w>=1280 || w > h;
         if (this.landscape != ls || e=="init") {
             this.landscape = ls;
             this.releaseDrag();
+        }
+        if (w>=1000) wmin=1000;
+        else if (w>=768) wmin=768;
+        else wmin=320;
+        if (wmin!=this.screenW) {
+            this.screenW=wmin;
+            let ar=$(this.parent).find('.grid-smallphotos .photo_item').toArray(), i,k, l=ar.length;
+            ar.forEach(el=>el.classList.add('photo_item-hidden'));
+            if (this.screenW==1000) k=9;
+            else if (this.screenW==768) k=7;
+            else k=5;
+            for (i=0;i<l-1;i++){
+                ar[i].classList.remove('photo_item-hidden');
+                if (i>=k-1) break;
+            }
+            if (l>k+1) ar[l-1].classList.remove('photo_item-hidden');
+            else ar[k] && ar[k].classList.remove('photo_item-hidden');
         }
 
     }
