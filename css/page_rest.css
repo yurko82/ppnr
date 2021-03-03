@@ -374,6 +374,7 @@
           justify-content: space-between;
 }
 
+<<<<<<< HEAD
 .pointer {
   cursor: pointer;
 }
@@ -773,6 +774,8 @@ img.hover-shadow {
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(167, 167, 167, 0.19);
 }
 
+=======
+>>>>>>> 1e392b3db2847d25107884925c1af3da7c9c6b4b
 .whiteLake,
 .whiteLakePay {
   margin: 12px 0;
