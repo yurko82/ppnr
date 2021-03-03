@@ -12,4 +12,4 @@ let arURLs = [
 let texts = ['Загальний вигляд ПТУ ВП РАЕС', 'Кабінет енергетичних дисциплін', 'Слюсарна майстерня', 'Майстерня зварювання', 'Деревообробна майстерня',
     'Бібліотека', 'Кабінет загальноосвітніх дисциплін', 'Кабінет спецтехнологій зварників', 'Спортзал'
 ];
-let lightbox = new RnppLightbox('photo-gallery', arURLs, texts);
+let lightbox = new RnppLightbox('photo-gallery', arURLs, arURLs, texts);

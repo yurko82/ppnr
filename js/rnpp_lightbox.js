@@ -1,7 +1,8 @@
 class RnppLightbox {
-    constructor(parentID, photoURLs, descriptions) {
+    constructor(parentID, previewURLs, photoURLs, descriptions) {
         this.parent = $('#' + parentID);
         this.photos = photoURLs;
+        this.photosPreview = previewURLs;
         this.texts = descriptions || [];
         this.slideIndex = 1;
         this.isDrag=false;
@@ -18,7 +19,7 @@ class RnppLightbox {
             html = '<div class="rnpp_lightbox"><div class="grid-smallphotos">';
          for (i = 0; i < l; i++) {
             html += `<div class="photo_item">
-                <div class="photo_item-inner hover-shadow pointer" style="background-image: url(${this.photos[i]})" data-num=${parseInt(i+1)}></div>
+                <div class="photo_item-inner hover-shadow pointer" style="background-image: url(${this.photosPreview[i]})" data-num=${parseInt(i+1)}></div>
             </div>`;
         }
         html+=`<div class="photo_item photo_item-show_more" data-num="0"><span>Більше<br>фото</span></div>`;
@@ -43,7 +44,7 @@ class RnppLightbox {
         html += '<div class="modal-smallphotos"><div class="modal-smallphotos-line">';
         for (i = 0; i < l; i++) {
             html += `<div class="photo_item">
-                <div class="photo_item-inner halftransparent pointer" style="background-image: url(${this.photos[i]})" data-num=${parseInt(i+1)}></div>
+                <div class="photo_item-inner halftransparent pointer" style="background-image: url(${this.photosPreview[i]})" data-num=${parseInt(i+1)}></div>
             </div>`;
         }
         html += '</div></div><button class="btn-lightbox btn-lightbox-close"><a class="icon-close pointer"></a></button></div>';
