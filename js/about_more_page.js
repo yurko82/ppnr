@@ -11,4 +11,4 @@
         'https://www.rnpp.rv.ua/assets/images/czentr/poles/infocentr_2017_10.jpg'
     ];
     let texts = ['Опис 1', 'Опис 2', '', 'Опис 4', 'Опис 5', 'Опис 6', 'Опис 7', 'Опис 8', 'Опис 9', 'Опис 10'];
-    let lightbox = new RnppLightbox('photo-gallery', arURLs, texts);
+    let lightbox = new RnppLightbox('photo-gallery', arURLs, arURLs, texts);

@@ -22,4 +22,4 @@ let arURLs=[
 
 ];
 let texts=[];
-let lightbox = new RnppLightbox('photo-gallery', arURLs, texts);
+let lightbox = new RnppLightbox('photo-gallery', arURLs, arURLs, texts);

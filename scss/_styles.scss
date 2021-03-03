@@ -24,6 +24,12 @@
         list-style: none;
     }
     
+    b,
+    strong {
+        font-weight: 600;
+        color: #686868;
+    }
+    
     h1,
     h2,
     h3,
@@ -99,14 +105,14 @@
             justify-content: center;
         }
     }
-
+    
     .container {
         @media (max-width: 1300px) {
-              width: 100%;
-              max-width: 1300px;
+            width: 100%;
+            max-width: 1300px;
         }
     }
-
+    
     .to-top {
         margin-top: 90px;
         @media (min-width: 768px) {
@@ -124,7 +130,7 @@
     .mt80 {
         margin-top: 80px;
     }
- 
+    
     .h1 {
         margin: 0;
         font-size: 20px;
