@@ -39,7 +39,7 @@ class RnppLightbox {
         <div class="options"><div><span class="numbertext">0/0</span></div> 
                 <div class="btn-arrow-container">
                     <button class="btn-lightbox btn-lightbox-arrow btn-arrow-left"><a class="icon-left-arrow"></a></button>
-                    <button class="btn-lightbox btn-lightbox-arrow btn-arrow-left"><a class="icon-right-arrow"></a></button>
+                    <button class="btn-lightbox btn-lightbox-arrow btn-arrow-right"><a class="icon-right-arrow"></a></button>
                 </div></div>`;
         html += '<div class="modal-smallphotos"><div class="modal-smallphotos-line">';
         for (i = 0; i < l; i++) {
@@ -66,8 +66,8 @@ class RnppLightbox {
         this.parent.find('button.btn-arrow-right').click(()=>this.plusSlides(1));
     }
 
-    openModal() { this.modal.css("display", "block"); }
-    closeModal() { this.modal.css("display", "none"); }
+    openModal() { this.modal.css("display", "block"); $(document.body).css('overflow', 'hidden'); }
+    closeModal() { this.modal.css("display", "none"); $(document.body).css('overflow', 'auto'); }
     plusSlides(n) {
         this.slideIndex += n;
         while (this.slideIndex < 1) this.slideIndex += this.photos.length;
