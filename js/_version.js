@@ -33,7 +33,7 @@ let _v = (function(){
 
     let addFile = function(src,head=0){
         let [filename,ext] = src.split('/').pop().split('.');
-        _queue.push({head:head, src:src, filename:filename, ext:ext});
+        _queue.push({head:head, src:src, filename:filename, ext:ext, count:0});
         if (_queue.length==1) _loadQueue();
     };
 
@@ -48,11 +48,17 @@ let _v = (function(){
             s = document.createElement('link');
             s.setAttribute('rel',"stylesheet");
             s.setAttribute('href',file.src+'?v='+getCSSversion(file.filename));
-        } else console.error('_version:: unsupported extension: '+file.ext);
+        } else console.error('_version:: Unsupported extension: '+file.ext);
         s.onload = () => {
             _queue.shift();
             _loadQueue();
         }
+        s.onerror = () => {
+            console.error("_version:: Error loading: " + file.src); 
+            if (_queue[0].count<1) _queue[0].count++;
+            else _queue.shift(); 
+            _loadQueue();
+          };
         file.head ? document.head.appendChild(s) : document.body.appendChild(s);
     };
 
