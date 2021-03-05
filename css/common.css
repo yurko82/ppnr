@@ -825,6 +825,18 @@ button.next {
   font-weight: 700;
 }
 
+.urlFile {
+  cursor: s-resize;
+}
+
+.urlList {
+  cursor: url(https://www.rnpp.rv.ua/assets/RNPP/img/doc_search_error_26.png), auto;
+}
+
+.urlLink {
+  cursor: pointer;
+}
+
 .bg-green1 {
   background-color: #39b791;
 }
