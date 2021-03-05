@@ -95,18 +95,31 @@
   width: 100%;
   height: 100%;
   background-repeat: no-repeat;
-  background-size: cover;
+  -webkit-background-size: cover;
+          background-size: cover;
   background-position: center;
 }
 
 .rnpp_lightbox .photo_item-show_more {
   display: -webkit-box;
+<<<<<<< HEAD
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+=======
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
+>>>>>>> 15dac96de91a0afef816930fddab9c336d55f5f6
       -ms-flex-align: center;
           align-items: center;
   border: 2px solid #74d2e7;
@@ -168,10 +181,15 @@
   top: 8px;
 }
 
+<<<<<<< HEAD
+.rnpp_lightbox .modal .caption-container p {
+  padding: 0;
+=======
 .rnpp_lightbox .modal .caption-container span {
   text-shadow: 1px 2px rgba(50, 50, 50, 0.75);
   font-weight: 600;
   font-size: 18px;
+>>>>>>> 15dac96de91a0afef816930fddab9c336d55f5f6
 }
 
 .rnpp_lightbox .modal-arrow-container {
@@ -290,18 +308,22 @@
   height: 100%;
   min-height: 200px;
   background-repeat: no-repeat;
-  background-size: contain;
+  -webkit-background-size: contain;
+          background-size: contain;
   background-position: center;
 }
 
 .rnpp_lightbox .modal-content .options {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
+  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 16px 0;
@@ -359,16 +381,20 @@
   }
   .rnpp_lightbox .modal .bigphotos .bigphoto-arrow-container {
     display: -webkit-box;
+    display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
     position: absolute;
     top: 50%;
     -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
             transform: translateY(-50%);
     -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
     transition: all 0.3s;
     width: 100%;
     -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
@@ -383,12 +409,15 @@
   background-color: rgba(0, 0, 0, 0.5);
   margin: 4px;
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
+  -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
+  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   cursor: pointer;
@@ -417,7 +446,8 @@
   font-size: 16px;
   padding: 10px 20px;
   border: 1px solid white;
-  border-radius: 0;
+  -webkit-border-radius: 0;
+          border-radius: 0;
 }
 
 .rnpp_lightbox .btn-lightbox-close {
@@ -470,6 +500,10 @@
 
 @media (min-width: 1400px) {
   .rnpp_lightbox .btn-lightbox {
+<<<<<<< HEAD
+    margin: 4px -webkit-calc((100vw - 1200px)/4 - 40px);
+=======
+>>>>>>> 15dac96de91a0afef816930fddab9c336d55f5f6
     margin: 4px calc((100vw - 1200px)/4 - 40px);
   }
 }
@@ -484,6 +518,7 @@
 
 .rnpp_lightbox img.hover-shadow {
   -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
   transition: 0.3s;
 }
 
@@ -530,7 +565,8 @@
 
 .article-fixed .container-fixed .article__img {
   height: 600px;
-  background-size: cover;
+  -webkit-background-size: cover;
+          background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
@@ -592,10 +628,12 @@
 
 .rest_phones {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
 }
@@ -603,14 +641,22 @@
 .rest_phones > div {
   padding: 4px;
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+<<<<<<< HEAD
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+=======
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+>>>>>>> 15dac96de91a0afef816930fddab9c336d55f5f6
   -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
@@ -628,6 +674,7 @@
   .rest_phones > div {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
         -ms-flex-direction: column;
             flex-direction: column;
   }
