@@ -358,15 +358,12 @@
 
 .rnpp_lightbox .photo_item-show_more {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   border: 2px solid #74d2e7;
@@ -730,10 +727,6 @@
 
 @media (min-width: 1400px) {
   .rnpp_lightbox .btn-lightbox {
-<<<<<<< HEAD
-    margin: 4px -webkit-calc((100vw - 1200px)/4 - 40px);
-=======
->>>>>>> 15dac96de91a0afef816930fddab9c336d55f5f6
     margin: 4px calc((100vw - 1200px)/4 - 40px);
   }
 }
