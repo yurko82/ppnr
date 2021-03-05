@@ -1,5 +1,5 @@
 let _v = (function(){
-
+    let _queue=[];
     let versionJS = {
         'main':4,
         'index_page':3,
@@ -32,17 +32,29 @@ let _v = (function(){
     let getCSSversion=function(filename){ return versionCSS[filename]||''; }
 
     let addFile = function(src,head=0){
-        let [filename,ext] = src.split('/').pop().split('.'), s;
-        if (ext=='js') {
+        let [filename,ext] = src.split('/').pop().split('.');
+        _queue.push({head:head, src:src, filename:filename, ext:ext});
+        if (_queue.length==1) _loadQueue();
+    };
+
+    let _loadQueue=function(){
+        if (!_queue.length) return;
+        let s, file;
+        file = _queue[0];
+        if (file.ext=='js') {
             s = document.createElement('script');
-            s.setAttribute('src',src+'?v='+getJSversion(filename));
-        } else {
+            s.setAttribute('src',file.src+'?v='+getJSversion(file.filename));
+        } else if (file.ext=='scss' || file.ext=='css'){
             s = document.createElement('link');
             s.setAttribute('rel',"stylesheet");
-            s.setAttribute('href',src+'?v='+getCSSversion(filename));
+            s.setAttribute('href',file.src+'?v='+getCSSversion(file.filename));
+        } else console.error('_version:: unsupported extension: '+file.ext);
+        s.onload = () => {
+            _queue.shift();
+            _loadQueue();
         }
-        head ? document.head.appendChild(s) : document.body.appendChild(s);
-    }
+        file.head ? document.head.appendChild(s) : document.body.appendChild(s);
+    };
 
     return {
         js: getJSversion,
