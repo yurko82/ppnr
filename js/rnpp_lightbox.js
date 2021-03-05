@@ -26,7 +26,7 @@ class RnppLightbox {
         html += `</div>  <div class="modal">
         <div class="modal-content"><div class="bigphotos">`;
         for (i = 0; i < l; i++) {
-            html += `<div class="bigphoto" draggable="false">
+            html += `<div class="bigphoto" draggable="false" data-url="${this.photos[i]}">
                     <div class="caption-container"><span>${this.texts[i]||''}</span></div>
                     <div class="bigphoto_img" style="background-image: url(${this.photos[i]})" draggable="false"></div>
                     <div class="numbertext-container"><span>${parseInt(i+1)} / ${parseInt(l)}</span></div> 
@@ -54,7 +54,7 @@ class RnppLightbox {
         this.modal = this.parent.find(".modal");
         this.numberText = this.parent.find('.numbertext');
         this.bigphotos.forEach(el => {
-            new RnppTouches(el, { swipeLeft: () => this.plusSlides(1), swipeRight: () => this.plusSlides(-1), touch: true, mouse: true });
+            new RnppTouches(el, { swipeLeft: () => this.plusSlide(1), swipeRight: () => this.plusSlide(-1), touch: true, mouse: true });
         });
         this.parent.find('.grid-smallphotos .photo_item-inner, .grid-smallphotos .photo_item-show_more').click((e)=>{
             this.openModal();
@@ -62,17 +62,17 @@ class RnppLightbox {
         });
         this.parent.find('.modal-smallphotos .photo_item-inner').mouseup((e)=>{ if (!this.isDrag) this.currentSlide(e.target.dataset.num); });
         this.parent.find('button.btn-lightbox-close').click(()=>this.closeModal());
-        this.parent.find('button.btn-arrow-left').click(()=>this.plusSlides(-1));
-        this.parent.find('button.btn-arrow-right').click(()=>this.plusSlides(1));
+        this.parent.find('button.btn-arrow-left').click(()=>this.plusSlide(-1));
+        this.parent.find('button.btn-arrow-right').click(()=>this.plusSlide(1));
     }
 
     openModal() { this.modal.css("display", "block"); $(document.body).css('overflow', 'hidden'); }
     closeModal() { this.modal.css("display", "none"); $(document.body).css('overflow', 'auto'); }
-    plusSlides(n) {
+    plusSlide(n) {
         this.slideIndex += n;
         while (this.slideIndex < 1) this.slideIndex += this.photos.length;
         while (this.slideIndex > this.photos.length) this.slideIndex -= this.photos.length;
-        this.showSlides(this.slideIndex);
+        this.showSlide(this.slideIndex);
     }
     currentSlide(num) { 
         num=parseInt(num);
@@ -82,10 +82,10 @@ class RnppLightbox {
             else num=6;
         }
         this.slideIndex = num; 
-        this.showSlides(this.slideIndex); 
+        this.showSlide(this.slideIndex); 
     }
 
-    showSlides(n) {
+    showSlide(n) {
         let i;
         if (n > this.bigphotos.length) this.slideIndex = 1;
         if (n < 1) this.slideIndex = this.bigphotos.length;
@@ -95,7 +95,8 @@ class RnppLightbox {
         for (i = 0; i < this.dots.length; i++) {
             this.dots[i].className = this.dots[i].className.replace(" active", "");
         }
-        this.bigphotos[this.slideIndex - 1].style.display = "block";
+        this.bigphotos[this.slideIndex-1].style.display = "block";
+        // $(this.bigphotos[this.slideIndex-1]).find('.bigphoto_img').css("background-image", this.bigphotos[this.slideIndex-1].dataset.url);
         this.dots[this.slideIndex - 1].className += " active";
         this.numberText.text(n + ' / ' + this.bigphotos.length);
     }
