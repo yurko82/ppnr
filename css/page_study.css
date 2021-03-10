@@ -114,10 +114,10 @@
 
 @media (min-width: 1000px) {
   .article__img {
-    height: 500px;
+    height: 600px;
   }
   .article__img-overlay {
-    height: 500px;
+    height: 600px;
     top: 120px;
   }
 }
@@ -801,7 +801,7 @@
 
 .rnpp-content-hidder_white-gradient {
   width: 100%;
-  height: 90px;
+  height: 100px;
   position: absolute;
   bottom: 0;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(white), to(white));

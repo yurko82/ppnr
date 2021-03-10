@@ -42,10 +42,10 @@
                 height: 400px;
             }
          }
-        @media(min-width:1000px) {
-            height: 500px;
+        @media(min-width:1000px) { 
+            height: 600px;
             &-overlay {
-                height: 500px;
+                height: 600px;
                 top: 120px;
             }
         }
