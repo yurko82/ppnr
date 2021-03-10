@@ -114,10 +114,10 @@
 
 @media (min-width: 1000px) {
   .article__img {
-    height: 500px;
+    height: 600px;
   }
   .article__img-overlay {
-    height: 500px;
+    height: 600px;
     top: 120px;
   }
 }
