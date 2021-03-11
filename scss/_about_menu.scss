@@ -38,7 +38,7 @@
         &__content {
             margin-left: 320px;
             padding-top: 60px;
-            min-height: 550px;
+            min-height: 650px;
             & .img-info {
                 width: 50vw;
             }
@@ -167,16 +167,6 @@
                 transform: rotate(90deg);
             }
         }
-        // &::before {
-        //     content: '';
-        //     position: absolute;
-        //     left: 0;
-        //     top: 5px;
-        //     display: inline-block;
-        //     width: 4px;
-        //     height: 20px;
-        //     background-color: $blue3;
-        // }
         @media(min-width: 768px) {
             padding-left: 24px;
             position: sticky;
