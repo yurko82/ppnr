@@ -9,3 +9,8 @@
     margin: 0 0 8px 8px;
   }
 }
+
+.employee .zber-zdorovia_list,
+.employee .mat-dopomoga_list {
+  display: none;
+}
