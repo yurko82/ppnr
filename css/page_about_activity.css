@@ -776,8 +776,29 @@
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(167, 167, 167, 0.19);
 }
 
-.block .safety {
+.safety.allView .viewSafety {
+  display: block;
+}
+
+.safety.allView .safety__btn {
   display: none;
+}
+
+.safety .viewSafety {
+  display: none;
+}
+
+.safety__btn {
+  text-align: center;
+  padding: 0 0 24px 0;
+}
+
+.safety__btn button {
+  padding: 8px;
+}
+
+.safety p ~ ul {
+  margin-top: -20px;
 }
 
 .declaration h2 {
@@ -816,4 +837,44 @@
 
 .licensed ul.licensed-doc li a:hover {
   color: #41b6e6;
+}
+
+.purchase .item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: #d1d1d1 solid 1px;
+  padding: 18px;
+  margin: 10px 0;
+}
+
+.purchase .item:hover {
+  border: #005b99 solid 1px;
+}
+
+.purchase .item div {
+  padding-right: 12px;
+  margin-right: 12px;
+}
+
+.purchase .item a {
+  color: #005b99;
+}
+
+.purchase .item a:hover {
+  color: #41b6e6;
+}
+
+.purchase__btn {
+  text-align: center;
+  padding: 24px 0;
+}
+
+.purchase__btn button {
+  padding: 8px;
 }

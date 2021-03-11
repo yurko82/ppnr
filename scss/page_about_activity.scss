@@ -1,8 +1,26 @@
     @import "_about_menu";
     @import "_rnpp_lightbox";
-    .block {
-        & .safety {
+    .safety {
+        &.allView {
+            & .viewSafety {
+                display: block;
+            }
+            & .safety__btn {
+                display: none;
+            }
+        }
+        & .viewSafety {
             display: none;
+        }
+        &__btn {
+            text-align: center;
+            padding: 0 0 24px 0;
+            & button {
+                padding: 8px;
+            }
+        }
+        & p~ul {
+            margin-top: -20px;
         }
     }
     
@@ -39,6 +57,36 @@
                         color: $blue4;
                     }
                 }
+            }
+        }
+    }
+    
+    .purchase {
+        & .item {
+            display: flex;
+            align-items: center;
+            border: $grey5 solid 1px;
+            padding: 18px;
+            margin: 10px 0;
+            &:hover {
+                border: $blue3 solid 1px;
+            }
+            & div {
+                padding-right: 12px;
+                margin-right: 12px;
+            }
+            & a {
+                color: $blue3;
+                &:hover {
+                    color: $blue4;
+                }
+            }
+        }
+        &__btn {
+            text-align: center;
+            padding: 24px 0;
+            & button {
+                padding: 8px;
             }
         }
     }
