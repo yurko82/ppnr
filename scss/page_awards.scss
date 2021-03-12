@@ -1,0 +1,17 @@
+.awards {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    & .award {
+        position: relative;
+        & img {
+            width: 100%;
+            padding: 10px;
+            opacity: 0.8;
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+}

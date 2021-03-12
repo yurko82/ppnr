@@ -1,0 +1,25 @@
+.awards {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.awards .award {
+  position: relative;
+}
+
+.awards .award img {
+  width: 100%;
+  padding: 10px;
+  opacity: 0.8;
+}
+
+.awards .award img:hover {
+  opacity: 1;
+}
