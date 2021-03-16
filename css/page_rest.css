@@ -601,7 +601,7 @@
 }
 
 .rest_phones > div {
-  padding: 4px;
+  padding: 8px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
