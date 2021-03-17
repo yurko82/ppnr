@@ -1,0 +1,117 @@
+.article-fixed {
+  padding-top: 60px;
+}
+
+.article-fixed p, .article-fixed img {
+  padding-top: 20px;
+}
+
+@media (min-width: 768px) {
+  .article-fixed {
+    padding-top: 90px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .article-fixed {
+    padding-top: 120px;
+  }
+}
+
+.article-fixed .article__container {
+  max-width: 900px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.article-fixed .container-fixed {
+  position: relative;
+  width: 100%;
+  height: 600px;
+}
+
+.article-fixed .container-fixed .article__img {
+  height: 600px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  background-attachment: fixed;
+}
+
+.article-fixed .container-fixed .article__img-overlay {
+  background-image: url(../images/img/grid.png);
+  height: 600px;
+  width: 100%;
+  position: absolute;
+  opacity: 0.3;
+  top: 0;
+}
+
+@media (min-width: 768px) {
+  .article-fixed .container-fixed .article__img {
+    height: 400px;
+  }
+  .article-fixed .container-fixed .article__img-overlay {
+    height: 400px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .article-fixed .container-fixed .article__img {
+    height: 600px;
+  }
+  .article-fixed .container-fixed .article__img-overlay {
+    height: 600px;
+  }
+}
+
+.article-fixed .container-fixed__title {
+  position: absolute;
+  bottom: 8%;
+  left: 0;
+  right: 0;
+  padding: 0 12px;
+}
+
+.article-fixed .container-fixed__title span {
+  line-height: 115%;
+  color: white;
+  font-size: 30px;
+  font-weight: 600;
+  text-shadow: 2px 2px rgba(50, 50, 50, 0.5);
+}
+
+.article-fixed .container-fixed__title span.big_text {
+  font-size: 72px;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+@media (min-width: 768px) {
+  .article-fixed .container-fixed__title {
+    padding: 0 20px;
+  }
+  .article-fixed .container-fixed__title span {
+    font-size: 28px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .article-fixed .container-fixed__title {
+    padding-left: 5%;
+    bottom: 10%;
+  }
+  .article-fixed .container-fixed__title span {
+    font-size: 32px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .article-fixed .container-fixed__title {
+    padding-left: 8%;
+  }
+  .article-fixed .container-fixed__title span.big_text {
+    font-size: 90px;
+  }
+}
