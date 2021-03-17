@@ -819,13 +819,13 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border: #d1d1d1 solid 1px;
-  padding: 18px;
+  border: #eeeeee solid 1px;
+  padding: 20px;
   margin: 10px 0;
 }
 
 .purchase .item:hover {
-  border: #005b99 solid 1px;
+  border: #41b6e6 solid 1px;
 }
 
 .purchase .item div {
@@ -839,6 +839,15 @@
 
 .purchase .item a:hover {
   color: #41b6e6;
+}
+
+@media (max-width: 900px) {
+  .purchase .item {
+    display: block;
+  }
+  .purchase .item .time {
+    padding-bottom: 12px;
+  }
 }
 
 .purchase__btn {

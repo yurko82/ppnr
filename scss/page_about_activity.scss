@@ -65,11 +65,11 @@
         & .item {
             display: flex;
             align-items: center;
-            border: $grey5 solid 1px;
-            padding: 18px;
+            border: $grey6 solid 1px;
+            padding: 20px;
             margin: 10px 0;
             &:hover {
-                border: $blue3 solid 1px;
+                border: $blue4 solid 1px;
             }
             & div {
                 padding-right: 12px;
@@ -79,6 +79,12 @@
                 color: $blue3;
                 &:hover {
                     color: $blue4;
+                }
+            }
+            @media (max-width:900px){
+                display: block;
+                & .time{
+                    padding-bottom: 12px;
                 }
             }
         }
