@@ -288,7 +288,7 @@ section {
 }
 
 .info #info-items-slider_container {
-  padding-bottom: 120px;
+  padding-bottom: 80px;
 }
 
 .info__item {
@@ -886,33 +886,30 @@ section {
   background-color: #39b791;
 }
 
-.why a {
-  color: #fff;
+.why__wrap {
+  padding-bottom: 80px;
 }
 
 .why__items {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 20px;
+  -ms-grid-columns: (1fr)[1];
+      grid-template-columns: repeat(1, 1fr);
 }
 
 .why__item {
   width: 100%;
+  cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  padding: 5px 10px 40px 0;
+  padding: 10px;
   color: #fff;
+  outline: none;
 }
 
 .why__item-icon {
@@ -952,15 +949,8 @@ section {
 
 @media (min-width: 768px) {
   .why__items {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-  .why__item {
-    width: 50%;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
   }
   .why__item-icon-img {
     background-size: 75px;
@@ -971,23 +961,16 @@ section {
 
 @media (min-width: 1000px) {
   .why__items {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-  .why__item {
-    width: 33%;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
   }
 }
 
 /*----why end----*/
 /*----gromadi start----*/
-.people __wrap {
-  margin-bottom: 15px;
+.people__wrap {
   max-height: 1280px;
+  padding-bottom: 40px;
 }
 
 .people__items {
@@ -1087,8 +1070,4 @@ section {
   .section-top-row .btn-arrow-container {
     display: none;
   }
-}
-
-.section_padding {
-  padding-bottom: 40px;
 }

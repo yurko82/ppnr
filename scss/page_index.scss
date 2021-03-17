@@ -178,7 +178,7 @@ section {
         justify-content: space-between;
     }
     #info-items-slider_container{
-        padding-bottom:120px;
+        padding-bottom:80px;
     }
     &__item {
         width: 100%;
@@ -696,23 +696,24 @@ section {
 
 .why {
     background-color: $green1;
-    & a {
-        color: #fff;
+    &__wrap{
+        padding-bottom: 80px;
     }
     &__items {
-        display: flex;
-        justify-content: space-between;
-        flex-direction: column;
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: repeat(1, 1fr);
     }
     &__item {
         width: 100%;
+        cursor: pointer;
         display: flex;
         align-items: flex-start;
-        padding: 5px 10px 40px 0;
+        padding: 10px;
         color: #fff;
+        outline: none;
         &-icon {
             margin: -5px 15px 0 0;
-            // width: 60px;
             display: inline-block;
             text-align: center;
             &-img {
@@ -739,28 +740,58 @@ section {
     }
     @media(min-width: 768px) {
         &__items {
-            flex-direction: row;
-            flex-wrap: wrap;
+            grid-template-columns: repeat(2, 1fr);
         }
-        &__item {
-            width: 50%;
-            &-icon {
-                // width: 80px;
-                &-img {
-                    background-size: 75px;
-                    max-width: 75px;
-                    height: 70px;
-                }
-            }
+        &__item-icon-img {
+            background-size: 75px;
+            max-width: 75px;
+            height: 70px;
         }
     }
     @media(min-width: 1000px) {
         &__items {
-            flex-direction: row;
-            flex-wrap: wrap;
+            grid-template-columns: repeat(3, 1fr);
         }
         &__item {
-            width: 33%;
+            // https://codepen.io/Toomean/pen/xLhpg
+            // &:before {
+            //     transform: translateX(100%);
+            //     content: '';
+            //     position: relative;
+            //     bottom: 0;
+            //     left: 0;
+            //     width: 99.5%;
+            //     height: 2px;
+            //     border-bottom: 2px solid transparent;
+            //     border-left: 2px solid transparent;
+            // }
+            // &:after {
+            //     transform: translateX(-100%);
+            //     content: '';
+            //     position: relative;
+            //     top: 0;
+            //     left: 0;
+            //     width: 99.5%;
+            //     height: 2px;
+            //     border-top: 2px solid transparent;
+            //     border-right: 2px solid transparent;
+            // }
+            // &:hover {
+            //     color: inherit;
+            //     text-decoration: none;
+            //     &:before {
+            //       transition: .1s transform linear, .1s height linear .1s;
+            //       transform: translateX(0);
+            //       height: 100%;
+            //       border-color: white;
+            //     }
+            //     &:after {
+            //       transition: .1s transform linear .2s, .1s height linear .3s;
+            //       transform: translateX(0);
+            //       height: 100%;
+            //       border-color: white;
+            //     }
+            // }
         }
     }
 }
@@ -772,9 +803,9 @@ section {
 /*----gromadi start----*/
 
 .people {
-    & __wrap {
-        margin-bottom: 15px;
+    &__wrap {
         max-height: 1280px;
+        padding-bottom: 40px;
     }
     &__items {
         display: flex;
@@ -817,29 +848,12 @@ section {
             width: 100%;
         }
     }
-    @media(min-width: 480px) {
-        // &__item-title {
-        //     & h3 {
-        //         line-height: 32px;
-        //     }
-        // }
-    }
     @media (min-width: 768px) {
-        // &__item-title {
-        //     & h3 {
-        //         line-height: 32px;
-        //     }
-        // }
         &__item-padding {
             width: 48.5%;
         }
     }
     @media (min-width: 1000px) {
-        // &__item-title {
-        //     & h3 {
-        //         line-height: 32px;
-        //     }
-        // }
         &__item-padding {
             width: 32.5%;
         }
@@ -862,8 +876,4 @@ section {
             display: none;
         }
     }
-}
-
-.section_padding{
-    padding-bottom: 40px;
 }
