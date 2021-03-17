@@ -287,6 +287,10 @@ section {
           justify-content: space-between;
 }
 
+.info #info-items-slider_container {
+  padding-bottom: 120px;
+}
+
 .info__item {
   width: 100%;
   max-width: 1240px;
@@ -999,7 +1003,6 @@ section {
           justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-bottom: 50px;
 }
 
 .people__item {
@@ -1084,4 +1087,8 @@ section {
   .section-top-row .btn-arrow-container {
     display: none;
   }
+}
+
+.section_padding {
+  padding-bottom: 40px;
 }

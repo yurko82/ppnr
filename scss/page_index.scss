@@ -177,6 +177,9 @@ section {
         flex-direction: row;
         justify-content: space-between;
     }
+    #info-items-slider_container{
+        padding-bottom:120px;
+    }
     &__item {
         width: 100%;
         max-width: 1240px;
@@ -778,7 +781,6 @@ section {
         flex-direction: row;
         justify-content: space-between;
         flex-wrap: wrap;
-        margin-bottom: 50px;
     }
     &__item {
         overflow: hidden;
@@ -860,4 +862,8 @@ section {
             display: none;
         }
     }
+}
+
+.section_padding{
+    padding-bottom: 40px;
 }
