@@ -32,7 +32,8 @@
 
 .article-fixed .container-fixed .article__img {
   height: 600px;
-  background-size: cover;
+  -webkit-background-size: cover;
+          background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
