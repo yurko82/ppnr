@@ -1,5 +1,6 @@
 @import "_colors";
 @import "_rnpp_lightbox";
+@import "_rnpp_content_hidder";
 .article-fixed {
     & p,
     img {
@@ -111,8 +112,14 @@
 }
 
 .sport {
+    &_item {
+        padding: 20px 10px 15px 10px;
+        margin: 0 -10px;
+        &:hover {
+            background-color: $grey6;
+        }
+    }
     &_title {
-        margin-top: 20px;
         font-size: 20px;
         font-weight: 700;
         color: $blue4;
@@ -123,6 +130,16 @@
     &_distance,
     &_location {
         color: $blue3;
+    }
+    &_table {
+        & li {
+            display: flex;
+            justify-content: space-between;
+            &:nth-child(2n) {
+                background-color: $grey6;
+                padding: 3px 0;
+            }
+        }
     }
 }
 
@@ -135,7 +152,7 @@
         align-items: center;
         flex-wrap: wrap;
         justify-content: space-between;
-        &:nth-child(2n+1) {
+        &:nth-child(2n) {
             background-color: $grey6;
         }
         & span {

@@ -510,6 +510,48 @@
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(167, 167, 167, 0.19);
 }
 
+.rnpp-content-hidder {
+  overflow: hidden;
+}
+
+.rnpp-content-hidder_white-gradient {
+  width: 100%;
+  height: 100px;
+  position: absolute;
+  bottom: 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(white), to(white));
+  background: -webkit-linear-gradient(rgba(255, 255, 255, 0), white, white);
+  background: -o-linear-gradient(rgba(255, 255, 255, 0), white, white);
+  background: linear-gradient(rgba(255, 255, 255, 0), white, white);
+}
+
+.rnpp-content-hidder_cont {
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.rnpp-content-hidder_btn {
+  font-size: 16px;
+  line-height: 20px;
+  padding: 8px 16px;
+  margin: 0;
+}
+
+.rnpp-content-hidder_btn:active, .rnpp-content-hidder_btn:focus {
+  outline: none;
+}
+
 .article-fixed {
   padding-top: 60px;
 }
@@ -650,8 +692,16 @@
   margin: 20px 0 80px 0;
 }
 
+.sport_item {
+  padding: 20px 10px 15px 10px;
+  margin: 0 -10px;
+}
+
+.sport_item:hover {
+  background-color: #eeeeee;
+}
+
 .sport_title {
-  margin-top: 20px;
   font-size: 20px;
   font-weight: 700;
   color: #41b6e6;
@@ -663,6 +713,22 @@
 
 .sport_distance, .sport_location {
   color: #005b99;
+}
+
+.sport_table li {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.sport_table li:nth-child(2n) {
+  background-color: #eeeeee;
+  padding: 3px 0;
 }
 
 .rest_phones {
@@ -696,7 +762,7 @@
           justify-content: space-between;
 }
 
-.rest_phones > div:nth-child(2n+1) {
+.rest_phones > div:nth-child(2n) {
   background-color: #eeeeee;
 }
 
