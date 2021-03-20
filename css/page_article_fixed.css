@@ -582,7 +582,7 @@
 }
 
 .article-fixed .article__container {
-  max-width: 900px;
+  max-width: 1000px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -762,7 +762,7 @@
           justify-content: space-between;
 }
 
-.rest_phones > div:nth-child(2n) {
+.rest_phones > div:nth-child(2n+1) {
   background-color: #eeeeee;
 }
 
