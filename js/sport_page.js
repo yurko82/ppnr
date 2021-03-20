@@ -1,54 +1,57 @@
-let arTip1 = [
-    '../images/rest/lakehouse_1_1.jpg', '../images/rest/lakehouse_1_2.jpg', '../images/rest/lakehouse_1_3.jpg',
-    '../images/rest/lakehouse_1_4.jpg', '../images/rest/lakehouse_1_5.jpg', '../images/rest/lakehouse_1_6.jpg',
-    '../images/rest/lakehouse_1_7.jpg', '../images/rest/lakehouse_1_8.jpg', '../images/rest/lakehouse_1_9.jpg',
-    '../images/rest/lakehouse_1_10.jpg', '../images/rest/lakehouse_1_11.jpg', '../images/rest/lakehouse_1_12.jpg',
-    '../images/rest/lakehouse_1_13.jpg', '../images/rest/lakehouse_1_14.jpg', '../images/rest/lakehouse_1_15.jpg'
+let arSc = [
+    '../images/sport/sc/sc_1.jpg', '../images/sport/sc/sc_2.jpg', '../images/sport/sc/sc_3.jpg',
+    '../images/sport/sc/sc_4.jpg', '../images/sport/sc/sc_5.jpg', '../images/sport/sc/sc_6.jpg',
+    '../images/sport/sc/sc_7.jpg', '../images/sport/sc/sc_8.jpg', '../images/sport/sc/sc_9.jpg',
+    '../images/sport/sc/sc_10.jpg', '../images/sport/sc/sc_11.jpg', '../images/sport/sc/sc_12.jpg',
+    '../images/sport/sc/sc_13.jpg'
 ];
-let arTipPreview1 = [
-    '../images/rest/lakehouse_1_1_preview.jpg', '../images/rest/lakehouse_1_2_preview.jpg', '../images/rest/lakehouse_1_3_preview.jpg',
-    '../images/rest/lakehouse_1_4_preview.jpg', '../images/rest/lakehouse_1_5_preview.jpg', '../images/rest/lakehouse_1_6_preview.jpg',
-    '../images/rest/lakehouse_1_7_preview.jpg', '../images/rest/lakehouse_1_8_preview.jpg', '../images/rest/lakehouse_1_9_preview.jpg',
-    '../images/rest/lakehouse_1_10_preview.jpg', '../images/rest/lakehouse_1_11_preview.jpg', '../images/rest/lakehouse_1_12_preview.jpg',
-    '../images/rest/lakehouse_1_13_preview.jpg', '../images/rest/lakehouse_1_14_preview.jpg', '../images/rest/lakehouse_1_15_preview.jpg'
+let arScPreview = [
+    '../images/sport/sc/sc_1_preview.jpg', '../images/sport/sc/sc_2_preview.jpg', '../images/sport/sc/sc_3_preview.jpg',
+    '../images/sport/sc/sc_4_preview.jpg', '../images/sport/sc/sc_5_preview.jpg', '../images/sport/sc/sc_6_preview.jpg',
+    '../images/sport/sc/sc_7_preview.jpg', '../images/sport/sc/sc_8_preview.jpg', '../images/sport/sc/sc_9_preview.jpg',
+    '../images/sport/sc/sc_10_preview.jpg', '../images/sport/sc/sc_11_preview.jpg', '../images/sport/sc/sc_12_preview.jpg',
+    '../images/sport/sc/sc_13_preview.jpg', '../images/sport/sc/sc_14_preview.jpg', '../images/sport/sc/sc_15_preview.jpg'
 ];
-let arTip2 = ['../images/rest/lakehouse_2_1.jpg', '../images/rest/lakehouse_2_2.jpg', '../images/rest/lakehouse_2_3.jpg', ];
-let arTipPreview2 = ['../images/rest/lakehouse_2_1_preview.jpg', '../images/rest/lakehouse_2_2_preview.jpg', '../images/rest/lakehouse_2_3_preview.jpg', ];
-let arTip3 = ['../images/rest/lakehouse_3_1.jpg', '../images/rest/lakehouse_3_2.jpg', '../images/rest/lakehouse_3_3.jpg', ];
-let arTipPreview3 = ['../images/rest/lakehouse_3_1_preview.jpg', '../images/rest/lakehouse_3_2_preview.jpg', '../images/rest/lakehouse_3_3_preview.jpg', ];
-let arTip4 = ['../images/rest/lakehouse_4_1.jpg', '../images/rest/lakehouse_4_2.jpg', '../images/rest/lakehouse_4_3.jpg', ];
-let arTipPreview4 = ['../images/rest/lakehouse_4_1_preview.jpg', '../images/rest/lakehouse_4_2_preview.jpg', '../images/rest/lakehouse_4_3_preview.jpg', ];
+let arSz = [
+    '../images/sport/sz/sz_1.jpg', '../images/sport/sz/sz_2.jpg', '../images/sport/sz/sz_3.jpg',
+    '../images/sport/sz/sz_4.jpg', '../images/sport/sz/sz_5.jpg', '../images/sport/sz/sz_6.jpg',
+    '../images/sport/sz/sz_7.jpg', '../images/sport/sz/sz_8.jpg', '../images/sport/sz/sz_9.jpg',
+    '../images/sport/sz/sz_10.jpg', '../images/sport/sz/sz_11.jpg', '../images/sport/sz/sz_12.jpg',
+    '../images/sport/sz/sz_11.jpg', '../images/sport/sz/sz_12.jpg'
+];
+let arSzPreview = [
+    '../images/sport/sz/sz_1_preview.jpg', '../images/sport/sz/sz_2_preview.jpg', '../images/sport/sz/sz_3_preview.jpg',
+    '../images/sport/sz/sz_4_preview.jpg', '../images/sport/sz/sz_5_preview.jpg', '../images/sport/sz/sz_6_preview.jpg',
+    '../images/sport/sz/sz_7_preview.jpg', '../images/sport/sz/sz_8_preview.jpg', '../images/sport/sz/sz_9_preview.jpg',
+    '../images/sport/sz/sz_10_preview.jpg', '../images/sport/sz/sz_11_preview.jpg', '../images/sport/sz/sz_12_preview.jpg',
+    '../images/sport/sz/sz_11_preview.jpg', '../images/sport/sz/sz_12_preview.jpg'
+];
 
-let texts1 = ['Загальний вигляд ПТУ ВП РАЕС', 'Кабінет енергетичних дисциплін', 'Слюсарна майстерня', 'Майстерня зварювання', 'Деревообробна майстерня',
-    'Бібліотека', 'Кабінет загальноосвітніх дисциплін', 'Кабінет спецтехнологій зварників', 'Спортзал'
+let arSp = [
+    '../images/sport/sp/sp_1.jpg', '../images/sport/sp/sp_2.jpg', '../images/sport/sp/sp_3.jpg',
+    '../images/sport/sp/sp_4.jpg', '../images/sport/sp/sp_5.jpg', '../images/sport/sp/sp_6.jpg',
+    '../images/sport/sp/sp_7.jpg', '../images/sport/sp/sp_8.jpg', '../images/sport/sp/sp_9.jpg',
+    '../images/sport/sp/sp_10.jpg', '../images/sport/sp/sp_11.jpg', '../images/sport/sp/sp_12.jpg',
+    '../images/sport/sp/sp_13.jpg', '../images/sport/sp/sp_14.jpg'
 ];
-let texts2 = ['Загальний вигляд ПТУ ВП РАЕС', 'Кабінет енергетичних дисциплін', 'Слюсарна майстерня', 'Майстерня зварювання', 'Деревообробна майстерня',
-    'Бібліотека', 'Кабінет загальноосвітніх дисциплін', 'Кабінет спецтехнологій зварників', 'Спортзал'
+let arSpPreview = [
+    '../images/sport/sp/sp_1_preview.jpg', '../images/sport/sp/sp_2_preview.jpg', '../images/sport/sp/sp_3_preview.jpg',
+    '../images/sport/sp/sp_4_preview.jpg', '../images/sport/sp/sp_5_preview.jpg', '../images/sport/sp/sp_6_preview.jpg',
+    '../images/sport/sp/sp_7_preview.jpg', '../images/sport/sp/sp_8_preview.jpg', '../images/sport/sp/sp_9_preview.jpg',
+    '../images/sport/sp/sp_10_preview.jpg', '../images/sport/sp/sp_11_preview.jpg', '../images/sport/sp/sp_12_preview.jpg',
+    '../images/sport/sp/sp_13_preview.jpg', '../images/sport/sp/sp_14_preview.jpg'
 ];
-let texts3 = ['Загальний вигляд ПТУ ВП РАЕС', 'Кабінет енергетичних дисциплін', 'Слюсарна майстерня', 'Майстерня зварювання', 'Деревообробна майстерня',
-    'Бібліотека', 'Кабінет загальноосвітніх дисциплін', 'Кабінет спецтехнологій зварників', 'Спортзал'
-];
-let texts4 = ['Загальний вигляд ПТУ ВП РАЕС', 'Кабінет енергетичних дисциплін', 'Слюсарна майстерня', 'Майстерня зварювання', 'Деревообробна майстерня',
-    'Бібліотека', 'Кабінет загальноосвітніх дисциплін', 'Кабінет спецтехнологій зварників', 'Спортзал'
-];
-let lightbox1 = new RnppLightbox('photo-gallery-1', arTipPreview1, arTip1, texts1);
-let lightbox2 = new RnppLightbox('photo-gallery-2', arTipPreview2, arTip2, texts2);
-let lightbox3 = new RnppLightbox('photo-gallery-3', arTipPreview3, arTip3, texts3);
-let lightbox4 = new RnppLightbox('photo-gallery-4', arTipPreview4, arTip4, texts4);
 
-let arHotel = [
-    '../images/rest/hotel1.jpg', '../images/rest/hotel2.jpg', '../images/rest/hotel3.jpg', '../images/rest/hotel4.jpg', '../images/rest/hotel5.jpg',
-    '../images/rest/hotel6.jpg', '../images/rest/hotel7.jpg', '../images/rest/hotel8.jpg', '../images/rest/hotel9.jpg', '../images/rest/hotel10.jpg',
-    '../images/rest/hotel11.jpg', '../images/rest/hotel12.jpg', '../images/rest/hotel13.jpg', '../images/rest/hotel14.jpg', '../images/rest/hotel15.jpg'
+let textsSc = ['Загальний вигляд ПТУ ВП РАЕС', 'Кабінет енергетичних дисциплін', 'Слюсарна майстерня', 'Майстерня зварювання', 'Деревообробна майстерня',
+    'Бібліотека', 'Кабінет загальноосвітніх дисциплін', 'Кабінет спецтехнологій зварників', 'Спортзал'
 ];
-let arHotelPreview = [
-    '../images/rest/hotel1-preview.jpg', '../images/rest/hotel2-preview.jpg', '../images/rest/hotel3-preview.jpg', '../images/rest/hotel4-preview.jpg',
-    '../images/rest/hotel5-preview.jpg', '../images/rest/hotel6-preview.jpg', '../images/rest/hotel7-preview.jpg', '../images/rest/hotel8-preview.jpg',
-    '../images/rest/hotel9-preview.jpg', '../images/rest/hotel10-preview.jpg', '../images/rest/hotel11-preview.jpg',
-    '../images/rest/hotel12-preview.jpg', '../images/rest/hotel13-preview.jpg', '../images/rest/hotel14-preview.jpg', '../images/rest/hotel15-preview.jpg'
+let textsSz = ['Загальний вигляд ПТУ ВП РАЕС', 'Кабінет енергетичних дисциплін', 'Слюсарна майстерня', 'Майстерня зварювання', 'Деревообробна майстерня',
+    'Бібліотека', 'Кабінет загальноосвітніх дисциплін', 'Кабінет спецтехнологій зварників', 'Спортзал'
 ];
-let textsHotel = [
-    'Загальний вигляд', 'Головний вхід', 'Зона очікування та відпочинку', 'Номер напівлюкс', 'Напівлюкс', 'Номер Люкс', 'Номер Люкс',
-    'Санвузол люкс', 'Одномісний номер', 'Одномісний номер', 'Санвузол одномісного номера', 'Двомісний номер'
+let textsSp = ['Загальний вигляд ПТУ ВП РАЕС', 'Кабінет енергетичних дисциплін', 'Слюсарна майстерня', 'Майстерня зварювання', 'Деревообробна майстерня',
+    'Бібліотека', 'Кабінет загальноосвітніх дисциплін', 'Кабінет спецтехнологій зварників', 'Спортзал'
 ];
-let lightboxHotel = new RnppLightbox('photo-gallery-10', arHotelPreview, arHotel, textsHotel);
+
+let lightboxSc = new RnppLightbox('photo-gallery-sc', arScPreview, arSc, textsSc);
+let lightboxSz = new RnppLightbox('photo-gallery-sz', arSzPreview, arSz, textsSz);
+let lightboxSp = new RnppLightbox('photo-gallery-sp', arSpPreview, arSp, textsSp);
