@@ -575,7 +575,7 @@
 }
 
 .article-fixed .container-fixed .article__img {
-  height: 600px;
+  height: 400px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -585,7 +585,7 @@
 
 .article-fixed .container-fixed .article__img-overlay {
   background-image: url(../images/img/grid.png);
-  height: 600px;
+  height: 400px;
   width: 100%;
   position: absolute;
   opacity: 0.3;
@@ -594,10 +594,10 @@
 
 @media (min-width: 768px) {
   .article-fixed .container-fixed .article__img {
-    height: 400px;
+    height: 500px;
   }
   .article-fixed .container-fixed .article__img-overlay {
-    height: 400px;
+    height: 500px;
   }
 }
 
@@ -629,12 +629,18 @@
 }
 
 .article-fixed .container-fixed__title span.big_text {
-  font-size: 60px;
+  font-size: 50px;
   text-transform: uppercase;
   font-weight: 900;
   line-height: 100%;
   position: relative;
   top: 10px;
+}
+
+@media (min-width: 420px) {
+  .article-fixed .container-fixed__title span.big_text {
+    font-size: 60px;
+  }
 }
 
 @media (min-width: 768px) {
@@ -670,6 +676,97 @@
     font-size: 32px;
   }
   .article-fixed .container-fixed__title span.big_text {
+    font-size: 90px;
+  }
+}
+
+.article-fixed .container-fixed__title span.less-text-sport {
+  font-size: 42px;
+}
+
+.article-fixed .container-fixed__title span.less-text-sport .tire {
+  font-size: inherit;
+}
+
+@media (min-width: 360px) {
+  .article-fixed .container-fixed__title span.less-text-sport {
+    font-size: 50px;
+  }
+}
+
+@media (min-width: 420px) {
+  .article-fixed .container-fixed__title span.less-text-sport {
+    font-size: 60px;
+  }
+}
+
+@media (min-width: 768px) {
+  .article-fixed .container-fixed__title span.less-text-sport {
+    font-size: 72px;
+  }
+  .article-fixed .container-fixed__title span.less-text-sport .tire {
+    display: none;
+  }
+}
+
+@media (min-width: 1000px) {
+  .article-fixed .container-fixed__title span.less-text-sport {
+    font-size: 80px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .article-fixed .container-fixed__title span.less-text-sport {
+    font-size: 90px;
+  }
+}
+
+.article-fixed .container-fixed__title span.less-text-career {
+  font-size: 34px;
+}
+
+.article-fixed .container-fixed__title span.less-text-career .tire {
+  font-size: inherit;
+}
+
+@media (min-width: 380px) {
+  .article-fixed .container-fixed__title span.less-text-career {
+    font-size: 36px;
+  }
+}
+
+@media (min-width: 420px) {
+  .article-fixed .container-fixed__title span.less-text-career {
+    font-size: 44px;
+  }
+}
+
+@media (min-width: 500px) {
+  .article-fixed .container-fixed__title span.less-text-career {
+    font-size: 50px;
+  }
+}
+
+@media (min-width: 600px) {
+  .article-fixed .container-fixed__title span.less-text-career {
+    font-size: 60px;
+  }
+}
+
+@media (min-width: 768px) {
+  .article-fixed .container-fixed__title span.less-text-career .tire {
+    display: none;
+  }
+}
+
+@media (min-width: 1000px) {
+  .article-fixed .container-fixed__title span.less-text-career {
+    font-size: 76px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .article-fixed .container-fixed__title span.less-text-career {
     font-size: 90px;
   }
 }
