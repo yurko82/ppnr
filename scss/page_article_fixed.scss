@@ -205,11 +205,12 @@
     }
     &_table {
         & li {
+            padding: 8px;
             display: flex;
             justify-content: space-between;
             &:nth-child(2n) {
                 background-color: $grey6;
-                padding: 3px 0;
+                // padding: 3px 0;
             }
         }
     }

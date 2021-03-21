@@ -803,6 +803,7 @@
 }
 
 .sport_table li {
+  padding: 8px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -813,7 +814,6 @@
 
 .sport_table li:nth-child(2n) {
   background-color: #eeeeee;
-  padding: 3px 0;
 }
 
 .rest_phones {
