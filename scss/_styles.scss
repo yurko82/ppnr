@@ -590,12 +590,28 @@
         font-weight: 700;
     }
     
-    // @mixin font($font_name, $file_name, $weight, $height){
-    //     @font-face {
-    //         font-family: $font_name;
-    //         font-display: swap;
-    //         src: url('../fonts/#{$font_name}.woff') format('woff'), url('../fonts/#{$font_name}.woff2') format('woff2');
-    //         font-weight: #{$weight};
-    //         font-style: #{$style};
-    //     }
-    // }
+   .decor-url{
+       color: $blue3;
+       &:hover{
+           color: $blue4;
+           text-decoration: underline;
+           padding-bottom:2px;
+       }
+   }
+
+   .decor-file{
+        color: $blue3;
+        &:hover{
+            color: $blue3;
+            text-decoration: underline dashed;
+            text-decoration-thickness: from-font;
+        }
+    }
+
+    .decor-list{
+        color: $blue4;
+        &:hover{
+            color: $blue3;
+            text-decoration: none;
+        }
+    }

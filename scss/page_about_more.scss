@@ -70,17 +70,12 @@
             &>a {
                 display: block;
                 padding: 10px;
-                color: $blue3;
                 font-size: 16px;
                 &:first-child {
                     padding-top: 0;
                 }
                 &:last-child {
                     padding-bottom: 20px;
-                }
-                &:hover {
-                    color: $blue4;
-                    text-decoration: underline;
                 }
                 @media (max-width:768px) {
                     font-size: 18px;

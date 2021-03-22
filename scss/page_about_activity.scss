@@ -28,15 +28,13 @@
         & h2 {
             font-size: 20px;
         }
-        & li {
-            padding-top: 12px;
-            & a {
-                color: $blue3;
-                &:hover {
-                    color: $blue4;
-                }
+        & ul{
+            list-style-type: none;
+            & li {
+                padding-top: 12px;
             }
         }
+        
     }
     
     .licensed {
@@ -45,16 +43,14 @@
             color: $grey3;
             font-weight: 600;
         }
-        ul.licensed-doc {
-            padding: revert;
-            & li {
-                & div {
-                    display: none;
-                }
-                & a {
-                    color: $blue3;
-                    &:hover {
-                        color: $blue4;
+        ul {
+            list-style-type: none;
+            &.licensed-doc {
+                list-style-type: none;
+                padding: revert;
+                & li {
+                    & div {
+                        display: none;
                     }
                 }
             }
