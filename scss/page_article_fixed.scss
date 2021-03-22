@@ -1,7 +1,6 @@
 @import "_colors";
 @import "_rnpp_lightbox";
 @import "_rnpp_content_hidder";
-
 .article-fixed {
     & p,
     img {
@@ -23,7 +22,7 @@
     & .article__container {
         max-width: 1280px;
         margin: 20px auto 60px auto;
-        @media(min-width:1000px) {
+        @media(min-width: 1000px) {
             padding-bottom: 100px;
         }
     }
@@ -65,7 +64,7 @@
             right: 0;
             text-align: left;
             overflow: hidden;
-            padding:0 12px;
+            padding: 0 12px;
             & span {
                 line-height: 115%;
                 color: white;
@@ -73,40 +72,29 @@
                 font-weight: 600;
                 text-shadow: 2px 2px rgba(50, 50, 50, 0.5);
                 &.big_text {
-                    font-size: 50px;
+                    font-size: 7vw;
                     text-transform: uppercase;
                     font-weight: 900;
-                    line-height: 100%;
+                    line-height: 115%;
                     position: relative;
-                    top: 10px;
-                }
-            }
-            @media(min-width:420px) {
-                & span {
-                    &.big_text {
-                        font-size: 60px;
-                    }
                 }
             }
             @media(min-width:768px) {
                 & span {
                     font-size: 28px;
                     &.big_text {
-                        font-size: 72px;
+                        // font-size: 72px;
                         line-height: 115%;
                         top: 0;
                     }
                 }
             }
             @media(min-width:1000px) {
-                padding:0 20px;
+                padding: 0 20px;
                 bottom: 10%;
                 margin: 0 auto;
                 & span {
                     font-size: 30px;
-                    &.big_text {
-                        font-size: 80px;
-                    }
                 }
             }
             @media(min-width:1280px) {
@@ -116,59 +104,6 @@
                     &.big_text {
                         font-size: 90px;
                     }
-                }
-            }
-            & span.less-text-sport {
-                font-size:42px;
-                & .tire{
-                    font-size: inherit;
-                }
-                @media(min-width:360px) {
-                    font-size: 50px;
-                }
-                @media(min-width:420px) {
-                    font-size: 60px;
-                }
-                @media(min-width:768px) {
-                    font-size: 72px;
-                    & .tire{
-                        display: none;
-                    }
-                }
-                @media(min-width:1000px) {
-                    font-size: 80px;
-                }
-                @media(min-width:1280px) {
-                    font-size: 90px;
-                }
-            }
-            & span.less-text-career {
-                font-size: 34px;
-                & .tire{
-                    font-size: inherit;
-                }
-                @media(min-width:380px) {
-                    font-size: 36px;
-                }
-                @media(min-width:420px) {
-                    font-size: 44px;
-                }
-                @media(min-width:500px) {
-                    font-size: 50px;
-                }
-                @media(min-width:600px) {
-                    font-size: 60px;
-                }
-                @media(min-width:768px) {
-                    & .tire{
-                        display: none;
-                    }
-                }
-                @media(min-width:1000px) {
-                    font-size: 76px;
-                }
-                @media(min-width:1280px) {
-                    font-size: 90px;
                 }
             }
         }
