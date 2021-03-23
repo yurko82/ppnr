@@ -118,7 +118,13 @@
   margin: 0 auto 200px auto;
   margin-left: auto;
   background-color: white;
-  padding: 60px;
+  padding: 40px;
+}
+
+.article__container .r5_title {
+  color: #74d2e7;
+  font-weight: 900;
+  font-size: 30px;
 }
 
 .article__container .info {
@@ -174,8 +180,8 @@ blockquote.quote {
   background-color: #daf4fa;
   width: 100vw;
   margin-left: calc(-50vw + 50%);
-  margin-top: 20px;
-  padding: 20px;
+  margin-top: 60px;
+  padding: 40px;
   font-style: italic;
 }
 
@@ -191,28 +197,33 @@ blockquote.quote .info {
 
 blockquote.quote .info i {
   position: absolute;
-  left: -60px;
   color: #41b6e6;
   font-size: 40px;
 }
 
 blockquote.quote .info .quote-text {
-  padding-left: 30px;
+  padding-left: 80px;
+  padding-right: 40px;
 }
 
 blockquote.quote .info .quote-text span {
   display: block;
+  font-weight: 500;
+  color: #505050;
 }
 
 blockquote.quote .info .quote-text span.quote-author {
-  padding-top: 10px;
+  padding-top: 40px;
   font-style: normal;
+  text-align: right;
+  font-weight: 400;
+  color: #363636;
 }
 
 blockquote.quote .info .quote-img {
-  width: 250px;
-  min-width: 250px;
-  height: 220px;
+  width: 300px;
+  min-width: 300px;
+  height: 270px;
 }
 
 blockquote.quote .info .quote-img div {
