@@ -62,6 +62,8 @@
   z-index: -1;
   width: 100vw;
   height: 100vh;
+  -ms-touch-action: none;
+      touch-action: none;
 }
 
 .article {
@@ -73,6 +75,8 @@
 }
 
 .article .container_r5 {
+  -ms-touch-action: none;
+      touch-action: none;
   position: relative;
   width: 100%;
   height: 600px;
@@ -83,14 +87,13 @@
   text-transform: uppercase;
   font-weight: 900;
   color: white;
-  line-height: 1;
+  line-height: 115%;
   text-shadow: 2px 2px rgba(50, 50, 50, 0.3);
-  padding: 0;
+  padding: 16px;
   margin: 0;
 }
 
 .article .container_r5 .big_text_cont {
-  height: 104px;
   position: absolute;
   bottom: 40px;
   left: 50%;
@@ -108,13 +111,14 @@
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  bottom: auto;
 }
 
 .article__container {
   margin: 0 auto 200px auto;
   margin-left: auto;
   background-color: white;
-  padding: 40px;
+  padding: 60px;
 }
 
 .article__container .info {
@@ -133,11 +137,11 @@
     font-size: 72px;
   }
   .article .container_r5 .big_text_cont {
-    height: 86px;
     bottom: 40px;
   }
   .article .container_r5 .big_text_cont-fixed {
     top: 290px;
+    bottom: auto;
   }
 }
 
@@ -152,11 +156,11 @@
     font-size: 90px;
   }
   .article .container_r5 .big_text_cont {
-    height: 104px;
     bottom: 40px;
   }
   .article .container_r5 .big_text_cont-fixed {
     top: 430px;
+    bottom: auto;
   }
 }
 
@@ -164,4 +168,62 @@
   .article .big_text {
     font-size: 90px;
   }
+}
+
+blockquote.quote {
+  background-color: #daf4fa;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-top: 20px;
+  padding: 20px;
+  font-style: italic;
+}
+
+blockquote.quote .info {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+blockquote.quote .info i {
+  position: absolute;
+  left: -60px;
+  color: #41b6e6;
+  font-size: 40px;
+}
+
+blockquote.quote .info .quote-text {
+  padding-left: 30px;
+}
+
+blockquote.quote .info .quote-text span {
+  display: block;
+}
+
+blockquote.quote .info .quote-text span.quote-author {
+  padding-top: 10px;
+  font-style: normal;
+}
+
+blockquote.quote .info .quote-img {
+  width: 250px;
+  min-width: 250px;
+  height: 220px;
+}
+
+blockquote.quote .info .quote-img div {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.container_changed {
+  padding: 0;
+  overflow: hidden;
 }
