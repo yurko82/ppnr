@@ -17,14 +17,14 @@ let arSz = [
     '../images/sport/sz/sz_4.jpg', '../images/sport/sz/sz_5.jpg', '../images/sport/sz/sz_6.jpg',
     '../images/sport/sz/sz_7.jpg', '../images/sport/sz/sz_8.jpg', '../images/sport/sz/sz_9.jpg',
     '../images/sport/sz/sz_10.jpg', '../images/sport/sz/sz_11.jpg', '../images/sport/sz/sz_12.jpg',
-    '../images/sport/sz/sz_11.jpg', '../images/sport/sz/sz_12.jpg'
+    '../images/sport/sz/sz_13.jpg', '../images/sport/sz/sz_14.jpg'
 ];
 let arSzPreview = [
     '../images/sport/sz/sz_1_preview.jpg', '../images/sport/sz/sz_2_preview.jpg', '../images/sport/sz/sz_3_preview.jpg',
     '../images/sport/sz/sz_4_preview.jpg', '../images/sport/sz/sz_5_preview.jpg', '../images/sport/sz/sz_6_preview.jpg',
     '../images/sport/sz/sz_7_preview.jpg', '../images/sport/sz/sz_8_preview.jpg', '../images/sport/sz/sz_9_preview.jpg',
     '../images/sport/sz/sz_10_preview.jpg', '../images/sport/sz/sz_11_preview.jpg', '../images/sport/sz/sz_12_preview.jpg',
-    '../images/sport/sz/sz_11_preview.jpg', '../images/sport/sz/sz_12_preview.jpg'
+    '../images/sport/sz/sz_13_preview.jpg', '../images/sport/sz/sz_14_preview.jpg'
 ];
 
 let arSp = [
