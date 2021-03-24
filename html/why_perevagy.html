@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Переваги</title>
+
+    <!-- <script src='../js/_version.js?v=(add some version)'></script> -->
+    <link href="../css/lib/bootstrap5.css" rel="stylesheet" id="bootstrap-css">
+    <!-- <link rel="stylesheet" href="../fonts/fontawesome/all.css"> -->
+    <link rel="stylesheet" href="../fonts/GothamPro/stylesheet.css">
+    <link rel="stylesheet" href="../fonts/rnpp-icons/rnpp-icons.css">
+
+    <link rel="stylesheet" href="../css/common.css">
+    <!-- without version: <link rel="stylesheet" href="../css/page_about.css"> -->
+    <!-- <script>  _v.add('../css/page_about.css',1);  </script> /* use this */ -->
+</head>
+
+<body>
+    <div class="body__overlay"></div>
+    <!------ Include the above in your HEAD tag ---------->
+    <header class="header fixed-top shadow">
+        <div class="container">
+            <div class="header__wrap position-relative">
+                <div class="header__social">
+                    <ul class="header__social-icons pr-4">
+                        <li class="header__social-icon"><a href="https://www.facebook.com/rnppofficial" title="Facebook"><i class="icon-facebook"></i></a></li>
+                        <li class="header__social-icon"><a href="https://twitter.com/rnppofficial" title="Twitter"><i class="icon-twitter"></i></a></li>
+                        <li class="header__social-icon"><a href="https://www.instagram.com/rnppofficial" title="Instagram"><i class="icon-instagram"></i></a></li>
+                        <li class="header__social-icon"><a href="https://t.me/rnppofficial" title="Telegram"><i class="icon-telegram"></i></a></li>
+                        <li class="header__social-icon"><a href="https://www.youtube.com/channel/UCRrM8pysKmTiDqlfTPMzyCg" title="Youtube"><i class="icon-youtube"></i></a></li>
+                    </ul>
+                    <ul class="header__social-icons">
+                        <li class="header__social-icon"><i class="icon-search pointer" title="Пошук"></i></li>
+                        <li class="header__social-icon"><i class="icon-eye pr-3 pointer" title="Перегляд для людей з вадами зору"></i></li>
+                        <li class="header__social-icon">
+                            <div class="lang__block">
+                                <button class="lang__btn lang">
+                                    <span class="text">Укр</span><i class="icon-right-arrow lang__angle-bottom"></i>
+                                </button>
+                                <div class="lang__drop">
+                                    <a class="active lang_UA" href="#">Укр</a>
+                                    <a class="lang_RU" href="#">Рус</a>
+                                    <a class="lang_EN" href="#">Eng</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="logo-nav">
+                    <nav class="navbar navbar-expand-lg  align-items-center p-0" role="navigation">
+
+                        <!-- data-target="#navbarCollapse" -->
+                        <button class="navbar-toggler" type="button" data-show="false">
+                            <span class="navbar-icon"></span>
+                        </button>
+                        <a href="../index.html" class="logo"><img src="../images/svg/raes_logo_green.svg" alt=""></a>
+                        <div class="flex-grow-1"></div>
+                        <div class="lang__block">
+                            <button class="lang__btn lang">
+                                <span class="text">Укр</span><i class="icon-right-arrow lang__angle-bottom"></i>
+                            </button>
+                            <div class="lang__drop">
+                                <a class="active lang_UA" href="#">Укр</a>
+                                <a class="lang_RU" href="#">Рус</a>
+                                <a class="lang_EN" href="#">Eng</a>
+                            </div>
+                        </div>
+                        <div class="navbar__sett"><i class="icon-eye"></i></div>
+                        <div class="navbar-collapse align-self-end" id="navbarCollapse">
+                            <div class="navbar-collapse_inner-container">
+                                <ul class="navbar-nav ml-auto">
+                                    <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="dropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Про нас <i class="icon-right-arrow angle-right"></i></a>
+                                        <ul class="dropdown-menu" aria-labelledby="dropdown1">
+                                            <li class="dropdown-submenu dropdown"><a class="dropdown-item dropdown-toggle" href="#">Хто ми <i class="icon-right-arrow angle-right"></i></a>
+                                                <ul class="dropdown-menu marginleftfix">
+                                                    <li><a class="dropdown-item" href="about_info.html">Загальна інформація</a></li>
+                                                    <li><a class="dropdown-item" href="about_mission.html">Місія, бачення, цінності</a></li>
+                                                    <li><a class="dropdown-item" href="about_history.html">Історія</a></li>
+                                                    <li class="dropdown-submenu dropdown dropright"><a class="dropdown-item dropdown-toggle" href="#">Діяльність <i class="icon-right-arrow angle-right"></i></a>
+                                                        <ul class="dropdown-menu marginleftfix">
+                                                            <li><a class="dropdown-item" href="about_activity_production.html">Технологія виробництва</a></li>
+                                                            <li><a class="dropdown-item" href="about_activity_declaration.html">Заяви</a></li>
+                                                            <li><a class="dropdown-item" href="about_activity_licensed.html">Ліцензовані види діяльності</a></li>
+                                                            <li><a class="dropdown-item" href="about_activity_safety.html">Безпека і надійність</a></li>
+                                                            <li><a class="dropdown-item" href="about_activity_purchase.html">Закупівлі</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><a class="dropdown-item" href="about_more.html">Дізнатися більше</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown-submenu dropdown"><a class="dropdown-item dropdown-toggle" href="#">Наша команда <i class="icon-right-arrow angle-right"></i></a>
+                                                <ul class="dropdown-menu marginleftfix">
+                                                    <li><a class="dropdown-item" href="about_leaders.html">Лідери</a></li>
+                                                    <li><a class="dropdown-item" href="team.html">Професіонали</a></li>
+                                                    <li><a class="dropdown-item" href="employee.html">Працівнику</a></li>
+                                                    <li><a class="dropdown-item" href="awards.html">Нагороди</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown-submenu dropdown"><a class="dropdown-item dropdown-toggle" href="#">Наші партнери <i class="icon-right-arrow angle-right"></i></a>
+                                                <ul class="dropdown-menu marginleftfix">
+                                                    <li><a class="dropdown-item" href="profspilka.html">Профспілка</a></li>
+                                                    <li><a class="dropdown-item" href="ukrns.html">УкрЯТ</a></li>
+                                                    <li><a class="dropdown-item" href="uaf.html">УЯФ</a></li>
+                                                    <li><a class="dropdown-item" href="magate.html">МАГАТЕ</a></li>
+                                                    <li><a class="dropdown-item" href="waoaes.html">ВАО АЕС</a></li>
+                                                    <li><a class="dropdown-item" href="partners.html">Ділові партнери</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="dropdown2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Новини <i class="icon-right-arrow angle-right"></i></a>
+                                        <ul class="dropdown-menu" aria-labelledby="dropdown2">
+                                            <li><a class="dropdown-item" href="allnews.html?news">Новини</a></li>
+                                            <li><a class="dropdown-item" href="allnews.html?announcements">Анонси</a></li>
+                                            <li><a class="dropdown-item" href="allnews.html?newspapers">Газета «Енергія»</a></li>
+                                            <li><a class="dropdown-item" href="allnews.html?videos">Телеканал «Енергоатом»</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" id="dropdown3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Чому АЕС <i class="icon-right-arrow angle-right"></i></a>
+                                        <ul class="dropdown-menu" aria-labelledby="dropdown3">
+                                            <li><a class="dropdown-item" href="climate.html">Клімат і довкілля</a></li>
+                                            <li><a class="dropdown-item" href="available_energy.html">Доступна енергія</a></li>
+                                            <li><a class="dropdown-item" href="support_nuclear.html">Підтримую ядерну енергію</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link dropdown-toggle" aria-haspopup="true" aria-expanded="false" href="rfive.html">Р5</a>
+                                    </li>
+                                    <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="dropdown4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Громаді <i class="icon-right-arrow angle-right"></i></a>
+                                        <ul class="dropdown-menu dropdown-menu-right-1350" aria-labelledby="dropdown4">
+                                            <li><a class="dropdown-item" href="region.html">Розвиток регіону</a></li>
+                                            <li><a class="dropdown-item" href="career.html">Робочі місця</a></li>
+                                            <li><a class="dropdown-item" href="study.html">Навчання</a></li>
+                                            <li><a class="dropdown-item" href="sport.html">Спорт</a></li>
+                                            <li><a class="dropdown-item" href="rest.html">Відпочинок</a></li>
+                                            <li><a class="dropdown-item" href="culture.html">Культура</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <form class="navbar__form form-inline">
+                                    <input class="navbar__form-input" type="search" placeholder="Пошук" aria-label="Search">
+                                    <button class="navbar__form-btn" type="submit"><i class="icon-search"></i></button>
+                                </form>
+
+                                <ul class="header__social-icons menu">
+                                    <li class="header__social-icon"><a href="https://www.facebook.com/rnppofficial" title="Facebook"><i class="icon-facebook"></i></a></li>
+                                    <li class="header__social-icon"><a href="https://twitter.com/rnppofficial" title="Twitter"><i class="icon-twitter"></i></a></li>
+                                    <li class="header__social-icon"><a href="https://www.instagram.com/rnppofficial" title="Instagram"><i class="icon-instagram"></i></a></li>
+                                    <li class="header__social-icon"><a href="https://t.me/rnppofficial" title="Telegram"><i class="icon-telegram"></i></a></li>
+                                    <li class="header__social-icon"><a href="https://www.youtube.com/channel/UCRrM8pysKmTiDqlfTPMzyCg" title="Youtube"><i class="icon-youtube"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="to-top"></div>
+
+    <section class="allabout">
+        <div class="container">
+            <div class="allabout__block">
+
+                <nav class="about_side_menu">
+                    <div class="side_menu">
+                        <div class="side_menu-item active" data-anchor="bezpeka"><div class="icon-img" style="background: url('../images/svg/advantage_bezpeka.svg');"></div><span>Безпека</span></div>
+                        <div class="side_menu-item" data-anchor="eco"><div class="icon-img" style="background: url('../images/svg/advantage_ecology.svg');"></div><span>Екологічність</span></div>
+                        <div class="side_menu-item" data-anchor="tech"><div class="icon-img" style="background: url('../images/svg/advantage_technology.svg');"></div><span>Сучасні<br>технології</span></div>
+                        <div class="side_menu-item" data-anchor="reliability"><div class="icon-img" style="background: url('../images/svg/advantage_nadiinist.svg');"></div><span>Надійність</span></div>
+                        <div class="side_menu-item" data-anchor="climat"><div class="icon-img" style="background: url('../images/svg/advantage_climat.svg');"></div><span>Збереження<br>клімату</span></div>
+                        <div class="side_menu-item" data-anchor="energy"><div class="icon-img" style="background: url('../images/svg/advantage_dostupnist.svg');"></div><span>Доступна<br>енергія</span></div>
+                    </div>
+                </nav>
+
+                <div class="allabout__content">
+                    <div class="perevaga" id="bezpeka">
+                        <h2 class="text-blue5">Безпека</h2><br>
+                        <p>Є головним пріоритетом діяльності АЕС та забезпечується надійною системою безпеки, яка складається з трьох незалежних, дублюючих один 
+                            одного каналів. Важливість забезпечення високого рівня безпеки підкреслює значна частка вартості її систем, яка становить до 40% вартості 
+                            будівництва усього енергоблоку.</p>
+                        <p>Безпека експлуатації забезпечується дотриманням персоналом принципів Культури безпеки шляхом створення атмосфери прихильності цілям 
+                            безпеки та особистої відповідальності.</p>
+                    </div>
+
+                    <div class="perevaga" id="eco">
+                        <h2 class="text-blue5">Екологічність</h2><br>
+                        <p>Рівненська АЕС – екологічно відповідальне підприємство. АЕС під час експлуатації не здійснює негативного впливу на довкілля у тепловому, 
+                            хімічному та радіаційному контекстах. Це підтверджено багаторічними спостереженнями, які свідчать про відсутність негативного впливу РАЕС 
+                            на навколишнє природне середовище за всю історію експлуатації.</p>
+
+                        <p>На РАЕС проводиться безупинний автоматичний контроль радіаційного стану на промисловому майданчику РАЕС, у санітарно-захисній зоні, 
+                            зоні спостереження при всіх режимах роботи станції.</p>
+                            
+                        <p>Прикладом екологічності може слугувати і реалізація спільного з ЄС проєкту «Розбудова сільськогосподарської діяльності за рахунок підтримки 
+                            регіональних програм покращення ґрунтів і просвітницької діяльності серед населення», суть якого полягає у використанні шламу, 
+                            який утворюється в процесі освітлення річкової води, як меліоранта для підвищення урожайності кислих ґрунтів регіону.</p>
+                    </div>
+
+                    <div class="perevaga" id="tech">
+                        <h2 class="text-blue5">Сучасні технології</h2><br>
+                        <p>Впровадження сучасних технологій у виробничі процеси шляхом модернізації та реконструкції обладнання, діджиталізація багатьох виробничих
+                             процесів, реалізація передового досвіду інших АЕС, а також висококваліфікований експлуатуючий персонал дозволяють позиціонувати 
+                             Рівненську АЕС як високотехнологічне підприємство.</p>
+
+                        <p>Про повноту впровадження сучасних технологій свідчить виконання Комплексної зведеної програми підвищення рівня безпеки АЕС України, 
+                            а це близько 330 заходів на період 2011-2023 рр. У рамках проєкту міжнародної технічної допомоги TACIS спільно з Єврокомісією на РАЕС 
+                            побудовано комплекс з переробки твердих радіоактивних відходів, що дозволило вивести систему поводження з РАВ на новий, сучасний рівень.</p>
+                            
+                        <p>Прикладом впровадження сучасних технологій є реалізація проєкту створення центру обробки даних поряд з АЕС.</p>
+                    </div>
+
+                    <div class="perevaga" id="reliability">
+                        <h2 class="text-blue5">Надійність</h2><br>
+                        <p>Надійність виробництва електроенергії енергоблоками РАЕС обґрунтовується високими показниками коефіцієнтів готовності. Також щорічне 
+                            проведення модернізацій та реконструкцій під час планово-попереджувальних ремонтів енергоблоків спрямовано на підвищення рівня безпеки, 
+                            надійності та ефективності роботи обладнання та технологічних систем.</p>
+                    </div>
+
+                    <div class="perevaga" id="climat">
+                        <h2 class="text-blue5">Збереження клімату</h2><br>
+                        <p>Атомна енергетика – одне з найбільш економічно ефективних низьковуглецевих технологій генерації енергії. Поряд з гідроенергетикою, 
+                            вітровою енергетикою та іншими відновлювальними джерелами енергії з найменшим рівнем викидів парникових газів, ядерна енергетика відіграє 
+                            важливу роль у протидії процесам глобального потепління.</p>
+
+                        <p>За весь час експлуатації українських АЕС вдалося уникнути 2,7 млрд тонн викидів СО2 у навколишнє середовище. У разі ж припинення 
+                            експлуатації АЕС щороку викидалося б додатково 70 млн тонн СО2. За даними МАГАТЕ, в період з 1970 до 2015 року відвернений викид CO2 
+                            у світі завдяки використанню атомної енергії склав приблизно 68 млрд тонн.</p>
+                            
+                        <p>Чиста енергія 24/7, яку забезпечують АЕС, вкрай важлива для досягнення Цілей сталого розвитку ООН у сфері клімату. Виробництво електроенергії 
+                            за допомогою реакції поділу атому не утворює викиди вуглекислого газу або інших парникових газів.</p>
+                    </div>
+
+                    <div class="perevaga" id="energy">
+                        <h2 class="text-blue5">Доступна енергія</h2><br>
+                        <p>Традиційно АЕС виробляють половину всієї електроенергії в країні та забезпечують енергетичну незалежність держави. Лише атомна енергетика 
+                            здатна бути безперебійним джерелом енергії та спроможна забезпечити необхідну кількість електроенергії для потреб промисловості. 
+                            Атомні електростанції виробляють електроенергію стабільно: незалежно від вітру, сонця чи кліматичних умов. Наразі АЕС забезпечують 
+                            населення держави найдешевшою електрикою, вартість якої складає 15 копійок за 1 кВт годину.</p>
+
+                        <p>Розміщення АЕС не потребує особливих кліматичних умов та не вимагає виведення з сільськогосподарського обороту великих площ 
+                            земельних угідь. Для розташування атомного енергоблоку потужністю 1 млн кВт потрібно близько 4 кв. км. Для виробництва 
+                            електроенергії АЕС достатньо раз на 4-5 років проводити завантаження свіжого ядерного палива. </p>
+                    </div>
+                    
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class=" footer ">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__mail">
+                    <div class="footer__contact">
+                        <h4 class="footer__title h3">Контакти</h4>
+                        <p>Рівненська АЕС</p>
+                        <p>м. Вараш</p>
+                        <p>Рівненська обл.</p>
+                        <p>34400</p>
+                        <p>Україна</p>
+                        <p><a href="mailto:office@rnpp.atom.gov.ua">office@rnpp.atom.gov.ua</a></p>
+                        <p><a href="mailto:pr@rnpp.atom.gov.ua">pr@rnpp.atom.gov.ua</a></p>
+                    </div>
+                </div>
+                <div class="footer__link">
+                    <div class="footer__info mb-4">
+                        <h4 class="footer__title h3">Інформаційний центр</h4>
+                        <p>+38 (03636) 64-123</p>
+                        <p><a href="mailto:info@info.atom.gov.ua">info@rnpp.atom.gov.ua</a></p>
+                    </div>
+                    <ul class="footer__link-links">
+                        <li class="footer__link-link"><a href="links.html">Посилання</a></li>
+                        <li class="footer__link-link"><a href="corruption.html">Протидія корупції</a></li>
+                        <li class="footer__link-politic"><a href="privacy_policy.html">Політика конфедеційності та захисту персональних даних</a></li>
+                    </ul>
+                </div>
+                <div class="footer__right">
+                    <div class="footer__logo">
+                        <a href="http://www.energoatom.kiev.ua/"><img class="footer__logo-naek" src="../images/svg/naek_logo_w.svg" alt=""></a>
+                        <img class="footer__logo-raes" src="../images/svg/logo_white.svg" alt="">
+                    </div>
+                    <ul class="footer__social-icons">
+                        <li class="footer__social-icon"><a href="https://www.facebook.com/rnppofficial" title="Facebook"><i class="icon-facebook"></i></a></li>
+                        <li class="footer__social-icon"><a href="https://twitter.com/rnppofficial" title="Twitter"><i class="icon-twitter"></i></a></li>
+                        <li class="footer__social-icon"><a href="https://www.instagram.com/rnppofficial" title="Instagram"><i class="icon-instagram"></i></a></li>
+                        <li class="footer__social-icon"><a href="https://t.me/rnppofficial" title="Telegram"><i class="icon-telegram"></i></a></li>
+                        <li class="footer__social-icon"><a href="https://www.youtube.com/channel/UCRrM8pysKmTiDqlfTPMzyCg" title="Youtube"><i class="icon-youtube"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        <div class="footer__wrap"></div>
+        <div class="footer__copy t3">
+            <div class="container">
+                <p>©2020, Рівненська Атомна Електростанція. Усі права захищено.</p>
+                <p>Копіювання, публікування або інше поширення інформації, у т.ч. окремих частин текстів чи зображень, розміщених на веб-сайті ВП РАЕС, без письмового дозволу забороняється. <a href="mailto:pr@rnpp.atom.gov.ua">pr@rnpp.atom.gov.ua</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/lib/jquery.min.js "></script>
+    <script src="../js/lib/bootstrap5.min.js "></script>
+    <!-- without version: <script src="../js/main.js"></script> -->
+    <!-- <script> /* use this */
+        _v.add('js/main.js'); 
+    </script> -->
+
+    <script>
+        /* temporary script */
+        let s = document.createElement('script');
+        s.setAttribute('src', '../js/_version.js?v=' + parseInt(Math.random() * 1000000));
+        s.onload = function() {
+            _v.add('../css/page_why_perevagy.css', 1);
+            _v.add('../js/main.js');
+            _v.add('../js/rnpp_anchors.js');
+        };
+        document.head.appendChild(s);
+    </script>
+
+</body>
+
+</html>

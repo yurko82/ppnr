@@ -1,0 +1,79 @@
+@import "_colors";
+
+.allabout {
+    color: $grey1;
+    &__block {
+        position: relative;
+    }
+    &__content {
+        padding-top: 20px;
+        min-height: 300px;
+        & p {
+            padding: 0 0 24px 0;
+        }
+    }
+    @media(min-width: 768px) {
+        &__content {
+            margin-left: 320px;
+            padding-top: 60px;
+            min-height: 650px;
+            & .perevaga{
+                margin-bottom: 80px;
+                h2 {
+                    font-weight: 900;
+                    font-size: 36px;
+                    color: $green1;
+                }
+            }
+        }
+    }
+    & .about_side_menu {
+        z-index: 1005;
+        padding: 0;
+        top: 180px;
+        float: left;
+        position: sticky;
+        left: 0;
+        & .side_menu {
+            & .side_menu-item {
+                display: flex;
+                justify-content: start;
+                align-items: center;
+                padding: 10px 0;
+                cursor: pointer;
+                & .icon-img {
+                    width: 40px;
+                    height: 40px;
+                    background-size: contain !important;
+                    background-repeat: no-repeat !important;
+                    filter: invert(33%) sepia(95%) saturate(2%) hue-rotate(11deg) brightness(101%) contrast(101%);
+                }
+                & span {
+                    color: $grey5;
+                    font-weight: 700;
+                    font-size: 20px;
+                    padding-left: 10px;
+                }
+                &:hover{
+                    & .icon-img {
+                        filter: invert(24%) sepia(0%) saturate(4342%) hue-rotate(8deg) brightness(82%) contrast(67%);
+                    }
+                    & span {
+                        color: $grey4;
+                    }
+                }
+                &.active {
+                    & .icon-img {
+                        filter: invert(40%) sepia(69%) saturate(361%) hue-rotate(111deg) brightness(88%) contrast(93%);
+                    }
+                    & span {
+                        color: $green1;
+                    }
+                }
+            }
+        }
+    }
+    @media(max-width: 767px) {
+        display: none;
+    }
+}
