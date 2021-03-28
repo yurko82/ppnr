@@ -56,7 +56,8 @@
 
 .r5__bg-img {
   background-image: url("../images/img/r5/build.jpg");
-  background-size: cover;
+  -webkit-background-size: cover;
+          background-size: cover;
   background-position: bottom;
   position: fixed;
   z-index: -1;
@@ -98,6 +99,7 @@
   bottom: 40px;
   left: 50%;
   -webkit-transform: translate(-50%, 0);
+      -ms-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
   padding: 10px;
   border: 3px solid white;
@@ -110,6 +112,7 @@
   top: 430px;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   bottom: auto;
 }
@@ -179,6 +182,7 @@
 blockquote.quote {
   background-color: #daf4fa;
   width: 100vw;
+  margin-left: -webkit-calc(-50vw + 50%);
   margin-left: calc(-50vw + 50%);
   margin-top: 60px;
   padding: 40px;
@@ -188,9 +192,11 @@ blockquote.quote {
 blockquote.quote .info {
   position: relative;
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
@@ -230,7 +236,8 @@ blockquote.quote .info .quote-img div {
   width: 100%;
   height: 100%;
   background-repeat: no-repeat;
-  background-size: cover;
+  -webkit-background-size: cover;
+          background-size: cover;
   background-position: center;
 }
 

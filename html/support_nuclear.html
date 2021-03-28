@@ -169,12 +169,42 @@
 
     <div class="to-top"></div>
     <!-- article start -->
-    <section class="article">
+    <section class="allabout">
+        <div class="container">
+            <div class="allabout__block">
 
-        <div style="min-height:300px; width:100%; text-align: center;">
-            ... Контент ...
+                <nav class="about_side_menu">
+                    <div class="about_side_menu-title">
+                        <h2>Чому АЕС</h2>
+                    </div>
+                    <div class="about_side_menu-select" onclick="openSideMenu()"><span>Оберіть рубрику</span>
+                        <div class="icon-up-down"><i class="icon-left-arrow"></i><i class="icon-right-arrow"></i></div>
+                    </div>
+                    <ul>
+                        <li class="about_side_menu-submenu" onclick="openSideSubMenu(this)">
+                            <h3>Переваги <i class="icon-right-arrow angle-down"></i></h3>
+                            <ul>
+                                <li><a href="security.html">Безпека</a></li>
+                                <li><a href="reliability.html">Надійність</a></li>
+                                <li><a href="ecology.html">Екологічність</a></li>
+                                <li><a href="climate.html">Збереження клімату</a></li>
+                                <li><a href="modern_technology.html">Сучасні технологій</a></li>
+                                <li><a href="available_energy.html">Доступна енергія</a></li>
+                            </ul>
+                        </li>
+                        <li class="about_side_menu-submenu active" onclick="openSideSubMenu(this)">
+                            <h3><a href="support_nuclear.html">Підтримую атому енергію</a></h3>
+
+                        </li>
+
+                    </ul>
+                </nav>
+
+                <div class="allabout__content">
+                    <p>--контент--</p>
+                </div>
+            </div>
         </div>
-
     </section>
     <!-- article end -->
 
@@ -245,7 +275,9 @@
         s.setAttribute('src', '../js/_version.js?v=' + parseInt(Math.random() * 1000000));
         s.onload = function() {
             _v.add('../css/page_support_nuclear.css', 1);
+            _v.add('../css/page_about.css', 1);
             _v.add('../js/main.js');
+            _v.add('../js/about_menu.js');
         };
         document.head.appendChild(s);
     </script>

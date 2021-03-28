@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Клімат і довкілля</title>
+    <title>Збереження клімату</title>
 
     <!-- <script src='../js/_version.js?v=(add some version)'></script> -->
     <link href="../css/lib/bootstrap5.css" rel="stylesheet" id="bootstrap-css">
@@ -169,12 +169,51 @@
 
     <div class="to-top"></div>
     <!-- article start -->
-    <section class="article">
+    <section class="allabout">
+        <div class="container">
+            <div class="allabout__block">
 
-        <div style="min-height:300px; width:100%; text-align: center;">
-            ... Контент ...
+                <nav class="about_side_menu">
+                    <div class="about_side_menu-title">
+                        <h2>Чому АЕС</h2>
+                    </div>
+                    <div class="about_side_menu-select" onclick="openSideMenu()"><span>Оберіть рубрику</span>
+                        <div class="icon-up-down"><i class="icon-left-arrow"></i><i class="icon-right-arrow"></i></div>
+                    </div>
+                    <ul>
+                        <li class="about_side_menu-submenu" onclick="openSideSubMenu(this)">
+                            <h3>Переваги <i class="icon-right-arrow angle-down"></i></h3>
+                            <ul>
+                                <li><a href="security.html">Безпека</a></li>
+                                <li><a href="reliability.html">Надійність</a></li>
+                                <li><a href="ecology.html">Екологічність</a></li>
+                                <li class="active"><a href="climate.html">Збереження клімату</a></li>
+                                <li><a href="modern_technology.html">Сучасні технологій</a></li>
+                                <li><a href="available_energy.html">Доступна енергія</a></li>
+                            </ul>
+                        </li>
+                        <li class="about_side_menu-submenu" onclick="openSideSubMenu(this)">
+                            <h3><a href="support_nuclear.html">Підтримую атому енергію</a></h3>
+
+                        </li>
+
+                    </ul>
+                </nav>
+
+                <div class="allabout__content">
+                    <span class="font-bold text-blue5 h2">Збереження клімату</span>
+                    <p>Атомна енергетика – одне з найбільш економічно ефективних низьковуглецевих технологій генерації енергії. Поряд з гідроенергетикою, вітровою енергетикою та іншими відновлювальними джерелами енергії з найменшим рівнем викидів парникових
+                        газів, ядерна енергетика відіграє важливу роль у протидії процесам глобального потепління.</p>
+
+                    <p>За весь час експлуатації українських АЕС вдалося уникнути 2,7 млрд тонн викидів СО2 у навколишнє середовище. У разі ж припинення експлуатації АЕС щороку викидалося б додатково 70 млн тонн СО2. За даними МАГАТЕ, в період з 1970 до 2015
+                        року відвернений викид CO2 у світі завдяки використанню атомної енергії склав приблизно 68 млрд тонн.</p>
+
+                    <p>Чиста енергія 24/7, яку забезпечують АЕС, вкрай важлива для досягнення Цілей сталого розвитку ООН у сфері клімату. Виробництво електроенергії за допомогою реакції поділу атому не утворює викиди вуглекислого газу або інших парникових
+                        газів.
+                    </p>
+                </div>
+            </div>
         </div>
-
     </section>
     <!-- article end -->
 
@@ -244,8 +283,9 @@
         let s = document.createElement('script');
         s.setAttribute('src', '../js/_version.js?v=' + parseInt(Math.random() * 1000000));
         s.onload = function() {
-            _v.add('../css/page_climate.css', 1);
+            _v.add('../css/page_about.css', 1);
             _v.add('../js/main.js');
+            _v.add('../js/about_menu.js');
         };
         document.head.appendChild(s);
     </script>
