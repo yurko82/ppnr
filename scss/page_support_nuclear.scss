@@ -1,1 +1,84 @@
-@import "_colors";
+    @import "_colors";
+    .support {
+        &__block {
+            display: flex;
+            margin-bottom: 70px;
+            & .support__foto {
+                width: calc(50% + 12px);
+                & img {
+                    width: 135%;
+                }
+            }
+            & .support__content {
+                background-color: #fff;
+                width: calc(50% - 12px);
+                margin-top: 30px;
+                &-text {
+                    padding: 30px 40px;
+                    & h2 {
+                        font-size: 24px;
+                        margin: 8px 0;
+                    }
+                    & p {
+                        line-height: 1.75rem;
+                    }
+                }
+                &::before {
+                    content: "";
+                    display: block;
+                    height: 4px;
+                    background-image: linear-gradient(90deg, #169CD6 13%, #3DC2CF 54%, #3EBC95 89%);
+                }
+            }
+            &:nth-child(even) {
+                & .support__foto {
+                    order: 1;
+                    & img {
+                        float: right;
+                    }
+                }
+                & .support__content {
+                    position: relative;
+                }
+            }
+        }
+        @media (max-width: 600px) {
+            &__block {
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 50px;
+                & .support__foto {
+                    width: 100%;
+                    & img {
+                        width: 100%;
+                    }
+                }
+                & .support__content {
+                    width: 100%;
+                    background-color: #fff;
+                    margin-top: 0;
+                    &-text {
+                        padding: 20px 30px;
+                        & h2 {
+                            font-size: 20px;
+                            margin: 8px 0;
+                        }
+                        & p {
+                            line-height: 1.5rem;
+                        }
+                    }
+                }
+                &:nth-child(even) {
+                    & .support__foto {
+                        order: 0;
+                        & img {
+                            float: right;
+                        }
+                    }
+                    & .support__content {
+                        position: relative;
+                    }
+                }
+            }
+        }
+    }
