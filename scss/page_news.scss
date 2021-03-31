@@ -22,7 +22,7 @@
     &__head {
         display: flex;
         justify-content: space-between;
-        padding: 8px 0;
+        padding: 20px 0;
         color: $grey4;
         &-wrap {
             flex: 1;
@@ -30,6 +30,7 @@
     }
     &__title {
         color: $blue3;
+        margin-top: 20px;
         h1 {
             font-weight: 400;
         }
@@ -86,53 +87,77 @@
         justify-content: space-between;
         padding: 20px 0;
         color: $grey2;
-        & a {
-            color: $blue3;
-            border: 1px solid $blue3;
-            padding: 0 3px;
-        }
+        
         &-tags {
             &>span {
                 font-size: 18px;
                 color: $grey4;
             }
+            &>a {
+                color: $grey4;
+                border: 1px solid $grey4;
+                padding: 6px;
+                font-size: 14px;
+                background-color: transparent;
+                &:hover {
+                    color: white;
+                    border: 1px solid white;
+                    background-color: $blue4;
+                }
+            }
         }
         &-autor {
-            font-style: italic;
             & span {
-                font-style: normal;
                 color: $grey4;
                 font-size: 18px;
+                &.author{
+                    color: $grey2;
+                    font-size: 18px;
+                }
             }
         }
     }
     &__social {
-        font-size: 40px;
-        color: $grey4;
         text-align: center;
+        & i {
+            font-size: 40px;
+            color: $grey4;
+            cursor: pointer;
+            padding:8px;
+        }
+        & i:hover{
+           color: $blue3;
+        }
     }
     &__buttons {
         display: flex;
         justify-content: space-between;
-        padding: 12px 0;
         & button {
             margin-left: 0;
+            & i{
+                font-size:12px;
+            }
         }
     }
     &__others {
         color: $grey4;
+        padding:20px 0;
         &>span {
             font-size: 18px;
         }
         &-items {
             display: flex;
             justify-content: space-between;
-            margin: 15px 0 20px 0;
+            margin: 10px 0;
         }
         &-item {
             width: 30%;
             border: 1px solid $grey5;
-            padding: 5px;
+            padding: 10px;
+            cursor: pointer;
+            &:hover{
+                border-color: $blue3;
+            }
         }
         &-title {
             color: $blue3;
@@ -145,6 +170,10 @@
         &-footer {
             display: flex;
             justify-content: space-between;
+            align-items: center;
+            & span {
+                font-size:14px;
+            }
         }
     }
 }
