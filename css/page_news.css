@@ -518,7 +518,7 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 8px 0;
+  padding: 20px 0;
   color: #999999;
 }
 
@@ -530,6 +530,7 @@
 
 .news__title {
   color: #005b99;
+  margin-top: 20px;
 }
 
 .news__title h1 {
@@ -636,15 +637,18 @@
 }
 
 .news__social {
+  text-align: center;
+}
+
+.news__social i {
   font-size: 40px;
   color: #999999;
-  text-align: center;
   cursor: pointer;
+  padding: 8px;
 }
 
 .news__social i:hover {
-  -webkit-filter: invert(90%) sepia(90%) saturate(6233%) hue-rotate(193deg) brightness(70%) contrast(101%);
-          filter: invert(90%) sepia(90%) saturate(6233%) hue-rotate(193deg) brightness(70%) contrast(101%);
+  color: #005b99;
 }
 
 .news__buttons {
@@ -666,6 +670,7 @@
 
 .news__others {
   color: #999999;
+  padding: 20px 0;
 }
 
 .news__others > span {
@@ -679,13 +684,18 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 15px 0 20px 0;
+  margin: 10px 0;
 }
 
 .news__others-item {
   width: 30%;
   border: 1px solid #d1d1d1;
-  padding: 5px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.news__others-item:hover {
+  border-color: #005b99;
 }
 
 .news__others-title {
@@ -705,4 +715,11 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.news__others-footer span {
+  font-size: 14px;
 }

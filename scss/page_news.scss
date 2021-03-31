@@ -22,7 +22,7 @@
     &__head {
         display: flex;
         justify-content: space-between;
-        padding: 8px 0;
+        padding: 20px 0;
         color: $grey4;
         &-wrap {
             flex: 1;
@@ -30,6 +30,7 @@
     }
     &__title {
         color: $blue3;
+        margin-top: 20px;
         h1 {
             font-weight: 400;
         }
@@ -117,12 +118,15 @@
         }
     }
     &__social {
-        font-size: 40px;
-        color: $grey4;
         text-align: center;
-        cursor: pointer;
+        & i {
+            font-size: 40px;
+            color: $grey4;
+            cursor: pointer;
+            padding:8px;
+        }
         & i:hover{
-            filter: invert(90%) sepia(90%) saturate(6233%) hue-rotate(193deg) brightness(70%) contrast(101%);
+           color: $blue3;
         }
     }
     &__buttons {
@@ -137,18 +141,23 @@
     }
     &__others {
         color: $grey4;
+        padding:20px 0;
         &>span {
             font-size: 18px;
         }
         &-items {
             display: flex;
             justify-content: space-between;
-            margin: 15px 0 20px 0;
+            margin: 10px 0;
         }
         &-item {
             width: 30%;
             border: 1px solid $grey5;
-            padding: 5px;
+            padding: 10px;
+            cursor: pointer;
+            &:hover{
+                border-color: $blue3;
+            }
         }
         &-title {
             color: $blue3;
@@ -161,6 +170,10 @@
         &-footer {
             display: flex;
             justify-content: space-between;
+            align-items: center;
+            & span {
+                font-size:14px;
+            }
         }
     }
 }
