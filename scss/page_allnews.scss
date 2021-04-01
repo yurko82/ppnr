@@ -18,15 +18,12 @@
         cursor: pointer;
         & li {
             margin: 0 4px;
-            font-size: 18px;
+            font-size: 20px;
             padding: 4px;
             display: flex;
             align-items: center;
             &.news-type{
                 width: 18px;
-            }
-            &.active {
-                border: 1px solid $blue3;
             }
         }
     }
