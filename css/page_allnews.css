@@ -102,13 +102,8 @@
   width: 18px;
 }
 
-.allnews__btn {
-  text-align: center;
-  padding: 24px 0;
-}
-
 .allnews__btn button {
-  padding: 8px;
+  margin: 60px auto;
 }
 
 .news__block {

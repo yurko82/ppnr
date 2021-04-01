@@ -27,12 +27,8 @@
             }
         }
     }
-    &__btn {
-        text-align: center;
-        padding: 24px 0;
-        & button {
-            padding: 8px;
-        }
+    &__btn button{
+        margin: 60px auto;
     }
 }
 
@@ -71,7 +67,6 @@
         }
     }
     &-img {
-        //width: 200px;
         float: left;
         margin-right: 8px;
         & img {
@@ -93,107 +88,3 @@
         margin: 0 10px;
     }
 }
-
-// .news{
-//     &__slider {
-//         display: flex;
-//         justify-content: space-between;
-//     }
-//     &__items {
-//         display: flex;
-//         flex-wrap: no-wrap;
-//         justify-content: space-between;
-//         width: 100%;
-//         margin: o auto;
-//         &:hover{
-//             box-shadow: 0px 3px 12px #000;
-//         }
-//     }
-//     &__item {
-//         background-color: #fff;
-//         position: relative;
-//         &:hover{
-//             border-bottom: 5px solid $blue2;
-//         }
-//         &.anons{
-//             &:hover{
-//             border-bottom: 5px solid $green1;
-//             }
-//             &::before{
-//                 content: "Анонс";
-//                 // width: 90px;
-//                 height: 24px;
-//                 padding: 2px 5px;
-//                 background-color: $green1;
-//                 display: inline-block;
-//                 position: absolute;
-//                 top: 0;
-//                 right: 0;
-//             }
-//         }
-//         &.important{
-//             &:hover{
-//             border-bottom: 5px solid $red3;
-//             }
-//             &::before{
-//                 content: "Важливо";
-//                 // width: 90px;
-//                 height: 24px;
-//                 padding: 2px 5px;
-//                 background-color: $red3;
-//                 display: inline-block;
-//                 position: absolute;
-//                 top: 0;
-//                 right: 0;
-//             }
-//         }
-//         &.video{
-//             &:hover{
-//             border-bottom: 5px solid $red1;
-//             }
-//             &::before{
-//                 content: "Відео";
-//                 color: $grey6;
-//                 // width: 90px;
-//                 height: 24px;
-//                 padding: 2px 5px;
-//                 background-color: $red1;
-//                 display: inline-block;
-//                 position: absolute;
-//                 top: 0;
-//                 right: 0;
-//             }
-//         }
-//     }
-//     &__item-title {
-//         height: 110px;
-//         & h3{
-//             font-size: 16px;
-//             font-style: normal;
-//             font-weight: 400;
-//             color: $blue2;
-//             padding: 10px;
-//         }
-//     }
-//    &__item-date {
-//         color: $grey4;
-//         position: absolute;
-//         right: 20px;
-//         bottom: 20px;
-//     }
-//     & .slide2,.slide3 {
-//         display: none;
-//     }
-//     @media(min-width: 1000px) {
-//         & .slide2,.slide3 {
-//             display: block;
-//         }
-//         &__items {
-//             width: 33.3333%;
-//             margin: 0 8px;
-//         }
-//         &__slider {
-//             max-height: 0 -8px;
-//         }
-//     }
-// }
