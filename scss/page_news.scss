@@ -47,11 +47,6 @@
             position: relative;
             display: flex;
             justify-content: space-between;
-            & i {
-                position: absolute;
-                color: #41b6e6;
-                font-size: 40px;
-            }
             & .quote-text {
                 padding-left: 80px;
                 padding-right: 40px;

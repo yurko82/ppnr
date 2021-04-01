@@ -557,12 +557,6 @@
           justify-content: space-between;
 }
 
-.news__quote .info i {
-  position: absolute;
-  color: #41b6e6;
-  font-size: 40px;
-}
-
 .news__quote .info .quote-text {
   padding-left: 80px;
   padding-right: 40px;

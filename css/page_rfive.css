@@ -130,6 +130,7 @@
 .article__container .info {
   max-width: 1000px;
   margin: 0 auto;
+  padding: 40px 0;
 }
 
 @media (min-width: 768px) {
@@ -181,7 +182,7 @@ blockquote.quote {
   width: 100vw;
   margin-left: calc(-50vw + 50%);
   margin-top: 60px;
-  padding: 0 0 20px 0;
+  padding: 0;
   font-style: italic;
 }
 
@@ -193,12 +194,6 @@ blockquote.quote .info {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-}
-
-blockquote.quote .info i {
-  position: absolute;
-  color: #41b6e6;
-  font-size: 40px;
 }
 
 blockquote.quote .info .quote-text {

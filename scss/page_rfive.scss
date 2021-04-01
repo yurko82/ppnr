@@ -61,6 +61,7 @@
         & .info {
             max-width: 1000px;
             margin:0 auto;
+            padding:40px 0;
         }
     }
    
@@ -110,18 +111,12 @@ blockquote.quote {
     width: 100vw;
     margin-left: calc(-50vw + 50%);
     margin-top: 60px;
-    padding: 0 0 20px 0;
+    padding: 0;
     font-style: italic;
     & .info {
         position: relative;
         display: flex;
         justify-content: space-between;
-        & i {
-            position: absolute;
-            // left: -60px;
-            color: #41b6e6;
-            font-size: 40px;
-        }
         & .quote-text {
             padding-left: 80px;
             padding-right: 40px;
