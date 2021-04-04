@@ -210,7 +210,7 @@ blockquote.quote {
   background-color: #daf4fa;
   width: 100vw;
   margin-left: calc(-50vw + 50%);
-  margin-top: 60px;
+  margin-top: 40px;
   padding: 0 18px;
   font-style: italic;
 }
