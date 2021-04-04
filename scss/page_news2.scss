@@ -1,0 +1,94 @@
+@import "_colors";
+@import "_rnpp_lightbox";
+
+.article-fixed {
+    & p,
+    img {
+        padding-top: 20px;
+    }
+    ul {
+        margin-bottom: 0;
+    }
+    li {
+        margin: 5px 0;
+    }
+    padding-top: 60px;
+    @media(min-width: 768px) {
+        padding-top: 90px;
+    }
+    @media(min-width:1000px) {
+        padding-top: 120px;
+    }
+    & .article__container {
+        max-width: 1280px;
+        margin: 20px auto 40px auto;
+        padding-bottom: 20px;
+        @media(min-width: 1000px) {
+            padding-bottom: 60px;
+        }
+    }
+    & .container-fixed {
+        position: relative;
+        width: 100%;
+        & .article__img {
+            height: 400px;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+            background-attachment: fixed;
+            &-overlay {
+                background-image: url(../images/img/grid.png);
+                height: 400px;
+                width: 100%;
+                position: absolute;
+                opacity: 0.3;
+                top: 0;
+            }
+            @media(min-width: 768px) {
+                height: 500px;
+                &-overlay {
+                    height: 500px;
+                }
+            }
+            @media(min-width:1000px) {
+                height: 600px;
+                &-overlay {
+                    height: 600px;
+                }
+            }
+        }
+        &__title {
+            position: absolute;
+            left:50%;
+            top:50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            width:90%;
+            & span {
+                line-height: 115%;
+                color: white;
+                font-size: 8vw;
+                font-weight: 700;
+                text-shadow: 2px 2px rgba(50, 50, 50, 0.5);
+            }
+            @media(min-width:768px) {
+                & span {
+                    font-size: 7vw;
+                }
+            }
+            @media(min-width:1000px) {
+                width:80%;
+                & span {
+                    font-size: 50px;
+                }
+            }
+            @media(min-width:1280px) {
+                max-width: 1280px;
+                & span {
+                    font-size: 60px;
+                }
+            }
+        }
+    }
+}
