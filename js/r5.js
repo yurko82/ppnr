@@ -3,9 +3,9 @@
     let toTop=0, up=0;
     $(window).resize(function() {
         let _w = window.innerWidth;
-        if (_w>=1000) toTop=200;
-        else if (_w>768) toTop=114;
-        else toTop=100;
+        if (_w>=1000) toTop=190;
+        else if (_w>768) toTop=210;
+        else toTop=258;
         up=0;
         $(window).triggerHandler('scroll');
     });
