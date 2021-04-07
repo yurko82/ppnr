@@ -1,0 +1,40 @@
+@import "_colors";
+.why {
+    & p {
+        & b {
+            &:hover {
+                font-size: 20px;
+                color: $blue4;
+            }
+        }
+    }
+    & img {
+        padding-top: 20px;
+        margin: 0 auto;
+    }
+}
+
+.fact {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    background-color: $green1;
+    &__title {
+        width: 100px;
+        font-size: 24px;
+        color: $blue6;
+        font-weight: 600;
+        text-transform: uppercase;
+        text-align: center;
+        padding-right: 10px;
+    }
+    &__text {
+        padding-left: 10px;
+        font-style: italic;
+        color: $blue6;
+        & ul {
+            margin: 0;
+        }
+    }
+}

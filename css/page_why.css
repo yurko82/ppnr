@@ -54,42 +54,49 @@
   color: #999999;
 }
 
-.partners_logos {
+.why p b:hover {
+  font-size: 20px;
+  color: #41b6e6;
+}
+
+.why img {
+  padding-top: 20px;
+  margin: 0 auto;
+}
+
+.fact {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-justify-content: space-around;
-      -ms-flex-pack: distribute;
-          justify-content: space-around;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
-}
-
-.partners_logo {
-  width: 250px;
-  height: 100px;
-  text-align: center;
-}
-
-.partners_logo a {
-  height: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 12px;
+  background-color: #39b791;
 }
 
-.partners_logo img {
-  width: 100%;
+.fact__title {
+  width: 100px;
+  font-size: 24px;
+  color: #daf4fa;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+  padding-right: 10px;
+}
+
+.fact__text {
+  padding-left: 10px;
+  font-style: italic;
+  color: #daf4fa;
+}
+
+.fact__text ul {
+  margin: 0;
 }

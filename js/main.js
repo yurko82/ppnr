@@ -201,3 +201,8 @@
 function toogleList(list) {
     $('.' + list).toggle(300);
 }
+
+// temp code-----
+$(".why b").hover(function() {
+    $(".why b").css("color", "#41b6e6").css("font-size", "20px")
+})
