@@ -217,7 +217,54 @@
 
                 <div class="allabout__content">
 
-                    <!-- content -->
+                    <div class="block">
+                        <div class="block-title show"><i class="icon-right-arrow angle-down show"></i><span>Ремонт</span></div>
+                        <div class="block-content">
+                            <div class="info">
+                                <p><b>Основною метою</b> діяльності підрозділів ВП РАЕС є забезпечення планування, підготовки і виконання технічного обслуговування і ремонту, 
+                                    реконструкції і модернізації устаткування і систем ВП РАЕС якісно, у встановлені терміни і з мінімальними витратами.</p>
+                                <p><b>Основним завданням</b> підрозділів ВП РАЕС, які здійснюють функції техобслуговування і ремонту, є підтримання 
+                                    устаткування станції у справному стані протягом всього терміну його служби та своєчасна заміна устаткування, що відпрацювало свій ресурс.</p>
+                                    Структура ремонтних підрозділів дозволяє:
+                                    <ul>
+                                        <li>ефективно здійснювати техобслуговування та ремонт  устаткування під час експлуатації станції</li>
+                                        <li>виконувати регламентні роботи з технічного обслуговування і ремонту устаткування і систем силами станційного персоналу.</li>
+                                    </ul>
+                                
+                                <table class="table-production">
+                                    <caption>Графік ремонтів на Рівненській АЕС</caption>
+                                    <thead>
+                                        <tr>
+                                            <th width="30%">&nbsp;</th>
+                                            <th width="15%">Вид ремонту</th>
+                                            <th width="15%">План (діб)</th>
+                                            <th width="20%">Початок</th>
+                                            <th width="20%">Закінчення</th>
+                                        </tr>
+                                    </thead>
+                                    <tr> <td>Енергоблок №3</td> <td>СР</td> <td>77</td> <td>15.12.2022</td> <td>01.03.2023</td> </tr>
+                                    <tr> <td>Енергоблок №4</td> <td>КР</td> <td>110</td> <td>2.11.2022</td> <td>01.03.2023</td> </tr>
+                                    <tr> <td>Енергоблок №2</td> <td>СР</td> <td>73</td>	<td>01.03.2022</td> <td>12.05.2022</td> </tr>
+                                    <tr> <td>Енергоблок №1</td> <td>СР</td> <td>95</td> <td>03.01.2022</td> <td>>07.04.2022</td> </tr>
+                                    <tr> <td>Енергоблок №4</td> <td>СР</td> <td>100</td> <td>15.10.2021</td> <td>22.01.2022</td> </tr>
+                                    <tr> <td>Енергоблок №2</td> <td>СР</td> <td>45</td>  <td>04.03.2021</td> <td>17.04.2021</td> </tr>
+                                    <tr> <td>Енергоблок №3</td> <td>КР</td> <td>116</td> <td>14.11.2020</td> <td>09.03.2021</td> </tr>
+                                </table>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="block">
+                        <div class="block-title"><i class="icon-right-arrow angle-down"></i><span>Техніко-економічні показники</span></div>
+                        <div class="block-content content-hidden">
+                            <div class="info">
+                                <p>Основні показники роботи Рівненської АЕС</p>
+                                
+                                
+                            </div>
+                        </div>
+                    </div>
 
                 </div>
             </div>
@@ -288,9 +335,12 @@
         let s = document.createElement('script');
         s.setAttribute('src', '../js/_version.js?v=' + parseInt(Math.random() * 1000000));
         s.onload = function() {
-            _v.add('../css/page_about.css', 1);
+            _v.add('../css/page_about_more.css', 1);
+            _v.add('../css/page_about_activity.css', 1);
             _v.add('../js/main.js');
             _v.add('../js/about_menu.js');
+            _v.add('../js/about_more_page.js');
+            _v.add('../js/text_blocks.js');
         };
         document.head.appendChild(s);
     </script>
