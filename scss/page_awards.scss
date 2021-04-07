@@ -1,17 +1,17 @@
 .awards {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    align-items: center;
-    & .award {
+    display: flex;
+    justify-content: space-between;
+    &__list {
+        width: 66%;
+    }
+    &__view {
+        width: 33%;
         position: relative;
         & img {
+            position: sticky;
+            top: 200px;
+            left: 0;
             width: 100%;
-            padding: 10px;
-            opacity: 0.8;
-            &:hover {
-                opacity: 1;
-            }
         }
     }
 }

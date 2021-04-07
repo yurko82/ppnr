@@ -1,24 +1,27 @@
 .awards {
-  width: 100%;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.awards .award {
+.awards__list {
+  width: 66%;
+}
+
+.awards__view {
+  width: 33%;
   position: relative;
 }
 
-.awards .award img {
+.awards__view img {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 200px;
+  left: 0;
   width: 100%;
-  padding: 10px;
-  opacity: 0.8;
-}
-
-.awards .award img:hover {
-  opacity: 1;
 }
