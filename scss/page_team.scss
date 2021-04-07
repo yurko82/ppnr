@@ -1,0 +1,29 @@
+@import "_colors";
+@import "_about_menu";
+
+.rnpp_team{
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    & span {
+        font-size: 24px;
+        padding-bottom: 40px;
+        color: $blue3;
+    }
+    & img {
+        width:100%;
+        max-width: 600px;
+        cursor: pointer;
+    }
+}
+
+.rnpp_structura{
+    padding:120px 0;
+    width:100%;
+    & img{
+        width:100%;
+        cursor: pointer;
+    }
+}
