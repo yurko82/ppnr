@@ -1,8 +1,15 @@
+@import "_colors";
+@import "_rnpp_lightbox";
 .awards {
     display: flex;
     justify-content: space-between;
     &__list {
         width: 66%;
+        & li {
+            &:hover {
+                color: $blue4;
+            }
+        }
     }
     &__view {
         width: 33%;

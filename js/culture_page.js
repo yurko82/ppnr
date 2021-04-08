@@ -1,4 +1,4 @@
-let arURLs=[
+let arURLs = [
     'https://www.rnpp.rv.ua/assets/images/palaz/2019-04-25_12-19_1.jpg',
     'https://www.rnpp.rv.ua/assets/images/palaz/2019-04-25_12-19_DSC_1111.JPG',
     'https://www.rnpp.rv.ua/assets/images/palaz/2019-04-25_12-18_kfjgkf.JPG',
@@ -21,5 +21,5 @@ let arURLs=[
     'https://www.rnpp.rv.ua/assets/images/palaz/2019-04-25_12-18_DSC_7503-2.jpg'
 
 ];
-let texts=[];
+let texts = [];
 let lightbox = new RnppLightbox('photo-gallery', arURLs, arURLs, texts);
