@@ -231,26 +231,27 @@
                                         <li>виконувати регламентні роботи з технічного обслуговування і ремонту устаткування і систем силами станційного персоналу.</li>
                                     </ul>
                                 
-                                <table class="table-production">
-                                    <caption>Графік ремонтів на Рівненській АЕС</caption>
-                                    <thead>
-                                        <tr>
-                                            <th width="30%">&nbsp;</th>
-                                            <th width="15%">Вид ремонту</th>
-                                            <th width="15%">План (діб)</th>
-                                            <th width="20%">Початок</th>
-                                            <th width="20%">Закінчення</th>
-                                        </tr>
-                                    </thead>
-                                    <tr> <td>Енергоблок №3</td> <td>СР</td> <td>77</td> <td>15.12.2022</td> <td>01.03.2023</td> </tr>
-                                    <tr> <td>Енергоблок №4</td> <td>КР</td> <td>110</td> <td>2.11.2022</td> <td>01.03.2023</td> </tr>
-                                    <tr> <td>Енергоблок №2</td> <td>СР</td> <td>73</td>	<td>01.03.2022</td> <td>12.05.2022</td> </tr>
-                                    <tr> <td>Енергоблок №1</td> <td>СР</td> <td>95</td> <td>03.01.2022</td> <td>>07.04.2022</td> </tr>
-                                    <tr> <td>Енергоблок №4</td> <td>СР</td> <td>100</td> <td>15.10.2021</td> <td>22.01.2022</td> </tr>
-                                    <tr> <td>Енергоблок №2</td> <td>СР</td> <td>45</td>  <td>04.03.2021</td> <td>17.04.2021</td> </tr>
-                                    <tr> <td>Енергоблок №3</td> <td>КР</td> <td>116</td> <td>14.11.2020</td> <td>09.03.2021</td> </tr>
-                                </table>
-
+                                <div class="table-production">
+                                    <table>
+                                        <caption>Графік ремонтів на Рівненській АЕС</caption>
+                                        <thead>
+                                            <tr>
+                                                <th width="30%">&nbsp;</th>
+                                                <th width="15%">Вид ремонту</th>
+                                                <th width="15%">План (діб)</th>
+                                                <th width="20%">Початок</th>
+                                                <th width="20%">Закінчення</th>
+                                            </tr>
+                                        </thead>
+                                        <tr> <td>Енергоблок №3</td> <td>СР</td> <td>77</td> <td>15.12.2022</td> <td>01.03.2023</td> </tr>
+                                        <tr> <td>Енергоблок №4</td> <td>КР</td> <td>110</td> <td>2.11.2022</td> <td>01.03.2023</td> </tr>
+                                        <tr> <td>Енергоблок №2</td> <td>СР</td> <td>73</td>	<td>01.03.2022</td> <td>12.05.2022</td> </tr>
+                                        <tr> <td>Енергоблок №1</td> <td>СР</td> <td>95</td> <td>03.01.2022</td> <td>07.04.2022</td> </tr>
+                                        <tr> <td>Енергоблок №4</td> <td>СР</td> <td>100</td> <td>15.10.2021</td> <td>22.01.2022</td> </tr>
+                                        <tr> <td>Енергоблок №2</td> <td>СР</td> <td>45</td>  <td>04.03.2021</td> <td>17.04.2021</td> </tr>
+                                        <tr> <td>Енергоблок №3</td> <td>КР</td> <td>116</td> <td>14.11.2020</td> <td>09.03.2021</td> </tr>
+                                    </table>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -259,9 +260,79 @@
                         <div class="block-title"><i class="icon-right-arrow angle-down"></i><span>Техніко-економічні показники</span></div>
                         <div class="block-content content-hidden">
                             <div class="info">
-                                <p>Основні показники роботи Рівненської АЕС</p>
-                                
-                                
+                                <div class="table-production">
+                                    <table>
+                                        <caption>Основні показники роботи Рівненської АЕС</caption>
+                                        <thead>
+                                            <tr>
+                                                <th>Показники</th>
+                                                <th>Енергоблок №&nbsp;1</th>
+                                                <th>Енергоблок №&nbsp;2</th>
+                                                <th>Енергоблок №&nbsp;3</th>
+                                                <th>Енергоблок №&nbsp;4</th>
+                                                <th>АЕС</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Виробіток електроенергії за минулу добу, млн кВт*год</td>
+                                                <td><span id="PDL_B1">10.6</span></td>
+                                                <td><span id="PDL_B2">Н/Д</span></td>
+                                                <td><span id="PDL_B3">24.1</span></td>
+                                                <td><span id="PDL_B4">24.3</span></td>
+                                                <td><span id="PDL_RnPP">59</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Відпуск електроенергії за минулу добу, млн кВт*год</td>
+                                                <td colspan="5"><span id="PD_ES_RnPP">55.1</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Електрична потужність (середньодобова) за минулу добу, МВт</td>
+                                                <td><span id="PD_EPAD_B1">439.7</span></td>
+                                                <td><span id="PD_EPAD_B2">Н/Д</span></td>
+                                                <td><span id="PD_EPAD_B3">1 005.8</span></td>
+                                                <td><span id="PD_EPAD_B4">1 012.9</span></td>
+                                                <td><span id="PD_EPAD_RnPP">2 458</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Теплова потужність(середньодобова) за минулу добу, МВт</td>
+                                                <td><span id="PD_NAKZ_B1">1 376.9</span></td>
+                                                <td><span id="PD_NAKZ_B2">0</span></td>
+                                                <td><span id="PD_NAKZ_B3">2 966.2</span></td>
+                                                <td><span id="PD_NAKZ_B4">2 980.9</span></td>
+                                                <td><span id="PD_NAKZ_RnPP">7 324</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Виробіток електроенергії з початку місяця, млн кВт*год</td>
+                                                <td><span id="CUR_M_B1">77.1</span></td>
+                                                <td><span id="CUR_M_B2">0</span></td>
+                                                <td><span id="CUR_M_B3">176.5</span></td>
+                                                <td><span id="CUR_M_B4">178</span></td>
+                                                <td><span id="CUR_M_RnPP">431.6</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Виробіток електроенергії за попередній місяць, млн. кВт*год</td>
+                                                <td><span id="PREV_M_B1">305.6</span></td>
+                                                <td><span id="PREV_M_B2">16.2</span></td>
+                                                <td><span id="PREV_M_B3">528.4</span></td>
+                                                <td><span id="PREV_M_B4">750.9</span></td>
+                                                <td><span id="PREV_M_RnPP">1 601.1</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Виробіток електроенергії з початку року, млн. кВт*год</td>
+                                                <td><span id="PBY_W_B1">607.5</span></td>
+                                                <td><span id="PBY_W_B2">597.9</span></td>
+                                                <td><span id="PBY_W_B3">704.9</span></td>
+                                                <td><span id="PBY_W_B4">2 148.8</span></td>
+                                                <td><span id="PBY_W_RnPP">4 059.1</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Виробіток електроенергії блоками АЕС з початку експлуатації, млрд. кВт*год</td>
+                                                <td colspan="5"><span id="SumRnppAll">524.9</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
                         </div>
                     </div>

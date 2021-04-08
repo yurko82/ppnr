@@ -99,15 +99,12 @@
 
 .allabout .about_side_menu .side_menu .side_menu-item {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: start;
-  -webkit-justify-content: start;
       -ms-flex-pack: start;
           justify-content: start;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   padding: 10px 0;
@@ -117,8 +114,7 @@
 .allabout .about_side_menu .side_menu .side_menu-item .icon-img {
   width: 40px;
   height: 40px;
-  -webkit-background-size: contain !important;
-          background-size: contain !important;
+  background-size: contain !important;
   background-repeat: no-repeat !important;
   -webkit-filter: invert(33%) sepia(95%) saturate(2%) hue-rotate(11deg) brightness(101%) contrast(101%);
           filter: invert(33%) sepia(95%) saturate(2%) hue-rotate(11deg) brightness(101%) contrast(101%);

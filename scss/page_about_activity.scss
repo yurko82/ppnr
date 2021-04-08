@@ -1,94 +1,117 @@
-    @import "_about_menu";
-    @import "_rnpp_lightbox";
-    .safety {
-        &.allView {
-            & .viewSafety {
-                display: block;
-            }
-            & .safety__btn {
-                display: none;
-            }
-        }
+@import "_about_menu";
+@import "_rnpp_lightbox";
+.safety {
+    &.allView {
         & .viewSafety {
+            display: block;
+        }
+        & .safety__btn {
             display: none;
         }
-        &__btn {
-            text-align: center;
-            padding: 0 0 24px 0;
-            & button {
-                padding: 8px;
-            }
+    }
+    & .viewSafety {
+        display: none;
+    }
+    &__btn {
+        text-align: center;
+        padding: 0 0 24px 0;
+        & button {
+            padding: 8px;
         }
-        & p~ul {
-            margin-top: -20px;
+    }
+    & p~ul {
+        margin-top: -20px;
+    }
+}
+
+.declaration {
+    & h2 {
+        font-size: 20px;
+    }
+    & ul{
+        list-style-type: none;
+        & li {
+            padding-top: 12px;
         }
     }
     
-    .declaration {
-        & h2 {
-            font-size: 20px;
-        }
-        & ul{
+}
+
+.licensed {
+    & p {
+        padding: 0 0 8px 0;
+        color: $grey3;
+        font-weight: 600;
+    }
+    ul {
+        list-style-type: none;
+        &.licensed-doc {
             list-style-type: none;
+            padding: revert;
             & li {
-                padding-top: 12px;
-            }
-        }
-        
-    }
-    
-    .licensed {
-        & p {
-            padding: 0 0 8px 0;
-            color: $grey3;
-            font-weight: 600;
-        }
-        ul {
-            list-style-type: none;
-            &.licensed-doc {
-                list-style-type: none;
-                padding: revert;
-                & li {
-                    & div {
-                        display: none;
-                    }
+                & div {
+                    display: none;
                 }
             }
         }
     }
-    
-    .purchase {
-        & .item {
-            display: flex;
-            align-items: center;
-            border: $grey6 solid 1px;
-            padding: 20px;
-            margin: 10px 0;
+}
+
+.purchase {
+    & .item {
+        display: flex;
+        align-items: center;
+        border: $grey6 solid 1px;
+        padding: 20px;
+        margin: 10px 0;
+        &:hover {
+            border: $blue4 solid 1px;
+        }
+        & div {
+            padding-right: 12px;
+            margin-right: 12px;
+        }
+        & a {
+            color: $blue3;
             &:hover {
-                border: $blue4 solid 1px;
-            }
-            & div {
-                padding-right: 12px;
-                margin-right: 12px;
-            }
-            & a {
-                color: $blue3;
-                &:hover {
-                    color: $blue4;
-                }
-            }
-            @media (max-width:900px){
-                display: block;
-                & .time{
-                    padding-bottom: 12px;
-                }
+                color: $blue4;
             }
         }
-        &__btn {
-            text-align: center;
-            padding: 24px 0;
-            & button {
-                padding: 8px;
+        @media (max-width:900px){
+            display: block;
+            & .time{
+                padding-bottom: 12px;
             }
         }
     }
+    &__btn {
+        text-align: center;
+        padding: 24px 0;
+        & button {
+            padding: 8px;
+        }
+    }
+}
+.table-production{
+    padding: 40px 0;
+    table, td, th {
+        border: 1px solid $grey5;
+        padding: 8px;
+        text-align: center;
+        border-collapse: collapse;
+    }
+    // tr:nth-child(2n) {
+    //     background-color: $grey6;
+    // }
+    // tr:nth-child(2n+1) {
+    //     background-color: white;
+    // }
+    caption {
+        text-align: center;
+        caption-side: top;
+        padding: 16px;
+        color: $grey3;
+        font-weight: 500;
+        font-size: 24px;
+    }
+}
