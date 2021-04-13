@@ -153,14 +153,7 @@
     background-color: white;
     padding: 40px;
   }
-  .article__container .r5_title {
-    color: #74d2e7;
-    font-weight: 900;
-    font-size: 30px;
-  }
   .article__container .info {
-    max-width: 1000px;
-    margin: 0 auto;
     padding: 0;
   }
 }
@@ -188,14 +181,7 @@
     background-color: white;
     padding: 40px;
   }
-  .article__container .r5_title {
-    color: #74d2e7;
-    font-weight: 900;
-    font-size: 30px;
-  }
   .article__container .info {
-    max-width: 1000px;
-    margin: 0 auto;
     padding: 20px 0;
   }
 }

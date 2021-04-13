@@ -2,7 +2,10 @@
     .support {
         &__block {
             display: flex;
-            margin-bottom: 70px;
+            margin-bottom: 80px;
+            &:last-child {
+                margin-bottom: 120px;
+            }
             & .support__foto {
                 width: calc(50% + 12px);
                 & img {
@@ -45,14 +48,17 @@
         &__btn {
             & button {
                 text-transform: uppercase;
-                padding: 2px 12px;
+                margin:0;
             }
         }
         @media (max-width: 600px) {
             &__block {
                 display: flex;
                 flex-direction: column;
-                margin-bottom: 50px;
+                margin-bottom: 40px;
+                &:last-child {
+                    margin-bottom: 60px;
+                }
                 & .support__foto {
                     width: 100%;
                     & img {
@@ -64,7 +70,7 @@
                     background-color: #fff;
                     margin-top: 0;
                     &-text {
-                        padding: 20px 30px;
+                        padding: 20px 0;
                         & h2 {
                             font-size: 20px;
                             margin: 8px 0;

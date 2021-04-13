@@ -75,6 +75,7 @@
       -ms-flex-align: center;
           align-items: center;
   padding: 12px;
+  margin: 40px 0;
   background-color: #39b791;
 }
 
@@ -96,4 +97,12 @@
 
 .fact__text ul {
   margin: 0;
+}
+
+.why_title {
+  font-size: 30px;
+  margin-bottom: 20px;
+  display: block;
+  font-weight: 900;
+  color: #74d2e7;
 }
