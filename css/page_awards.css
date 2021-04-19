@@ -505,7 +505,15 @@
   width: 66%;
 }
 
-.awards__list li:hover {
+.awards__list ul {
+  margin-bottom: 40px;
+}
+
+.awards__list ul li {
+  cursor: pointer;
+}
+
+.awards__list ul li:hover {
   color: #41b6e6;
 }
 
@@ -520,4 +528,26 @@
   top: 200px;
   left: 0;
   width: 100%;
+}
+
+.awards-title {
+  font-size: 24px;
+  display: block;
+  font-weight: 600;
+  color: #74d2e7;
+}
+
+@media (max-width: 999px) {
+  .awards .awards__view {
+    display: none;
+  }
+  .awards .awards__list {
+    width: 100%;
+  }
+  .awards .awards__list li {
+    pointer-events: none;
+  }
+  .awards .awards-title {
+    font-size: 20px;
+  }
 }
