@@ -1,19 +1,13 @@
 @import "_colors";
 .why {
-    & p {
-        & b {
-            &:hover {
-                font-size: 20px;
-                color: $blue4;
-            }
-        }
-    }
     & img {
         padding-top: 20px;
         margin: 0 auto;
     }
+    & b {
+        pointer-events: none;
+    }
 }
-
 .fact {
     display: flex;
     justify-content: space-between;

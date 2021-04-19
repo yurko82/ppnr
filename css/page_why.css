@@ -54,14 +54,13 @@
   color: #999999;
 }
 
-.why p b:hover {
-  font-size: 20px;
-  color: #41b6e6;
-}
-
 .why img {
   padding-top: 20px;
   margin: 0 auto;
+}
+
+.why b {
+  pointer-events: none;
 }
 
 .fact {
