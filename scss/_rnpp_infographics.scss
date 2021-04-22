@@ -1,0 +1,26 @@
+
+.rnpp_infographics{
+    &_cont{
+        width:100%;
+    }
+    &_line{
+        width:100%;
+        // display: flex;
+        // justify-content: space-around;
+        // align-items: center;
+    }
+    &_block {
+        height:100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    &_text{
+        font-size: 24px;
+        color:white;
+        &-count{
+            font-size: 30px;
+            color:white;
+        }
+    }
+}

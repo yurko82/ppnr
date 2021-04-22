@@ -367,6 +367,36 @@
   }
 }
 
+.rnpp_infographics_cont {
+  width: 100%;
+}
+
+.rnpp_infographics_line {
+  width: 100%;
+}
+
+.rnpp_infographics_block {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.rnpp_infographics_text {
+  font-size: 24px;
+  color: white;
+}
+
+.rnpp_infographics_text-count {
+  font-size: 30px;
+  color: white;
+}
+
 .rnpp_team {
   width: 100%;
   display: -webkit-box;
