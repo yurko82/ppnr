@@ -762,12 +762,7 @@
 }
 
 .safety__btn {
-  text-align: center;
-  padding: 0 0 24px 0;
-}
-
-.safety__btn button {
-  padding: 8px;
+  padding-bottom: 24px;
 }
 
 .safety p ~ ul {
