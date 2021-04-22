@@ -13,11 +13,7 @@
         display: none;
     }
     &__btn {
-        text-align: center;
-        padding: 0 0 24px 0;
-        & button {
-            padding: 8px;
-        }
+        padding-bottom:24px;
     }
     & p~ul {
         margin-top: -20px;
