@@ -8,7 +8,6 @@ class RnppInfographics{
         // get data from server
         this.maxCount=7642;
         this.defaultBGColor='#eeeeee';
-        this.margin=10;
         this.data=[{
             count1:7642,
             title1:'Працівників',
@@ -22,9 +21,9 @@ class RnppInfographics{
         },{
             count1:6325,
             title1:'Промисловий персонал',
-            bgColor1:'#009a31',
+            bgColor1:'#39b791',
             count2:1317,
-            bgColor2:'#fd5d0f'
+            bgColor2:'#ff9600'
         },{
             count1:4100,
             title1:'Вища освіта',
@@ -32,7 +31,7 @@ class RnppInfographics{
         },{
             count1:44.4,
             title1:'Середній вік',
-            bgColor1:'#489c85',
+            bgColor1:'#668986',
             min:20,
             max:60
         }];
@@ -50,8 +49,10 @@ class RnppInfographics{
             } else if (!this.data[i].count2){
                 if (this.data[i].max) mxc = this.data[i].max-this.data[i].min;
                 else mxc = this.maxCount;
-                w1 = `calc(${(this.data[i].count1-this.data[i].min)/mxc} * (100% - ${this.margin}px))`;
-                w2 = `calc(${(this.data[i].max-this.data[i].count1)/mxc} * (100% - ${this.margin}px))`;
+                if (!this.data[i].min) this.data[i].min=0;
+                w1 = `calc(${(this.data[i].count1-this.data[i].min)/mxc} * (100% - 8px))`;
+                w2 = `calc(${(mxc-this.data[i].count1+this.data[i].min)/mxc} * (100% - 8px))`;
+                console.log(w2)
                 html+=`<div class="rnpp_infographics_line">
                     <div class="rnpp_infographics_block" style="background-color:${this.data[i].bgColor1}; width:${w1}"><span class="rnpp_infographics_text">${this.data[i].title1}</span>
                                         <span class="rnpp_infographics_text-count">${this.data[i].count1}</span></div>
@@ -59,12 +60,12 @@ class RnppInfographics{
                 </div>`;
             } else {
                 mxc = this.data[i].count1+this.data[i].count2;
-                w1 = `calc(${(this.data[i].count1-this.data[i].min)/mxc} * (100% - ${this.margin}px))`;
-                w2 = `calc(${(this.data[i].max-this.data[i].count1)/mxc} * (100% - ${this.margin}px))`;
+                w1 = `calc(${(this.data[i].count1)/mxc} * (100% - 8px))`;
+                w2 = `calc(${(this.data[i].count2)/mxc} * (100% - 8px))`;
                 html+=`<div class="rnpp_infographics_line">
                     <div class="rnpp_infographics_block" style="background-color:${this.data[i].bgColor1}; width:${w1}"><span class="rnpp_infographics_text">${this.data[i].title1}</span>
                                     <span class="rnpp_infographics_text-count">${this.data[i].count1}</span></div>
-                    <div class="rnpp_infographics_block" style="background-color:${this.data[i].bgColor2}; width:${w2}">
+                    <div class="rnpp_infographics_block rnpp_infographics_block-right" style="background-color:${this.data[i].bgColor2}; width:${w2}">
                                     <span class="rnpp_infographics_text-count">${this.data[i].count2}</span></div>
                 </div>`;
             }

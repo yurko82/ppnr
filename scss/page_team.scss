@@ -8,10 +8,18 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    & span {
+    & span.rnpp_team-title {
         font-size: 24px;
         padding-bottom: 40px;
         color: $blue3;
+        font-weight: 600px;
+        @media(max-width:1000px){
+            padding-bottom:20px;
+        }
+        @media(max-width:768px){
+            font-size: 20px;
+            padding-bottom:0;
+        }
     }
     & img {
         width:100%;
@@ -27,4 +35,11 @@
         width:100%;
         cursor: pointer;
     }
+    @media(max-width:1000px){
+        padding:90px 0;
+    }
+    @media(max-width:768px){
+        padding:60px 0;
+    }
 }
+
